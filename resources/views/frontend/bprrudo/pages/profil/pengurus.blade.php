@@ -1,0 +1,136 @@
+@extends('frontend.bprjas.layout.main')
+
+@section('content')
+
+<style>
+.common-hero {
+  background: url('{{ asset(env('GLOBAL_TOPPAGE')) }}') no-repeat center center; 
+  background-size: contain; /* default untuk desktop */
+  background-position: center;
+  color: #fff;
+  padding: 40px 0;
+  position: relative;
+  margin-top: 70px; /* jarak dari navbar */
+  text-align: center; /* teks ke tengah */
+}
+
+/* Versi Mobile */
+@media (max-width: 768px) {
+  .common-hero {
+    background: url('{{ asset(env('GLOBAL_TOPMOBILE')) }}') no-repeat center center; 
+    background-size: cover;   /* gambar diperbesar biar penuh */
+    min-height: 180px;        /* tinggi hero agar kelihatan besar */
+    display: flex;
+    align-items: center;      /* teks di tengah vertikal */
+    justify-content: center;  /* teks di tengah horizontal */
+    padding: 0;               /* hilangkan padding default */
+  }
+
+  .common-hero h1,
+  .common-hero h2,
+  .common-hero .title { 
+    font-size: 20px;   /* sesuaikan ukuran teks agar pas di mobile */
+    font-weight: bold;
+    color: #000;       /* atau putih jika kontras dengan background */
+  }
+}
+.event-content {
+  max-width: 100%;
+  overflow-x: auto;   /* biar kalau ada tabel / gambar besar, muncul scroll horizontal */
+  word-wrap: break-word; /* biar teks panjang gak keluar area */
+  line-height: 1.6;   /* biar enak dibaca */
+  text-align: justify;
+   font-family: 'Archivo', sans-serif;
+}
+</style>
+
+<body class="body tg-heading-subheading animation-style3">
+
+
+  <!--=====progress END=======-->
+
+<div class="paginacontainer"> 
+
+  <div class="progress-wrap">
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+    </svg>
+  </div>
+
+</div> 
+
+
+
+   
+     
+        <!--=====HERO AREA START=======-->
+
+        <div class="common-hero">
+          <div class="container">
+            <div class="row align-items-center text-center">
+              <div class="col-lg-8 m-auto">
+                <div class="main-heading">
+                  <h1 style="font-size: 35px;">PENGURUS</h1>
+                    <span class="span"><img src="frontend/bprjas/assets/img/icons/span1.png" alt=""> <a href="index.html">Home</a> <span class="arrow"><i class="fa-regular fa-angle-right"></i></span> Pengurus <span class="arrow">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="service-details-area-all sp">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4" >
+                       
+
+                        <div class="sidebar-box-area sidebar-bg mb-40">
+                            <h3>Profil Terkait</h3>
+                            <ul class="features-list">
+                                <li><a href="sejarah">Sejarah <span><i class="fa-regular fa-angle-right"></i></span></a></li>
+                                <li><a href="pengurus">Pengurus <span><i class="fa-regular fa-angle-right"></i></span></a></li>
+                                <li><a href="organisasi">Struktur Oranisasi<span><i class="fa-regular fa-angle-right"></i></span></a></li>
+                             
+                            </ul>
+                        </div>
+
+                    </div>
+
+                     <div class="col-lg-8 col-md-12 col-12 ">
+                        <div class="service-details-post">
+                            <article>
+                                <div class="details-post-area">
+                                    <div class="image" style="text-align:center;">
+                                        <img src="/recfil?display=true&rf={{ $pengurus->banner }}" 
+                                            alt="{{ $pengurus->title }}" 
+                                            style="border-radius:8px; height: 800px; width: 900px;">
+                                    </div>
+                                    <div class="space30"></div>
+                                    <div class="heading1">
+                                      <div class="event-content">
+                                        {!! $pengurus->content !!}
+                                      </div> 
+                                    </div>
+                                </div>
+                            </article>
+                           
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
+                          <!--=====CTA AREA START=======-->
+
+     
+
+        <!--=====CTA AREA END=======-->
+
+</body>
+
+
+@endsection
