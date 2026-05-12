@@ -1,306 +1,273 @@
- <!-- Footer Start -->
- <style>
-     .visitor-stats {
-         background-color: #f8f9fa;
-         padding: 20px;
-         /* Diperkecil dari 30px */
-         border-radius: 8px;
-         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-         text-align: center;
-     }
+<style>
+    /* Mobile Bottom Navigation */
+    .mobile-bottom-nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: #ff5a1e;
+        z-index: 9999;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 10px 0;
+    }
 
-     .visitor-stats h5 {
-         font-size: 16px;
-         /* Diperkecil dari 24px */
-         font-weight: 700;
-         color: #333;
-         margin-bottom: 10px;
-     }
+    .mobile-bottom-nav ul {
+        display: flex;
+        margin: 0;
+        padding: 5px 0;
+        list-style: none;
+    }
 
-     .visitor-stats p {
-         font-size: 12px;
-         /* Diperkecil dari 14px */
-         color: #666;
-         margin-bottom: 20px;
-     }
+    .mobile-bottom-nav ul li {
+        flex: 1;
+        text-align: center;
+    }
 
-     .stats-container {
-         display: flex;
-         justify-content: space-evenly;
-         /* Distribusi yang lebih merata untuk 2 item */
-         gap: 10px;
-     }
+    .mobile-bottom-nav ul li a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+        font-size: 12px;
+        text-decoration: none;
+    }
 
-     .stat-item {
-         display: flex;
-         flex-direction: column;
-         align-items: center;
-         text-align: center;
-     }
+    .mobile-bottom-nav ul li a i {
+        font-size: 18px;
+        margin-bottom: 2px;
+    }
 
-     .stat-item i {
-         font-size: 22px;
-         /* Diperkecil dari 28px */
-         color: #cb201d;
-         margin-bottom: 8px;
-     }
+    .mobile-bottom-nav ul li a:hover {
+        color: #ffffff;
+    }
 
-     .stat-info .stat-number {
-         display: block;
-         font-size: 18px;
-         /* Diperkecil dari 28px */
-         font-weight: 700;
-         color: #333;
-         line-height: 1;
-     }
+    .running-text {
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+    }
 
-     .stat-info p {
-         font-size: 10px;
-         /* Diperkecil dari 12px */
-         color: #888;
-         margin: 5px 0 0;
-     }
+    .running-text span {
+        display: inline-block;
+        padding-left: 100%;
+        animation: runningText 25s linear infinite;
+    }
 
-     .whatsapp-float {
-         position: fixed;
-         bottom: 28px;
-         right: 27px;
-         z-index: 1000;
-     }
+    @keyframes runningText {
+        0% {
+            transform: translateX(0);
+        }
 
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+</style>
 
-     /* Mobile Bottom Navigation */
-     .mobile-bottom-nav {
-         position: fixed;
-         bottom: 0;
-         left: 0;
-         width: 100%;
-         background: #3b87f9;
-         /* warna hijau menyesuaikan website */
-         z-index: 9999;
-         border-top: 1px solid rgba(255, 255, 255, 0.2);
-         padding: 10px 0;
-     }
+<footer class="footer-wrapper footer-layout2 space-top" style="background-color: #ff5a1e">
+    <div class="widget-area">
+        <div class="container">
+            <div class="row justify-content-between">
 
-     .mobile-bottom-nav ul {
-         display: flex;
-         margin: 0;
-         padding: 5px 0;
-         list-style: none;
-     }
+                <!-- Kolom 1: About -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="widget footer-widget">
+                        <div class="th-widget-about">
+                            <div class="about-logo">
+                                <a href="index.html">
+                                    <div
+                                        style="background:#fff; padding:8px 20px; display:inline-block; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+                                        <img src="{{ asset('frontend/bprsms/assets/img/logo/logo.png') }}"
+                                            style="width: 180px" alt="logo">
+                                    </div>
+                                </a>
+                            </div>
+                            <p class="about-text" style="color: #fff">
+                                BPR Sinar Mitra Sejahtera merupakan lembaga keuangan yang berkomitmen
+                                memberikan layanan perbankan terpercaya dengan produk tabungan, deposito,
+                                dan kredit untuk mendukung pertumbuhan ekonomi masyarakat.
+                            </p>
+                            <div class="th-social">
+                                <a href="https://web.facebook.com/sinar.mitra.7712?_rdc=1&_rdr"><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a href="https://x.com/BPRSMS"><i class="fab fa-twitter"></i></a>
 
-     .mobile-bottom-nav ul li {
-         flex: 1;
-         text-align: center;
-     }
+                                
+                                <a href="https://www.youtube.com/@bprsms3518">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                                <a href="https://www.instagram.com/accounts/login/?next=%2Fbprsms%2F&source=omni_redirect">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="https://wa.me/6285727272035">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
 
-     .mobile-bottom-nav ul li a {
-         display: flex;
-         flex-direction: column;
-         align-items: center;
-         justify-content: center;
-         color: #ffffff;
-         font-size: 12px;
-         text-decoration: none;
-     }
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-     .mobile-bottom-nav ul li a i {
-         font-size: 18px;
-         margin-bottom: 2px;
-     }
+                <!-- Kolom 2: Tautan Terkait -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="widget widget_nav_menu footer-widget">
+                        <h3 class="widget_title">Tautan Terkait</h3>
+                        <div class="menu-all-pages-container">
+                            <ul class="menu">
+                                <li style="color: #fff"><a href="/pengaduan" style="color: #fff">Pengaduan Nasabah</a>
+                                </li>
+                                {{-- <li style="color: #fff"><a
+                                        href="{{ asset('frontend/bprbhaktiriyadi/assets/img/alur.png') }}"
+                                        target="_blank" style="color: #fff">Alur Pengaduan Nasabah</a></li> --}}
+                                <li style="color: #fff"><a href="/rekrutmen" style="color: #fff">Karir</a></li>
+                                <li style="color: #fff"><a href="/lelang-jualaset" style="color: #fff">Lelang / Jualaset</a></li>
+                                <li style="color: #fff"><a href="/jaringankantor" style="color: #fff">Jaringan
+                                        Kantor</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-     .mobile-bottom-nav ul li a:hover {
-         color: #f7c319;
-     }
+                <!-- Kolom 3: Kontak Kami -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="widget footer-widget">
+                        <h3 class="widget_title">Kontak Kami</h3>
+                        <div class="th-widget-contact">
+                            <div class="info-box_text" style="display:flex; align-items:center; gap:10px;">
+                                <div class="icon">
+                                    <img src="{{ asset('frontend/bprbhaktiriyadi/assets/img/icon/phone.svg') }}"
+                                        alt="img" style="width:20px;">
+                                </div>
+                                <div class="details">
+                                    <p style="margin:0;">
+                                        <a href="tel:+(024) 76637101" class="info-box_link" style="color:#fff;">(024)
+                                            76637101</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="info-box_text" style="display:flex; align-items:center; gap:10px;">
+                                <div class="icon">
+                                    <img src="{{ asset('frontend/bprbhaktiriyadi/assets/img/icon/envelope.svg') }}"
+                                        alt="img" style="width:20px;">
+                                </div>
+                                <div class="details">
+                                    <p style="margin:0;">
+                                        <a href="mailto:mailinfo00@atek.com" class="info-box_link"
+                                            style="color:#fff;">bprsms@gmail.com</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="info-box_text" style="display:flex; align-items:flex-start; gap:10px;">
+                                <div class="icon">
+                                    <img src="{{ asset('frontend/bprbhaktiriyadi/assets/img/icon/location-dot.svg') }}"
+                                        alt="img" style="width:20px; margin-top:3px;">
+                                </div>
+                                <div class="details">
+                                    <p style="margin:0;">
+                                        <a href="https://maps.app.goo.gl/QyH2fFoJ9fii93mt7" target="_blank"
+                                            style="color:#fff;">
+                                            Jl. Abdurahman Saleh No. 199 Semarang
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-     .running-text {
-         width: 100%;
-         overflow: hidden;
-         white-space: nowrap;
-     }
+                <!-- Kolom 4: Jaringan Kantor -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="widget footer-widget">
+                        <h3 class="widget_title">Jaringan Kantor</h3>
+                        <select id="pilihKantor" class="form-select mb-3"
+                            style="background-color:#ffffff; color:#462ced; text-transform:none;">
+                            @foreach ($kantorglobal as $kantor)
+                                <option value="{{ $kantor->id }}" data-nama="{{ $kantor->kantor }}"
+                                    data-alamat="{{ $kantor->alamat }}" data-telp="{{ $kantor->no_telp }}"
+                                    data-lat="{{ $kantor->latitude }}" data-lng="{{ $kantor->longitude }}"
+                                    data-thumb="/recfil?display=true&rf={{ $kantor->thumbnail }}"
+                                    {{ strtolower($kantor->kantor) == 'kantor pusat' ? 'selected' : '' }}>
+                                    {{ $kantor->kantor }}
+                                </option>
+                            @endforeach
+                        </select>
+                        <div id="detailKantor">
+                            <p id="namaKantor" style="font-weight:600; margin-bottom:4px;"></p>
+                            <p id="alamatKantor" style="font-size:14px; margin-bottom:4px;"></p>
+                            <p id="telpKantor" style="font-size:14px; margin-bottom:10px;"></p>
+                            <div id="thumbnailContainer"></div>
+                        </div>
+                    </div>
+                </div>
 
-     .running-text span {
-         display: inline-block;
-         padding-left: 100%;
-         animation: runningText 25s linear infinite;
-     }
+            </div>
 
-     @keyframes runningText {
-         0% {
-             transform: translateX(0);
-         }
+        </div>
 
-         100% {
-             transform: translateX(-100%);
-         }
-     }
- </style>
- <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
-     <div class="container py-5">
-         <div class="row g-5">
-             <div class="col-md-6 col-lg-6 col-xl-3">
-                 <div class="footer-item d-flex flex-column">
-                     <div class="footer-item">
-                         <h4 class="text-white mb-4">Tentang Kami</h4>
-                         <p class="mb-3" style="color: #fff">PT. BPR Kotabaru yang merupakan Bank Perkreditan Rakyat
-                             milik Pemprov Kalimantan
-                             Selatan dan Pemkab Kotabaru.
-                         </p>
-                         <div class="d-flex align-items-center">
-                             <a class="btn btn-light btn-md-square me-2" href="#"><i
-                                     class="fab fa-facebook-f"></i></a>
-                             <a class="btn btn-light btn-md-square me-2" href="#"><i
-                                     class="fab fa-twitter"></i></a>
-                             <a class="btn btn-light btn-md-square me-2"
-                                 href="https://www.instagram.com/bpr.bankkotabaru/"><i class="fab fa-instagram"></i></a>
-                             <a class="btn btn-light btn-md-square me-0" href="#"><i
-                                     class="fab fa-linkedin-in"></i></a>
-                         </div>
-                     </div>
-                 </div>
-             </div>
-             <div class="col-md-6 col-lg-6 col-xl-3">
-                 <div class="footer-item d-flex flex-column">
-                     <h4 class="text-white mb-4">Tautan Terkait</h4>
-                     <a href="/pengaduan" style="color: #fff"><i class="fas fa-angle-right me-2"
-                             style="color: #fff"></i> Pengaduan Nasabah</a>
-                     <a href="/rekrutmen" style="color: #fff"><i class="fas fa-angle-right me-2"
-                             style="color: #fff"></i> Karir</a>
-                     <a href="/informasi" style="color: #fff"><i class="fas fa-angle-right me-2"
-                             style="color: #fff"></i> Berita</a>
-                     <a href="/jaringankantor" style="color: #fff"><i class="fas fa-angle-right me-2"
-                             style="color: #fff"></i> Jaringan Kantor</a>
+    </div>
+    <div class="container footer-menu" style="margin-bottom: 10px">
+        <div class="f-menu running-text">
+            <span style="color: white">
+                PT. BPR Bhaktiriyadi berizin dan diawasi oleh Otoritas Jasa Keuangan (OJK) serta merupakan peserta
+                penjaminan LPS.
+                Maksimum nilai simpanan yang dijamin oleh
+                LPS adalah Rp.2 Miliar per nasabah per bank. Untuk informasi tingkat suku bunga
+                penjaminan LPS dapat diakses
+            </span>
+        </div>
+    </div>
 
-                 </div>
-             </div>
-             <div class="col-md-6 col-lg-6 col-xl-4">
-                 <div class="footer-item d-flex flex-column">
-                     <h4 class="text-white mb-4">Informasi Kontak</h4>
+    <div class="copyright-wrap">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-lg-6">
+                    <p class="copyright-text">Copyright © <a href="index.html">BPR Baja</a>. Support By <a
+                            href="" style="color: rgb(255, 255, 255)">Antar Uang</a></p>
+                </div>
+                <div class="col-lg-6 text-lg-end text-center">
+                    <div class="footer-links"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 
+<nav class="mobile-bottom-nav d-block d-lg-none">
+    <ul>
+        <li><a href="/"><i class="fas fa-home"></i><span>Beranda</span></a></li>
+        <li><a href="/kredit"><i class="fas fa-credit-card"></i><span>Kredit</span></a></li>
+        <li><a href="/deposito"><i class="fas fa-coins"></i><span>Deposito</span></a></li>
+        <li><a href="/tabungan"><i class="fas fa-piggy-bank"></i><span>Tabungan</span></a></li>
+        <li><a href="/jaringankantor"><i class="fas fa-phone"></i><span>Kontak</span></a></li>
+    </ul>
+</nav>
 
-                     <a href="tel:085124525" style="color: #fff"><i class="fas fa-phone me-2" style="color: #fff"></i>+0851
-                         24525</a>
-                     <a href="https://wa.me/6285348046915" style="color: #fff" class="mb-3">
-                         <i class="fab fa-whatsapp me-2" style="color: #fff"></i> 085348046915
-                     </a>
-                     <a href="#" style="color: #fff; "><i class="fas fa-envelope me-2" style="color: #fff;"></i>
-                         bankKotabaru_perseroda@yahoo.com</a>
-                     <a href="#" style="color: #fff"><i class="fa fa-map-marker-alt me-2"
-                             style="color: #fff; "></i>Jl. Kenanga No.2 Desa Dirgahayu Kelurahan Kotabaru tengah
-                         Kabupaten Kotabaru
-                         Kabupaten Tegal</a>
+<script>
+    function tampilkanKantor() {
+        let select = document.getElementById('pilihKantor');
+        let selected = select.options[select.selectedIndex];
 
-                 </div>
-             </div>
-             <div class="col-md-6 col-lg-6 col-xl-2">
-                 <div class="footer-item-post d-flex flex-column">
-                     <div class="visitor-stats">
-                         <h5>Statistik Pengunjung</h5>
-                         {{-- <p>
-                           Pantau aktivitas real-time website kami dan lihat bagaimana kami terus berkembang.
-                       </p> --}}
-                         <div class="stats-container">
-                             <div class="stat-item">
-                                 <i class="fas fa-users"></i>
-                                 <div class="stat-info">
-                                     <span class="stat-number" data-target="{{ $total_visitor }}">0</span>
-                                     <p>Total Pengunjung</p>
-                                 </div>
-                             </div>
-                             <div class="stat-item">
-                                 <i class="fas fa-user-check"></i>
-                                 <div class="stat-info">
-                                     <span class="stat-number" data-target="{{ $today_visitor }}">0</span>
-                                     <p>Pengunjung Hari Ini</p>
-                                 </div>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-             </div>
-         </div>
+        let nama = selected.getAttribute('data-nama');
+        let alamat = selected.getAttribute('data-alamat');
+        let telp = selected.getAttribute('data-telp');
+        let lat = selected.getAttribute('data-lat');
+        let lng = selected.getAttribute('data-lng');
+        let thumb = selected.getAttribute('data-thumb');
 
-     </div>
-     <div class="container footer-menu">
-         <div class="f-menu running-text">
-             <span style="color: #fff; font-size: 15px; font-family: 'Open Sans', sans-serif; font-weight:500;">
-                 PT. BPR Kotabaru berizin dan diawasi oleh Otoritas Jasa Keuangan serta merupakan peserta penjaminan
-                 LPS.
-                 Maksimum nilai simpanan yang dijamin oleh
-                 LPS adalah Rp.2 Miliar per nasabah per bank. Untuk informasi tingkat suku bunga
-                 penjaminan LPS dapat diakses
-             </span>
-         </div>
-     </div>
- </div>
+        document.getElementById('alamatKantor').innerHTML = `<span style="color:#fff;">${alamat}</span>`;
+        document.getElementById('telpKantor').innerHTML =
+            `<strong style="color:#fff;">Telp : </strong><a href="tel:${telp}" style="color:#fff;">${telp}</a>`;
 
- <!-- Footer End -->
- <nav class="mobile-bottom-nav d-block d-lg-none">
-     <ul>
-         <li><a href="/"><i class="fas fa-home"></i><span>Beranda</span></a></li>
-         <li><a href="/kredit"><i class="fas fa-credit-card"></i><span>Kredit</span></a></li>
-         <li><a href="/deposito"><i class="fas fa-coins"></i><span>Deposito</span></a></li>
-         <li><a href="/tabungan"><i class="fas fa-piggy-bank"></i><span>Tabungan</span></a></li>
-         <li><a href="/jaringankantor"><i class="fas fa-phone"></i><span>Kontak</span></a></li>
-     </ul>
- </nav>
+        let googleLink = `https://www.google.com/maps?q=${lat},${lng}`;
+        let thumbnailHTML = `
+            <a href="${googleLink}" target="_blank">
+                <img src="${thumb}" style="width:80%; height:70px; object-fit:cover; border-radius:8px; cursor:pointer; text-align:center" alt="Lokasi Kantor">
+            </a>
+        `;
+        document.getElementById('thumbnailContainer').innerHTML = thumbnailHTML;
+    }
 
-
-
- <!-- Copyright Start -->
- <div class="container-fluid copyright py-4" style="background:#000;">
-     <div class="container">
-         <div class="row g-4 align-items-center">
-             <div class="col-md-6 text-center text-md-start mb-md-0">
-                 <span style="color:#fff;">
-                     <a href="#" style="color:#fff;">
-                         <i class="fas fa-copyright me-2"></i>
-                         PT. BPR Kotabaru
-                     </a>
-                     support by
-                     <a href="https://antaruang.com" style="color:#f7c319;">
-                         Antar Uang
-                     </a>
-                 </span>
-             </div>
-         </div>
-     </div>
- </div>
-
- {{-- <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>    --}}
- <script>
-     document.addEventListener('DOMContentLoaded', () => {
-         const animateCounter = (element) => {
-             const target = +element.getAttribute('data-target');
-             const increment = target / 200;
-             let current = 0;
-             const updateCounter = () => {
-                 current += increment;
-                 if (current < target) {
-                     element.innerText = Math.ceil(current);
-                     requestAnimationFrame(updateCounter);
-                 } else {
-                     element.innerText = target.toLocaleString('id-ID');
-                 }
-             };
-             updateCounter();
-         };
-
-         const statsSection = document.querySelector('.visitor-stats');
-         const observer = new IntersectionObserver((entries) => {
-             entries.forEach(entry => {
-                 if (entry.isIntersecting) {
-                     const counters = document.querySelectorAll('.stat-number');
-                     counters.forEach(counter => animateCounter(counter));
-                     observer.unobserve(statsSection);
-                 }
-             });
-         }, {
-             threshold: 0.5
-         });
-
-         if (statsSection) {
-             observer.observe(statsSection);
-         }
-     });
- </script>
+    document.getElementById('pilihKantor').addEventListener('change', tampilkanKantor);
+    window.addEventListener('DOMContentLoaded', tampilkanKantor);
+</script>

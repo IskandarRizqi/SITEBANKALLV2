@@ -1,4 +1,4 @@
-@extends('frontend.bprdatagita.layout.main')
+@extends('frontend.bprsms.layout.main')
 
 @section('content')
 

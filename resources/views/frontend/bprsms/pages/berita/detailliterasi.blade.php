@@ -1,4 +1,4 @@
-@extends('frontend.bprtaruna.layout.main')
+@extends('frontend.bprsms.layout.main')
 
 @section('content')
 

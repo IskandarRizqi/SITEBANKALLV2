@@ -5,6 +5,7 @@ namespace App\Http\Controllers\frontend;
 use App\Http\Controllers\Controller;
 use App\Models\LaporanModel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 
 class LaporanController extends Controller
 {
@@ -61,14 +62,29 @@ class LaporanController extends Controller
 
         return view(ENV('GLOBAL_KEBERLANJUTAN'), $data);
     }
+    public function akb()
+    {
+        // detail event
+        $data['akb'] = LaporanModel::where('type', 4)->get();
 
-    public function lainnya()
+
+        return view(ENV('GLOBAL_AKB'), $data);
+    }
+
+    public function piagamaudit()
     {
 
-        $data['lainnya'] = LaporanModel::where('type', 4)->get();
+        $data['piagamaudit'] = LaporanModel::where('type', 5)->get();
 
+        return view(ENV('GLOBAL_PIAGAMAUDIT'), $data);
+    }
 
-        return view('frontend.bprtaruna.pages.laporan.piagamaudit', $data);
+     public function lainnya()
+    {
+
+        $data['lainnya'] = LaporanModel::where('type', 6)->get();
+
+        return view(ENV('GLOBAL_LAPORAN_LAINNYA'), $data);
     }
 
     public function laporanall()
@@ -102,6 +118,34 @@ class LaporanController extends Controller
 
 
         return view(ENV('GLOBAL_LAPORANALL'), $data);
+    }
+
+     public function getlaporanfront(Request $request)
+    {
+        $query = LaporanModel::query();
+
+        if ($request->type !== null && $request->type !== '') {
+            $query->where('type', $request->type);
+        }
+
+        if ($request->tahun) {
+            $query->whereYear('tanggal', $request->tahun);
+        }
+
+        if ($request->bulan && $request->bulan !== '') {
+            $bulan    = (int) $request->bulan;
+            $bulanAwal = $bulan - 2;
+            $query->whereMonth('tanggal', '>=', $bulanAwal)
+                  ->whereMonth('tanggal', '<=', $bulan);
+        }
+
+        $data = $query->orderBy('tanggal', 'desc')->get()
+            ->map(function ($item) {
+                $item->bulan = (int) Carbon::parse($item->tanggal)->format('n');
+                return $item;
+            });
+
+        return response()->json($data->values());
     }
 
 }

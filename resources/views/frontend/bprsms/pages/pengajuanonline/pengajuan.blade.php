@@ -1,4 +1,4 @@
-@extends('frontend.bprkotabaru.layout.main')
+@extends('frontend.bprsms.layout.main')
 
 @section('content')
     <style>
@@ -32,12 +32,17 @@
         }
     </style>
 
-    <div class="container-fluid bg-breadcrumb">
-        <div class="bg-breadcrumb-single"></div>
-        <div class="container text-center py-5" style="max-width: 900px;">
-            <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">
-                Pengajuan Online
-            </h4>
+    <div class="breadcumb-area style2 bg-smoke4">
+        <div class="breadcumb-wrapper" data-bg-src="frontend/bprsms/assets/img/bg/breadcumb-bg.jpg">
+            <div class="container">
+                <div class="breadcumb-content">
+                    <h1 class="breadcumb-title">Pengajuan Online</h1>
+                    <ul class="breadcumb-menu">
+                        <li><a href="index.html">Beranda</a></li>
+                        <li>Pengajuan Online</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
     <div class="team2 team-page sp" style="padding-top:0px">
@@ -48,7 +53,7 @@
                 Pengajuan Online
             </h4> --}}
 
-            <div style=" border:1.5px solid #3b87f9; border-radius:8px; padding:30px 15px; margin-bottom: 30px;">
+            <div style=" border:1.5px solid #ff5a1e; border-radius:8px; padding:30px 15px; margin-bottom: 30px;">
 
                 <h5 style=" text-align:center; font-weight:600; margin-bottom:30px; ">
                     Pilih Layanan
@@ -60,7 +65,7 @@
                     <div class="col-lg-4 col-md-6">
                         <a href="/formpengajuankredit" style="text-decoration:none;color:inherit;">
                             <div class="team-box"
-                                style="background:#f7c319;border-radius:8px;padding:25px 15px;text-align:center;margin-bottom:20px;cursor:pointer;transition:.3s;">
+                                style=" background: linear-gradient(45deg, #ff5a1e, #ffffff);border-radius:8px;padding:25px 15px;text-align:center;margin-bottom:20px;cursor:pointer;transition:.3s;">
                                 <div class="image-area">
                                     <div class="image">
                                         <img src="{{ asset('frontend/bprrudo/assets/img/profil/kredit.png') }}"
@@ -79,7 +84,7 @@
                     <div class="col-lg-4 col-md-6">
                         <a href="/formpengajuantabungan" style="text-decoration:none;color:inherit;">
                             <div class="team-box"
-                                style="background:#f7c319;border-radius:8px;padding:25px 15px;text-align:center;margin-bottom:20px;cursor:pointer;transition:.3s;">
+                                style=" background: linear-gradient(45deg, #ff5a1e, #ffffff);border-radius:8px;padding:25px 15px;text-align:center;margin-bottom:20px;cursor:pointer;transition:.3s;">
                                 <div class="image-area">
                                     <div class="image">
                                         <img src="{{ asset('frontend/bprrudo/assets/img/profil/tabungan.png') }}"
@@ -99,7 +104,7 @@
                     <div class="col-lg-4 col-md-6">
                         <a href="/formpengajuandeposito" style="text-decoration:none;color:inherit;">
                             <div class="team-box"
-                                style="background:#f7c319;border-radius:8px;padding:25px 15px;text-align:center;margin-bottom:20px;cursor:pointer;transition:.3s;">
+                                style=" background: linear-gradient(45deg, #ff5a1e, #ffffff);border-radius:8px;padding:25px 15px;text-align:center;margin-bottom:20px;cursor:pointer;transition:.3s;">
                                 <div class="image-area">
                                     <div class="image">
                                         <img src="{{ asset('frontend/bprrudo/assets/img/profil/deposito.png') }}"

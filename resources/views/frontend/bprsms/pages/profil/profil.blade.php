@@ -1,8 +1,9 @@
-@extends('frontend.bprkotabaru.layout.main')
+@extends('frontend.bprsms.layout.main')
 
-@section('content')      
-     <!-- ##### Breadcrumb Area Start ##### -->
-    <section class="breadcrumb-area bg-img bg-overlay jarallax" style="background-image: url(frontend/bprtanadoang/img/profil/topbaner.png);">
+@section('content')
+    <!-- ##### Breadcrumb Area Start ##### -->
+    <section class="breadcrumb-area bg-img bg-overlay jarallax"
+        style="background-image: url(frontend/bprtanadoang/img/profil/topbaner.png);">
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-12">
@@ -31,8 +32,12 @@
                             <p>Take look at our</p>
                             <h2>About our company</h2>
                         </div>
-                        <h6 class="mb-4">In vitae nisi aliquam, scelerisque leo a, volutpat sem. Viva mus rutrum dui fermentum eros hendrerit, id lobortis leo volutpat. </h6>
-                        <p class="mb-0">Sed ut iaculis elit, quis varius mauris. Integer ut ultricies orci, lobortis egestas sem. Duis non volutpat arcu. Sed ut iaculis elit, quis varius mauris. Integer ut ultricies orci, lobortis egestas sem. Duis non volutpat arcu. Pellentesque lobortis neque non sem dapibus, non rutrum dolor pretium.</p>
+                        <h6 class="mb-4">In vitae nisi aliquam, scelerisque leo a, volutpat sem. Viva mus rutrum dui
+                            fermentum eros hendrerit, id lobortis leo volutpat. </h6>
+                        <p class="mb-0">Sed ut iaculis elit, quis varius mauris. Integer ut ultricies orci, lobortis
+                            egestas sem. Duis non volutpat arcu. Sed ut iaculis elit, quis varius mauris. Integer ut
+                            ultricies orci, lobortis egestas sem. Duis non volutpat arcu. Pellentesque lobortis neque non
+                            sem dapibus, non rutrum dolor pretium.</p>
                         <a href="#" class="btn credit-btn mt-50">Discover</a>
                     </div>
                 </div>
@@ -45,5 +50,4 @@
         </div>
     </section>
     <!-- ##### About Area End ###### -->
-
 @endsection

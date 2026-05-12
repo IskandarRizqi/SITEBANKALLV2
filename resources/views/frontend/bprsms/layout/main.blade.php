@@ -29,7 +29,7 @@
                 class="bi bi-arrow-up-short"></i></a> --}}
     </div>
 
-    @include('frontend.bprkotabaru.layout.script')
+    @include('frontend.bprsms.layout.script')
     @include(ENV('GLOBAL_INCFOOTER'))
 
     

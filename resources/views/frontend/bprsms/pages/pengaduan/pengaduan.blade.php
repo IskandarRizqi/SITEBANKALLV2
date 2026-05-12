@@ -1,4 +1,4 @@
-@extends('frontend.bprkotabaru.layout.main')
+@extends('frontend.bprsms.layout.main')
 
 @section('content')
     <style>
@@ -268,18 +268,19 @@
         }
     </style>
 
-      <div class="container-fluid bg-breadcrumb">
-        <div class="bg-breadcrumb-single"></div>
-        <div class="container text-center py-5" style="max-width: 900px;">
-            <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">
-                Pengaduan Nasabah
-            </h4>
+  <div class="breadcumb-area style2 bg-smoke4">
+        <div class="breadcumb-wrapper" data-bg-src="frontend/bprsms/assets/img/bg/breadcumb-bg.jpg">
+            <div class="container">
+                <div class="breadcumb-content">
+                    <h1 class="breadcumb-title">Pengaduan Nasabah</h1>
+                    <ul class="breadcumb-menu">
+                        <li><a href="#">Beranda</a></li>
+                        <li>Pengaduan Nasabah</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
-    {{-- <div style="width:100%; overflow:hidden; margin-top:100px;">
-        <img src="{{ asset('frontend/bprtaruna/assets/img/profil/pengaduan.jpg') }}" alt="Banner"
-            style=" width:100%; height: auto; max-height:auto; object-fit:cover; display:block;">
-    </div> --}}
 
 
     <body class="body tg-heading-subheading animation-style3">
@@ -287,10 +288,6 @@
 
         <!--===== LAYANAN PENGADUAN =====-->
         <section class="py-5 text-center">
-
-            {{-- <h2 style="font-weight:600; color:#b80000; margin-bottom:20px; font-family:'Open Sans', sans-serif;"">
-                Pengaduan Nasabah
-            </h2> --}}
 
             <div class="row justify-content-center mb-4" style="margin-top: 40px;">
                 <div class="col-lg-8">
@@ -314,7 +311,7 @@
             <div class="row justify-content-center">
                 <div class="col-md-6 mb-3">
                     <a href="#" class="btn btn-lg" id="btnPengaduan"
-                        style=" width: 80%; padding: 15px 7px; background-color: #f7c319; color: #ffffff;font-size: 25px; border-radius: 30px;">
+                        style=" width: 80%; padding: 15px 7px;  background-color: #ff5a1e; color: #ffffff;font-size: 25px; border-radius: 30px;">
                         <i class="fas fa-edit mr-2"></i> Pengaduan Nasabah
                     </a>
 
@@ -366,12 +363,12 @@
                                     <div class="form-floating mb-3">
                                         <input type="text" class="form-control rounded-pill" id="login_identifier"
                                             name="email" placeholder="Email / Nomor HP" required>
-                                        {{-- <label for="login_identifier">Email / Nomor HP</label> --}}
+                                        <label for="login_identifier">Email / Nomor HP</label>
                                     </div>
                                     <div class="form-floating mb-3">
                                         <input type="password" class="form-control rounded-pill" id="login_password"
                                             name="password" placeholder="Password" required>
-                                        {{-- <label for="login_password">Password</label> --}}
+                                        <label for="login_password">Password</label>
                                     </div>
                                     <div id="login_errors" class="text-danger mb-3 px-3" style="display:none"></div>
 
@@ -384,7 +381,7 @@
 
                                 <div class="text-center mt-4">
                                     <p class="mb-0">Belum punya akun? <a href="#" id="showRegister"
-                                            class="text-decoration-none fw-bold" style="color: #f7c319 ">Daftar sekarang</a>
+                                            class="text-decoration-none fw-bold" style="color: #f63030 ">Daftar sekarang</a>
                                     </p>
                                 </div>
                             </div>
@@ -436,7 +433,7 @@
 
                                 <div class="text-center mt-4">
                                     <p class="mb-0">Sudah punya akun? <a href="#" id="showLogin"
-                                            class="text-decoration-none fw-bold" style="color: #f7c319 ">Masuk</a></p>
+                                            class="text-decoration-none fw-bold" style="color: #f63030 ">Masuk</a></p>
                                 </div>
                             </div>
 

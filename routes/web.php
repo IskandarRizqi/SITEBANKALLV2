@@ -16,6 +16,7 @@ use App\Http\Controllers\admin\SeoSettingController;
 use App\Http\Controllers\admin\UserController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\UserLoginController;
+use App\Http\Controllers\CounterRateController;
 use App\Http\Controllers\frontend\BerandaController;
 use App\Http\Controllers\frontend\DashboardUserController;
 use App\Http\Controllers\frontend\EmailOtpController;
@@ -108,6 +109,8 @@ Route::prefix('salamprofit')->middleware(['admin'])->group(function () {
     Route::resource('data-umkm', UMKMController::class);
     Route::resource('rate', UMKMController::class);
 
+    Route::resource('counter-rate', CounterRateController::class);
+
 
 });
 // ADMIN ROUTE END
@@ -167,6 +170,7 @@ Route::get('sejarah', [\App\Http\Controllers\frontend\ProfileController::class, 
 Route::get('pengurus', [\App\Http\Controllers\frontend\ProfileController::class, 'pengurus']);
 Route::get('organisasi', [\App\Http\Controllers\frontend\ProfileController::class, 'organisasi']);
 Route::get('visimisi', [\App\Http\Controllers\frontend\ProfileController::class, 'visimisi']);
+Route::get('profile', [\App\Http\Controllers\frontend\ProfileController::class, 'profile']);
 Route::get('corevalue', [\App\Http\Controllers\frontend\ProfileController::class, 'corevalue']);
 Route::resource('jaringankantor', Fe_JaringanKantorController::class);
 Route::resource('galery', \App\Http\Controllers\frontend\GalleryController::class);
@@ -221,12 +225,12 @@ Route::get('publikasi', [\App\Http\Controllers\frontend\LaporanController::class
 Route::get('tahunan', [\App\Http\Controllers\frontend\LaporanController::class, 'tahunan'])->name('tahunan');
 Route::get('tatakelola', [\App\Http\Controllers\frontend\LaporanController::class, 'tatakelola'])->name('tatakelola');
 Route::get('keberlanjutan', [\App\Http\Controllers\frontend\LaporanController::class, 'keberlanjutan'])->name('keberlanjutan');
-Route::get('piagamaudit', [\App\Http\Controllers\frontend\LaporanController::class, 'lainnya'])->name('lainnya');
+Route::get('akb', [\App\Http\Controllers\frontend\LaporanController::class, 'akb'])->name('akb');
+Route::get('piagamaudit', [\App\Http\Controllers\frontend\LaporanController::class, 'piagamaudit'])->name('piagamaudit');
+Route::get('laporan-lainnya', [\App\Http\Controllers\frontend\LaporanController::class, 'lainnya'])->name('lainnya');
 Route::get('laporanall', [\App\Http\Controllers\frontend\LaporanController::class, 'laporanall'])->name('laporanall');
 
-
-
-
+Route::post('/getlaporan-pisah', [\App\Http\Controllers\frontend\LaporanController::class, 'getlaporanfront']);
 
 
 Route::get('/term', function () {

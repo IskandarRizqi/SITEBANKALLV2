@@ -1,11 +1,17 @@
-@extends('frontend.bprkotabaru.layout.main')
+@extends('frontend.bprsms.layout.main')
 
 @section('content')
-    <div class="container-fluid bg-breadcrumb">
-        <div class="bg-breadcrumb-single"></div>
-        <div class="container text-center py-5" style="max-width: 900px;">
-            <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">Profil</h4>
-
+    <div class="breadcumb-area style2 bg-smoke4">
+        <div class="breadcumb-wrapper" data-bg-src="frontend/bprsms/assets/img/bg/breadcumb-bg.jpg">
+            <div class="container">
+                <div class="breadcumb-content">
+                    <h1 class="breadcumb-title">Visimisi</h1>
+                    <ul class="breadcumb-menu">
+                        <li><a href="index.html">Profil</a></li>
+                        <li>Visimisi</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -16,74 +22,46 @@
             <div style="width: 100%; max-width: 1120px;">
 
                 <div
-                    style="background-color: #3b87f9; color: white; margin-top: 50px; padding: 55px 30px; position: relative; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-                    <div
-                        style="display: flex; align-items: center; margin-bottom: 15px; font-size: 28px; font-weight: bold;">
-                        <img src="frontend/bprrudo/assets/img/icons/visi.png" alt="" style="height: 40px">
-                        <span style="margin-left: 10px">Visi</span>
-                    </div>
-                    <div style="font-size: 20px; line-height: 1.5; padding-left: 47px;">
-                        "Mewujudkan Bank Perkreditan Rakyat, yang Sehat, Tanggap, Tangguh serta efisien menjadi mitra usaha
-                        sektor usaha
-                        kecel dan mikro dengan berbasis pada ekonomi kerakyatan"
-                    </div>
-                </div>
-
-                <!-- Misi Section -->
-
-
-                <div
-                    style="background-color: #afb5b1; color: white; margin-top: 20px; padding: 25px 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                    style=" background: linear-gradient(45deg, #ff5a1e, #a9a8ac); color: white; margin-top: 20px; padding: 25px 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
                     <div
                         style="display: flex; align-items: center; margin-bottom: 15px; font-size: 28px; font-weight: bold;">
                         <img src="frontend/bprrudo/assets/img/icons/misi.png" alt="" style="height: 40px">
-                        <span style="margin-left: 10px">Misi</span>
+                        <span style="margin-left: 10px">Visi</span>
                     </div>
                     <div style="list-style: none; padding-left: 47px;">
 
                         <div
                             style="margin-bottom: 12px; font-size: 18px; line-height: 1.5; position: relative; padding-left: 25px;">
-                            <span style="position: absolute; left: 0; font-size: 22px;">•</span>
-                            Menyediakan solusi kebutuhan keuangan masyarakat dengan memberikan pengalaman perbankan yang
-                            berkesan
+                          
+                            Menjadi Bank Yang Sehat dan besar melalui keunggulan pelayanan untuk kesejahteraan masyarakat Jawa Tengah.
                         </div>
-                        <div
-                            style="margin-bottom: 12px; font-size: 18px; line-height: 1.5; position: relative; padding-left: 25px;">
-                            <span style="position: absolute; left: 0; font-size: 22px;">•</span>
-                            Menjalankan prinsip kehati-hatian dan menerapkan bisnis yang beretika untuk meningkatkan nilai
-                            perusahaan
-                        </div>
-                        <div
-                            style="margin-bottom: 12px; font-size: 18px; line-height: 1.5; position: relative; padding-left: 25px;">
-                            <span style="position: absolute; left: 0; font-size: 22px;">•</span>
-                            Mencapai SDM yang unggul, berintegritas dan professional
-                        </div>
-                        <div
-                            style="margin-bottom: 12px; font-size: 18px; line-height: 1.5; position: relative; padding-left: 25px;">
-                            <span style="position: absolute; left: 0; font-size: 22px;">•</span>
-                            Membangun budaya Bank dan Mempertahankan Bank Sehat
-                        </div>
-                        <div
-                            style="margin-bottom: 12px; font-size: 18px; line-height: 1.5; position: relative; padding-left: 25px;">
-                            <span style="position: absolute; left: 0; font-size: 22px;">•</span>
-                            Mengembangkan keunggulan kompotitif dengan layanan prima dan produk yang inovatif berbasis
-                            budaya untuk menjadi Regional Champion yang berkelanjutan
-                        </div>
-                        <div
-                            style="margin-bottom: 12px; font-size: 18px; line-height: 1.5; position: relative; padding-left: 25px;">
-                            <span style="position: absolute; left: 0; font-size: 22px;">•</span>
-                            Menjalankan Fungsi Agen Pembangunan yang focus mengembangkan sector UMKM, Mendorong
-                            Pertumbuhan Perekonomian daerah dan menjaga lingkungan
-                        </div>
-                        <div
-                            style="margin-bottom: 12px; font-size: 18px; line-height: 1.5; position: relative; padding-left: 25px;">
-                            <span style="position: absolute; left: 0; font-size: 22px;">•</span>
-                            Memberikan layanan Perbankan terbaik yang selalu berorientasi kepada kepuasan nasabah, dan
-                            meningkatkan nilai manfaat secara berkesinambungan bagi semua pemangku kepentingan
+                       
 
-                        </div>
+
                     </div>
                 </div>
 
+               <div
+                    style=" background: linear-gradient(45deg, #ff5a1e, #aca8a8); color: white; margin-top: 20px; padding: 25px 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                    <div
+                        style="display: flex; align-items: center; margin-bottom: 15px; font-size: 28px; font-weight: bold;">
+                        <img src="frontend/bprrudo/assets/img/icons/misi.png" alt="" style="height: 40px">
+                        <span style="margin-left: 10px">Visi</span>
+                    </div>
+                    <div style="list-style: none; padding-left: 47px;">
+
+                        <div
+                            style="margin-bottom: 12px; font-size: 18px; line-height: 1.5; position: relative; padding-left: 25px;">
+                          
+                            Menjalankan Aktivitas Bank yang unggul dengan pelayanan prima kepada usaha mikro, kecil dan menengah untuk
+                            menunjang peningkatan perekonomian masyarakat, sehingga dapat memberikan keuntungan dan manfaat yang optimal 
+                            kepada pemegang saham, karyawan, pengurus, mitra bisnis dan masyarakat.
+                        </div>
+                       
+
+
+                    </div>
+                </div>
+            </div>
     </body>
 @endsection

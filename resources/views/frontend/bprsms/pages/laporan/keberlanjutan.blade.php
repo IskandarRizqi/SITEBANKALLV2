@@ -1,12 +1,17 @@
-@extends('frontend.bprsahabattata.layout.main')
+@extends('frontend.bprsms.layout.main')
 
 @section('content')
-     <div class="container-fluid bg-breadcrumb">
-        <div class="bg-breadcrumb-single"></div>
-        <div class="container text-center py-5" style="max-width: 900px;">
-            <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">
-                Laporan Keberlanjutan
-            </h4>
+    <div class="breadcumb-area style2 bg-smoke4">
+        <div class="breadcumb-wrapper" data-bg-src="frontend/bprsms/assets/img/bg/breadcumb-bg.jpg">
+            <div class="container">
+                <div class="breadcumb-content">
+                    <h1 class="breadcumb-title">Laporan Keberlanjutan</h1>
+                    <ul class="breadcumb-menu">
+                        <li><a href="index.html">Laporan</a></li>
+                        <li>Laporan Keberlanjutan</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -27,7 +32,7 @@
                                         <h6 class="fw-bold">{{ strtoupper($item->title) }}</h6>
                                         <br>
                                         <a href="/recfil?display=true&rf={{ $item->url }}" target="_blank"
-                                            class="btn btn-warning text-white fw-bold px-4">
+                                            class="btn btn-info text-white fw-bold px-4">
                                             Download
                                         </a>
                                     </div>

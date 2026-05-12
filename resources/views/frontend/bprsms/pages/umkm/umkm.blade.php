@@ -1,13 +1,56 @@
-@extends('frontend.bprstaja.layout.main')
+@extends('frontend.bprsms.layout.main')
 
 @section('content')
-    <div class="page-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h2>UMKM</h2>
-                </div>
+    <style>
+        /* Center Filter */
+        #portfolio-flters {
+            padding: 0;
+            margin: 0 auto 30px auto;
+            list-style: none;
+            text-align: center;
+        }
 
+        /* List Item Jadi Button */
+        #portfolio-flters li {
+            cursor: pointer;
+            display: inline-block;
+            padding: 10px 25px;
+            margin: 5px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+            background: #f1f1f1;
+            border-radius: 30px;
+            transition: 0.3s;
+        }
+
+        /* Hover Effect */
+        #portfolio-flters li:hover {
+            background: linear-gradient(45deg, #ff6f00, #ffe203);
+            color: #fff;
+        }
+
+        /* Active Button */
+        #portfolio-flters li.filter-active {
+            background: linear-gradient(45deg, #ff6f00, #ffe203);
+            color: #fff;
+            box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
+        }
+
+        .portfolio-item {
+            padding: 20px;
+        }
+    </style>
+    <div class="breadcumb-area style2 bg-smoke4">
+        <div class="breadcumb-wrapper" data-bg-src="frontend/bprsms/assets/img/bg/breadcumb-bg.jpg">
+            <div class="container">
+                <div class="breadcumb-content">
+                    <h1 class="breadcumb-title">UMKM BPR Baja</h1>
+                    <ul class="breadcumb-menu">
+                        <li><a href="index.html">UMKM</a></li>
+                        <li>UMKM BPR Baja</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -16,10 +59,7 @@
     <!-- Portfolio Start -->
     <div class="portfolio">
         <div class="container">
-            {{-- <div class="section-header text-center">
-            <p>UMKM</p>
-            <h2>UMKM BPRS Taja</h2>
-        </div> --}}
+
             <div class="row">
                 <div class="col-12">
                     <ul id="portfolio-flters">
@@ -97,7 +137,7 @@
                                 </div>
 
                                 <!-- content -->
-                                 <div style="padding:12px; text-align: left;">
+                                <div style="padding:12px; text-align: left;">
 
                                     <!-- title -->
                                     <h5
@@ -140,10 +180,10 @@
                                         style="
                                         display:block;
                                         text-align:center;
-                                        background:#0a6e22;
+                                        background: linear-gradient(45deg, #ff6f00, #ffe203);
                                         color:#fff;
                                         padding:6px;
-                                        border-radius:5px;
+                                        border-radius:20px;
                                         font-size:13px;
                                         text-decoration:none;
                                         font-weight:bold;
@@ -223,7 +263,7 @@
                                 </div>
 
                                 <!-- content -->
-                                    <div style="padding:12px; text-align: left;">
+                                <div style="padding:12px; text-align: left;">
 
                                     <!-- title -->
                                     <h5
@@ -266,10 +306,10 @@
                                         style="
                                         display:block;
                                         text-align:center;
-                                        background:#0a6e22;
+                                        background: linear-gradient(45deg, #ff6f00, #ffe203);
                                         color:#fff;
                                         padding:6px;
-                                        border-radius:5px;
+                                        border-radius:20px;
                                         font-size:13px;
                                         text-decoration:none;
                                         font-weight:bold;
@@ -349,7 +389,7 @@
                                 </div>
 
                                 <!-- content -->
-                                 <div style="padding:12px; text-align: left;">
+                                <div style="padding:12px; text-align: left;">
 
                                     <!-- title -->
                                     <h5
@@ -392,10 +432,10 @@
                                         style="
                                         display:block;
                                         text-align:center;
-                                        background:#0a6e22;
+                                        background: linear-gradient(45deg, #ff6f00, #ffe203);
                                         color:#fff;
                                         padding:6px;
-                                        border-radius:5px;
+                                        border-radius:20px;
                                         font-size:13px;
                                         text-decoration:none;
                                         font-weight:bold;

@@ -1,4 +1,4 @@
-@extends('frontend.bprkotabaru.layout.main')
+@extends('frontend.bprsms.layout.main')
 
 @section('content')
     <style>
@@ -76,7 +76,7 @@
 
         .action-buttons a {
             flex: 1;
-            background: #3b87f9;
+            background: #ff5a1e;
             color: #fff;
             text-align: center;
             padding: 20px;
@@ -120,12 +120,18 @@
             }
         }
     </style>
-    <div class="container-fluid bg-breadcrumb">
-        <div class="bg-breadcrumb-single"></div>
-        <div class="container text-center py-5" style="max-width: 900px;">
-            <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">
-                {{ $kredit->title ?? 'Kredit' }}
-            </h4>
+
+      <div class="breadcumb-area style2 bg-smoke4">
+        <div class="breadcumb-wrapper" data-bg-src="{{asset('frontend/bprsms/assets/img/bg/breadcumb-bg.jpg')}}">
+            <div class="container">
+                <div class="breadcumb-content">
+                    <h1 class="breadcumb-title">  {{ $kredit->title ?? 'Kredit' }}</h1>
+                    <ul class="breadcumb-menu">
+                        <li><a href="index.html">Kredit</a></li>
+                        <li>  {{ $kredit->title ?? 'Kredit' }}</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -159,7 +165,7 @@
             </div>
             <div style="margin-top:30px;">
                 <a href="/formpengajuankredit"
-                    style="display:inline-block; background:#f7c319; color:#fff; padding:12px 30px; border-radius:20px; font-size:16px; font-weight:600;
+                    style="display:inline-block; background:#1a902a; color:#fff; padding:12px 30px; border-radius:20px; font-size:16px; font-weight:600;
                     text-decoration:none;cursor:pointer;">
                     AJUKAN
                 </a>

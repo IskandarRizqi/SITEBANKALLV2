@@ -1,4 +1,4 @@
-@extends('frontend.bprdatagita.layout.main')
+@extends('frontend.bprsms.layout.main')
 
 @section('content')
     <style>
@@ -28,21 +28,6 @@
             }
         }
 
-        /* Responsive Running Text */
-        .running-text {
-            color: rgb(250, 109, 109);
-          
-            font-weight: bold;
-            padding-right: 80px;
-            white-space: nowrap;
-        }
-
-        @media(max-width:768px) {
-            .running-text {
-                font-size: 28px;
-                padding-right: 40px;
-            }
-        }
 
         .btn-tab {
             border: none;
@@ -56,13 +41,13 @@
         }
 
         .btn-tab.active {
-            background: #9c2b33;
+            background: #091098;
             color: #fff;
             box-shadow: 0 4px 10px rgba(0, 0, 0, .15);
         }
 
         .btn-tab:hover {
-            background: #9c2b33;
+            background: #091098;
             color: #fff;
         }
 
@@ -98,8 +83,8 @@
 
         .custom-pagination .page-item.active .page-link {
             background-color: transparent;
-            border: 2px solid #f26c4f;
-            color: #f26c4f;
+            border: 2px solid #091098;
+            color: #091098;
             font-weight: bold;
         }
 
@@ -109,7 +94,7 @@
         }
 
         .custom-pagination .page-item:not(.active) .page-link:hover {
-            background-color: #f26c4f;
+            background-color: #091098;
         }
 
         .tab-wrapper {
@@ -139,20 +124,31 @@
                 min-width: 120px;
             }
         }
+
+        .btn-birutua {
+            background-color: #091098;
+            border-color: #091098;
+            color: #fff;
+        }
+
+        .btn-birutua:hover {
+            background-color: #091098;
+            border-color: #091098;
+        }
+    
     </style>
 
-    <div style="width:100%; overflow:hidden; margin-top:100px;">
-        <img src="{{ asset('frontend/bprrudo/assets/img/profil/laporan.png') }}" style="object-fit: fill; height: auto;" alt="Banner"
-            class="banner-img">
-    </div>
-
-    <div style="width:100%; overflow:hidden; white-space:nowrap; position:relative; padding:10px 0; ">
-        <div
-            style="display:flex; width:max-content; font-family:'Open Sans', sans-serif; animation:marquee 90s linear infinite;">
-            <span class="running-text" style="font-family:'Open Sans', sans-serif; font-size:40px; font-style:italic;">
-                SUKSES BERSAMA NASABAH - SUKSES BERSAMA NASABAH - SUKSES BERSAMA NASABAH -  SUKSES BERSAMA NASABAH - SUKSES BERSAMA NASABAH -
-                SUKSES BERSAMA NASABAH - SUKSES BERSAMA NASABAH - SUKSES BERSAMA NASABAH - SUKSES BERSAMA NASABAH - SUKSES BERSAMA NASABAH -
-            </span>
+    <div class="breadcumb-area style2 bg-smoke4">
+        <div class="breadcumb-wrapper" data-bg-src="frontend/bprsms/assets/img/bg/breadcumb-bg.jpg">
+            <div class="container">
+                <div class="breadcumb-content">
+                    <h1 class="breadcumb-title">Laporan BPR Baja</h1>
+                    <ul class="breadcumb-menu">
+                        <li><a href="index.html">Laporan</a></li>
+                        <li>Laporan BPR Baja</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -174,23 +170,24 @@
                     <div class="row readContent">
                         <div class="col-lg-12 mt-3 mb-3">
                             <!-- Laporan Publikasi -->
-                            @if(isset($publikasi) && count($publikasi) > 0)
+                            @if (isset($publikasi) && count($publikasi) > 0)
                                 <h4 class="text-center mb-4">Laporan Publikasi</h4>
                                 <div class="row d-flex justify-content-center">
                                     @foreach ($publikasi as $tahun => $laporanTahun)
                                         <div class="col-lg-4 mt-3 mb-3">
                                             <div class="card h-100 text-center border-0 shadow">
                                                 <img src="/recfil?display=true&rf={{ $laporanTahun->first()->thumbnail }}"
-                                                    alt="Laporan Publikasi {{ $tahun }}" class="card-img-top rounded-3"
+                                                    alt="Laporan Publikasi {{ $tahun }}"
+                                                    class="card-img-top rounded-3"
                                                     style="width: 200px; height: 280px; object-fit: cover; margin: 0 auto;">
                                                 <div class="card-body">
-                                                    <h6  class="fw-bold" style="margin-bottom:5px;" alt>Laporan Publikasi
+                                                    <h6 class="fw-bold" style="margin-bottom:5px;" alt>Laporan Publikasi
                                                         {{ $tahun }}</h6>
                                                     <br>
                                                     <div class="d-grid gap-2">
                                                         @foreach ($laporanTahun->groupBy('triwulan') as $triwulan => $items)
                                                             <a href="/recfil?display=true&rf={{ $items->first()->url }}"
-                                                                target="_blank" class="btn btn-danger text-white fw-bold">
+                                                                target="_blank" class="btn btn-birutua text-white fw-bold">
                                                                 {{ $triwulan }}
                                                             </a>
                                                         @endforeach
@@ -203,7 +200,7 @@
                             @endif
 
                             <!-- Laporan Tahunan -->
-                            @if(isset($tahunan) && count($tahunan) > 0)
+                            @if (isset($tahunan) && count($tahunan) > 0)
                                 <h4 class="text-center mb-4 mt-5">Laporan Tahunan</h4>
                                 <div class="row d-flex justify-content-center">
                                     @foreach ($tahunan as $item)
@@ -216,7 +213,7 @@
                                                     <h6 class="fw-bold" style="margin-bottom: 10px;">
                                                         {{ strtoupper($item->title) }}</h6>
                                                     <a href="/recfil?display=true&rf={{ $item->url }}" target="_blank"
-                                                        class="btn btn-danger text-white fw-bold px-4">
+                                                        class="btn btn-birutua text-white fw-bold px-4">
                                                         Download
                                                     </a>
                                                 </div>
@@ -227,7 +224,7 @@
                             @endif
 
                             <!-- Laporan GCG -->
-                            @if(isset($tatakelola) && count($tatakelola) > 0)
+                            @if (isset($tatakelola) && count($tatakelola) > 0)
                                 <h4 class="text-center mb-4 mt-5">Laporan GCG</h4>
                                 <div class="row d-flex justify-content-center">
                                     @foreach ($tatakelola as $item)
@@ -240,7 +237,7 @@
                                                     <h6 class="fw-bold" style="margin-bottom: 10px;">
                                                         {{ strtoupper($item->title) }}</h6>
                                                     <a href="/recfil?display=true&rf={{ $item->url }}" target="_blank"
-                                                        class="btn btn-danger text-white fw-bold px-4">
+                                                        class="btn btn-birutua text-white fw-bold px-4">
                                                         Download
                                                     </a>
                                                 </div>
@@ -251,7 +248,7 @@
                             @endif
 
                             <!-- Laporan AKB -->
-                            @if(isset($akb) && count($akb) > 0)
+                            @if (isset($akb) && count($akb) > 0)
                                 <h4 class="text-center mb-4 mt-5">Laporan AKB</h4>
                                 <div class="row d-flex justify-content-center">
                                     @foreach ($akb as $item)
@@ -264,7 +261,7 @@
                                                     <h6 class="fw-bold" style="margin-bottom: 10px;">
                                                         {{ strtoupper($item->title) }}</h6>
                                                     <a href="/recfil?display=true&rf={{ $item->url }}" target="_blank"
-                                                        class="btn btn-danger text-white fw-bold px-4">
+                                                        class="btn btn-birutua text-white fw-bold px-4">
                                                         Download
                                                     </a>
                                                 </div>
@@ -274,8 +271,8 @@
                                 </div>
                             @endif
 
-                             <!-- Laporan Lainnya -->
-                             @if(isset($lainnya) && count($lainnya) > 0)
+                            <!-- Laporan Lainnya -->
+                            @if (isset($lainnya) && count($lainnya) > 0)
                                 <h4 class="text-center mb-4 mt-5">Laporan Lainnya</h4>
                                 <div class="row d-flex justify-content-center">
                                     @foreach ($lainnya as $item)
@@ -288,7 +285,7 @@
                                                     <h6 class="fw-bold" style="margin-bottom: 10px;">
                                                         {{ strtoupper($item->title) }}</h6>
                                                     <a href="/recfil?display=true&rf={{ $item->url }}" target="_blank"
-                                                        class="btn btn-danger text-white fw-bold px-4">
+                                                        class="btn btn-birutua text-white fw-bold px-4">
                                                         Download
                                                     </a>
                                                 </div>
@@ -307,22 +304,24 @@
                 <div id="superParentContainer" class="container pb-3" style="margin-top:40px;">
                     <div class="row readContent">
                         <div class="col-lg-12 mt-3 mb-3">
-                            @if(isset($publikasi) && count($publikasi) > 0)
+                            @if (isset($publikasi) && count($publikasi) > 0)
                                 <div class="row d-flex justify-content-center">
                                     @foreach ($publikasi as $tahun => $laporanTahun)
                                         <div class="col-lg-4 mt-3 mb-3">
                                             <div class="card h-100 text-center border-0 shadow">
                                                 <img src="/recfil?display=true&rf={{ $laporanTahun->first()->thumbnail }}"
-                                                    alt="Laporan Publikasi {{ $tahun }}" class="card-img-top rounded-3"
+                                                    alt="Laporan Publikasi {{ $tahun }}"
+                                                    class="card-img-top rounded-3"
                                                     style="width: 200px; height: 280px; object-fit: cover; margin: 0 auto;">
                                                 <div class="card-body">
-                                                    <h6  class="fw-bold" style="margin-bottom:5px;" alt>Laporan Publikasi
+                                                    <h6 class="fw-bold" style="margin-bottom:5px;" alt>Laporan Publikasi
                                                         {{ $tahun }}</h6>
                                                     <br>
                                                     <div class="d-grid gap-2">
                                                         @foreach ($laporanTahun->groupBy('triwulan') as $triwulan => $items)
                                                             <a href="/recfil?display=true&rf={{ $items->first()->url }}"
-                                                                target="_blank" class="btn btn-danger text-white fw-bold">
+                                                                target="_blank"
+                                                                class="btn btn-birutua text-white fw-bold">
                                                                 {{ $triwulan }}
                                                             </a>
                                                         @endforeach
@@ -347,7 +346,7 @@
                 <div id="superParentContainer" class="container pb-3" style="margin-top:40px;">
                     <div class="row readContent">
                         <div class="col-lg-12 mt-3 mb-3">
-                            @if(isset($tahunan) && count($tahunan) > 0)
+                            @if (isset($tahunan) && count($tahunan) > 0)
                                 <div class="row d-flex justify-content-center">
                                     @foreach ($tahunan as $item)
                                         <div class="col-lg-4 col-md-6 mb-4">
@@ -359,7 +358,7 @@
                                                     <h6 class="fw-bold" style="margin-bottom: 10px;">
                                                         {{ strtoupper($item->title) }}</h6>
                                                     <a href="/recfil?display=true&rf={{ $item->url }}" target="_blank"
-                                                        class="btn btn-danger text-white fw-bold px-4">
+                                                        class="btn btn-birutua text-white fw-bold px-4">
                                                         Download
                                                     </a>
                                                 </div>
@@ -382,7 +381,7 @@
                 <div id="superParentContainer" class="container pb-3" style="margin-top:40px;">
                     <div class="row readContent">
                         <div class="col-lg-12 mt-3 mb-3">
-                            @if(isset($tatakelola) && count($tatakelola) > 0)
+                            @if (isset($tatakelola) && count($tatakelola) > 0)
                                 <div class="row d-flex justify-content-center">
                                     @foreach ($tatakelola as $item)
                                         <div class="col-lg-4 col-md-6 mb-4">
@@ -394,7 +393,7 @@
                                                     <h6 class="fw-bold" style="margin-bottom: 10px;">
                                                         {{ strtoupper($item->title) }}</h6>
                                                     <a href="/recfil?display=true&rf={{ $item->url }}" target="_blank"
-                                                        class="btn btn-danger text-white fw-bold px-4">
+                                                        class="btn btn-birutua text-white fw-bold px-4">
                                                         Download
                                                     </a>
                                                 </div>
@@ -417,7 +416,7 @@
                 <div id="superParentContainer" class="container pb-3" style="margin-top:40px;">
                     <div class="row readContent">
                         <div class="col-lg-12 mt-3 mb-3">
-                            @if(isset($akb) && count($akb) > 0)
+                            @if (isset($akb) && count($akb) > 0)
                                 <div class="row d-flex justify-content-center">
                                     @foreach ($akb as $item)
                                         <div class="col-lg-4 col-md-6 mb-4">
@@ -429,7 +428,7 @@
                                                     <h6 class="fw-bold" style="margin-bottom: 10px;">
                                                         {{ strtoupper($item->title) }}</h6>
                                                     <a href="/recfil?display=true&rf={{ $item->url }}" target="_blank"
-                                                        class="btn btn-danger text-white fw-bold px-4">
+                                                        class="btn btn-birutua text-white fw-bold px-4">
                                                         Download
                                                     </a>
                                                 </div>
@@ -448,11 +447,11 @@
             </div>
 
             {{-- LAPORAN LAINNYA --}}
-             <div class="row tab-content d-none" id="lainnya">
+            <div class="row tab-content d-none" id="lainnya">
                 <div id="superParentContainer" class="container pb-3" style="margin-top:40px;">
                     <div class="row readContent">
                         <div class="col-lg-12 mt-3 mb-3">
-                            @if(isset($lainnya) && count($lainnya) > 0)
+                            @if (isset($lainnya) && count($lainnya) > 0)
                                 <div class="row d-flex justify-content-center">
                                     @foreach ($lainnya as $item)
                                         <div class="col-lg-4 col-md-6 mb-4">
@@ -464,7 +463,7 @@
                                                     <h6 class="fw-bold" style="margin-bottom: 10px;">
                                                         {{ strtoupper($item->title) }}</h6>
                                                     <a href="/recfil?display=true&rf={{ $item->url }}" target="_blank"
-                                                        class="btn btn-danger text-white fw-bold px-4">
+                                                        class="btn btn-birutua text-white fw-bold px-4">
                                                         Download
                                                     </a>
                                                 </div>

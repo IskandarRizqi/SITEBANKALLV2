@@ -19,7 +19,8 @@
                               class="fab fa-facebook-f text-white"></i></a>
                       <a href="#" class="btn btn-red btn-square rounded-circle nav-fill me-3"><i
                               class="fab fa-twitter text-white"></i></a>
-                      <a href="https://www.instagram.com/pt.bprsahabattatatgl/" class="btn btn-red btn-square rounded-circle nav-fill me-3"><i
+                      <a href="https://www.instagram.com/pt.bprsahabattatatgl/"
+                          class="btn btn-red btn-square rounded-circle nav-fill me-3"><i
                               class="fab fa-instagram text-white"></i></a>
                       <a href="#" class="btn btn-red btn-square rounded-circle nav-fill me-0"><i
                               class="fab fa-linkedin-in text-white"></i></a>
@@ -102,6 +103,15 @@
                               <a href="/keberlanjutan"
                                   class="dropdown-item {{ request()->is('keberlanjutan') ? 'active' : '' }}">Laporan
                                   Keberlanjutan</a>
+                              <a href="/akb"
+                                  class="dropdown-item {{ request()->is('akb') ? 'active' : '' }}">Laporan
+                                  AKB</a>
+                              <a href="/piagamaudit"
+                                  class="dropdown-item {{ request()->is('piagamaudit') ? 'active' : '' }}">Laporan
+                                  Piagam Audit Internal</a>
+                              <a href="/laporan-lainnya"
+                                  class="dropdown-item {{ request()->is('laporan-lainnya') ? 'active' : '' }}">Laporan
+                                  Lainnya</a>
 
                           </div>
                       </div>

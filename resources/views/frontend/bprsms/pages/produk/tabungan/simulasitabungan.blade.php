@@ -1,4 +1,4 @@
-@extends('frontend.bprkotabaru.layout.main')
+@extends('frontend.bprsms.layout.main')
 
 @section('content')
     <style>
@@ -22,12 +22,17 @@
         }
     </style>
 
-    <div class="container-fluid bg-breadcrumb">
-        <div class="bg-breadcrumb-single"></div>
-        <div class="container text-center py-5" style="max-width: 900px;">
-            <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">
-                Simulasi Tabungan
-            </h4>
+    <div class="breadcumb-area style2 bg-smoke4">
+        <div class="breadcumb-wrapper" data-bg-src="frontend/bprsms/assets/img/bg/breadcumb-bg.jpg">
+            <div class="container">
+                <div class="breadcumb-content">
+                    <h1 class="breadcumb-title">Simuasi Tabungan</h1>
+                    <ul class="breadcumb-menu">
+                        <li><a href="index.html">Produk</a></li>
+                        <li>Simuasi Tabungan</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -35,7 +40,7 @@
 
     <body class="body tg-heading-subheading animation-style3">
 
-        <div style="width:83%; margin:auto; background:#3b87f9; padding:35px; border-radius:15px; margin-top:50px; margin-bottom: 50px; display:flex; flex-direction:column;"
+        <div style="width:83%; margin:auto;   background: linear-gradient(45deg, #ff5a1e, #ffffff); padding:35px; border-radius:15px; margin-top:50px; margin-bottom: 50px; display:flex; flex-direction:column;"
             class="simulasi-wrapper">
 
             <div class="simulasi-wrapper" style="display:flex;">
@@ -52,8 +57,8 @@
                     <label style="font-size:14px;">Setoran Rata - rata</label>
                     <div
                         style="display:flex; align-items:center; background:white; border-radius:30px;
-                        padding:12px 20px; margin-bottom:18px;">
-                        <span style="color:#19178e; font-weight:bold; margin-right:10px;">Rp.</span>
+                        padding:0 20px; margin-bottom:18px;">
+                        <span style="color:#ff5a1e; font-weight:bold; margin-right:10px;">Rp.</span>
 
                         <input type="text" id="plafon" placeholder="Ketik disini"
                             style="border:none; outline:none; width:100%; font-size:14px;">
@@ -65,10 +70,10 @@
                     <div style="background:white; border-radius:30px; padding:0; margin-bottom:30px;">
 
                         <select name="bunga" id="bunga"
-                            style="width:100%; padding:12px 20px; border-radius:30px;
+                            style="width:100%; padding:0 20px; border-radius:30px;
                             border:none; outline:none; font-size:14px;
                             appearance:none; -webkit-appearance:none; -moz-appearance:none;
-                            background:white url('data:image/svg+xml;utf8,<svg fill=\'%23f71827\' height=\'18\' viewBox=\'0 0 24 24\' width=\'18\' xmlns=\'http://www.w3.org/2f7c319/svg\'><path d=\'M7 10l5 5 5-5z\'/></svg>') 
+                            background:white url('data:image/svg+xml;utf8,<svg fill=\'%23f71827\' height=\'18\' viewBox=\'0 0 24 24\' width=\'18\' xmlns=\'http://www.w3.org/2000/svg\'><path d=\'M7 10l5 5 5-5z\'/></svg>') 
                             no-repeat right 20px center;">
 
                             <option value="">Pilih Produk</option>
@@ -91,14 +96,14 @@
                         class="simulasi-buttons">
 
                         <button id="btnReset"
-                            style="width:40%; padding:12px; border-radius:30px; background:#f7c319;
+                            style="width:40%; padding:12px; border-radius:30px; background:#ff5a1e;
                         border:none; color:white; font-size:14px;">
                             Reset
                         </button>
 
                         <button id="btnHitung"
                             style="width:55%; padding:12px; border-radius:30px; background:white;
-                        border:none; color:#f7c319; font-weight:bold; font-size:14px;">
+                        border:none; color:#000; font-weight:bold; font-size:14px;">
                             Hitung
                         </button>
 
@@ -120,11 +125,11 @@
 
             <div id="hasilSimulasiContainer" style="width:100%; margin-top:30px; display:none;">
                 <div style="background:white; border-radius:10px; padding:20px; box-shadow:0 4px 8px rgba(0,0,0,0.1);">
-                    <h4 style="color:#f7c319; margin-bottom:20px; text-align:center;">Hasil Simulasi Tabungan</h4>
+                    <h4 style="color:#000; margin-bottom:20px; text-align:center;">Hasil Simulasi Tabungan</h4>
                     <div style="display: flex; justify-content: space-between; margin-bottom: 15px;">
                         <div style="width: 48%;">
                             <h5 style="color:#333; margin-bottom:5px;font-size:16px; ">Bunga + Saldo Tabungan</h5>
-                            <p id="saldoKalehBunga" style="font-size: 15px; font-weight: bold; color:#f7c319;">Rp 0</p>
+                            <p id="saldoKalehBunga" style="font-size: 15px; font-weight: bold; color:#000;">Rp 0</p>
                         </div>
                         <div style="width: 48%;">
                             <h5 style="color:#333; margin-bottom:5px;font-size:16px;">Saldo Tanpa Bunga</h5>

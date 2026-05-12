@@ -17,8 +17,8 @@ return new class extends Migration
             $table->integer('urutan')->default(0);
             $table->json('tag')->nullable();
             $table->text('kategori')->nullable();
-            $table->text('title')->unique();
-            $table->text('slug')->unique();
+            $table->text('title')->nullable();
+            $table->text('slug')->nullable();
             $table->text('banner')->nullable();
             $table->text('thumbnail')->nullable();
             $table->longText('content')->nullable();

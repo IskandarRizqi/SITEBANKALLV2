@@ -1,4 +1,4 @@
-@extends('frontend.bprkotabaru.layout.main')
+@extends('frontend.bprsms.layout.main')
 
 @section('content')
     <style>
@@ -11,7 +11,7 @@
         }
 
         .auction-card:hover {
-            background: #3b87f9;
+           background: linear-gradient(45deg, #ff5a1e, #ffffff);
             /* biru */
             color: #fff !important;
             transform: translateY(-5px);
@@ -23,8 +23,8 @@
         }
 
         .auction-card:hover .btn {
-            background: #f7c319 !important;
-            border-color: #f7c319 !important;
+            background: #441bff !important;
+            border-color: #441bff !important;
             color: #fff !important;
         }
 
@@ -65,19 +65,24 @@
             left: 0;
             margin: 8px;
             padding: 4px 8px;
-            background: red;
+            background: rgb(63, 36, 237);
             color: white;
             border-radius: 6px;
             font-size: 12px;
         }
     </style>
 
-    <div class="container-fluid bg-breadcrumb">
-        <div class="bg-breadcrumb-single"></div>
-        <div class="container text-center py-5" style="max-width: 900px;">
-            <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">
-                Lelang
-            </h4>
+    <div class="breadcumb-area style2 bg-smoke4">
+        <div class="breadcumb-wrapper" data-bg-src="frontend/bprsms/assets/img/bg/breadcumb-bg.jpg">
+            <div class="container">
+                <div class="breadcumb-content">
+                    <h1 class="breadcumb-title">Lelang</h1>
+                    <ul class="breadcumb-menu">
+                        <li><a href="index.html">Profil</a></li>
+                        <li>Lelang</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -127,9 +132,9 @@
 
                                                     <div class="d-flex justify-content-between small mb-2">
                                                         <span>Nilai Limit<br><strong
-                                                                class="text-danger">Rp.{{ number_format($item->limit, 0, ',', '.') }}</strong></span>
+                                                                class="text-muted">Rp.{{ number_format($item->limit, 0, ',', '.') }}</strong></span>
                                                         <span >Uang
-                                                            Jaminan<br><strong class="text-danger">Rp.{{ number_format($item->jaminan, 0, ',', '.') }}</strong></span>
+                                                            Jaminan<br><strong class="text-muted">Rp.{{ number_format($item->jaminan, 0, ',', '.') }}</strong></span>
                                                     </div>
 
                                                     <p class="small mb-2">{{ $item->deskripsi }}</p>
@@ -137,7 +142,7 @@
                                                         Batas Akhir Setor Uang
                                                         Jaminan<br>{{ \Carbon\Carbon::parse($item->selesai)->format('d-m-Y') }}
                                                     </p>
-                                                    <span class="btn btn-sm btn-success w-100 fw-bold">OPEN
+                                                    <span class="btn btn-sm w-100 fw-bold" style="background-color: #ff5a1e">OPEN
                                                         BIDDING</span>
                                                 </div>
                                             </div>

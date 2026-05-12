@@ -8,6 +8,15 @@ use Illuminate\Http\Request;
 
 class ProfileController extends Controller
 {
+     public function profile() {
+        
+        $data['profil'] = ProfileModel::where('type', 0)
+        ->first();
+
+        return view(ENV('GLOBAL_PROFILE'), $data);
+        
+    }
+
     public function sejarah() {
         
         $data['sejarah'] = ProfileModel::where('type', 1)

@@ -16,8 +16,8 @@ return new class extends Migration
             $table->integer('type')->default(0)->description('0:publikasi; 1:gcg; 2:tahunan; 3:keberlanjutan;');
             $table->date('tanggal');
             $table->text('title');
-            $table->text('thumbnail');
-            $table->text('url');
+            $table->text('thumbnail')->nullable();
+            $table->text('url')->nullable();
             $table->bigInteger('created_by')->nullable();
             $table->bigInteger('updated_by')->nullable();
             $table->timestamps();

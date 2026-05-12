@@ -1,30 +1,36 @@
+
 <head>
-        <meta charset="utf-8">
-        <title>BPR Kota Baru</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="" name="keywords">
-        <meta content="" name="description">
-
-        <!-- Google Web Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com/">
-        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&amp;family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"> 
-
-        <link href="{{asset('frontend/bprkotabaru/img/logo/ico.png')}}" rel="icon">
-        <!-- Icon Font Stylesheet -->
-        <link rel="stylesheet" href="{{asset('frontend/bprkotabaru/use.fontawesome.com/releases/v5.15.4/css/all.css')}}"/>
-        <link href="{{asset('frontend/bprkotabaru/img/logo/ico.png')}}" rel="stylesheet">
-
-        <!-- Libraries Stylesheet -->
-        <link rel="stylesheet" href="{{asset('frontend/bprkotabaru/cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css')}}"/>
-        <link href="{{asset('frontend/bprkotabaru/lib/animate/animate.min.css')}}" rel="stylesheet">
-        <link href="{{asset('frontend/bprkotabaru/lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
-        <link href="{{asset('frontend/bprkotabaru/lib/lightbox/css/lightbox.min.css')}}" rel="stylesheet">
-
-
-        <!-- Customized Bootstrap Stylesheet -->
-        <link href="{{asset('frontend/bprkotabaru/css/bootstrap.min.css')}}" rel="stylesheet">
-
-        <!-- Template Stylesheet -->
-        <link href="{{asset('frontend/bprkotabaru/css/style.css')}}" rel="stylesheet">
-    </head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>BPR SMS</title>
+    <meta name="author" content="Atek">
+    <meta name="description" content="PT. BPR Sinar Mitra Sejahtera">
+    <meta name="keywords" content="PT. BPR Sinar Mitra Sejahtera">
+    <meta name="robots" content="INDEX,FOLLOW">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="57x57" href="{{asset('frontend/bprsms/assets/img/logo/ico.png')}}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{asset('frontend/bprsms/assets/img/logo/ico.png')}}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{asset('frontend/bprsms/assets/img/logo/ico.png')}}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{asset('frontend/bprsms/assets/img/logo/ico.png')}}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{asset('frontend/bprsms/assets/img/logo/ico.png')}}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{asset('frontend/bprsms/assets/img/logo/ico.png')}}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{asset('frontend/bprsms/assets/img/logo/ico.png')}}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{asset('frontend/bprsms/assets/img/logo/ico.png')}}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{asset('frontend/bprsms/assets/img/logo/ico.png')}}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{asset('frontend/bprsms/assets/img/logo/ico.png')}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{asset('frontend/bprsms/assets/img/logo/ico.png')}}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{{asset('frontend/bprsms/assets/img/logo/ico.png')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{asset('frontend/bprsms/assets/img/logo/ico.png')}}">
+    <link rel="manifest" href="{{asset('frontend/bprsms/assets/img/favicons/manifest.json')}}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="{{asset('frontend/bprsms/assets/img/favicons/ms-icon-144x144.png')}}">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('frontend/bprsms/assets/css/app.min.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/bprsms/assets/css/fontawesome.min.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/bprsms/assets/css/style.css')}}">
+</head>

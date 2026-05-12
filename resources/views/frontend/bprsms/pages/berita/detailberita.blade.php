@@ -1,4 +1,4 @@
-@extends('frontend.bprkotabaru.layout.main')
+@extends('frontend.bprsms.layout.main')
 
 @section('content')
     <style>
@@ -174,75 +174,118 @@
             margin-bottom: 30px;
         }
     </style>
-    <div class="container-fluid bg-breadcrumb">
-        <div class="bg-breadcrumb-single"></div>
-        <div class="container text-center py-5" style="max-width: 900px;">
-            <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">
-                Detail Berita
-            </h4>
-        </div>
-    </div>
-    <!-- Single Post Start-->
-    <div class="single">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8" style="margin-top: 50px;">
-                    <div class="single-content wow fadeInUp">
-                        <!-- Dynamic Article Image -->
-                        <img src="/recfil?display=true&rf={{ $berita->banner }}" alt="{{ $berita->title }}"
-                            style="width: 100%; height: auto; border-radius: 5px; margin-bottom: 20px;" />
 
-                        <!-- Article Meta Data -->
-                        <div class="article-meta" style="margin-bottom: 15px; color: #6c757d; font-size: 14px;">
-                            <span>
-                                <i class="fa fa-calendar"></i>
-                                {{ \Carbon\Carbon::parse($berita->tanggal_tampil)->translatedFormat('d F Y') }}
-                            </span>
-                            <span style="margin-left: 15px;">
-                                <i class="fa fa-tag"></i>
-                                {{ implode(', ', json_decode($berita->tag, true) ?? []) }}
-                            </span>
-                        </div>
-
-                        <!-- Dynamic Article Title -->
-                        <h2>{{ $berita->title }}</h2>
-
-                        <!-- Dynamic Article Content -->
-                        <div class="event-content">
-                            {!! $berita->content !!}
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="sidebar">
-
-
-                        <div class="sidebar-widget wow fadeInUp">
-                            <h2 class="widget-title">Berita Lain</h2>
-                            <div class="recent-post">
-                                @foreach ($other_beritaall as $item)
-                                    <div class="post-item">
-                                        <div class="post-img">
-                                            <img src="/recfil?display=true&rf={{ $item->thumbnail }}"
-                                                alt="{{ $item->title }}" />
-                                        </div>
-                                        <div class="post-text">
-                                            <a href="{{ route('detberita', $item->id) }}"
-                                                class="text-truncate-2">{{ $item->title }}</a>
-                                            <div class="post-meta">
-                                                <p style="color: #000; font-size: 12px;">
-                                                    {{ \Carbon\Carbon::parse($item->tanggal_tampil)->format('d F Y') }}</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                @endforeach
-                            </div>
-                        </div>
-                    </div>
+    <div class="breadcumb-area style2 bg-smoke4">
+        <div class="breadcumb-wrapper" data-bg-src="{{ asset('frontend/bprsms/assets/img/bg/breadcumb-bg.jpg') }}">
+            <div class="container">
+                <div class="breadcumb-content">
+                    <h1 class="breadcumb-title">Detail informasi</h1>
+                    <ul class="breadcumb-menu">
+                        <li><a href="index.html">Informasi</a></li>
+                        <li>Detail informasi</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Single Post End-->
+    <section class="th-blog-wrapper blog-details space-top space-extra-bottom">
+        <div class="container">
+            <div class="row">
+
+                <!-- CONTENT -->
+                <div class="col-xxl-8 col-lg-7">
+                    <div class="th-blog blog-single">
+
+                        <div class="blog-img">
+                            <img src="/recfil?display=true&rf={{ $berita->banner }}" alt="{{ $berita->title }}">
+                        </div>
+
+                        <div class="blog-content">
+
+                            <div class="blog-meta">
+
+                                <a class="author" href="#">
+                                    <i class="fa-light fa-user"></i>
+                                    {{ $berita->kategori ?? 'Informasi' }}
+                                </a>
+
+                                <a href="#">
+                                    <i class="fa-regular fa-calendar"></i>
+                                    {{ \Carbon\Carbon::parse($berita->tanggal_tampil)->translatedFormat('d F Y') }}
+                                </a>
+
+                                @if (!empty($berita->tag))
+                                    <a href="#">
+                                        <i class="fa fa-tag"></i>
+                                        {{ implode(', ', json_decode($berita->tag, true) ?? []) }}
+                                    </a>
+                                @endif
+
+                            </div>
+
+                            <h2 class="blog-title">
+                                {{ $berita->title }}
+                            </h2>
+
+                            <div class="blog-text">
+                                {!! $berita->content !!}
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- SIDEBAR -->
+                <div class="col-xxl-4 col-lg-5">
+                    <aside class="sidebar-area">
+
+                        <div class="widget">
+                            <h3 class="widget_title">Berita Lain</h3>
+
+                            <div class="recent-post-wrap">
+
+                                @foreach ($other_beritaall as $item)
+                                    <div class="recent-post">
+
+                                        <div class="media-img">
+                                            <a href="{{ route('detberita', $item->id) }}">
+                                                <img src="/recfil?display=true&rf={{ $item->thumbnail }}"
+                                                    alt="{{ $item->title }}">
+                                            </a>
+                                        </div>
+
+                                        <div class="media-body">
+
+                                            <div class="recent-post-meta">
+                                                <a href="#">
+                                                    <i class="fa-solid fa-calendar-days"></i>
+                                                    {{ \Carbon\Carbon::parse($item->tanggal_tampil)->format('d M Y') }}
+                                                </a>
+                                            </div>
+
+                                            <h4 class="post-title">
+                                                <a class="text-inherit" href="{{ route('detberita', $item->id) }}">
+
+                                                    {{ $item->title }}
+
+                                                </a>
+                                            </h4>
+
+                                        </div>
+
+                                    </div>
+                                @endforeach
+
+                            </div>
+
+                        </div>
+
+                    </aside>
+                </div>
+
+            </div>
+        </div>
+    </section>
 @endsection

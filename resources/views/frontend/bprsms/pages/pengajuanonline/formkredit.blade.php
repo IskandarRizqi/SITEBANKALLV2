@@ -1,4 +1,4 @@
-@extends('frontend.bprkotabaru.layout.main')
+@extends('frontend.bprsms.layout.main')
 
 @section('content')
     <style>
@@ -41,19 +41,24 @@
             all: revert;
         }
     </style>
-   <div class="container-fluid bg-breadcrumb">
-        <div class="bg-breadcrumb-single"></div>
-        <div class="container text-center py-5" style="max-width: 900px;">
-            <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">
-                Form Pengajuan Kredit
-            </h4>
+  <div class="breadcumb-area style2 bg-smoke4">
+        <div class="breadcumb-wrapper" data-bg-src="frontend/bprsms/assets/img/bg/breadcumb-bg.jpg">
+            <div class="container">
+                <div class="breadcumb-content">
+                    <h1 class="breadcumb-title">Form Pengajuan Kredit</h1>
+                    <ul class="breadcumb-menu">
+                        <li><a href="index.html">Beranda</a></li>
+                        <li>Form Pengajuan Kredit</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 
     <div class="job-wrapper" style="max-width:1150px;margin:0px auto 40px;font-family:'Open Sans',sans-serif;color:#333;">
 
         <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
-            <a href="javascript:history.back()" style="text-decoration:none;color:#3b87f9;">
+            <a href="javascript:history.back()" style="text-decoration:none;color:#ff5a1e;">
                 <i class="bi bi-arrow-left" style="font-size:26px;font-weight:bold;"></i>
             </a>
           
@@ -78,7 +83,7 @@
 
             <div style="background:#fff;border-radius:10px;padding:30px;box-shadow:0 8px 20px rgba(0,0,0,.08);">
 
-                <h5 style="font-weight:700;color:#3b87f9;margin-bottom:20px;">Data Pemohon</h5>
+                <h5 style="font-weight:700;color:#ff5a1e;margin-bottom:20px;">Data Pemohon</h5>
 
                 <div class="row">
                     <div class="col-lg-6 mb-3">
@@ -138,7 +143,7 @@
                     </div>
                 </div>
 
-                <h5 style="font-weight:700;color:#1578f1;margin:25px 0 15px;">Data Pengajuan Kredit</h5>
+                <h5 style="font-weight:700;color:#ff5a1e;margin:25px 0 15px;">Data Pengajuan Kredit</h5>
 
                 <div class="row">
                     <div class="col-lg-6 mb-3">
@@ -192,11 +197,11 @@
                 <div class="row mt-4">
                     <div class="col-lg-6 mb-2">
                         <a href="javascript:history.back()"
-                            style="display:block;width:100%;padding:10px;text-align:center;border:2px solid #f7c319;border-radius:30px;color:#f7c319;font-weight:600;text-decoration:none;">Batal</a>
+                            style="display:block;width:100%;padding:10px;text-align:center;border:2px solid #ff5a1e;border-radius:30px;color:#ff5a1e;font-weight:600;text-decoration:none;">Batal</a>
                     </div>
                     <div class="col-lg-6 mb-2">
                         <button type="submit"
-                            style="width:100%;padding:12px;background:#3b87f9;border:none;border-radius:30px;color:#fff;font-weight:600;">Kirim</button>
+                            style="width:100%;padding:12px;background:#ff5a1e;border:none;border-radius:30px;color:#fff;font-weight:600;">Kirim</button>
                     </div>
                 </div>
 

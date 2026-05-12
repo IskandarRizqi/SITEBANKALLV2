@@ -1,4 +1,4 @@
-@extends('frontend.bprbaja.layout.main')
+@extends('frontend.bprbhaktiriyadi.layout.main')
 
 @section('content')
     <style>
@@ -139,13 +139,13 @@
     </style>
 
     <div class="breadcumb-area style2 bg-smoke4">
-        <div class="breadcumb-wrapper" data-bg-src="frontend/bprbaja/assets/img/bg/breadcumb-bg.jpg">
+        <div class="breadcumb-wrapper" data-bg-src="frontend/bprbhaktiriyadi/assets/img/bg/breadcumb-bg.jpg">
             <div class="container">
                 <div class="breadcumb-content">
-                    <h1 class="breadcumb-title">Laporan BPR Baja</h1>
+                    <h1 class="breadcumb-title">Laporan BPR Bhakti riyadi</h1>
                     <ul class="breadcumb-menu">
                         <li><a href="index.html">Laporan</a></li>
-                        <li>Laporan BPR Baja</li>
+                        <li>Laporan BPR Bhakti riyadi</li>
                     </ul>
                 </div>
             </div>
@@ -160,6 +160,7 @@
                 <button class="btn-tab" onclick="showTab('publikasi', this)">Laporan Publikasi</button>
                 <button class="btn-tab" onclick="showTab('tahunan', this)">Laporan Tahunan</button>
                 <button class="btn-tab" onclick="showTab('gcg', this)">Laporan GCG</button>
+                <button class="btn-tab" onclick="showTab('keberlanjutan', this)">Laporan keberlanjutan</button>
                 <button class="btn-tab" onclick="showTab('akb', this)">Laporan AKB</button>
                 <button class="btn-tab" onclick="showTab('lainnya', this)">Laporan Lainnya</button>
             </div>
@@ -237,6 +238,34 @@
                                                     <h6 class="fw-bold" style="margin-bottom: 10px;">
                                                         {{ strtoupper($item->title) }}</h6>
                                                     <a href="/recfil?display=true&rf={{ $item->url }}" target="_blank"
+                                                        class="btn btn-birutua text-white fw-bold px-4">
+                                                        Download
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                </div>
+                            @endif
+                            
+                             <!-- Laporan GCG -->
+                            @if (isset($keberlanjutan) && count($keberlanjutan) > 0)
+                                <div class="row d-flex justify-content-center">
+                                    @foreach ($keberlanjutan as $item)
+                                        <div class="col-lg-4 col-md-6 mb-4">
+                                            <div class="card h-100 text-center border-0">
+                                                <img src="/recfil?display=true&rf={{ $item->thumbnail }}"
+                                                    class="card-img-top rounded-3"
+                                                    alt="{{ $item->title }}"
+                                                    style="width: 250px; height: 300px; object-fit: cover; margin: 0 auto;">
+                            
+                                                <div class="card-body">
+                                                    <h6 class="fw-bold" style="margin-bottom: 10px;">
+                                                        {{ strtoupper($item->title) }}
+                                                    </h6>
+                            
+                                                    <a href="/recfil?display=true&rf={{ $item->url }}"
+                                                        target="_blank"
                                                         class="btn btn-birutua text-white fw-bold px-4">
                                                         Download
                                                     </a>
@@ -404,6 +433,40 @@
                             @else
                                 <div class="text-center mt-5 mb-5">
                                     <h5>Belum ada data Laporan GCG</h5>
+                                </div>
+                            @endif
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row tab-content d-none" id="keberlanjutan">
+                <div id="superParentContainer" class="container pb-3" style="margin-top:40px;">
+                    <div class="row readContent">
+                        <div class="col-lg-12 mt-3 mb-3">
+                            @if (isset($keberlanjutan) && count($keberlanjutan) > 0)
+                                <div class="row d-flex justify-content-center">
+                                    @foreach ($keberlanjutan as $item)
+                                        <div class="col-lg-4 col-md-6 mb-4">
+                                            <div class="card h-100 text-center border-0">
+                                                <img src="/recfil?display=true&rf={{ $item->thumbnail }}"
+                                                    class="card-img-top rounded-3" alt="{{ $item->title }}"
+                                                    style="width: 250px; height: 300px; object-fit: cover; margin: 0 auto;">
+                                                <div class="card-body">
+                                                    <h6 class="fw-bold" style="margin-bottom: 10px;">
+                                                        {{ strtoupper($item->title) }}</h6>
+                                                    <a href="/recfil?display=true&rf={{ $item->url }}" target="_blank"
+                                                        class="btn btn-birutua text-white fw-bold px-4">
+                                                        Download
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                </div>
+                            @else
+                                <div class="text-center mt-5 mb-5">
+                                    <h5>Belum ada data Laporan keberlanjutan</h5>
                                 </div>
                             @endif
                         </div>

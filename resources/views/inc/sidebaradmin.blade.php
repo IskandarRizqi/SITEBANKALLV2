@@ -274,13 +274,13 @@
 				<div class="side-menu__title"> UMKM </div>
 			</a>
 		</li>
-			{{-- <li>
-			<a href="/salamprofit/rate-deposito"
-				class="{{Request::is('salamprofit/rate-deposito') ? 'side-menu side-menu--active' : 'side-menu'}}">
+		<li>
+			<a href="/salamprofit/counter-rate"
+				class="{{Request::is('salamprofit/counter-rate') ? 'side-menu side-menu--active' : 'side-menu'}}">
 				<div class="side-menu__icon"> <i data-lucide="file-text"></i> </div>
-				<div class="side-menu__title"> Rate Deposito </div>
+				<div class="side-menu__title"> Counter Rate </div>
 			</a>
-		</li> --}}
+		</li>
 		{{-- <li>
 			<a href="javascript:;" class="side-menu">
 				<div class="side-menu__icon"> <i data-lucide="file-text"></i> </div>

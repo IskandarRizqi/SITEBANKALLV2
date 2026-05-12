@@ -1,11 +1,16 @@
-@extends('frontend.bprkotabaru.layout.main')
+@extends('frontend.bprsms.layout.main')
 
 @section('content')
-    <div class="page-header">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12 text-center">
-                    <h2>Frequently Asked Question ( FAQ )</h2>
+
+     <div class="breadcumb-area style2 bg-smoke4">
+        <div class="breadcumb-wrapper" data-bg-src="frontend/bprsms/assets/img/bg/breadcumb-bg.jpg">
+            <div class="container">
+                <div class="breadcumb-content">
+                    <h1 class="breadcumb-title">Frequently Asked Question ( FAQ )</h1>
+                    <ul class="breadcumb-menu">
+                        <li><a href="index.html">Profil</a></li>
+                        <li>Frequently Asked Question ( FAQ )</li>
+                    </ul>
                 </div>
             </div>
         </div>

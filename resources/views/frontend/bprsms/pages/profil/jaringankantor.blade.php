@@ -1,4 +1,4 @@
-@extends('frontend.bprkotabaru.layout.main')
+@extends('frontend.bprsms.layout.main')
 
 @section('content')
     <style>
@@ -37,20 +37,7 @@
             }
         }
 
-        .running-text {
-            color: rgb(249, 37, 37);
-            font-size: 58px;
-            font-weight: 700;
-            padding-right: 80px;
-            white-space: nowrap;
-        }
-
-        @media(max-width:768px) {
-            .running-text {
-                font-size: 28px;
-                padding-right: 40px;
-            }
-        }
+       
 
         .page-wrap {
             display: flex;
@@ -134,7 +121,7 @@
             top: 50%;
             transform: translateY(-50%);
             background: rgba(255, 255, 255, 0.85);
-            color: #3b87f9;
+            color: #091098;
             border: none;
             border-radius: 50%;
             width: 44px;
@@ -172,7 +159,7 @@
         }
 
         .dot.active {
-            background: #3b87f9;
+            background: #091098;
         }
 
 
@@ -189,28 +176,28 @@
             }
 
             .running-text {
-                font-size: 24px;
+                font-size: 14px;
             }
         }
     </style>
-    <div class="container-fluid bg-breadcrumb">
-        <div class="bg-breadcrumb-single"></div>
-        <div class="container text-center py-5" style="max-width: 900px;">
-            <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">
-                Jaringan Kantor
-            </h4>
+    <div class="breadcumb-area style2 bg-smoke4">
+        <div class="breadcumb-wrapper" data-bg-src="frontend/bprsms/assets/img/bg/breadcumb-bg.jpg">
+            <div class="container">
+                <div class="breadcumb-content">
+                    <h1 class="breadcumb-title">Jaringan Kantor</h1>
+                    <ul class="breadcumb-menu">
+                        <li><a href="index.html">Profil</a></li>
+                        <li>Jaringan Kantor</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
-    {{-- 
-    <div style="width:100%; overflow:hidden; ">
-        <img src="{{ asset('frontend/bprtaruna/assets/img/profil/taruna.jpeg') }}" style="object-fit: fill; height: auto; margin-top: 75px;" alt="Banner"
-            class="banner-img">
-    </div> --}}
 
 
     <div class="page-wrap">
         <div class="slider-box" aria-label="Slider Kantor">
-            {{-- <h2 style="text-align:center; font-weight:700; color:#3b87f9; margin:26px 0 8px;">JARINGAN KANTOR</h2> --}}
+            {{-- <h2 style="text-align:center; font-weight:700; color:#091098; margin:26px 0 8px;">JARINGAN KANTOR</h2> --}}
             <div id="slideViewport" role="list">
                 @php
                     $pusat = $kantor[0] ?? null;
@@ -222,7 +209,7 @@
                     <section class="slide" role="listitem" aria-label="Kantor Pusat" style="padding: 25px 60px">
                         <div class="row">
                             <div class="col-left">
-                                <h3 style="color:#3b87f9; font-size:22px; margin:6px 0 18px;">Kantor Pusat</h3>
+                                <h3 style="color:#091098; font-size:22px; margin:6px 0 18px;">Kantor Pusat</h3>
 
                                 <div class="info-row">
                                     <img src="{{ asset('frontend/bprrudo/assets/img/profil/map.png') }}" alt="icon alamat">
@@ -296,7 +283,7 @@
                     <section class="slide" role="listitem" aria-label="Kantor Cabang" style="padding: 25px 60px">
                         <div class="row">
                             <div class="col-left">
-                                <h3 style="color:#3b87f9; font-size:22px; margin:6px 0 18px;">{{ $cabang->kantor }}</h3>
+                                <h3 style="color:#091098; font-size:22px; margin:6px 0 18px;">{{ $cabang->kantor }}</h3>
 
                                 <div class="info-row">
                                     <img src="{{ asset('frontend/bprrudo/assets/img/profil/map.png') }}" alt="icon alamat">
@@ -372,7 +359,7 @@
                     <section class="slide" role="listitem" aria-label="Kantor Cabang 2" style="padding: 25px 60px">
                         <div class="row">
                             <div class="col-left">
-                                <h3 style="color:#3b87f9; font-size:22px; margin:6px 0 18px;">{{ $kas->kantor }}</h3>
+                                <h3 style="color:#091098; font-size:22px; margin:6px 0 18px;">{{ $kas->kantor }}</h3>
 
                                 <div class="info-row">
                                     <img src="{{ asset('frontend/bprrudo/assets/img/profil/map.png') }}"

@@ -1,0 +1,20 @@
+ <!-- jQuery Frameworks
+    ============================================= -->
+    <script src="{{asset('frontend/bprsulawesi/assets/js/jquery-3.7.1.min.js')}}"></script>
+    <script src="{{asset('frontend/bprsulawesi/assets/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{asset('frontend/bprsulawesi/assets/js/jquery.appear.js')}}"></script>
+    <script src="{{asset('frontend/bprsulawesi/assets/js/jquery.easing.min.js')}}"></script>
+    <script src="{{asset('frontend/bprsulawesi/assets/js/jquery.magnific-popup.min.js')}}"></script>
+    <script src="{{asset('frontend/bprsulawesi/assets/js/owl.carousel.min.js')}}"></script>
+    <script src="{{asset('frontend/bprsulawesi/assets/js/wow.min.js')}}"></script>
+    <script src="{{asset('frontend/bprsulawesi/assets/js/progress-bar.min.js')}}"></script>
+    <script src="{{asset('frontend/bprsulawesi/assets/js/isotope.pkgd.min.js')}}"></script>
+    <script src="{{asset('frontend/bprsulawesi/assets/js/imagesloaded.pkgd.min.js')}}"></script>
+    <script src="{{asset('frontend/bprsulawesi/assets/js/count-to.js')}}"></script>
+    <script src="{{asset('frontend/bprsulawesi/assets/js/jquery.nice-select.min.js')}}"></script>
+    <script src="{{asset('frontend/bprsulawesi/assets/js/YTPlayer.min.js')}}"></script>
+    <script src="{{asset('frontend/bprsulawesi/assets/js/validnavs.js')}}"></script>
+    <script src="{{asset('frontend/bprsulawesi/assets/js/gsap.js')}}"></script>
+    <script src="{{asset('frontend/bprsulawesi/assets/js/ScrollTrigger.min.js')}}"></script>
+    <script src="{{asset('frontend/bprsulawesi/assets/js/SplitText.min.js')}}"></script>
+    <script src="{{asset('frontend/bprsulawesi/assets/js/main.js')}}"></script>
