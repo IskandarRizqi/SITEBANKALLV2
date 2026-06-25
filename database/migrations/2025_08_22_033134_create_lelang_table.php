@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('lelang', function (Blueprint $table) {
+        Schema::create('lelangs', function (Blueprint $table) {
             $table->id();
             $table->integer('type')->default(0)->comment('0:Lelang; 1:Jual Aset;');
             $table->integer('urutan')->default(0);
@@ -46,6 +46,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('lelang');
+        Schema::dropIfExists('lelangs');
     }
 };

@@ -21,4 +21,5 @@
   <link rel="stylesheet" href="{{asset('frontend/bprapm/assets/css/odometer-theme-default.css')}}">
   <link rel="stylesheet" href="{{asset('frontend/bprapm/assets/css/meanmenu.css')}}">
   <link rel="stylesheet" href="{{asset('frontend/bprapm/assets/css/main.css')}}">
+  <link rel="stylesheet" href="{{asset('frontend/bprapm/assets/css/style.css')}}">
 </head>

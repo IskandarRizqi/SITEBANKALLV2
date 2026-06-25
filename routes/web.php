@@ -142,6 +142,12 @@ Route::get('/simulasi-deposito', [\App\Http\Controllers\frontend\ProdukLayananCo
 Route::get('/pengajuanonline', function () {
     return view(ENV('GLOBAL_PENGAJUANONLINE'));
 });
+Route::get('/programmagang', function () {
+    return view(ENV('GLOBAL_MAGANG'));
+});
+Route::get('/newformtabungan', function () {
+    return view('frontend.bprmekar.pages.pengajuanonline.newformtabungan');
+});
 Route::get('/formpengajuankredit', [\App\Http\Controllers\frontend\PengajuanOnlineController::class, 'formpengajuankredit']);
 Route::get('/formpengajuandeposito', [\App\Http\Controllers\frontend\PengajuanOnlineController::class, 'formpengajuandeposito']);
 Route::get('/formpengajuantabungan', [\App\Http\Controllers\frontend\PengajuanOnlineController::class, 'formpengajuantabungan']);
@@ -150,7 +156,10 @@ Route::get('/formkredit/{id}/download', [\App\Http\Controllers\frontend\Pengajua
 Route::get('/formdeposito/{id}/download', [\App\Http\Controllers\frontend\PengajuanOnlineController::class, 'downloadformdeposito'])->name('formdeposito.download');
 Route::get('/formktabungan/{id}/download', [\App\Http\Controllers\frontend\PengajuanOnlineController::class, 'downloadformtabungan'])->name('formtabungan.download');
 
-
+Route::get('/newformpengajuantabungan', [\App\Http\Controllers\frontend\PengajuanOnlineController::class, 'newformpengajuantabungan']);
+Route::post('/pembukaan-rekening/simpan', [\App\Http\Controllers\frontend\PengajuanOnlineController::class, 'savetabungan'])->name('pembukaanrekening.simpan');
+// Route::get('/pembukaan-rekening/download/{id}', [\App\Http\Controllers\frontend\PengajuanOnlineController::class, 'downloadformpembukaanrekening'])->name('download.pembukaanrekening');
+ 
 
 // PENGHARGAAN
 Route::get('/penghargaan', function () {

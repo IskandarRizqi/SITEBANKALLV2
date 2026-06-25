@@ -316,15 +316,14 @@
                                                 <span class="categories"><a
                                                         href="portfolio-details.html">Business</a></span>
                                                 <div class="project-text">
-                                                    <h4 class="title"><a href="portfolio-details.html">Event
-                                                            Management Platform</a></h4>
+                                                    <h3 class="title"><a href="portfolio-details.html">Kredit</a></h3>
                                                     <a class="tji-icon-btn" href="portfolio-details.html">
                                                         <i class="tji-arrow-right-long"></i>
                                                     </a>
                                                 </div>
                                             </div>
                                             <div class="project-img">
-                                                <img src="frontend/bprapm/assets/images/project/project-4.webp"
+                                                <img src="frontend/bprapm/assets/images/product/kredit-icon.jpg"
                                                     alt="Image">
                                             </div>
                                         </div>
@@ -335,16 +334,15 @@
                                                 <span class="categories"><a
                                                         href="portfolio-details.html">Business</a></span>
                                                 <div class="project-text">
-                                                    <h4 class="title"><a href="portfolio-details.html">Rebranding
-                                                            Strategy for a Growing</a>
-                                                    </h4>
+                                                    <h3 class="title"><a href="portfolio-details.html">Deposito</a>
+                                                    </h3>
                                                     <a class="tji-icon-btn" href="portfolio-details.html">
                                                         <i class="tji-arrow-right-long"></i>
                                                     </a>
                                                 </div>
                                             </div>
                                             <div class="project-img">
-                                                <img src="frontend/bprapm/assets/images/project/project-8.webp"
+                                                <img src="frontend/bprapm/assets/images/product/deposito-icon.jpg"
                                                     alt="Image">
                                             </div>
                                         </div>
@@ -355,15 +353,14 @@
                                                 <span class="categories"><a
                                                         href="portfolio-details.html">Business</a></span>
                                                 <div class="project-text">
-                                                    <h4 class="title"><a href="portfolio-details.html">Event
-                                                            Management Platform</a></h4>
+                                                    <h3 class="title"><a href="portfolio-details.html">Tabungan</a></h3>
                                                     <a class="tji-icon-btn" href="portfolio-details.html">
                                                         <i class="tji-arrow-right-long"></i>
                                                     </a>
                                                 </div>
                                             </div>
                                             <div class="project-img">
-                                                <img src="frontend/bprapm/assets/images/project/project-9.webp"
+                                                <img src="frontend/bprapm/assets/images/product/tabungan-icon.jpg"
                                                     alt="Image">
                                             </div>
                                         </div>
@@ -379,7 +376,6 @@
         <!-- end: Project Section -->
 
 
-
         <section class="tj-contact-section h4-contact-section section-gap section-gap-x">
             <div class="container">
                 <div class="row justify-content-center">
@@ -389,18 +385,18 @@
 
                             <div class="sec-heading style-4 text-center mb-4">
                                 <span class="sub-title">
-                                    <i class="tji-box"></i>Video Profile
+                                    <i class="tji-box"></i>Video
                                 </span>
 
                                 <h2 class="sec-title title-anim">
-                                    Company Profile Video
+                                    Arthapuspa Video
                                 </h2>
                             </div>
 
                             <div style="border-radius:20px; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,0.15);">
 
                                 <div class="ratio ratio-16x9">
-                                    <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="YouTube video"
+                                    <iframe src="https://www.youtube.com/embed/F037p6zEgsI" title="YouTube video"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                         allowfullscreen>
                                     </iframe>
@@ -507,6 +503,11 @@
                 </div>
             </div>
         </section>
-
+        <section class="tj-blog-section-4 section-gap" style="padding-top: 0;">
+            <div class="text-center mt-3">
+                <h4>INFORMASI PENJAMINAN LPS</h4>
+                <p>Bank APM merupakan peserta penjaminan LPS. <br>Maksimum nilai simpanan yang dijamin oleh LPS adalah Rp. 2 Miliar per nasabah per bank. <br>Untuk informasi tingkat suku bunga penjamin LPS dapat diakses di <a href="https://apps.lps.go.id/BankPesertaLPSRate" style="color: gray; text-decoration: none;">https://apps.lps.go.id/BankPesertaLPSRate</a></p>
+            </div>
+        </section>
     </div>
 @endsection

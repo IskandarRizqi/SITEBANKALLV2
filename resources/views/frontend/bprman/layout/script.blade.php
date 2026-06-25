@@ -1,0 +1,16 @@
+ <script src="{{asset('frontend/bprman/assets/js/jquery.min.js')}}"></script>
+ <script src="{{asset('frontend/bprman/assets/js/bootstrap.bundle.min.js')}}"></script>
+ <script src="{{asset('frontend/bprman/assets/js/gsap.min.js')}}"></script>
+ <script src="{{asset('frontend/bprman/assets/js/ScrollSmoother.js')}}"></script>
+ <script src="{{asset('frontend/bprman/assets/js/gsap-scroll-to-plugin.min.js')}}"></script>
+ <script src="{{asset('frontend/bprman/assets/js/gsap-scroll-trigger.min.js')}}"></script>
+ <script src="{{asset('frontend/bprman/assets/js/gsap-split-text.min.js')}}"></script>
+ <script src="{{asset('frontend/bprman/assets/js/jquery.nice-select.min.js')}}"></script>
+ <script src="{{asset('frontend/bprman/assets/js/jquery-knob.js')}}"></script>
+ <script src="{{asset('frontend/bprman/assets/js/swiper.min.js')}}"></script>
+ <script src="{{asset('frontend/bprman/assets/js/odometer.min.js')}}"></script>
+ <script src="{{asset('frontend/bprman/assets/js/venobox.min.js')}}"></script>
+ <script src="{{asset('frontend/bprman/assets/js/appear.min.js')}}"></script>
+ <script src="{{asset('frontend/bprman/assets/js/wow.min.js')}}"></script>
+ <script src="{{asset('frontend/bprman/assets/js/meanmenu.js')}}"></script>
+ <script src="{{asset('frontend/bprman/assets/js/main.js')}}"></script>

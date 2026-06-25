@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class ProfileModel extends Model
 {
     use HasFactory, SoftDeletes;
-    protected $table = "profile";
+    protected $table = "profiles";
     protected $fillable = [
         'type',
         'urutan',

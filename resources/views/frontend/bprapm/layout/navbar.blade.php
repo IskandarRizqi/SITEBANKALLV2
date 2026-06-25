@@ -146,7 +146,7 @@
 
                                   <li class="has-dropdown"><a href="#">Tentang Kami</a>
                                       <ul class="sub-menu">
-                                          <li><a href="/profil">Profil</a></li>
+                                          <li><a href="/profile">Profil</a></li>
                                           <li><a href="/sejarah">Sejarah</a></li>
                                           <li><a href="/pengurus">Pengurus</a></li>
                                           <li><a href="/organisasi">Struktur Organisasi</a></li>
@@ -170,14 +170,14 @@
 
                                       </ul>
                                   </li>
-                                  <li><a href="/lelang-jualaset">Lelang</a></li>
+                                  <li><a href="/programmagang">Program Magang</a></li>
                                   <li><a href="/pengajuanonline">Pengajuan Online</a></li>
                               </ul>
                           </nav>
                       </div>
 
                       <!-- header right info -->
-                      <div class="header-right-item d-none d-lg-inline-flex">
+                      <!-- <div class="header-right-item d-none d-lg-inline-flex">
                           
                           <div class="header-button">
                               <a class="tj-primary-btn" href="contact.html">
@@ -190,7 +190,7 @@
                               <span></span>
                               <span></span>
                           </div>
-                      </div>
+                      </div> -->
 
                       <!-- menu bar -->
                       <div class="menu_bar mobile_menu_bar d-lg-none">
@@ -254,7 +254,7 @@
 
                                   <li class="has-dropdown"><a href="#">Tentang Kami</a>
                                       <ul class="sub-menu">
-                                          <li><a href="/profil">Profil</a></li>
+                                          <li><a href="/profile">Profil</a></li>
                                           <li><a href="/sejarah">Sejarah</a></li>
                                           <li><a href="/pengurus">Pengurus</a></li>
                                           <li><a href="/organisasi">Struktur Organisasi</a></li>

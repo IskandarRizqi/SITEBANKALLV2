@@ -832,7 +832,7 @@
                 </div>
             </div>
         </section> --}}
-          @if ($deposito->count() || $tabungan->count() || $kredit->count())
+        @if ($deposito->count() || $tabungan->count() || $kredit->count())
 
         <section class="rate section">
             <div class="container">

@@ -49,7 +49,6 @@
                                             {{ $kantor->kantor }}
                                         </option>
                                     @endforeach
-
                                 </select>
                                 <div id="detailKantor">
                                     <p id="namaKantor" style="font-weight:600; margin-bottom:4px;"></p>
