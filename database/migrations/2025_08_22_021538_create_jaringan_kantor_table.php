@@ -11,18 +11,20 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('jaringan_kantor', function (Blueprint $table) {
-            $table->id();
-            $table->text('kantor');
-            $table->text('latitude')->default('0');
-            $table->text('longitude')->default('0');
-            $table->text('alamat');
-            $table->text('thumbnail')->nullable();
-            $table->bigInteger('created_by')->nullable();
-            $table->bigInteger('updated_by')->nullable();
-            $table->timestamps();
-            $table->softDeletes();
-        });
+        if (!Schema::hasTable('jaringan_kantors')) {
+            Schema::create('jaringan_kantors', function (Blueprint $table) {
+                $table->id();
+                $table->text('kantor');
+                $table->text('latitude')->default('0');
+                $table->text('longitude')->default('0');
+                $table->text('alamat');
+                $table->text('thumbnail')->nullable();
+                $table->bigInteger('created_by')->nullable();
+                $table->bigInteger('updated_by')->nullable();
+                $table->timestamps();
+                $table->softDeletes();
+            });
+        }
     }
 
     /**

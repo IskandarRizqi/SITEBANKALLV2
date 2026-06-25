@@ -11,22 +11,25 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('common_pages', function (Blueprint $table) {
-            $table->id();
-            $table->integer('type')->default(0)->comment('0:Berita; 1:Event; 2:Lainnya');
-            $table->integer('urutan')->default(0);
-            $table->json('tag')->nullable();
-            $table->text('kategori')->nullable();
-            $table->text('title')->unique();
-            $table->text('slug')->unique();
-            $table->text('banner');
-            $table->text('thumbnail')->nullable();
-            $table->longText('content');
-            $table->bigInteger('created_by')->nullable();
-            $table->bigInteger('updated_by')->nullable();
-            $table->timestamps();
-            $table->softDeletes();
-        });
+        if (!Schema::hasTable('common_pages')) {
+            Schema::create('common_pages', function (Blueprint $table) {
+                $table->id();
+                $table->integer('type')->default(0)->comment('0:Berita; 1:Event; 2:Lainnya');
+                $table->integer('urutan')->default(0);
+                $table->json('tag')->nullable();
+                $table->text('kategori')->nullable();
+                // $table->text('title')->unique();
+                $table->text('title')->nullable();
+                $table->text('slug')->unique();
+                $table->text('banner');
+                $table->text('thumbnail')->nullable();
+                $table->longText('content');
+                $table->bigInteger('created_by')->nullable();
+                $table->bigInteger('updated_by')->nullable();
+                $table->timestamps();
+                $table->softDeletes();
+            });
+        }
     }
 
     /**
