@@ -30,4 +30,6 @@ Route::get('/mapikantor', [WebApiController::class, 'getkantor']);
 Route::get('/mapiberita', [WebApiController::class, 'getberita']);
 
 Route::get('/mapiumkm', [WebApiController::class, 'getumkm']);
-
+Route::get('/mapidashboard', [WebApiController::class, 'getdashboardv2']);
+Route::get('/mapiproduk/{jenis}', [WebApiController::class, 'getjenisproduk']);
+Route::post('/formpengajuankredit', [WebApiController::class, 'formpengajuankredit']);

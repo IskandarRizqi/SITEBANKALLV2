@@ -20,6 +20,7 @@ use App\Models\LaporanModel;
 use App\Models\LelangModel;
 use App\Models\MasterPengajuanDepositoModel;
 use App\Models\MasterPengajuanTabunganModel;
+use App\Models\PengajuanModel;
 use App\Models\ProdukLayananModel;
 use App\Models\ProfileModel;
 use App\Models\RekruitmenModel;
@@ -464,6 +465,129 @@ class WebApiController extends Controller
 			'success' => true,
 			'message' => 'Data UMKM berhasil diambil',
 			'umkmitem' => $umkmitem,
+		]);
+	}
+
+	public function getdashboardv2(Request $r)
+	{
+		$data['banners'] = BannerModel::where('type', 0)
+			->where(function ($q) {
+				$q->whereNull('tampil_start')
+					->orWhere('tampil_start', '<=', now());
+			})
+			->where(function ($q) {
+				$q->whereNull('tampil_end')
+					->orWhere('tampil_end', '>=', now());
+			})
+			->where('tampil', 1) // Only show banners that are active
+			->orderBy('created_at', 'desc')
+			->get();
+		$data['product'] = ProdukLayananModel::where('type', 0)
+			// ->orderBy('urutan', 'asc')
+			->orderBy('created_at', 'desc')
+			->get();
+		$data['news'] = CommonPagesModel::where(function ($q) {
+			$q->whereNull('tanggal_tampil')
+				->orWhere('tanggal_tampil', '<=', now());
+		})
+			->where('type', 0) // Filter by type 'berita'
+			->orderBy('tanggal_tampil', 'desc')
+			->limit(3)
+			->get();
+
+		return response()->json([
+			'success' => true,
+			'message' => 'Data berhasil diambil',
+			'data' => $data,
+		]);
+	}
+
+	public function getjenisproduk(Request $r, $jenis)
+	{
+		$j = 0;
+		if ($jenis == 'kredit') {
+			$j = 0;
+		} elseif ($jenis == 'tabungan') {
+			$j = 2;
+		} elseif ($jenis == 'deposito') {
+			$j = 1;
+		}
+
+		$data = ProdukLayananModel::where('type', 0) // Produk: 0, Layanan: 1
+			->where(function ($q) use ($r, $j) {
+				if ($r->id) {
+					return $q->where('id', $r->id);
+				} else {
+					return 	$q->where('kategori', $j); // Kredit: 0, Tabungan: 2, Deposito: 1
+				}
+			})
+			->get();
+
+		return response()->json([
+			'success' => true,
+			'message' => 'Data berhasil diambil',
+			'data' => $data,
+		]);
+	}
+	public function formpengajuankredit(Request $r)
+	{
+		$data = [
+			'no_registrasi' => PengajuanModel::generateNoRegistrasi(),
+			'jenis_pengajuan' =>  '',
+			'nm_lengkap' => $r->nama_lengkap,
+			'no_ktp' => $r->no_ktp,
+			'no_hp' => $r->no_handphone,
+			'email' => $r->email,
+			'pekerjaan' => $r->pekerjaan,
+			'penghasilan' => $r->penghasilan_bulan,
+			'alamat' => $r->alamat_lengkap,
+
+			'jns_kredit' => null,
+			'jml_kredit' => null,
+			'jngka_wkt' => null,
+			'tujuan_kredit' => null,
+
+			'jns_tab' => null,
+			'setor_awal' => null,
+			'sumber_dn' => null,
+			'tujuan_bk_rek' => null,
+
+			'jns_depo' => null,
+			'nmnl_depo' => null,
+			'rek_pencairan' => null,
+			'cat_tmbhn' => null,
+		];
+
+		if ($r->jenis_produk == 'Kredit') {
+			$data['jenis_pengajuan'] = 'kredit';
+			$data['jenis_produk'] = 'kredit';
+			$data['jns_kredit'] = $r->jenis_kredit;
+			$data['jml_kredit'] = $r->jumlah_kredit;
+			$data['jngka_wkt'] = $r->jangka_waktu;
+			$data['tujuan_kredit'] = $r->tujuan_kredit;
+		}
+		if ($r->jenis_produk == 'Tabungan') {
+			$data['jenis_pengajuan'] = 'tabungan';
+			$data['jenis_produk'] = 'tabungan';
+			$data['jns_tab'] = $r->jenis_kredit;
+			$data['setor_awal'] = $r->jumlah_kredit;
+			$data['sumber_dn'] = $r->jangka_waktu;
+			$data['tujuan_bk_rek'] = $r->tujuan_kredit;
+		}
+		if ($r->jenis_produk == 'Deposito') {
+			$data['jenis_pengajuan'] = 'deposito';
+			$data['jenis_produk'] = 'deposito';
+			$data['jns_depo'] = $r->jenis_kredit;
+			$data['nmnl_depo'] = $r->jumlah_kredit;
+			$data['rek_pencairan'] = $r->jangka_waktu;
+			$data['cat_tmbhn'] = $r->tujuan_kredit;
+		}
+
+		PengajuanModel::create($data);
+		return response()->json([
+			'success' => true,
+			'message' => 'Pengajuan berhasil terkirim',
+			'data' => $r->all(),
 		]);
 	}
 }
