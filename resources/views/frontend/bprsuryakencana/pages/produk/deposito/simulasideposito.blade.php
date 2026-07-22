@@ -19,6 +19,10 @@
             list-style: disc !important;
             padding-left: 18px !important;
         }
+        .form-label {
+            font-weight: 600;
+            color: #070707;
+        }
     </style>
 
     <div class="breadcumb-area style2 bg-smoke4">
@@ -52,18 +56,18 @@
                     </h3>
 
 
-                    <label style="font-size:14px;">Plafon</label>
+                    <label style="font-size:14px;" class="form-label">Plafon</label>
                     <div
                         style="display:flex; align-items:center; background:white; border-radius:30px;
                         padding:0 20px; margin-bottom:18px;">
-                        <span style="color:#ff5a1e; font-weight:bold; margin-right:10px;">Rp.</span>
+                        <span style="color: #ff5a1e; font-weight:bold; margin-right:10px;">Rp.</span>
 
                         <input type="text" id="plafon" placeholder="Ketik disini"
                             style="border:none; outline:none; width:100%; font-size:14px;">
                     </div>
 
 
-                    <label style="font-size:14px;">Jangka Waktu</label>
+                    <label style="font-size:14px;" class="form-label">Jangka Waktu</label>
 
                     <div style="background:white; border-radius:30px; padding:0; margin-bottom:30px;">
 
@@ -113,7 +117,7 @@
 
                 <div class="simulasi-right" style="width:45%; display:flex; align-items:center; justify-content:center;"
                     class="simulasi-right">
-                    <img id="gambarProduk" src="frontend/bprdatagita/img/produk/simulasideposito.png"
+                    <img id="gambarProduk" src="frontend/bprsuryakencana/assets/images/simulasi/depo.png"
                         style="width:95%; height: 350px; border-radius:10px; ">
 
                 </div>

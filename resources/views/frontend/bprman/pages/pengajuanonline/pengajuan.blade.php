@@ -1,4 +1,4 @@
-@extends('frontend.bprbahari.layout.main')
+@extends('frontend.bprman.layout.main')
 
 @section('content')
     <style>
@@ -40,19 +40,14 @@
             <div class="row">
                 <div class="col">
                     <div class="pxn_page_header_content" style="text-align: center;">
-                        <h1 class="page_title">Pengajuan Online</h1>
-                        <div class="pxn_breadcrumb">
-                            <span><a href="index.html">Beranda</a></span>
-                            /
-                            <span class="current">Pengajuan Online</span>
-                        </div>
+                        <h2 class="page_title">Pengajuan Online</h2>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="team2 team-page sp" style="padding-top:0px">
-        <div class="container" style="margin-top: 50px">
+        <div class="container">
             <br>
 
             {{-- <h4 style=" text-align:center; color:#e53935; font-weight:600; margin-bottom:20px;">

@@ -12,22 +12,28 @@
               </div>
             </div>
             <div class="row justify-content-between">
-              <div class="col-xl-3 col-md-6">
-                <div class="footer-widget wow fadeInUp" data-wow-delay=".1s">
-                  <h5 class="title mb-2">Jaringan Kantor</h5>
-                  <div class="footer-text">
-                    
-                  </div>
-                  <div class="award-logo-area">
-                    <div class="award-logo">
-                      <img src="assets/images/footer/award-logo-1.webp" alt="">
+              <div class="col-lg-3 col-md-6">
+                    <div class="widget footer-widget">
+                        <h3 class="widget_title">Jaringan Kantor</h3>
+                        <select id="pilihKantor" class="form-select mb-3"
+                            style="background-color:#ffffff; color:#000; text-transform:none;">
+                            @foreach ($kantorglobal as $kantor)
+                                <option value="{{ $kantor->id }}" data-nama="{{ $kantor->kantor }}"
+                                    data-alamat="{{ $kantor->alamat }}" data-telp="{{ $kantor->no_telp }}"
+                                    data-lat="{{ $kantor->latitude }}" data-lng="{{ $kantor->longitude }}"
+                                    {{ strtolower($kantor->kantor) == 'kantor pusat' ? 'selected' : '' }}>
+                                    {{ $kantor->kantor }}
+                                </option>
+                            @endforeach
+                        </select>
+                        <div id="detailKantor">
+                            <p id="namaKantor" style="font-weight:600; margin-bottom:4px;"></p>
+                            <p id="alamatKantor" style="font-size:14px; margin-bottom:4px;"></p>
+                            <p id="telpKantor" style="font-size:14px; margin-bottom:10px;"></p>
+                            <div id="thumbnailContainer"></div>
+                        </div>
                     </div>
-                    <div class="award-logo">
-                      <img src="assets/images/footer/award-logo-2.webp" alt="">
-                    </div>
-                  </div>
                 </div>
-              </div>
               <div class="col-xl-3 col-md-6">
                 <div class="footer-widget footer-col-2 widget-nav-menu wow fadeInUp" data-wow-delay=".3s">
                   <h5 class="title mb-2">Hubungi Kami</h5>
@@ -65,9 +71,9 @@
                 <div class="footer-widget footer-col-3 widget-nav-menu wow fadeInUp" data-wow-delay=".5s">
                   <h5 class="title mb-2">Menu Lainnya</h5>
                   <ul>
-                    <li><a href="#">Karir</a></li>
-                    <li><a href="#">Pengaduan Nasabah</a></li>
-                    <li><a href="#">Laporan</a></li>
+                    <li><a href="/rekrutmen">Karir</a></li>
+                    <!-- <li><a href="#">Pengaduan Nasabah</a></li>
+                    <li><a href="#">Laporan</a></li> -->
                   </ul>
                 </div>
               </div>
@@ -129,3 +135,24 @@
         </div>
       </footer>
       <!-- end: Footer Section -->
+<script>
+        function tampilkanKantor() {
+            let select = document.getElementById('pilihKantor');
+            let selected = select.options[select.selectedIndex];
+    
+            let nama = selected.getAttribute('data-nama');
+            let alamat = selected.getAttribute('data-alamat');
+            let telp = selected.getAttribute('data-telp');
+            let lat = selected.getAttribute('data-lat');
+            let lng = selected.getAttribute('data-lng');
+    
+            document.getElementById('alamatKantor').innerHTML = `<span style="color:#000;">${alamat}</span>`;
+            document.getElementById('telpKantor').innerHTML =
+                `<strong style="color:#000;">Telp : </strong><a href="tel:${telp}" style="color:#000;">${telp}</a>`;
+    
+            let googleLink = `https://www.google.com/maps?q=${lat},${lng}`;
+        }
+    
+        document.getElementById('pilihKantor').addEventListener('change', tampilkanKantor);
+        window.addEventListener('DOMContentLoaded', tampilkanKantor);
+      </script>

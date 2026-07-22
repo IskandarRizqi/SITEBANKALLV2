@@ -129,7 +129,7 @@
                                             <a href="https://antaruang.com/" style="color: #db0b0b"> Antar uang.</a>
                                         </div>
 
-                                        <ul class="pxn_socials_2">
+                                        <ul class="pxn_socials_2" style="display:flex; flex-wrap: nowrap; align-items:center; gap:12px; list-style:none; padding:0; margin:0;">
                                             <li>
                                                 <a class="social" href="https://www.ojk.go.id/Default.aspx"
                                                     target="_blank">

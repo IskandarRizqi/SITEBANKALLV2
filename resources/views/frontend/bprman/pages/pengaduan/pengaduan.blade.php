@@ -1,4 +1,4 @@
-@extends('frontend.bprbahari.layout.main')
+@extends('frontend.bprman.layout.main')
 
 @section('content')
     <style>
@@ -277,27 +277,55 @@
             .breadcrumb-area {
                 margin-top: 0;
             }
+
+            .common-heros {
+                background: url('{{ asset(env('GLOBAL_TOPMOBILE')) }}') no-repeat center center;
+                background-size: 100% 50%;
+                /* isi penuh TANPA ruang kosong */
+                height: 180px;
+                margin-top: 30px;
+                /* tinggi tetap */
+                padding: 0;
+                object-fit: contain;
+            }
         }
+
+        .common-heros {
+            background: url('{{ asset ('frontend/bprman/assets/images/banner/pengaduan.jpg') }}') no-repeat center center;
+            background-size: contain;
+            /* TIDAK terpotong */
+
+            height: 170px;
+            max-width: 1120px;
+            margin: 100px auto 0 auto;
+            border-radius: 10px;
+        }
+
+        .event-content {
+            max-width: 100%;
+            overflow-x: auto;
+            /* biar kalau ada tabel / gambar besar, muncul scroll horizontal */
+            word-wrap: break-word;
+            /* biar teks panjang gak keluar area */
+            line-height: 1.6;
+            /* biar enak dibaca */
+            text-align: justify;
+            font-family: 'Archivo', sans-serif;
+        }
+
+        .judullap{
+        text-align: center;
+        margin-bottom: 0px;
+    }
     </style>
 
-    <div class="breadcrumb-area text-center shadow dark bg-fixed text-light"
-        style="background-image: url(frontend/bprbahari/assets/img/profil/banertop.jpg);">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2>Pengaduan Nasabah</h2>
-                    <ul class="breadcrumb">
-                        <li><a href="#"><i class="fas fa-home"></i> Beranda</a></li>
-                        <li class="active">Pengaduan Nasabah</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <body class="body tg-heading-subheading animation-style3">
+        <div class="common-heros">
+            
+        </div>
+        <br>
 
-
+        <h2 class="judullap">Pengaduan Nasabah</h2>
         <!--===== LAYANAN PENGADUAN =====-->
         <section class="py-5 text-center">
 

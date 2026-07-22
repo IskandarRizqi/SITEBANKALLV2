@@ -113,7 +113,7 @@
 
                 <div class="simulasi-right" style="width:45%; display:flex; align-items:center; justify-content:center;"
                     class="simulasi-right">
-                    <img id="gambarProduk" src="frontend/bprdatagita/img/produk/simulasideposito.png"
+                    <img id="gambarProduk" src="frontend/bprana/assets/images/simulasi/depo.png"
                         style="width:95%; height: 350px; border-radius:10px; ">
 
                 </div>

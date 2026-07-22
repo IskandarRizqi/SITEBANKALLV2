@@ -1,4 +1,4 @@
-@extends('frontend.bprsahabattata.layout.main')
+@extends('frontend.bpreleska.layout.main')
 
 @section('content')
     <style>

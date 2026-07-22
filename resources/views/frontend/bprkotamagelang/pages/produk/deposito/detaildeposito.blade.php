@@ -1,4 +1,4 @@
-@extends('frontend.bprtemanggung.layout.main')
+@extends('frontend.bprkotamagelang.layout.main')
 
 @section('content')
     <style>

@@ -209,7 +209,7 @@
     <div class="container footer-menu" style="margin-bottom: 10px">
         <div class="f-menu running-text">
             <span style="color: white">
-                PT. BPR Bhaktiriyadi berizin dan diawasi oleh Otoritas Jasa Keuangan (OJK) serta merupakan peserta
+                PT. BPR SMS berizin dan diawasi oleh Otoritas Jasa Keuangan (OJK) serta merupakan peserta
                 penjaminan LPS.
                 Maksimum nilai simpanan yang dijamin oleh
                 LPS adalah Rp.2 Miliar per nasabah per bank. Untuk informasi tingkat suku bunga

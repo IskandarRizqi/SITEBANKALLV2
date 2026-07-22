@@ -11,25 +11,15 @@
             margin-top: 0;
         }
     }
+    .judullap{
+        text-align: center;
+        margin-bottom: 0px;
+        margin-top: 100px;
+    }
 </style>
 @section('content')
-    <div class="breadcrumb-area text-center shadow dark bg-fixed text-light"
-        style="background-image: url(frontend/bprbahari/assets/img/profil/banertop.jpg);">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2>Laporan Keberlanjutan</h2>
-                    <ul class="breadcrumb">
-                        <li><a href="#"><i class="fas fa-home"></i> laporan</a></li>
-                        <li class="active">Laporan Keberlanjutan</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <body class="body tg-heading-subheading animation-style3">
-
+        <h2 class="judullap">Laporan Keberlanjutan</h2>
         <div id="superParentContainer" class="container pb-3" style="margin-top:40px;">
             <div class="row readContent">
                 <div class="col-lg-12 mt-3 mb-3">

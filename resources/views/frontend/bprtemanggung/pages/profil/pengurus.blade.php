@@ -1,4 +1,4 @@
-@extends('frontend.bpreleska.layout.main')
+@extends('frontend.bprtemanggung.layout.main')
 
 @section('content')
     <style>
@@ -9,10 +9,11 @@
         
     </style>
     <div class="container-fluid bg-breadcrumb">
-        <img src="{{asset('frontend/bpreleska/assets/img/banner/banner1.jpg')}}" alt="Breadcrumb" class="breadcrumb-img" />
+        <img src="{{asset('frontend/bprtemanggung/assets/img/banner/banner.jpg')}}" alt="Breadcrumb" class="breadcrumb-img" />
     </div>
 
     <div class="container-fluid faq py-5">
+    <h5 class="display-4 wow fadeInDown" style="color: #000; text-align: center; margin-top: 30px; font-size: 40px;" data-wow-delay="0.1s">PENGURUS</h5>
         <div class="container py-5">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-12 wow fadeInLeft" data-wow-delay="0.1s">

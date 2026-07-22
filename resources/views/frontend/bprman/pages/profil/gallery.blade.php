@@ -104,40 +104,72 @@
             z-index: 999;
         }
 
-        .breadcrumb-area {
-            margin-top: 100px;
-            width: 100%;
-            height: 150px;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+      
+        .common-heros {
+            background: url('{{ asset(env('GLOBAL_BANERTOPPROFIL')) }}') no-repeat center center;
+            background-size: contain;
+            height: 170px;
+            max-width: 1120px;
+            margin: 90px auto 0 auto;
+            border-radius: 15px;
         }
 
-        .breadcrumb {
-            padding-left: 15px;
-            margin-top: 20px
-        }
 
-        /* Mobile */
+        /* Versi Mobile */
         @media (max-width: 768px) {
-            .breadcrumb-area {
-                margin-top: 0;
+            .common-heros {
+                background: url('{{ asset(env('GLOBAL_TOPMOBILE')) }}') no-repeat center center;
+                background-size: 100% 50%;
+                /* isi penuh TANPA ruang kosong */
+                height: 180px;
+                margin-top: 30px;
+                /* tinggi tetap */
+                padding: 0;
+                object-fit: contain
             }
+
         }
+
+        .section-header {
+            font-weight: 600;
+            padding: 1.5rem;
+            color: #1f2937;
+        }
+
+        .section-content {
+            padding: 0 1.5rem 1.5rem;
+        }
+
+        .border-line {
+            height: 4px;
+            width: 100%;
+            background-color: #e5e7eb;
+        }
+
+        .blue-line {
+            width: 8px;
+            height: 100%;
+            background-color: #3b82f6;
+            margin-right: 1rem;
+            border-radius: 4px;
+        }
+        
+        .subjudul {
+            text-align: center;
+            margin-bottom: 0px;
+            padding-top: 20px;
+        }
+    
     </style>
 
 
-    <div class="breadcrumb-area text-center shadow dark bg-fixed text-light"
-        style="background-image: url(frontend/bprman/assets/images/banner/profil.jpg);">
-    </div>
-        <ul class="breadcrumb">
-            <li><a href="#"><i class="fas fa-home"></i> Profil</a></li>/
-            <li class="active">Gallery</li>
-        </ul>
-        <hr>
-        <div class="col-lg-12">
-            <h2 style="text-align: center;">Gallery</h2>
+    <body class="body tg-heading-subheading animation-style3">
+            
+            <div class="common-heros">
         </div>
+        
+        <h2 class="subjudul">Galeri</h2>
+        
     <div class="portfolio" style="margin-top: 50px; margin-bottom: 50px;">
         <div class="container">
             <div class="row">
@@ -192,4 +224,5 @@
             </div>
         </div>
     </div>
+    </body>
 @endsection

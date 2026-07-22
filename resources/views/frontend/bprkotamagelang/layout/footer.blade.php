@@ -6,7 +6,7 @@
 
           <div class="pxn_footer_widget widget-nav-menu mt-3">
             <h6 class="footer_title" style="font-weight:600;">Jaringan Kantor</h6>
-            <select id="pilihKantor" class="form-select mb-3" style="background-color:#ffffff; color:#462ced; text-transform:none;">
+            <select id="pilihKantor" class="form-select mb-3" style="background-color:#ffffff; color:#000; text-transform:none;">
                   @foreach ($kantorglobal as $kantor)
                       <option value="{{ $kantor->id }}" data-nama="{{ $kantor->kantor }}"
                           data-alamat="{{ $kantor->alamat }}" data-telp="{{ $kantor->no_telp }}"
@@ -33,7 +33,7 @@
             <li><i class="bi bi-envelope" style="margin-right: 10px;"></i> <a href="mailto:bpr_kota_magelang@yahoo.co.id">bpr_kota_magelang@yahoo.co.id</a></li>
             <li><i class="bi bi-people" style="margin-right: 10px;"></i> <a href="/pengaduan">Pengaduan Nasabah</a></li>
             <li><i class="bi bi-briefcase" style="margin-right: 10px;"></i> <a href="/rekrutmen">E-Recruitment</a></li>
-            <li><i class="bi bi-whatsapp" style="margin-right: 10px;"></i> <a href="#">0823-1489-7649</a></li>
+            <li><i class="bi bi-whatsapp" style="margin-right: 10px;"></i> <a href="https://wa.me/6282314897649" target="_blank">0823-1489-7649</a></li>
           </ul>
         </div>
 
@@ -56,3 +56,23 @@
     </div>
 
   </footer>
+  <script>
+        function tampilkanKantor() {
+            let select = document.getElementById('pilihKantor');
+            let selected = select.options[select.selectedIndex];
+    
+            let nama = selected.getAttribute('data-nama');
+            let alamat = selected.getAttribute('data-alamat');
+            let telp = selected.getAttribute('data-telp');
+            let lat = selected.getAttribute('data-lat');
+            let lng = selected.getAttribute('data-lng');
+    
+            document.getElementById('alamatKantor').innerHTML = `<span style="color:#000;">${alamat}</span>`;
+            document.getElementById('telpKantor').innerHTML = `<span style="color:#000;">Telp : ${telp}</span>`;
+    
+            let googleLink = `https://www.google.com/maps?q=${lat},${lng}`;
+        }
+    
+        document.getElementById('pilihKantor').addEventListener('change', tampilkanKantor);
+        window.addEventListener('DOMContentLoaded', tampilkanKantor);
+      </script>

@@ -16,6 +16,31 @@
             background: transparent !important;
             opacity: 0 !important;
         }
+
+        .header-carousel-item {
+            height: 650px;
+            overflow: hidden;
+        }
+        
+        @media (max-width: 767px) {
+            .header-carousel-item {
+                height: 220px; /* sesuaikan sama tinggi banner mobile kamu */
+            }
+        }
+
+        .video-container video {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            display: block;
+         }
+
+         /* opsional: batasi lebar di desktop biar video gak terlalu raksasa di layar besar */
+         @media (min-width: 768px) {
+            .video-container video {
+               max-width: 900px; /* sesuaikan sesuai desain */
+            }
+         }
     </style>
 
     <body>
@@ -37,7 +62,7 @@
                         @if (!empty($item->url_mobile))
                             <div class="d-block d-md-none w-100 h-100">
                                 <img src="/recfil?display=true&rf={{ $item->url_mobile }}" class="img-fluid"
-                                    alt="Banner Mobile" loading="lazy" style="width: 100%; height: 100%; object-fit: fill;">
+                                    alt="Banner Mobile" loading="lazy" style="width: 100%; object-fit: fill;">
                             </div>
                         @endif
 
@@ -50,6 +75,18 @@
             @endforeach
         </div>
 
+      <div class="bg-white">	 
+         <div class="col-12 pt-5 pb-5 video-section">
+            <div class="video-wrapper">
+                  <div class="video-container" style="display: flex; justify-content: center;">
+                     <video autoplay muted loop playsinline
+                        style="width: 100%; height: auto; max-width: 100%; display: block;">
+                        <source src="frontend/bprkotamagelang/assets/img/video.mp4" type="video/mp4">
+                     </video>
+                  </div>
+            </div>
+         </div>
+      </div>
       <section id="services" class="services section">
          <!-- Section Title -->
          <div class="container section-title" data-aos="fade-up">
@@ -63,7 +100,7 @@
                   <div class="icon">
                      <img src="frontend/bprkotamagelang/assets/img/produk/kredit.png" alt="">
                   </div>
-                  <a href="#" class="stretched-link">
+                  <a href="/kredit" class="stretched-link">
                      <h3>Kredit</h3>
                   </a>
                </div>
@@ -75,7 +112,7 @@
                      <img src="frontend/bprkotamagelang/assets/img/produk/deposito.png" alt="">
 
                   </div>
-               <a href="#" class="stretched-link">
+               <a href="/deposito" class="stretched-link">
                   <h3>Deposito</h3>
                </a>
                </div>
@@ -86,7 +123,7 @@
                   <div class="icon">
                      <img src="frontend/bprkotamagelang/assets/img/produk/tabungan.png" alt="">
                   </div>
-                  <a href="#" class="stretched-link">
+                  <a href="/tabungan" class="stretched-link">
                      <h3>Tabungan</h3>
                   </a>
                </div>

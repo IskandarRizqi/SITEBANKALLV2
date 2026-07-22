@@ -1,4 +1,4 @@
-@extends('frontend.bprsahabattata.layout.main')
+@extends('frontend.bprbkkbatang.layout.main')
 
 @section('content')
     <!-- Tambahkan CSS ini untuk menyamakan tinggi -->
@@ -84,15 +84,12 @@
         }
     </style>
 
-     <div class="container-fluid bg-breadcrumb">
-        <div class="bg-breadcrumb-single"></div>
-        <div class="container text-center py-5" style="max-width: 900px;">
-            <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">
-                Gallery
-            </h4>
-        </div>
+    <div class="container-fluid bg-breadcrumb">
+        <img src="{{asset('frontend/bprbkkbatang/assets/img/banner/profile.jpeg')}}" alt="Breadcrumb" class="breadcrumb-img" />
     </div>
-    <div class="portfolio" style="margin-top: 50px; margin-bottom: 50px;">
+
+    <div class="portfolio" style="margin-bottom: 50px;">
+    <h5 class="display-4 wow fadeInDown" style="color: #000; text-align: center; margin-top: 30px;" data-wow-delay="0.1s">GALERI</h5>
         <div class="container">
             <div class="row">
 

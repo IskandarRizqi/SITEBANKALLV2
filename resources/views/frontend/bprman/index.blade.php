@@ -9,7 +9,7 @@
         <div class="space-for-header"></div>
 
         <!-- start: Banner Section -->
-        <section class="h4-banner-section" style="padding:15px; margin-top:0px; background-color: #1f4fa3;">
+        <section class="h4-banner-section" style="padding:15px; margin-top:0px; background-color: #ecf0f0;">
             <div class="swiper h4-banner-slider">
                 <div class="swiper-wrapper">
 
@@ -420,66 +420,34 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-12">
-                <div class="blog-wrapper wow fadeIn" data-wow-delay=".5s">
-                  <div class="swiper blog-slider">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                        <div class="blog-item style-2">
-                          <div class="blog-thumb">
-                            <a href="blog-details.html"><img src="assets/images/blog/blog-4.webp" alt=""></a>
-                            <div class="blog-date">
-                              <span class="date">28</span>
-                              <span class="month">Feb</span>
+                    <div class="col-12">
+                        <div class="h4-blog-wrap">
+                            @foreach ($allinfo->take(3) as $item)
+                            <div class="blog-item style-3 wow fadeInUp" data-wow-delay=".3s">
+                                <div class="blog-thumb">
+                                    <img src="/recfil?display=true&rf={{ $item->thumbnail }}" alt="{{ $item->title }}">
+                                </div>
+                                <div class="blog-content">
+                                    <div class="blog-meta">
+                                        <span class="categories">Berita</span>
+                                    </div>
+                                    <h4 class="title" style="min-height:70px;"><a href="{{ route('detberita', $item->id) }}">
+                                        {{ \Illuminate\Support\Str::limit($item->title, 60) }}</a>
+                                    </h4>
+                                    <span style="color: white;">{{ \Carbon\Carbon::parse($item->tanggal_tampil)->translatedFormat('d M, Y') }}</span>
+                                    <a class="text-btn" href="{{ route('detberita', $item->id) }}">
+                                        <span class="btn-text"><span>Baca Selengkapnya</span></span>
+                                        <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
+                                    </a>
+                                </div>
                             </div>
-                          </div>
-                          <div class="blog-content">
-                            <div class="title-area">
-                              <div class="blog-meta">
-                                <span class="categories"><a href="blog-details.html">Business</a></span>
-                                <span>By <a href="blog-details.html">Ellinien Loma</a></span>
-                              </div>
-                              <h4 class="title"><a href="blog-details.html">Harnessing Digital Transform a Roadmap
-                                  Businesses.</a></h4>
-                            </div>
-                            <a class="text-btn" href="blog-details.html">
-                              <span class="btn-text"><span>Read More</span></span>
-                              <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
-                            </a>
-                          </div>
+                            @endforeach
                         </div>
-                      </div>
-                      <div class="swiper-slide">
-                        <div class="blog-item style-2">
-                          <div class="blog-thumb">
-                            <a href="blog-details.html"><img src="assets/images/blog/blog-5.webp" alt=""></a>
-                            <div class="blog-date">
-                              <span class="date">28</span>
-                              <span class="month">Feb</span>
-                            </div>
-                          </div>
-                          <div class="blog-content">
-                            <div class="title-area">
-                              <div class="blog-meta">
-                                <span class="categories"><a href="blog-details.html">Business</a></span>
-                                <span>By <a href="blog-details.html">Ellinien Loma</a></span>
-                              </div>
-                              <h4 class="title"><a href="blog-details.html">Mastering Change Management Lessons for
-                                  Businesses.</a></h4>
-                            </div>
-                            <a class="text-btn" href="blog-details.html">
-                              <span class="btn-text"><span>Read More</span></span>
-                              <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
                     </div>
-                    <div class="swiper-pagination-area"></div>
-                  </div>
                 </div>
-              </div>
-            </div>
+                <div class="d-flex justify-content-end">
+                    <a href="/informasi"><button class="btn btn-primary mt-3">Berita Lainnya</button></a>
+                </div>
           </div>
         </section>
     </div>

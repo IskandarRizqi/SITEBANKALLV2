@@ -28,10 +28,9 @@
         <link href="{{asset('frontend/bprbkkbatang/img/logo/ico.png')}}" rel="stylesheet"> -->
 
         <!-- Libraries Stylesheet -->
-        <link rel="stylesheet" href="{{asset('frontend/bprbkkbatang/assets/css/animate.min.css')}}"/>
-        <link href="{{asset('frontend/bprbkkbatang/assets/css/animate.min.css')}}" rel="stylesheet">
-        <link href="{{asset('frontend/bprbkkbatang/assets/css/owl.carousel.min.css')}}" rel="stylesheet">
-        <link href="{{asset('frontend/bprbkkbatang/assets/css/lightbox.min.css')}}" rel="stylesheet">
+        <link href="{{asset('frontend/bprbkkbatang/assets/lib/animate/animate.min.css')}}" rel="stylesheet">
+        <link href="{{asset('frontend/bprbkkbatang/assets/lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+        <link href="{{asset('frontend/bprbkkbatang/assets/lib/lightbox/css/lightbox.min.css')}}" rel="stylesheet">
 
 
         <!-- Customized Bootstrap Stylesheet -->

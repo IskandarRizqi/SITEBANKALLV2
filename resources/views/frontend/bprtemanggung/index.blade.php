@@ -16,13 +16,24 @@
             background: transparent !important;
             opacity: 0 !important;
         }
+        
+        .header-carousel-item {
+            height: 650px;
+            overflow: hidden;
+        }
+        
+        @media (max-width: 767px) {
+            .header-carousel-item {
+                height: 220px; /* sesuaikan sama tinggi banner mobile kamu */
+            }
+        }
     </style>
 
     <body>
       <div class="header-carousel owl-carousel">
             @foreach ($baner as $item)
                 @if (!empty($item->url) || !empty($item->url_mobile))
-                    <div class="header-carousel-item" style="height: 650px; overflow: hidden;">
+                    <div class="header-carousel-item">
 
                         {{-- DESKTOP --}}
                         @if (!empty($item->url))
@@ -37,7 +48,7 @@
                         @if (!empty($item->url_mobile))
                             <div class="d-block d-md-none w-100 h-100">
                                 <img src="/recfil?display=true&rf={{ $item->url_mobile }}" class="img-fluid"
-                                    alt="Banner Mobile" loading="lazy" style="width: 100%; height: 100%; object-fit: fill;">
+                                    alt="Banner Mobile" loading="lazy" style="width: 100%; object-fit: fill;">
                             </div>
                         @endif
 
@@ -198,5 +209,5 @@
     </section>
     </body>
 
-  
+
 @endsection

@@ -5,7 +5,7 @@
         <img src="{{asset('frontend/bprtemanggung/assets/img/banner/banner.jpg')}}" alt="Breadcrumb" class="breadcrumb-img" />
     </div>
     <body class="body tg-heading-subheading animation-style3">
-        <h6 class="display-4 wow fadeInDown" style="color: #000; text-align: center; margin-top: 30px; font-size: 40px;" data-wow-delay="0.1s">PROFIL</h6>
+        <h5 class="display-4 wow fadeInDown" style="color: #000; text-align: center; margin-top: 30px; font-size: 40px;" data-wow-delay="0.1s">PROFIL</h5>
         <div class="service-details-area-all sp mb-5">
           <div class="container mt-8">
 

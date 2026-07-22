@@ -1,4 +1,4 @@
-@extends('frontend.bprsms.layout.main')
+@extends('frontend.bprmekar.layout.main')
 
 @section('content')
 <style>
@@ -40,7 +40,7 @@
 
 }
 </style>
-<div class="breadcumb-area style2 bg-smoke4">
+<!-- <div class="breadcumb-area style2 bg-smoke4">
     <div class="breadcumb-wrapper" data-bg-src="frontend/bprsms/assets/img/bg/breadcumb-bg.jpg">
         <div class="container">
             <div class="breadcumb-content">
@@ -52,6 +52,11 @@
             </div>
         </div>
     </div>
+</div> -->
+
+
+<div class="container-fluid bg-breadcrumb">
+    <img src="{{asset('frontend/bprmekar/assets/img/banner/profile.jpg')}}" alt="Breadcrumb" class="breadcrumb-img" />
 </div>
 
 @if ($sejarah)

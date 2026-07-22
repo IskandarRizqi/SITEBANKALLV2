@@ -13,6 +13,11 @@
             text-align: justify;
             font-family: 'Archivo', sans-serif;
         }
+
+        .form-label {
+            font-weight: 600;
+            color: #000;
+        }
     </style>
     <div class="pxn-page-header" data-bg-image="{{asset('frontend/bprsuryakencana/assets/images/profil/banertop.jpg')}}"
         style="margin-top:120px; height:150px; display:flex; align-items:center; justify-content:center;">
@@ -48,7 +53,7 @@
                     </h3>
 
 
-                    <label style="font-size:14px;">Plafon Pembiayaan</label>
+                    <label style="font-size:14px;" class="form-label">Plafon Pembiayaan</label>
                     <div
                         style="display:flex; align-items:center; background:white; border-radius:30px;
                         padding:0 20px; margin-bottom:18px;">
@@ -58,7 +63,7 @@
                             style="border:none; outline:none; width:100%; font-size:14px;">
                     </div>
 
-                    <label style="font-size:14px;">Lama Angsuran</label>
+                    <label style="font-size:14px;" class="form-label">Lama Angsuran</label>
                     <div
                         style="display:flex; align-items:center; background:white; border-radius:30px;
                         padding:0 20px; margin-bottom:18px;">
@@ -69,7 +74,7 @@
                         <span style="color:#ff5a1e; font-weight:bold; margin-left:10px;">Bulan</span>
                     </div>
 
-                    <label style="font-size:14px;">Bunga</label>
+                    <label style="font-size:14px;" class="form-label">Bunga</label>
                     <div
                         style="display:flex; align-items:center; background:white; border-radius:30px;
                         padding:0 20px; margin-bottom:18px;">
@@ -82,7 +87,7 @@
                         </span>
                     </div>
 
-                    <label style="font-size:14px;">Sistem Angsuran</label>
+                    <label style="font-size:14px;" class="form-label">Sistem Angsuran</label>
                     <div style="background:white; border-radius:30px; padding:0; margin-bottom:30px;">
 
                         <select id="sistem"
@@ -121,7 +126,7 @@
 
                 <div class="simulasi-right" style="width:45%; display:flex; align-items:center; justify-content:center;"
                     class="simulasi-right">
-                    <img src="frontend/bprdatagita/img/produk/simulasikredit.png"
+                    <img src="frontend/bprsuryakencana/assets/images/simulasi/kredit.png"
                         style="width:95%; height: 350px; border-radius:10px;">
                 </div>
 

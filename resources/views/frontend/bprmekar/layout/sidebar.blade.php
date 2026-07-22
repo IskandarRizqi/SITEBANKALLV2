@@ -724,7 +724,7 @@
             items: [
                 {
                     label: 'Kredit',
-                    href: '#',
+                    href: '/kredit',
                     img: '',
                 },
                 {
@@ -738,6 +738,7 @@
                     img: '',
                 },
             ]
+            
         },
         layanan: {
             title: 'LAYANAN',

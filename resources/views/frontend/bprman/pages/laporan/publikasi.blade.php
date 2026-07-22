@@ -1,4 +1,4 @@
-@extends('frontend.bprbahari.layout.main')
+@extends('frontend.bprman.layout.main')
 
 <style>
     .breadcrumb-area {
@@ -11,26 +11,17 @@
             margin-top: 0;
         }
     }
+
+    .judullap{
+        text-align: center;
+        margin-bottom: 0px;
+        margin-top: 100px;
+    }
 </style>
 @section('content')
-    <div class="breadcrumb-area text-center shadow dark bg-fixed text-light"
-        style="background-image: url(frontend/bprbahari/assets/img/profil/banertop.jpg);">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2>Publikasi</h2>
-                    <ul class="breadcrumb">
-                        <li><a href="#"><i class="fas fa-home"></i> laporan</a></li>
-                        <li class="active">Publikasi</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <body class="body tg-heading-subheading animation-style3">
-
-
+<body class="body tg-heading-subheading animation-style3">
+    
+    <h2 class="judullap">Laporan Publikasi</h2>
         <!-- BEGIN CONTENT PART -->
         <div id="superParentContainer" class="container pb-3">
             <div class="row readContent">

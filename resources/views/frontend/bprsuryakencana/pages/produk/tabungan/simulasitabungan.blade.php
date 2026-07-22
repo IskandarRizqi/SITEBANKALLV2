@@ -20,6 +20,11 @@
             list-style: disc !important;
             padding-left: 18px !important;
         }
+
+        .form-label {
+            font-weight: 600;
+            color: #090909;
+        }
     </style>
 
    <div class="pxn-page-header" data-bg-image="{{asset('frontend/bprsuryakencana/assets/images/profil/banertop.jpg')}}"
@@ -58,7 +63,7 @@
                     </h3>
 
 
-                    <label style="font-size:14px;">Setoran Rata - rata</label>
+                    <label style="font-size:14px;" class="form-label">Setoran Rata - rata</label>
                     <div
                         style="display:flex; align-items:center; background:white; border-radius:30px;
                         padding:0 20px; margin-bottom:18px;">
@@ -69,7 +74,7 @@
                     </div>
 
 
-                    <label style="font-size:14px;">Pilih Produk</label>
+                    <label style="font-size:14px;" class="form-label">Pilih Produk</label>
 
                     <div style="background:white; border-radius:30px; padding:0; margin-bottom:30px;">
 
@@ -118,7 +123,7 @@
 
                 <div class="simulasi-right" style="width:45%; display:flex; align-items:center; justify-content:center;"
                     class="simulasi-right">
-                    <img id="gambarProduk" src="frontend/bprdatagita/img/produk/simulasitabungan.png"
+                    <img id="gambarProduk" src="frontend/bprsuryakencana/assets/images/simulasi/tab.png"
                         style="width:95%; height: 350px; border-radius:10px;">
 
 

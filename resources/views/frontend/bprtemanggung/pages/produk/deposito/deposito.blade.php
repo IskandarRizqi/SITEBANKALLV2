@@ -9,7 +9,7 @@
 
         .tabungan-img {
             width: 100%;
-            height: 400px;
+            height: 350px;
             object-fit: fill;
             border-radius: 15px;
             transition: 0.3s;
@@ -43,12 +43,12 @@
 
                         <div class="team-box">
 
-                            <a href="{{ route('detdeposito', $item->id) }}">
+                            <!--<a href="{{ route('detdeposito', $item->id) }}">-->
 
                                 <img src="/recfil?display=true&rf={{ $item->thumbnail }}"
                                     alt="{{ $item->title ?? 'deposito' }}" class="tabungan-img">
 
-                            </a>
+                            <!--</a>-->
 
                         </div>
 

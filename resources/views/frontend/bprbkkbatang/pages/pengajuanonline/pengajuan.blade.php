@@ -55,7 +55,7 @@
                     <div class="col-lg-4 col-md-6">
                         <a href="/formpengajuankredit" style="text-decoration:none;color:inherit;">
                             <div class="team-box"
-                                style="background:#f63030;border-radius:8px;padding:25px 15px;text-align:center;margin-bottom:20px;cursor:pointer;transition:.3s;">
+                                style="background: #1900ae;border-radius:8px;padding:25px 15px;text-align:center;margin-bottom:20px;cursor:pointer;transition:.3s;">
                                 <div class="image-area">
                                     <div class="image">
                                         <img src="{{ asset('frontend/bprrudo/assets/img/profil/kredit.png') }}"
@@ -74,7 +74,7 @@
                     <div class="col-lg-4 col-md-6">
                         <a href="/formpengajuantabungan" style="text-decoration:none;color:inherit;">
                             <div class="team-box"
-                                style="background:#f63030;border-radius:8px;padding:25px 15px;text-align:center;margin-bottom:20px;cursor:pointer;transition:.3s;">
+                                style="background: #1900ae;border-radius:8px;padding:25px 15px;text-align:center;margin-bottom:20px;cursor:pointer;transition:.3s;">
                                 <div class="image-area">
                                     <div class="image">
                                         <img src="{{ asset('frontend/bprrudo/assets/img/profil/tabungan.png') }}"
@@ -94,7 +94,7 @@
                     <div class="col-lg-4 col-md-6">
                         <a href="/formpengajuandeposito" style="text-decoration:none;color:inherit;">
                             <div class="team-box"
-                                style="background:#f63030;border-radius:8px;padding:25px 15px;text-align:center;margin-bottom:20px;cursor:pointer;transition:.3s;">
+                                style="background: #1900ae;border-radius:8px;padding:25px 15px;text-align:center;margin-bottom:20px;cursor:pointer;transition:.3s;">
                                 <div class="image-area">
                                     <div class="image">
                                         <img src="{{ asset('frontend/bprrudo/assets/img/profil/deposito.png') }}"

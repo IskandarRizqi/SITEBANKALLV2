@@ -1,4 +1,4 @@
-@extends('frontend.bpreleska.layout.main')
+@extends('frontend.bprtemanggung.layout.main')
 
 @section('content')
     <style>
@@ -33,7 +33,7 @@
     </style>
 
     <div class="container-fluid bg-breadcrumb">
-        <img src="{{asset('frontend/bpreleska/assets/img/banner/banner2.jpg')}}" alt="Breadcrumb" class="breadcrumb-img" />
+        <img src="{{asset('frontend/bprtemanggung/assets/img/banner/banner2.jpg')}}" alt="Breadcrumb" class="breadcrumb-img" />
     </div>
     <div class="team2 team-page sp" style="padding-top:0px">
         <div class="container" style="margin-top: 50px">
@@ -43,7 +43,7 @@
                 Pengajuan Online
             </h4> --}}
 
-            <div style=" border:1.5px solid #d6222b ; border-radius:8px; padding:30px 15px; margin-bottom: 30px;">
+            <div style=" border:1.5px solid #106eea ; border-radius:8px; padding:30px 15px; margin-bottom: 30px;">
 
                 <h5 style=" text-align:center; font-weight:600; margin-bottom:30px; ">
                     Pilih Layanan
@@ -55,7 +55,7 @@
                     <div class="col-lg-4 col-md-6">
                         <a href="/formpengajuankredit" style="text-decoration:none;color:inherit;">
                             <div class="team-box"
-                                style="background:#f63030;border-radius:8px;padding:25px 15px;text-align:center;margin-bottom:20px;cursor:pointer;transition:.3s;">
+                                style="background: #106eea;border-radius:8px;padding:25px 15px;text-align:center;margin-bottom:20px;cursor:pointer;transition:.3s;">
                                 <div class="image-area">
                                     <div class="image">
                                         <img src="{{ asset('frontend/bprrudo/assets/img/profil/kredit.png') }}"
@@ -74,7 +74,7 @@
                     <div class="col-lg-4 col-md-6">
                         <a href="/formpengajuantabungan" style="text-decoration:none;color:inherit;">
                             <div class="team-box"
-                                style="background:#f63030;border-radius:8px;padding:25px 15px;text-align:center;margin-bottom:20px;cursor:pointer;transition:.3s;">
+                                style="background: #106eea;border-radius:8px;padding:25px 15px;text-align:center;margin-bottom:20px;cursor:pointer;transition:.3s;">
                                 <div class="image-area">
                                     <div class="image">
                                         <img src="{{ asset('frontend/bprrudo/assets/img/profil/tabungan.png') }}"
@@ -94,7 +94,7 @@
                     <div class="col-lg-4 col-md-6">
                         <a href="/formpengajuandeposito" style="text-decoration:none;color:inherit;">
                             <div class="team-box"
-                                style="background:#f63030;border-radius:8px;padding:25px 15px;text-align:center;margin-bottom:20px;cursor:pointer;transition:.3s;">
+                                style="background: #106eea;border-radius:8px;padding:25px 15px;text-align:center;margin-bottom:20px;cursor:pointer;transition:.3s;">
                                 <div class="image-area">
                                     <div class="image">
                                         <img src="{{ asset('frontend/bprrudo/assets/img/profil/deposito.png') }}"

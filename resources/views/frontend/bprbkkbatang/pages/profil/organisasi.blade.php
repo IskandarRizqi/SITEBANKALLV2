@@ -1,19 +1,16 @@
-@extends('frontend.bprsahabattata.layout.main')
+@extends('frontend.bprbkkbatang.layout.main')
 
 @section('content')
     <style>
 
     </style>
-     <div class="container-fluid bg-breadcrumb">
-        <div class="bg-breadcrumb-single"></div>
-        <div class="container text-center py-5" style="max-width: 900px;">
-            <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">
-                Struktur Organisasi
-            </h4>
-        </div>
+    
+    <div class="container-fluid bg-breadcrumb">
+        <img src="{{asset('frontend/bprbkkbatang/assets/img/banner/profile.jpeg')}}" alt="Breadcrumb" class="breadcrumb-img" />
     </div>
 
-   <section class="about-area section-padding-100-0" style="margin-top: 50px; margin-bottom: 50px;">
+   <section class="about-area section-padding-100-0" style="margin-bottom: 50px;">
+    <h5 class="display-4 wow fadeInDown" style="color: #000; text-align: center;" data-wow-delay="0.1s">STRUKTUR ORGANISASI</h5>
     <div class="container">
         @if ($organisasi)
             <div class="row">

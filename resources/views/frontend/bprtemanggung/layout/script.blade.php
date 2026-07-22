@@ -1,17 +1,15 @@
  <!-- JavaScript Libraries -->
-    <script src="{{asset('frontend/bprtemanggung/assets/lib/jquery.min.js')}}"></script>
-    <script src="{{asset('frontend/bprtemanggung/assets/lib/bootstrap.bundle.min.js')}}"></script>
-    <script src="{{asset('frontend/bprtemanggung/assets/lib/wow.min.js')}}"></script>
-    <script src="{{asset('frontend/bprtemanggung/assets/lib/easing.min.js')}}"></script>
-    <script src="{{asset('frontend/bprtemanggung/assets/lib/waypoints.min.js')}}"></script>
-    <script src="{{asset('frontend/bprtemanggung/assets/lib/counterup.min.js')}}"></script>
-    <script src="{{asset('frontend/bprtemanggung/assets/lib/owl.carousel.min.js')}}"></script>
-    <script src="{{asset('frontend/bprtemanggung/assets/lib/lightbox.min.js')}}"></script>
+    <script src="{{asset('frontend/bprtemanggung/assets/js/jquery-3.7.1.min.js')}}"></script>
+    <script src="{{asset('frontend/bprtemanggung/assets/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{asset('frontend/bprtemanggung/assets/lib/wow/wow.min.js')}}"></script>
+    <script src="{{asset('frontend/bprtemanggung/assets/lib/easing/easing.min.js')}}"></script>
+    <script src="{{asset('frontend/bprtemanggung/assets/lib/waypoints/waypoints.min.js')}}"></script>
+    <script src="{{asset('frontend/bprtemanggung/assets/lib/counterup/counterup.min.js')}}"></script>
+    <script src="{{asset('frontend/bprtemanggung/assets/lib/owlcarousel/owl.carousel.min.js')}}"></script>
+    <script src="{{asset('frontend/bprtemanggung/assets/lib/lightbox/js/lightbox.min.js')}}"></script>
 
     
-      <script src="{{asset('frontend/bprtemanggung/assets/js/jquery-3.7.1.min.js')}}"></script>
-      <!-- Bootstrap 5 -->
-      <script src="{{asset('frontend/bprtemanggung/assets/js/bootstrap.bundle.min.js')}}"></script>
+      
       <!-- Swiper -->
       <script src="{{asset('frontend/bprtemanggung/assets/js/swiper-bundle.min.js')}}"></script>
       <!-- CounterUp -->

@@ -1,11 +1,11 @@
-@extends('frontend.bprstaja.layout.main')
+@extends('frontend.bprbkkbatang.layout.main')
 
 @section('content')
     <div class="page-header">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-12 text-center">
-                    <h2>Privacy Policy</h2>
+                <div class="col-12 text-center mt-5">
+                    <h2 class="mb-0">Privacy Policy</h2>
                 </div>
             </div>
         </div>
@@ -21,16 +21,12 @@
                     <div class="service-details-post">
                         <article>
                             <div class="details-post-area">
-                                <!-- Gambar di tengah -->
-                                <div class="image text-center">
-                                    <img src="frontend/bprjas/assets/img/profil/police.jpg" alt="Privacy Policy">
-                                </div>
                                 <div class="space30"></div>
                                 <div class="heading1">
                                   <br>
                                     <div class="space16"></div>
                                     <p style="text-align: justify;">
-                                        PT. BPRS Taja berkomitmen untuk menjaga privasi dan keamanan data nasabah
+                                        BPR BKK Batang berkomitmen untuk menjaga privasi dan keamanan data nasabah
                                         serta pengunjung situs web kami. Dengan mengakses situs ini, Anda menyetujui
                                         praktik yang dijelaskan dalam kebijakan ini.
                                     </p>
@@ -79,13 +75,13 @@
                                     <div class="space30"></div>
 
                                     <!-- Judul kedua di tengah -->
-                                    <h4 class="text-center">Kebijakan Penggunaan Situs Web</h4>
+                                    <h4 class="text-center mb-4 mt-5">Kebijakan Penggunaan Situs Web</h4>
                                     <div class="space16"></div>
 
                                     <p><strong>1. Hak Cipta & Merek Dagang</strong></p>
                                     <p style="text-align: justify">
                                         Seluruh konten di situs ini, termasuk teks, gambar, logo, dan desain, dilindungi
-                                        oleh hukum dan merupakan milik PT. BPRS Taja, kecuali dinyatakan lain.
+                                        oleh hukum dan merupakan milik BPR BKK Batang, kecuali dinyatakan lain.
                                     </p>
 
                                     <p><strong>2. Batasan Penggunaan</strong></p>
@@ -116,13 +112,13 @@
                                     </p>
                                     <div class="space30"></div>
 
-                                    <p style="text-align: justify;">
+                                    <!-- <p style="text-align: justify;">
                                         Jika Anda memiliki pertanyaan terkait kebijakan ini, silakan hubungi kami di:
                                     </p>
                                     <p style="text-align: center;">
                                         📧 Email: bprstaja@gmail.com <br>
                                         📞 Telp : (0354) 681755
-                                    </p>
+                                    </p> -->
                                 </div>
                             </div>
                         </article>

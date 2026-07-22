@@ -18,7 +18,7 @@
         }
     </style>
 
-    <body>
+   
       <div class="header-carousel owl-carousel">
             @foreach ($baner as $item)
                 @if (!empty($item->url) || !empty($item->url_mobile))
@@ -173,8 +173,6 @@
             </div>
          </div>
       </section> -->
-
-    </body>
 
   
 @endsection

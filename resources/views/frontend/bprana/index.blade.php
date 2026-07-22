@@ -124,7 +124,7 @@
         <br>
 
         <!-- start: Progress Section -->
-        <section class="pxn-h3-progress-section">
+        <!-- <section class="pxn-h3-progress-section">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col">
@@ -173,7 +173,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- end: Progress Section -->
         <br>
 

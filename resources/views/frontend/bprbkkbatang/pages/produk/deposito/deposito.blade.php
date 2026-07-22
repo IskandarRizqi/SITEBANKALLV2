@@ -7,40 +7,39 @@
             margin-bottom: 30px;
         }
 
-        .tabungan-img {
-            width: 100%;
-            height: 400px;
+        .deposito-img {
+            width: 80%;
+            height: 200px;
             object-fit: fill;
             border-radius: 15px;
             transition: 0.3s;
         }
 
-        .tabungan-img:hover {
+        .deposito-img:hover {
             transform: scale(1.03);
         }
 
         /* Mobile */
         @media(max-width:768px) {
-            .tabungan-img {
+            .deposito-img {
                 height: auto;
+            }
+            .col-lg-4 {
+                text-align: center;
             }
         }
     </style>
 
     <div class="container-fluid bg-breadcrumb">
-        <div class="bg-breadcrumb-single"></div>
-        <div class="container text-center py-5" style="max-width: 900px;">
-            <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">
-                Deposito
-            </h4>
-        </div>
+        <img src="{{asset('frontend/bprbkkbatang/assets/img/banner/profile.jpeg')}}" alt="Breadcrumb" class="breadcrumb-img" />
     </div>
 
-    <div class="team2 team-page sp" style="padding-top:50px; padding-bottom:60px;">
+    <div class="team2 team-page sp" style="padding-bottom:60px;">
+    <h5 class="display-4 wow fadeInDown" style="color: #000; text-align: center; margin-top: 30px;" data-wow-delay="0.1s">PRODUK DEPOSITO</h5>
         <div class="container">
 
-            ```
-            <div class="row">
+          
+            <!-- <div class="row">
 
                 @foreach ($deposito as $item)
                     <div class="col-lg-4 col-md-6 col-12">
@@ -50,7 +49,7 @@
                             <a href="{{ route('detdeposito', $item->id) }}">
 
                                 <img src="/recfil?display=true&rf={{ $item->thumbnail }}"
-                                    alt="{{ $item->title ?? 'deposito' }}" class="tabungan-img">
+                                    alt="{{ $item->title ?? 'deposito' }}" class="deposito-img">
 
                             </a>
 
@@ -59,10 +58,18 @@
                     </div>
                 @endforeach
 
-            </div>
+            </div> -->
+
+            <div class="col-lg-4 col-md-6 col-12">
+                    <div class="team-box">
+                        
+                        <img src="frontend/bprbkkbatang/assets/img/produk/ikondepo.png" alt="Deposito" class="deposito-img">
+                    
+                    </div>
+                </div>
 
         </div>
-        ```
+      
 
     </div>
 @endsection

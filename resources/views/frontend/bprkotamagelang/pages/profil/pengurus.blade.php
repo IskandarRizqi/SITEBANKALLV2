@@ -12,12 +12,12 @@
         <img src="{{asset('frontend/bprkotamagelang/assets/img/banner/profile.jpeg')}}" alt="Breadcrumb" class="breadcrumb-img" />
     </div>
 
-    <div class="container-fluid faq py-5">
+    <div class="container-fluid faq py-3">
         <div class="container py-5">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-12 wow fadeInLeft" data-wow-delay="0.1s">
                     <div class="titleText" style="text-align: center;">
-                        <h4>SUSUNAN PENGURUS</h4>
+                    <h5 class="display-4 wow fadeInDown" style="color: #000; text-align: center; font-size: 40px;" data-wow-delay="0.1s">SUSUNAN PENGURUS</h5>
                         <p>PT BPR BKK KOTA MAGELANG (PERSERODA)</p>
                     </div>
                     <div class="isiText">

@@ -121,8 +121,8 @@
 
                 <div class="simulasi-right" style="width:45%; display:flex; align-items:center; justify-content:center;"
                     class="simulasi-right">
-                    <img src="frontend/bprdatagita/img/produk/simulasikredit.png"
-                        style="width:95%; height: 350px; border-radius:10px;">
+                    <img id="gambarProduk" src="frontend/bprana/assets/images/simulasi/kredit.png"
+                        style="width:95%; height: 350px; border-radius:10px; ">
                 </div>
 
             </div>

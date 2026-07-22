@@ -51,20 +51,38 @@
                             <div class="pxn-h3_projects">
                                 <div class="pxn-h3_project_item">
                                     <div class="project_img pxn-zoom-in pxn-hover-btn-wrapper">
-                                        <a href="portfolio-details.html">
+                                        <a href="/kredit">
                                             <div class="pxn-hover-btn-item">
-                                                <img src="frontend/bprsuryakencana/assets/images/projects/h3-project-img-1.jpg"
+                                                <img src="frontend/bprsuryakencana/assets/images/produk/kreditsurya.jpg"
                                                     alt="Project">
                                             </div>
                                         </a>
 
                                         <div class="project_content">
                                             <div class="project_cat">
-                                                <a class="category" href="portfolio-details.html">Kredit</a>
-
+                                                <a class="category" href="/kredit">Produk</a>
                                             </div>
                                             <h3 class="project_title">
-                                                <a href="portfolio-details.html">Business Analytics & Reporting</a>
+                                                <a href="/kredit">KREDIT</a>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="pxn-h3_project_item">
+                                    <div class="project_img pxn-zoom-in pxn-hover-btn-wrapper">
+                                        <a href="/deposito">
+                                            <div class="pxn-hover-btn-item">
+                                                <img src="frontend/bprsuryakencana/assets/images/produk/deposurya.jpg"
+                                                    alt="Project">
+                                            </div>
+                                        </a>
+
+                                        <div class="project_content">
+                                            <div class="project_cat">
+                                                <a class="category" href="/deposito">Produk</a>
+                                            </div>
+                                            <h3 class="project_title"><a href="/deposito">DEPOSITO</a>
                                             </h3>
                                         </div>
                                     </div>
@@ -74,39 +92,17 @@
                                     <div class="project_img pxn-zoom-in pxn-hover-btn-wrapper">
                                         <a href="portfolio-details.html">
                                             <div class="pxn-hover-btn-item">
-                                                <img src="frontend/bprsuryakencana/assets/images/projects/h3-project-img-2.jpg"
+                                                <img src="frontend/bprsuryakencana/assets/images/produk/tabsurya.jpg"
                                                     alt="Project">
                                             </div>
                                         </a>
 
                                         <div class="project_content">
                                             <div class="project_cat">
-                                                <a class="category" href="portfolio-details.html">Deposito</a>
+                                                <a class="category" href="/tabungan">Produk</a>
 
                                             </div>
-                                            <h3 class="project_title"><a href="portfolio-details.html">Sales and Marketing
-                                                    Strategy</a>
-                                            </h3>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="pxn-h3_project_item">
-                                    <div class="project_img pxn-zoom-in pxn-hover-btn-wrapper">
-                                        <a href="portfolio-details.html">
-                                            <div class="pxn-hover-btn-item">
-                                                <img src="frontend/bprsuryakencana/assets/images/projects/h3-project-img-3.jpg"
-                                                    alt="Project">
-                                            </div>
-                                        </a>
-
-                                        <div class="project_content">
-                                            <div class="project_cat">
-                                                <a class="category" href="portfolio-details.html">Tabungan</a>
-
-                                            </div>
-                                            <h3 class="project_title"><a href="portfolio-details.html">Business Process
-                                                    Optimization</a>
+                                            <h3 class="project_title"><a href="/tabungan">TABUNGAN</a>
                                             </h3>
                                         </div>
                                     </div>
@@ -136,31 +132,12 @@
                                     <div class="col">
                                         <div class="progress_content_wrap">
                                             <div class="progress_content">
-                                                <h2 class="title pxn-chars-reveal">Skills & Expertise</h2>
-                                                <div class="desc pxn-fade" data-delay=".3">Our skills and experience are
-                                                    built on years of
-                                                    hands-on consulting across
-                                                    diverse
-                                                    industries.</div>
-
-                                                <div class="pxn_progress_item pxn-fade" data-delay=".4">
-                                                    <div class="progress_title">Business Consultants</div>
-
-                                                    <div class="pxn_progress">
-                                                        <div class="progress_bar" data-percent="65">
-                                                            <span class="progress_percent">0%</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="pxn_progress_item pxn-fade" data-delay=".5">
-                                                    <div class="progress_title">Client Communication</div>
-
-                                                    <div class="pxn_progress">
-                                                        <div class="progress_bar" data-percent="83">
-                                                            <span class="progress_percent">0%</span>
-                                                        </div>
-                                                    </div>
+                                                <h2 class="title pxn-chars-reveal">PROFILE SINGKAT</h2>
+                                                <div class="desc pxn-fade" data-delay=".3">
+                                                    PT. BPR Surya Kencana Jaya adalah sebuah lembaga keuangan bank yang beroperasi di Indonesia. 
+                                                    BPR merupakan singkatan dari Bank Perekonomian Rakyat, yang menunjukkan bahwa Surya Kencana adalah salah satu bentuk bank yang bergerak di sektor perbankan.
+                                                    Sebagai BPR, Surya Kencana fokus pada pemberian kredit kepada sektor usaha kecil dan mikro, serta masyarakat yang memiliki akses terbatas ke lembaga keuangan formal. 
+                                                    Misi utama BPR Surya Kencana adalah memberikan layanan keuangan yang inklusif dan berkelanjutan kepada anggotanya, serta mendukung pertumbuhan ekonomi lokal.
                                                 </div>
                                             </div>
                                         </div>

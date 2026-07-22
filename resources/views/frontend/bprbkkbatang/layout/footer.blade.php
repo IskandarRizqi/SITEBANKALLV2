@@ -7,6 +7,28 @@
       width: 80%;
       height: 65%;
    }
+   /* Kurangi gap antar kolom footer di mobile */
+   @media (max-width: 991.98px) {
+      .row.g-5 {
+         --bs-gutter-y: 1.75rem; /* jarak vertikal lebih wajar, dari 3rem jadi ~1.75rem */
+      }
+   }
+
+   /* Footer bawah: center-kan di mobile */
+   @media (max-width: 767.98px) {
+      .fbot .d-flex {
+         flex-direction: column;
+         text-align: center;
+         gap: 8px !important;
+      }
+      .fbot-links {
+         display: flex;
+         gap: 4px;
+      }
+      .fbot-links a {
+         margin: 0 8px;
+      }
+   }
 </style>
 <footer>
       <div class="container" style="margin-bottom: 46px;">
@@ -51,21 +73,23 @@
           <div class="col-sm-6 col-lg-2">
              <div class="ftit">Tautan</div>
              <ul class="flinks ps-0">
-                <li><a href="#hero"><i class="fas fa-chevron-right"></i>Karir</a></li>
-                <li><a href="#about"><i class="fas fa-chevron-right"></i>Berita</a></li>
-                <li><a href="#menu"><i class="fas fa-chevron-right"></i>Tata Kelola</a></li>
-                <li><a href="#reservation"><i class="fas fa-chevron-right"></i>Pengaduan Nasabah</a></li>
-                <li><a href="#blog"><i class="fas fa-chevron-right"></i>Layanan Pengaduan Nasabah</a></li>
+                <li><a href="/rekrutmen"><i class="fas fa-chevron-right"></i>Karir</a></li>
+                <li><a href="/informasi"><i class="fas fa-chevron-right"></i>Berita</a></li>
+                <li><a href="/tatakelola"><i class="fas fa-chevron-right"></i>Tata Kelola</a></li>
+                <li><a href="/pengaduan"><i class="fas fa-chevron-right"></i>Pengaduan Nasabah</a></li>
              </ul>
           </div>
       </div>
    </div>
    <div class="fbot">
-      <div class="container">
-         <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
-            <p>&copy Copyright <span>BPR BKK Batang</span>. All Rights Reserved by 
-            <div><a href="#">Privacy Policy</a><a href="#">Terms</a><a href="#">Cookies</a></div>
+   <div class="container">
+      <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+         <p class="mb-0">&copy; Copyright <span>BPR BKK Batang</span>. All Rights Reserved by</p>
+         <div class="fbot-links">
+            <a href="/privasipolicy">Privacy Policy</a>
+            <a href="/terms">Terms</a>
          </div>
       </div>
    </div>
+</div>
 </footer>
