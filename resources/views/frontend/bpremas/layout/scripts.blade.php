@@ -1,0 +1,10 @@
+    <script src="{{ asset('frontend/bpremas/js/script_uikit_min_307.js') }}"></script>
+    <script src="{{ asset('frontend/bpremas/js/script_uikit-icons-bjb_min_308.js') }}"></script>
+    <script src="{{ asset('frontend/bpremas/js/script_uikit-icons-custom_309.js') }}"></script>
+    <script src="{{ asset('frontend/bpremas/js/script_jquery-3_6_0_min_310.js') }}"></script>
+    <script src="{{ asset('frontend/bpremas/js/script_content-builder_311.js') }}"></script>
+    <script src="{{ asset('frontend/bpremas/js/script_select2_min_312.js') }}"></script>
+    <script src="{{ asset('frontend/bpremas/js/script_loadjs_min_313.js') }}"></script>
+    <script src="{{ asset('frontend/bpremas/js/script_manifest_314.js') }}"></script>
+    <script src="{{ asset('frontend/bpremas/js/script_vendor_315.js') }}"></script>
+    <script src="{{ asset('frontend/bpremas/js/script_app_316.js') }}"></script>
