@@ -146,7 +146,7 @@
 
                                   <li class="has-dropdown"><a href="#">Tentang Kami</a>
                                       <ul class="sub-menu">
-                                          <li><a href="/profile">Profil</a></li>
+                                          <li><a href="/visimisi">Visi Misi</a></li>
                                           <li><a href="/sejarah">Sejarah</a></li>
                                           <li><a href="/pengurus">Pengurus</a></li>
                                           <li><a href="/organisasi">Struktur Organisasi</a></li>
@@ -165,8 +165,8 @@
                                       <ul class="sub-menu">
                                           <li><a href="/publikasi">Publikasi</a></li>
                                           <li><a href="/tahunan">Tahunan</a></li>
-                                          <li><a href="/tata">Tata Kelola</a></li>
-                                          <li><a href="blog-right-sidebar.html">Keberlanjutan</a></li>
+                                          <li><a href="/tatakelola">Tata Kelola</a></li>
+                                          <li><a href="/keberlanjutan">Keberlanjutan</a></li>
                                           <li><a href="blog-right-sidebar.html">Audit Charter</a></li>
 
                                       </ul>
@@ -175,14 +175,14 @@
                                   <li><a href="/pengajuanonline">Pengajuan Online</a></li>
                                   <li class="has-dropdown"><a href="#">Simulasi</a>
                                     <ul class="sub-menu">
-                                        <li><a href="/kredit">Kredit</a></li>
-                                        <li><a href="/deposito">Deposito</a></li>
-                                        <li><a href="/tabungan">Tabungan</a></li>
+                                        <li><a href="/simulasi-kredit">Kredit</a></li>
+                                        <li><a href="/simulasi-deposito">Deposito</a></li>
+                                        <li><a href="/simulasi-tabungan">Tabungan</a></li>
                                     </ul>
                                   </li>
                                   <li class="has-dropdown"><a href="#">Kontak</a>
                                     <ul class="sub-menu">
-                                        <li><a href="#">Pengaduan Nasabah</a></li>
+                                        <li><a href="/pengaduan">Pengaduan Nasabah</a></li>
                                         <li><a href="#">Laporan Pelanggaran</a></li>
                                     </ul>
                                   </li>
@@ -268,7 +268,7 @@
 
                                   <li class="has-dropdown"><a href="#">Tentang Kami</a>
                                       <ul class="sub-menu">
-                                          <li><a href="/profile">Profil</a></li>
+                                          <li><a href="/visimisi">Visi Misi</a></li>
                                           <li><a href="/sejarah">Sejarah</a></li>
                                           <li><a href="/pengurus">Pengurus</a></li>
                                           <li><a href="/organisasi">Struktur Organisasi</a></li>
@@ -287,8 +287,8 @@
                                     <ul class="sub-menu">
                                         <li><a href="/publikasi">Publikasi</a></li>
                                         <li><a href="/tahunan">Tahunan</a></li>
-                                        <li><a href="/tata">Tata Kelola</a></li>
-                                        <li><a href="blog-right-sidebar.html">Keberlanjutan</a></li>
+                                        <li><a href="/tatakelola">Tata Kelola</a></li>
+                                        <li><a href="keberlanjutan">Keberlanjutan</a></li>
                                         <li><a href="blog-right-sidebar.html">Audit Charter</a></li>
                                     </ul>
                                   </li>
@@ -296,9 +296,9 @@
                                   <li><a href="/pengajuanonline">Pengajuan Online</a></li>
                                   <li class="has-dropdown"><a href="#">Simulasi</a>
                                     <ul class="sub-menu">
-                                        <li><a href="/kredit">Kredit</a></li>
-                                        <li><a href="/deposito">Deposito</a></li>
-                                        <li><a href="/tabungan">Tabungan</a></li>
+                                        <li><a href="/simulasi-kredit">Kredit</a></li>
+                                        <li><a href="/simulasi-deposito">Deposito</a></li>
+                                        <li><a href="/simulasi-tabungan">Tabungan</a></li>
                                     </ul>
                                   </li>
                                   <li class="has-dropdown"><a href="#">Kontak</a>

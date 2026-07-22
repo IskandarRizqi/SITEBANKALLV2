@@ -49,63 +49,21 @@
         <!-- top -->
         <div class="offcanvas_top d-flex flex-wrap align-items-center justify-content-between gap-3">
             <div class="offcanvas_logo">
-                <a class="pxn_site_logo" href="index.html">
+                <a class="pxn_site_logo" href="/">
                     <img src="{{ asset('frontend/bprana/assets/images/logo/logo.png') }}" alt="Logo"
                         style="width:230px !important; max-width:none !important; height:auto;">
                 </a>
             </div>
 
             <button class="offcanvas_close">
-                <span class="text">Close</span>
                 <span class="icon"><i class="pxni-close"></i></span>
             </button>
-        </div>
-
-        <div class="offcanvas_desc  d-none d-lg-block">
-            Developing personalize our customer journeys to increase satisfaction &amp; loyalty of our expansion
-            recognized
-            by industry leaders.
-        </div>
-
-        <div class="offcanvas_search d-none d-lg-block">
-            <div class="search_title">Search Now!</div>
-
-            <form method="get" action="https://html.pixeniumagency.com/rovix/demo/index.html">
-                <button type="submit"><i class="pxni-search"></i></button>
-                <input type="search" autocomplete="off" name="s" value="" placeholder="Search here...">
-            </form>
         </div>
 
         <!-- mobile menu -->
         <div class="pxn_offcanvas_menu mobile_menu d-lg-none mean-container"></div>
 
-        <div class="offcanvas_contact pxn_contact">
-            <div class="contact_title">Location</div>
-
-            <div class="contact_info">Seattle (major city in the state Washington).</div>
-        </div>
-
-        <div class="offcanvas_contact pxn_contact">
-            <div class="contact_title">Contact</div>
-
-            <a href="tel:+880123456789" class="contact_info">+880 (123) 456 789</a>
-            <a href="mailto:support@rovix.com" class="contact_info">support@rovix.com</a>
-        </div>
-
-        <ul class="offcanvas_socials pxn_socials_3">
-            <li>
-                <a class="icon" href="https://facebook.com/" target="_blank"><i class="pxni-facebook"></i></a>
-            </li>
-            <li>
-                <a class="icon" href="https://linkedin.com/" target="_blank"><i class="pxni-linkedin"></i></a>
-            </li>
-            <li>
-                <a class="icon" href="https://instagram.com/" target="_blank"><i class="pxni-instagram"></i></a>
-            </li>
-            <li>
-                <a class="icon" href="https://twitter.com/" target="_blank"><i class="pxni-x-twitter"></i></a>
-            </li>
-        </ul>
+        
     </div>
 </div>
 <!-- end: Offcanvas -->

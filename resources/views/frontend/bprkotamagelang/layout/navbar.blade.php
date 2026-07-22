@@ -1,4 +1,4 @@
-<header id="header" class="header sticky-top">
+<!-- <header id="header" class="header sticky-top">
     <div class="branding d-flex align-items-cente">
 
       <div class="container position-relative d-flex align-items-center justify-content-between">
@@ -53,6 +53,7 @@
     </div>
 
   </header>
+     -->
     
     
     
@@ -70,11 +71,10 @@
     
     
     
-    
-    <!-- <nav class="navbar navbar-expand-lg" id="nav">
+    <nav class="navbar navbar-expand-lg" id="nav">
          <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="{{ asset('frontend/bpreleska/assets/img/logo/logo.png') }}" alt="Logo" width="270px;">
+                <img src="{{ asset('frontend/bprkotamagelang/assets/img/logo/logo1.png') }}" alt="Logo" width="270px;">
             </a>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
             <i class="fas fa-bars" style="color:var(--primary);font-size:1.35rem;"></i>
@@ -119,8 +119,11 @@
                         Laporan
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item {{ request()->is('publikasi') ? 'active' : '' }}" href="/publikasi">Laporan Publikasi</a></li>
-                        <li><a class="dropdown-item {{ request()->is('laporan-lainnya') ? 'active' : '' }}" href="/laporan-lainnya">Laporan Lainnya</a></li>
+                        <li><a class="dropdown-item {{ request()->is('publikasi') ? 'active' : '' }}" href="/publikasi">Publikasi</a></li>
+                        <li><a class="dropdown-item {{ request()->is('tahunan') ? 'active' : '' }}" href="/tahunan">Tahunan</a></li>
+                        <li><a class="dropdown-item {{ request()->is('tatakelola') ? 'active' : '' }}" href="/tatakelola">Tata Kelola</a></li>
+                        <li><a class="dropdown-item {{ request()->is('keberlanjutan') ? 'active' : '' }}" href="/keberlanjutan">Keberlanjutan</a></li>
+                        <li><a class="dropdown-item {{ request()->is('piagamaudit') ? 'active' : '' }}" href="/piagamaudit">Piagam Audit</a></li>
                     </ul>
                     </li>
 
@@ -135,12 +138,12 @@
                     </ul>
                     </li>
 
+                    <li class="nav-item">
+                        <a href="/pengajuanonline" class="nav-link {{ request()->is('pengajuanonline') ? 'active' : '' }}">Pengajuan Online</a> 
+                    </li>
                 </ul>
 
-                <div class="d-flex align-items-center gap-1">
-                    <a href="/pengajuanonline" class="nav-link nav-cta {{ request()->is('pengajuanonline') ? 'active' : '' }}">Pengajuan Online</a>
-                </div>
                 </div>
          </div>
-    </nav>   -->
+    </nav> 
   

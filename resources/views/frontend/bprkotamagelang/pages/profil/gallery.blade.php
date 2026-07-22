@@ -84,10 +84,11 @@
         }
     </style>
 
-     <div class="container-fluid bg-breadcrumb">
+    <div class="container-fluid bg-breadcrumb">
         <img src="{{asset('frontend/bprkotamagelang/assets/img/banner/profile.jpeg')}}" alt="Breadcrumb" class="breadcrumb-img" />
     </div>
     <div class="portfolio" style="margin-top: 50px; margin-bottom: 50px;">
+        <h5 class="display-4 wow fadeInDown" style="color: #000; text-align: center; font-size: 40px;" data-wow-delay="0.1s">GALERI</h5>
         <div class="container">
             <div class="row">
 

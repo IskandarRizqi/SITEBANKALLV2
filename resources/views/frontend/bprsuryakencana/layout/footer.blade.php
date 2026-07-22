@@ -93,7 +93,7 @@
                                  <ul>
                                      <li><a href="/rekrutmen">Karir</a></li>
                                      <li><a href="/pengaduan">Pengaduan Nasabah</a></li>
-                                     {{-- <li><a href="/contact">Kontak</a></li> --}}
+                                     <li><a href="https://wa.me/6281336782553" target="_blank">Kontak</a></li>
                                      <li><a href="/jaringankantor">Jaringan Kantor</a></li>
 
                                  </ul>
@@ -165,32 +165,17 @@
                              <div class="row">
                                  <div class="col">
                                      <div
-                                         class="footer_bottom_wrap d-flex column-gap-4 row-gap-3 flex-wrap align-items-center justify-content-center justify-content-md-between">
+                                         class="footer_bottom_wrap d-flex column-gap-4 row-gap-3 flex-wrap align-items-center justify-content-center justify-content-md-center">
                                          <div class="pxn_copyright_text">&copy; <span>Bpr Surya Kencana Jaya</span>
                                              Support By
                                              <a href="https://antaruang.com/" style="color: #f6630e"> Antar uang.</a>
                                          </div>
 
-                                         <ul class="pxn_socials_2">
-                                             <li><a class="social" href="https://facebook.com/" target="_blank"><i
-                                                         class="pxni-facebook"></i></a>
-                                             </li>
-                                             <li><a class="social" href="https://x.com/" target="_blank"><i
-                                                         class="pxni-x-twitter"></i></a>
-                                             </li>
-                                             <li><a class="social" href="https://linkedin.com/" target="_blank"><i
-                                                         class="pxni-linkedin"></i></a>
-                                             </li>
-                                             <li><a class="social" href="https://instagram.com/" target="_blank"><i
-                                                         class="pxni-instagram"></i></a>
-                                             </li>
-                                         </ul>
-
-                                         <ul class="pxn_footer_bottom_menu">
+                                         <!-- <ul class="pxn_footer_bottom_menu">
                                              {{-- <li><a href="#">Career</a></li>
                                              <li><a href="#">Privacy & Policy</a></li>
                                              <li><a href="#">FAQS</a></li> --}}
-                                         </ul>
+                                         </ul> -->
                                      </div>
                                  </div>
                              </div>

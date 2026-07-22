@@ -25,6 +25,7 @@ use App\Http\Controllers\frontend\Fe_RekruitmenController;
 use App\Http\Controllers\frontend\InformasiController;
 use App\Http\Controllers\frontend\PengaduanController;
 use App\Http\Controllers\frontend\WbsController;
+use App\Http\Controllers\frontend\LayananLainController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MasterPengajuanDepositoController;
 use App\Http\Controllers\MasterPengajuanKreditController;
@@ -76,7 +77,7 @@ Route::prefix('salamprofit')->middleware(['admin'])->group(function () {
     Route::get('/wbs/{id}/download', [WbsController::class, 'download'])->name('wbs.download');
     Route::resource('gallery', GalleryController::class);
     Route::resource('jaringan-kantor', JaringanKantorController::class);
-    Route::resource('lelang', LelangController::class);
+    Route::resource('lelang', LelangController::class)->middleware('auth');
     Route::resource('profile', ProfileController::class);
     Route::resource('rekruitmen', RekruitmenController::class)->middleware('auth');
     Route::get('rekruitmen-data', [RekruitmenController::class, 'lamaran']);
@@ -145,6 +146,11 @@ Route::get('/pengajuanonline', function () {
 Route::get('/programmagang', function () {
     return view(ENV('GLOBAL_MAGANG'));
 });
+
+Route::get('/tatakelolapage', function () {
+    return view(ENV('GLOBAL_TATAKELOLAPAGE'));
+});
+
 Route::get('/newformtabungan', function () {
     return view('frontend.bprmekar.pages.pengajuanonline.newformtabungan');
 });
@@ -160,6 +166,9 @@ Route::get('/newformpengajuantabungan', [\App\Http\Controllers\frontend\Pengajua
 Route::post('/pembukaan-rekening/simpan', [\App\Http\Controllers\frontend\PengajuanOnlineController::class, 'savetabungan'])->name('pembukaanrekening.simpan');
 // Route::get('/pembukaan-rekening/download/{id}', [\App\Http\Controllers\frontend\PengajuanOnlineController::class, 'downloadformpembukaanrekening'])->name('download.pembukaanrekening');
  
+Route::get('/layananlain', function () {
+    return view(ENV('GLOBAL_LAYANANLAIN'));
+});
 
 // PENGHARGAAN
 Route::get('/penghargaan', function () {
@@ -242,8 +251,8 @@ Route::get('laporanall', [\App\Http\Controllers\frontend\LaporanController::clas
 Route::post('/getlaporan-pisah', [\App\Http\Controllers\frontend\LaporanController::class, 'getlaporanfront']);
 
 
-Route::get('/term', function () {
-    return view('frontend.bprjas.pages.profil.term');
+Route::get('/terms', function () {
+    return view(env ('GLOBAL_TERMS'));
 });
 Route::get('/privasipolicy', function () {
     return view( env('GLOBAL_PRIVASIPOLICY'));

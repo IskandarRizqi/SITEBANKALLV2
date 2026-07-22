@@ -1,9 +1,7 @@
-@extends('frontend.bprbahari.layout.main')
+@extends('frontend.bprman.layout.main')
 
 @section('content')
     <style>
-     
-
         .event-content {
             max-width: 100%;
             overflow-x: auto;
@@ -30,26 +28,15 @@
                 margin-top: 0;
             }
         }
+
+        .judullap {
+        text-align: center;
+        margin-bottom: 0px;
+        margin-top: 100px;
+        }
     </style>
-    <div class="breadcrumb-area text-center shadow dark bg-fixed text-light"
-        style="background-image: url(frontend/bprbahari/assets/img/profil/banertop.jpg);">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2>Simulasi Tabungan</h2>
-                    <ul class="breadcrumb">
-                        <li><a href="#"><i class="fas fa-home"></i> Simulasi</a></li>
-                        <li class="active">Simulasi Tabungan</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
     <body class="body tg-heading-subheading animation-style3">
-
+        <h2 class="judullap">Simulasi Tabungan</h2>
         <div style="width:83%; margin:auto;   background: linear-gradient(45deg, #0a1c92, #ffffff); padding:35px; border-radius:15px; margin-top:50px; margin-bottom: 50px; display:flex; flex-direction:column;"
             class="simulasi-wrapper">
 
@@ -124,7 +111,7 @@
 
                 <div class="simulasi-right" style="width:45%; display:flex; align-items:center; justify-content:center;"
                     class="simulasi-right">
-                    <img id="gambarProduk" src="frontend/bprdatagita/img/produk/simulasitabungan.png"
+                    <img id="gambarProduk" src="frontend/bprman/assets/images/produk/simulasitabungan.png"
                         style="width:95%; height: 350px; border-radius:10px;">
 
 

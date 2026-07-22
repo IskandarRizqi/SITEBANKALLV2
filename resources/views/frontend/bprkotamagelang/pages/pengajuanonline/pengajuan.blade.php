@@ -33,7 +33,7 @@
     </style>
 
     <div class="container-fluid bg-breadcrumb">
-        <img src="{{asset('frontend/bpreleska/assets/img/banner/banner2.jpg')}}" alt="Breadcrumb" class="breadcrumb-img" />
+        <img src="{{asset('frontend/bprkotamagelang/assets/img/banner/profile.jpeg')}}" alt="Breadcrumb" class="breadcrumb-img" />
     </div>
     <div class="team2 team-page sp" style="padding-top:0px">
         <div class="container" style="margin-top: 50px">

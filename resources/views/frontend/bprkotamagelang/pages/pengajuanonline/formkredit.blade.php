@@ -1,4 +1,4 @@
-@extends('frontend.bprsahabattata.layout.main')
+@extends('frontend.bprkotamagelang.layout.main')
 
 @section('content')
     <style>
@@ -41,8 +41,8 @@
             all: revert;
         }
     </style>
-   <div class="container-fluid bg-breadcrumb">
-        <img src="{{asset('frontend/bprbkkbatang/assets/img/banner/pengajuan.png')}}" alt="Breadcrumb" class="breadcrumb-img" />
+    <div class="container-fluid bg-breadcrumb">
+        <img src="{{asset('frontend/bprkotamagelang/assets/img/banner/profile.jpeg')}}" alt="Breadcrumb" class="breadcrumb-img" />
     </div>
 
     <div class="job-wrapper" style="max-width:1150px;margin:0px auto 40px;font-family:'Open Sans',sans-serif;color:#333;">

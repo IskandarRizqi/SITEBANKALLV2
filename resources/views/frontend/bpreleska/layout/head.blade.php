@@ -12,7 +12,6 @@
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet"/>
 
-        <link href="{{asset('frontend/bpreleska/assets/css/bootstrap.min.css')}}" rel="stylesheet"/>
         <!-- AOS Animate on Scroll -->
         <link href="{{asset('frontend/bpreleska/assets/css/aos.css')}}" rel="stylesheet"/>
         <!-- Swiper -->
@@ -22,20 +21,21 @@
         <!-- magnific CSS -->
         <link rel="stylesheet" href="{{asset('frontend/bpreleska/assets/css/magnific-popup.css')}}"/>
         <!-- Style CSS -->
-        <link rel="stylesheet" href="{{asset('frontend/bpreleska/assets/css/style.css')}}" />
-
+        
         <!-- <link href="{{asset('frontend/bpreleska/img/logo/ico.png')}}" rel="icon"> -->
         <!-- Icon Font Stylesheet -->
         <!-- <link rel="stylesheet" href="{{asset('frontend/bpreleska/use.fontawesome.com/releases/v5.15.4/css/all.css')}}"/>
         <link href="{{asset('frontend/bpreleska/img/logo/ico.png')}}" rel="stylesheet"> -->
-
+        
         <!-- Libraries Stylesheet -->
         <link rel="stylesheet" href="{{asset('frontend/bpreleska/assets/css/animate.min.css')}}"/>
         <link href="{{asset('frontend/bpreleska/assets/css/animate.min.css')}}" rel="stylesheet">
         <link href="{{asset('frontend/bpreleska/assets/css/owl.carousel.min.css')}}" rel="stylesheet">
         <link href="{{asset('frontend/bpreleska/assets/css/lightbox.min.css')}}" rel="stylesheet">
-
-
+        
+        <link href="{{asset('frontend/bpreleska/assets/css/bootstrap.min.css')}}" rel="stylesheet"/>
+        
+        <link rel="stylesheet" href="{{asset('frontend/bpreleska/assets/css/style.css')}}" />
         <!-- Customized Bootstrap Stylesheet -->
         <!-- <link href="{{asset('frontend/bprbkkbatang/css/bootstrap.min.css')}}" rel="stylesheet"> -->
 

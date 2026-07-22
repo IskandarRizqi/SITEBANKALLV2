@@ -55,12 +55,11 @@
             </div>
 
             <button class="offcanvas_close">
-                <span class="text">Close</span>
                 <span class="icon"><i class="pxni-close"></i></span>
             </button>
         </div>
 
-        <div class="offcanvas_desc  d-none d-lg-block">
+        <!-- <div class="offcanvas_desc  d-none d-lg-block">
             Developing personalize our customer journeys to increase satisfaction &amp; loyalty of our expansion
             recognized
             by industry leaders.
@@ -73,12 +72,12 @@
                 <button type="submit"><i class="pxni-search"></i></button>
                 <input type="search" autocomplete="off" name="s" value="" placeholder="Search here...">
             </form>
-        </div>
+        </div> -->
 
         <!-- mobile menu -->
         <div class="pxn_offcanvas_menu mobile_menu d-lg-none mean-container"></div>
 
-        <div class="offcanvas_contact pxn_contact">
+        <!-- <div class="offcanvas_contact pxn_contact">
             <div class="contact_title">Location</div>
 
             <div class="contact_info">Seattle (major city in the state Washington).</div>
@@ -104,7 +103,7 @@
             <li>
                 <a class="icon" href="https://twitter.com/" target="_blank"><i class="pxni-x-twitter"></i></a>
             </li>
-        </ul>
+        </ul> -->
     </div>
 </div>
 <!-- end: Offcanvas -->
@@ -133,7 +132,7 @@
                 <div class="col">
                     <div class="pxn_header_main_wrap d-flex flex-wrap align-items-center">
                         <!-- logo -->
-                        <a class="pxn_site_logo" href="index.html">
+                        <a class="pxn_site_logo" href="/">
                             <img src="{{ asset('frontend/bprsuryakencana/assets/images/logo/logo.png') }}"
                                 alt="Logo" width="70px">
                         </a>

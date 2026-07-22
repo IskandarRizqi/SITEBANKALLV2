@@ -290,7 +290,21 @@
         <section class="py-5 text-center">
 
             <div class="row justify-content-center mb-4" style="margin-top: 40px;">
+                
                 <div class="col-lg-8">
+                    <p>
+                        Layanan Pengaduan Konsumen
+                        Dalam rangka menjaga kepercayaan nasabah/konsumen, perlindungan terhadap kepentingan konsumen senantiasa menjadi prioritas kami. BPR Mekar Nugraha mengedepankan kualitas layanan dalam rangka memberikan solusi bagi konsumen diantaranya melalui layanan pengaduan konsumen.
+                        Untuk penyampaian saran, keluhan maupun pengaduan, konsumen dapat menyampaikan secara lisan dengan menghubungi:
+                        Contact Center BPR Mekar Nugraha: 0298-523432
+                        atau Whatsapp BPR Mekar Nugraha: 0811-2792-373
+                        atau secara tertulis melalui :
+                        1. Offline: Datang ke kantor terdekat BPR Mekar Nugraha
+                        2. Online: Mengirim email ke customercare@mekarnugraha.com
+                    </p>
+
+                    <p>Berikut alur layanan pengaduan konsumen :</p>
+                    gambar
                     <p style="color: black; font-size: 23px;">
                         Kami menyediakan sarana bagi masyarakat untuk menyampaikan pengaduan dan pelanggaran yang terjadi di
                         lingkungan sekitar secara cepat dan mudah.

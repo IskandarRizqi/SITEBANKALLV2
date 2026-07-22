@@ -8,7 +8,8 @@
         <img src="{{asset('frontend/bprkotamagelang/assets/img/banner/profile.jpeg')}}" alt="Breadcrumb" class="breadcrumb-img" />
     </div>
 
-   <section class="about-area section-padding-100-0" style="margin-top: 50px; margin-bottom: 50px;">
+    <section class="about-area section-padding-100-0">
+    <h5 class="display-4 wow fadeInDown" style="color: #000; text-align: center; font-size: 40px;" data-wow-delay="0.1s">STRUKTUR ORGANISASI</h5>
     <div class="container">
         @if ($organisasi)
             <div class="row">

@@ -1,9 +1,9 @@
-@extends('frontend.bprsms.layout.main')
+@extends('frontend.bprmekar.layout.main')
 
 @section('content')
     <style>
         .justify-text {
-            text-al ign: justify;
+            text-align: justify;
         }
     </style>
     <div class="breadcumb-area style2 bg-smoke4">

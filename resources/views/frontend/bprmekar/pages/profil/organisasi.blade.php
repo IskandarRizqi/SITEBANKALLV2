@@ -1,4 +1,4 @@
-@extends('frontend.bprsms.layout.main')
+@extends('frontend.bprmekar.layout.main')
 
 @section('content') 
     <style>

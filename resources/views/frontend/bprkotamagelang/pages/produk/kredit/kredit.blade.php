@@ -38,6 +38,10 @@
             .kredit-img {
                 height: auto;
             }
+
+            .col-lg-4 {
+                text-align: center;
+            }
         }
     </style>
 
@@ -48,11 +52,13 @@
            <img src="{{ asset('frontend/bprtemanggung/assets/img/produk/kredit.jpg') }}" alt="Breadcrumb" class="banner-img" />
         </div>
     </div> -->
-
+    <div class="container-fluid bg-breadcrumb">
+        <img src="{{asset('frontend/bprkotamagelang/assets/img/banner/profile.jpeg')}}" alt="Breadcrumb" class="breadcrumb-img" />
+    </div>
 
     <div class="team2 team-page sp" style="padding-top:50px; padding-bottom:60px;">
+        <h5 class="display-4 wow fadeInDown" style="color: #000; text-align: center; font-size: 40px;" data-wow-delay="0.1s">PRODUK KREDIT</h5>
         <div class="container">
-
             <div class="row">
 
                 @foreach ($kredit as $item)

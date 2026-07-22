@@ -179,7 +179,7 @@
                                         <li><a href="/pengurus">Pengurus</a></li>
                                         <li><a href="/organisasi">Struktur Organisasi</a></li>
                                         <li><a href="/galery">Galery</a></li>
-                                        <li><a href="/tatakelola">Tata Kelola</a></li>
+                                        <li><a href="/tatakelolapage">Tata Kelola</a></li>
                                     </ul>
                                 </li>
                                 <li class="menu-item-has-children"><a href="#">Laporan</a>

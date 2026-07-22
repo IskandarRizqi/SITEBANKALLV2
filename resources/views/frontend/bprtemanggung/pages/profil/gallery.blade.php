@@ -1,4 +1,4 @@
-@extends('frontend.bprsahabattata.layout.main')
+@extends('frontend.bprtemanggung.layout.main')
 
 @section('content')
     <!-- Tambahkan CSS ini untuk menyamakan tinggi -->
@@ -83,15 +83,6 @@
 
         }
     </style>
-
-     <div class="container-fluid bg-breadcrumb">
-        <div class="bg-breadcrumb-single"></div>
-        <div class="container text-center py-5" style="max-width: 900px;">
-            <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">
-                Gallery
-            </h4>
-        </div>
-    </div>
     <div class="portfolio" style="margin-top: 50px; margin-bottom: 50px;">
         <div class="container">
             <div class="row">

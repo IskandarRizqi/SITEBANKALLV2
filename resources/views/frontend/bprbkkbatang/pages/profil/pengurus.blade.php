@@ -1,4 +1,4 @@
-@extends('frontend.bprsahabattata.layout.main')
+@extends('frontend.bprbkkbatang.layout.main')
 
 @section('content')
     <style>
@@ -9,15 +9,11 @@
         
     </style>
     <div class="container-fluid bg-breadcrumb">
-        <div class="bg-breadcrumb-single"></div>
-        <div class="container text-center py-5" style="max-width: 900px;">
-            <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">
-                Pengurus
-            </h4>
-        </div>
+        <img src="{{asset('frontend/bprbkkbatang/assets/img/banner/profile.jpeg')}}" alt="Breadcrumb" class="breadcrumb-img" />
     </div>
 
     <div class="container-fluid faq py-5">
+    <h5 class="display-4 wow fadeInDown" style="color: #000; text-align: center; margin-top: 30px;" data-wow-delay="0.1s">PENGURUS</h5>
         <div class="container py-5">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-12 wow fadeInLeft" data-wow-delay="0.1s">

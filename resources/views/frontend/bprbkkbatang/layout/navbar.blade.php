@@ -68,7 +68,12 @@
                     </ul>
                     </li>
 
+                    <!-- <li class="nav-item">
+                    <a class="nav-link {{ request()->is('info') ? 'active' : '' }}" href="/info">Informasi</a>
+                    </li> -->
+
                 </ul>
+                
 
                 <div class="d-flex align-items-center gap-1">
                     <a href="/pengajuanonline" class="nav-link nav-cta {{ request()->is('pengajuanonline') ? 'active' : '' }}">Pengajuan Online</a>

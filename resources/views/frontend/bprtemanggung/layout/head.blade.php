@@ -31,10 +31,9 @@
         <link href="{{asset('frontend/bpreleska/img/logo/ico.png')}}" rel="stylesheet"> -->
 
         <!-- Libraries Stylesheet -->
-        <link rel="stylesheet" href="{{asset('frontend/bprtemanggung/assets/css/animate.min.css')}}"/>
-        <link href="{{asset('frontend/bprtemanggung/assets/css/animate.min.css')}}" rel="stylesheet">
-        <link href="{{asset('frontend/bprtemanggung/assets/css/owl.carousel.min.css')}}" rel="stylesheet">
-        <link href="{{asset('frontend/bprtemanggung/assets/css/lightbox.min.css')}}" rel="stylesheet">
+        <link href="{{asset('frontend/bprtemanggung/assets/lib/animate/animate.min.css')}}" rel="stylesheet">
+        <link href="{{asset('frontend/bprtemanggung/assets/lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+        <link href="{{asset('frontend/bprtemanggung/assets/lib/lightbox/css/lightbox.min.css')}}" rel="stylesheet">
         
 
         <link href="{{asset('frontend/bprtemanggung/assets/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">

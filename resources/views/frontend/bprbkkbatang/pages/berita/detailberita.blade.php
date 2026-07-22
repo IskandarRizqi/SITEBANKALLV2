@@ -1,4 +1,4 @@
-@extends('frontend.bprsahabattata.layout.main')
+@extends('frontend.bprbkkbatang.layout.main')
 
 @section('content')
     <style>
@@ -174,14 +174,7 @@
             margin-bottom: 30px;
         }
     </style>
-    <div class="container-fluid bg-breadcrumb">
-        <div class="bg-breadcrumb-single"></div>
-        <div class="container text-center py-5" style="max-width: 900px;">
-            <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">
-                Detail Berita
-            </h4>
-        </div>
-    </div>
+    
     <!-- Single Post Start-->
     <div class="single">
         <div class="container">

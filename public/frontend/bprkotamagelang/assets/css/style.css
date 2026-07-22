@@ -10,7 +10,7 @@
   --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.18);
 }
 /* Smooth dropdown animation */
-.dropdown-menu {
+/* .dropdown-menu {
   display: block;
   opacity: 0;
   visibility: hidden;
@@ -28,6 +28,103 @@
   visibility: visible;
   transform: translateY(0) scale(1);
   pointer-events: auto;
+} */
+
+@media (min-width: 992px) {
+  .dropdown-menu {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px) scale(0.97);
+    transform-origin: top left;
+    transition:
+      opacity 0.22s cubic-bezier(0.4, 0, 0.2, 1),
+      transform 0.22s cubic-bezier(0.4, 0, 0.2, 1),
+      visibility 0.22s;
+    pointer-events: none;
+  }
+
+  .dropdown-menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+  }
+}
+
+/* ===================== MOBILE NAVBAR / HAMBURGER FIXES ===================== */
+@media (max-width: 991.98px) {
+
+  /* Dropdown mobile: pakai perilaku default Bootstrap, tanpa animasi custom */
+  .dropdown-menu {
+    display: block !important;
+    position: static;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    padding: 0 10px;
+    margin: 0;
+    border: none;
+    box-shadow: none;
+    background: rgba(0, 0, 0, 0.02);
+    border-radius: 8px;
+    transition:
+      max-height 0.35s ease,
+      opacity 0.25s ease,
+      padding 0.35s ease,
+      margin 0.35s ease;
+  }
+
+  .dropdown-menu.show {
+    max-height: 600px; /* cukup besar untuk isi dropdown terpanjang, misal "Laporan" */
+    opacity: 1;
+    margin: 4px 0 8px;
+    padding: 8px 10px;
+  }
+  /* Garis aktif rata kiri, bukan center */
+  .navbar-nav .nav-link:not(.dropdown-toggle)::after {
+    left: 0;
+    transform: none;
+  }
+  .navbar-nav .nav-link:not(.dropdown-toggle):hover::after,
+  .navbar-nav .nav-link:not(.dropdown-toggle).active::after {
+    width: 40px;
+  }
+
+  /* Jarak antar item nav lebih rapi saat menu terbuka */
+  .navbar-nav .nav-link {
+    padding: 12px 8px !important;
+  }
+  .navbar-nav .nav-item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  }
+  .navbar-nav .nav-item:last-child {
+    border-bottom: none;
+  }
+
+  /* Panah dropdown berputar saat menu terbuka, jadi indikator status jelas */
+  .dropdown-toggle::after {
+    transition: transform 0.25s ease;
+  }
+  .dropdown-toggle[aria-expanded="true"]::after {
+    transform: rotate(180deg);
+  }
+
+  /* Animasi buka/tutup collapse hamburger lebih halus */
+  #navmenu.collapsing {
+    transition: height 0.3s ease;
+  }
+
+  /* Tombol "Pengajuan Online" full width & rapi di mobile */
+  #navmenu .d-flex {
+    margin-top: 10px;
+    width: 100%;
+  }
+  #navmenu .nav-cta {
+    width: 100%;
+    text-align: center;
+    padding: 12px !important;
+  }
 }
 
 * {
@@ -156,7 +253,7 @@ img {
   font-size: 0.87rem;
   font-weight: 500;
   color: #333 !important;
-  padding: 26px 13px !important;
+  padding: 20px 13px !important;
   position: relative;
 }
 .navbar-nav .nav-link:not(.dropdown-toggle)::after {
@@ -1717,8 +1814,7 @@ section {
 /* ===================== FOOTER ===================== */
 footer {
   background-color: #ffc9c9;
- ;
-  padding: 68px 0 0;
+  /* padding: 68px 0 0; */
 }
 .fnm {
   font-family: "Playfair Display", serif;

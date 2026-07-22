@@ -6,7 +6,7 @@
         .banner-img {
             width: 100%;
             height: 500px;
-            object-fit: cover;
+            object-fit: contain;
             display: block;
         }
 
@@ -23,7 +23,7 @@
 
         .kredit-img {
             width: 100%;
-            height: 400px;
+            height: 350px;
             object-fit: fill;
             border-radius: 15px;
             transition: 0.3s;
@@ -60,12 +60,12 @@
 
                         <div class="team-box">
 
-                            <a href="{{ route('detkredit', $item->id) }}">
+                            <!--<a href="{{ route('detkredit', $item->id) }}">-->
 
                                 <img src="/recfil?display=true&rf={{ $item->thumbnail }}"
                                     alt="{{ $item->title ?? 'kredit' }}" class="kredit-img">
 
-                            </a>
+                            <!--</a>-->
 
                         </div>
 

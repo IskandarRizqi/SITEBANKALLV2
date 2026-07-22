@@ -2,33 +2,45 @@
 
 @section('content')
     <style>
-        /* Running text animation */
-        @keyframes marquee {
-            0% {
-                transform: translateX(0);
-            }
-
-            100% {
-                transform: translateX(-100%);
-            }
-        }
-        .team-box {
-            margin-bottom: 30px;
-        }
-
-
-        /* Responsive Banner */
+        /* Banner */
         .banner-img {
             width: 100%;
             height: 500px;
-            object-fit: fill;
+            object-fit: cover;
             display: block;
         }
 
         @media(max-width:768px) {
             .banner-img {
                 height: 260px;
-                object-fit: cover;
+            }
+        }
+
+        /* Card Kredit */
+        .team-box {
+            margin-bottom: 30px;
+        }
+
+        .tabungan-img {
+            width: 100%;
+            height: 400px;
+            object-fit: fill;
+            border-radius: 15px;
+            transition: 0.3s;
+        }
+
+        .tabungan-img:hover {
+            transform: scale(1.03);
+        }
+
+        /* Mobile */
+        @media(max-width:768px) {
+            .tabungan-img {
+                height: auto;
+            }
+
+            .col-lg-4 {
+                text-align: center;
             }
         }
     </style>
@@ -40,8 +52,12 @@
         </div>
     </div> -->
 
+    <div class="container-fluid bg-breadcrumb">
+        <img src="{{asset('frontend/bprkotamagelang/assets/img/banner/profile.jpeg')}}" alt="Breadcrumb" class="breadcrumb-img" />
+    </div>
 
-    <div class="team2 team-page sp" style="padding-top: 50px">
+    <div class="team2 team-page sp" style="padding-top: 50px; padding-bottom:60px;">
+            <h5 class="display-4 wow fadeInDown" style="color: #000; text-align: center; font-size: 40px;" data-wow-delay="0.1s">PRODUK TABUNGAN</h5>
         <div class="container">
 
             <div class="row">
@@ -53,7 +69,7 @@
                                     <a href="{{ route('dettabungan', $item->id) }}">
                                         <img src="/recfil?display=true&rf={{ $item->thumbnail }}"
                                             alt="{{ $item->title ?? 'tabungan' }}"
-                                            style=" object-fit: fill; height: 400px; width: 320px; border-radius: 15px;">
+                                            class="tabungan-img">
                                     </a>
                                 </div>
                             </div>

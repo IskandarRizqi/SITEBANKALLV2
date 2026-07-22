@@ -1,17 +1,14 @@
 @extends('frontend.bprkotamagelang.layout.main')
 
 @section('content')
-     <div class="container-fluid bg-breadcrumb">
-        <div class="bg-breadcrumb-single"></div>
-        <div class="container text-center">
-            <img src="frontend/bprtemanggung/assets/img/banner/banner.jpg" alt="">
-        </div>
+    <div class="container-fluid bg-breadcrumb">
+        <img src="{{asset('frontend/bprkotamagelang/assets/img/banner/profile.jpeg')}}" alt="Breadcrumb" class="breadcrumb-img" />
     </div>
 
 
     <body class="body tg-heading-subheading animation-style3">
-
-        <div id="superParentContainer" class="container pb-3" style="margin-top:40px;">
+        <div id="superParentContainer" class="container" style="padding-top: 50px; padding-bottom: 60px;">
+                <h5 class="display-4 wow fadeInDown" style="color: #000; text-align: center; font-size: 40px;" data-wow-delay="0.1s">LAPORAN TAHUNAN</h5>
             <div class="row readContent">
                 <div class="col-lg-12 mt-3 mb-3">
                     <div class="row d-flex justify-content-center">

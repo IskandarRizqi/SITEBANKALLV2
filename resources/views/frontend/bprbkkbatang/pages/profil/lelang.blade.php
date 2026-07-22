@@ -1,4 +1,4 @@
-@extends('frontend.bprsahabattata.layout.main')
+@extends('frontend.bprbkkbatang.layout.main')
 
 @section('content')
     <style>
@@ -73,18 +73,10 @@
     </style>
 
     <div class="container-fluid bg-breadcrumb">
-        <div class="bg-breadcrumb-single"></div>
-        <div class="container text-center py-5" style="max-width: 900px;">
-            <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">
-                Lelang
-            </h4>
-        </div>
+        <img src="{{asset('frontend/bprbkkbatang/assets/img/banner/lelang.png')}}" alt="Breadcrumb" class="breadcrumb-img" />
     </div>
 
     <body class="body tg-heading-subheading animation-style3" >
-
-
-
         <div class="col-lg-12" style="margin-top: 50px;">
             <div class="blog blog-page sp">
                 <div class="container">

@@ -1,4 +1,4 @@
-@extends('frontend.bprdatagita.layout.main')
+@extends('frontend.bprbkkbatang.layout.main')
 
 @section('content')
     <style>

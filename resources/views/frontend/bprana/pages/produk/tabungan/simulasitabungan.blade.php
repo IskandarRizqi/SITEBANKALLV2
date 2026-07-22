@@ -20,6 +20,8 @@
             list-style: disc !important;
             padding-left: 18px !important;
         }
+
+        
     </style>
 
    <div class="pxn-page-header" data-bg-image="{{asset('frontend/bprana/assets/images/profil/banertop.jpg')}}"
@@ -118,8 +120,8 @@
 
                 <div class="simulasi-right" style="width:45%; display:flex; align-items:center; justify-content:center;"
                     class="simulasi-right">
-                    <img id="gambarProduk" src="frontend/bprdatagita/img/produk/simulasitabungan.png"
-                        style="width:95%; height: 350px; border-radius:10px;">
+                    <img id="gambarProduk" src="frontend/bprana/assets/images/simulasi/tab.png"
+                        style="width:95%; height: 350px; border-radius:10px; ">
 
 
                 </div>

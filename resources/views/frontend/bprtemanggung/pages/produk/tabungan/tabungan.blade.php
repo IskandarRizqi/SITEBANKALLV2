@@ -50,11 +50,11 @@
                         <div class="team-box">
                             <div class="image-area">
                                 <div class="image">
-                                    <a href="{{ route('dettabungan', $item->id) }}">
+                                    <!--<a href="{{ route('dettabungan', $item->id) }}">-->
                                         <img src="/recfil?display=true&rf={{ $item->thumbnail }}"
                                             alt="{{ $item->title ?? 'tabungan' }}"
-                                            style=" object-fit: fill; height: 400px; width: 320px; border-radius: 15px;">
-                                    </a>
+                                            style=" object-fit: fill; height: 350px; width: 320px; border-radius: 15px;">
+                                    <!--</a>-->
                                 </div>
                             </div>
                         </div>

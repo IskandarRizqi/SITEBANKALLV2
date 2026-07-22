@@ -1,4 +1,4 @@
-@extends('frontend.bprsahabattata.layout.main')
+@extends('frontend.bprbkkbatang.layout.main')
 
 @section('content')
     <style>
@@ -268,14 +268,6 @@
         }
     </style>
 
-      <div class="container-fluid bg-breadcrumb">
-        <div class="bg-breadcrumb-single"></div>
-        <div class="container text-center py-5" style="max-width: 900px;">
-            <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">
-                Pengaduan Nasabah
-            </h4>
-        </div>
-    </div>
     {{-- <div style="width:100%; overflow:hidden; margin-top:100px;">
         <img src="{{ asset('frontend/bprtaruna/assets/img/profil/pengaduan.jpg') }}" alt="Banner"
             style=" width:100%; height: auto; max-height:auto; object-fit:cover; display:block;">
@@ -288,7 +280,7 @@
         <!--===== LAYANAN PENGADUAN =====-->
         <section class="py-5 text-center">
 
-            {{-- <h2 style="font-weight:600; color:#b80000; margin-bottom:20px; font-family:'Open Sans', sans-serif;"">
+            {{-- <h2 style="font-weight:600; color: #1900ae; margin-bottom:20px; font-family:'Open Sans', sans-serif;"">
                 Pengaduan Nasabah
             </h2> --}}
 
@@ -314,7 +306,7 @@
             <div class="row justify-content-center">
                 <div class="col-md-6 mb-3">
                     <a href="#" class="btn btn-lg" id="btnPengaduan"
-                        style=" width: 80%; padding: 15px 7px; background-color: #f63030; color: #ffffff;font-size: 25px; border-radius: 30px;">
+                        style=" width: 80%; padding: 15px 7px; background-color: #0a016c; color: #ffffff;font-size: 25px; border-radius: 30px;">
                         <i class="fas fa-edit mr-2"></i> Pengaduan Nasabah
                     </a>
 

@@ -1,7 +1,7 @@
 @extends('frontend.bprsms.layout.main')
 
 @section('content')
-    <Style>
+    <style>
         .hero-12 {
             position: relative;
             margin-top: 0 !important;
@@ -45,7 +45,52 @@
             /* 2 baris */
             white-space: normal;
         }
-    </Style>
+        /* Kunci ukuran outer ring, JANGAN biarkan ikut ukuran gambar */
+.choose-card .box-img.global-img {
+    width: 300px;
+    height: 300px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.choose-card .box-img.global-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-width: none;
+    margin: 0;
+}
+
+/* Mobile: ring tetap konsisten, cuma ukurannya diperkecil proporsional — TIDAK ikut gambar */
+@media (max-width: 576px) {
+    .choose-card .box-img.global-img {
+        position: relative;
+        width: 70vw;
+        max-width: 260px;
+        height: 0;
+        padding-top: 70vw;          /* samain persis dgn width */
+        max-height: 260px;
+        border-radius: 50%;
+        overflow: hidden;
+        box-sizing: border-box;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .choose-card .box-img.global-img img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        max-width: none;
+        margin: 0;
+    }
+}
+    </style>
     <div class="hero-12 " style="background-color: #ff5a1e" id="hero">
         <div class="swiper th-slider overflow-hidden" id="heroSlide12"
             data-slider-options='{"effect":"fade","autoHeight":false,"autoplay":{"delay":3000}}'>
@@ -281,8 +326,8 @@
 
                                 <div class="box-img global-img mb-30"
                                     style="display:flex; justify-content:center; align-items:center;">
-                                    <img src="frontend/bprsms/assets/img/produk/kredit.png" alt="Image"
-                                        style="max-width:300px; margin:0 auto;">
+                                    <img src="frontend/bprsms/assets/img/produk/kredit.png" alt="Image">
+                                     
                                 </div>
 
                                 <h3 class="box-title">
@@ -302,8 +347,8 @@
 
                                 <div class="box-img global-img mb-30"
                                     style="display:flex; justify-content:center; align-items:center;">
-                                    <img src="frontend/bprsms/assets/img/produk/tabungan.png" alt="Image"
-                                        style="max-width:300px; margin:0 auto;">
+                                    <img src="frontend/bprsms/assets/img/produk/tabungan.png" alt="Image">
+                                       
                                 </div>
 
                                 <h3 class="box-title">
@@ -323,8 +368,8 @@
 
                                 <div class="box-img global-img mb-30"
                                     style="display:flex; justify-content:center; align-items:center;">
-                                    <img src="frontend/bprsms/assets/img/produk/deposito.png" alt="Image"
-                                        style="max-width:300px; margin:0 auto;">
+                                    <img src="frontend/bprsms/assets/img/produk/deposito.png" alt="Image">
+                                      
                                 </div>
 
                                 <h3 class="box-title">
