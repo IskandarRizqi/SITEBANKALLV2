@@ -5,10 +5,10 @@
         <div class="breadcumb-wrapper" data-bg-src="frontend/bprsms/assets/img/bg/breadcumb-bg.jpg">
             <div class="container">
                 <div class="breadcumb-content">
-                    <h1 class="breadcumb-title">Visimisi</h1>
+                    <h1 class="breadcumb-title">Visi & Misi</h1>
                     <ul class="breadcumb-menu">
                         <li><a href="index.html">Profil</a></li>
-                        <li>Visimisi</li>
+                        <li>Visi & Misi</li>
                     </ul>
                 </div>
             </div>
@@ -46,7 +46,7 @@
                     <div
                         style="display: flex; align-items: center; margin-bottom: 15px; font-size: 28px; font-weight: bold;">
                         <img src="frontend/bprrudo/assets/img/icons/misi.png" alt="" style="height: 40px">
-                        <span style="margin-left: 10px">Visi</span>
+                        <span style="margin-left: 10px">Misi</span>
                     </div>
                     <div style="list-style: none; padding-left: 47px;">
 

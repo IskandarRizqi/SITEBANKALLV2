@@ -269,7 +269,7 @@
                 </div>
             </div>
 
-            <div class="slider-area">
+            <!-- <div class="slider-area">
                 <div class="swiper th-slider has-shadow chooseSlider" id="chooseSlider"
                     data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"1"},"768":{"slidesPerView":"2"},"992":{"slidesPerView":"3"},"1200":{"slidesPerView":"3"},"1400":{"slidesPerView":"4"},"1600":{"slidesPerView":"5"}}}'>
 
@@ -288,11 +288,6 @@
                                 <h3 class="box-title">
                                     <a href="service-details.html">Kredit</a>
                                 </h3>
-
-                                <!-- <p class="sec-text">
-                                     Solusi pembiayaan mudah dan cepat untuk kebutuhan usaha maupun pribadi dengan proses yang aman dan terpercaya.
-                                </p> -->
-
                             </div>
                         </div>
 
@@ -309,11 +304,6 @@
                                 <h3 class="box-title">
                                     <a href="service-details.html">Deposito</a>
                                 </h3>
-
-                                <!-- <p class="sec-text">
-                                    Simpanan berjangka dengan bunga kompetitif dan pilihan tenor fleksibel untuk investasi yang lebih menguntungkan.
-                                </p> -->
-
                             </div>
                         </div>
 
@@ -330,17 +320,12 @@
                                 <h3 class="box-title">
                                     <a href="service-details.html">Tabungan</a>
                                 </h3>
-
-                                <!-- <p class="sec-text">
-                                    Produk tabungan aman dan praktis untuk membantu mengelola keuangan serta memenuhi kebutuhan masa depan.
-                                </p> -->
-
                             </div>
                         </div>
 
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
 

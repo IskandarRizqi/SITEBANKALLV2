@@ -1,4 +1,4 @@
-@extends('frontend.bprbahari.layout.main')
+@extends('frontend.bprapm.layout.main')
 
 @section('content')
     <style>
@@ -12,22 +12,18 @@
                 margin-top: 0;
             }
         }
+        
+        .judul-berita {
+            display: -webkit-box;
+            -webkit-line-clamp: 2; /* jumlah baris */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            min-height: 70px;
+        }
     </style>
 
-    <div class="breadcrumb-area text-center shadow dark bg-fixed text-light"
-        style="background-image: url(frontend/bprbahari/assets/img/profil/banertop.jpg);">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2>Informasi</h2>
-                    <ul class="breadcrumb">
-                        <li><a href="#"><i class="fas fa-home"></i> Berita</a></li>
-                        <li class="active">Informasi</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+    
 
     <!-- Blog Area -->
     <div class="container" style="margin-top:100px; margin-bottom:80px;">
@@ -58,27 +54,23 @@
                             <!-- Content -->
                             <div class="info">
 
-                                <div class="meta">
-                                    <ul>
-                                        <li>
-                                            <a href="#">
-                                                <i class="fas fa-calendar"></i>
+                                <div class="meta mt-3">
+
+                                            <a href="#" style="color: #000;">
                                                 {{ \Carbon\Carbon::parse($item->tanggal_tampil)->translatedFormat('d M Y') }}
                                             </a>
-                                        </li>
-                                    </ul>
+                                    
                                 </div>
 
-                                <h4 style="min-height:70px;">
+                                <h4 class="judul-berita">
                                     <a href="{{ route('detberita', $item->id) }}">
-                                        {{ \Illuminate\Support\Str::limit($item->title, 60) }}
+                                        {{ \Illuminate\Support\Str::limit($item->title) }}
                                     </a>
                                 </h4>
 
                                 <a class="btn-more"
                                     href="{{ route('detberita', $item->id) }}">
-                                    Baca Selengkapnya
-                                    <i class="fas fa-long-arrow-alt-right"></i>
+                                    Baca Selengkapnya...
                                 </a>
 
                             </div>

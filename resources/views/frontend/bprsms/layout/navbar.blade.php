@@ -122,7 +122,7 @@
                 <li class="menu-item-has-children"><a href="#">Tentang Kami</a>
                     <ul class="sub-menu">
 
-                        <li><a href="/visimisi">Visimisi</a></li>
+                        <li><a href="/visimisi">Visi & Misi</a></li>
                         <li><a href="/sejarah">Sejarah</a></li>
                         <li><a href="/pengurus">Pengurus</a></li>
                         <li><a href="/organisasi">Struktur Organisasi</a></li>
@@ -174,7 +174,7 @@
                                 <li class="menu-item-has-children"><a href="#">Tentang Kami</a>
                                     <ul class="sub-menu">
 
-                                        <li><a href="/visimisi">Visimisi</a></li>
+                                        <li><a href="/visimisi">Visi & Misi</a></li>
                                         <li><a href="/sejarah">Sejarah</a></li>
                                         <li><a href="/pengurus">Pengurus</a></li>
                                         <li><a href="/organisasi">Struktur Organisasi</a></li>
