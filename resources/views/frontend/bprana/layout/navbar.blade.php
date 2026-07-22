@@ -63,7 +63,7 @@
         <!-- mobile menu -->
         <div class="pxn_offcanvas_menu mobile_menu d-lg-none mean-container"></div>
 
-        
+
     </div>
 </div>
 <!-- end: Offcanvas -->
@@ -92,7 +92,7 @@
                 <div class="col">
                     <div class="pxn_header_main_wrap d-flex flex-wrap align-items-center">
                         <!-- logo -->
-                        <a class="pxn_site_logo" href="index.html">
+                        <a class="pxn_site_logo" href="/">
                             <img src="{{ asset('frontend/bprana/assets/images/logo/logo.png') }}" alt="Logo"
                                 style="width:230px !important; max-width:none !important; height:auto;">
                         </a>
@@ -225,7 +225,7 @@
                 <div class="col">
                     <div class="pxn_header_main_wrap d-flex flex-wrap align-items-center">
                         <!-- logo -->
-                        <a class="pxn_site_logo" href="index.html">
+                        <a class="pxn_site_logo" href="/">
                             <img src="{{ asset('frontend/bprana/assets/images/logo/logo.png') }}" alt="Logo"
                                 style="width:230px !important; max-width:none !important; height:auto; background-color: white; padding: 5px 10px; border-radius: 5px;">
                         </a>

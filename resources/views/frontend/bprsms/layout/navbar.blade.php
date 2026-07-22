@@ -104,7 +104,7 @@
             color: #000 !important;
         }
 
-    
+
 
     }
 </style>
@@ -112,8 +112,8 @@
 
 <div class="th-menu-wrapper onepage-nav">
     <div class="th-menu-area text-center"><button class="th-menu-toggle"><i class="fal fa-times"></i></button>
-        <div class="mobile-logo"><a href="index.html"><img src="frontend/bprsms/assets/img/logo/logo.png"
-                    style="width: 170px" alt="Atek"></a></div>
+        <div class="mobile-logo"><a href="/"><img src="frontend/bprsms/assets/img/logo/logo.png" style="width: 170px"
+                    alt="Atek"></a></div>
 
         <div class="th-mobile-menu allow-natural-scroll">
             <ul>
@@ -194,7 +194,7 @@
                                 class="far fa-bars"></i></button>
                     </div>
                     <div class="col-auto">
-                        <div class="header-logo"><a href="index.html"><img
+                        <div class="header-logo"><a href="/"><img
                                     src="{{asset('frontend/bprsms/assets/img/logo/logo.png')}}" style="width: 190px;"
                                     alt="Logo"></a></div>
                     </div>

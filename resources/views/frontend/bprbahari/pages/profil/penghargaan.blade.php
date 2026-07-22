@@ -1,150 +1,159 @@
 @extends('frontend.bprbahari.layout.main')
 
 @section('content')
-    <style>
-        .kantor-container {
-            margin: 30px auto;
-            max-width: 1100px;
-            font-family: Arial, sans-serif;
-            font-size: 14px;
-        }
+<style>
+    .kantor-container {
+        margin: 30px auto;
+        max-width: 1100px;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+    }
 
-        .section-header {
-            background-color: #113ADC;
-            /* biru dongker */
-            color: white;
-            font-weight: bold;
-            padding: 10px;
-            margin-top: 20px;
-        }
+    .section-header {
+        background-color: #113ADC;
+        /* biru dongker */
+        color: white;
+        font-weight: bold;
+        padding: 10px;
+        margin-top: 20px;
+    }
 
-        .kantor-item {
-            padding: 15px;
-            border: 1px solid #ddd;
-            background: #f9f9f9;
-        }
+    .kantor-item {
+        padding: 15px;
+        border: 1px solid #ddd;
+        background: #f9f9f9;
+    }
 
-        .kantor-item strong {
-            display: block;
-            margin-bottom: 5px;
-        }
+    .kantor-item strong {
+        display: block;
+        margin-bottom: 5px;
+    }
 
-        .kantor-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 10px;
-        }
+    .kantor-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 10px;
+    }
 
+    .common-hero {
+        background: url('{{ asset(env(' GLOBAL_TOPPAGE')) }}') no-repeat center center;
+        background-size: contain;
+        /* default untuk desktop */
+        background-position: center;
+        color: #fff;
+        padding: 40px 0;
+        position: relative;
+        margin-top: 70px;
+        /* jarak dari navbar */
+        text-align: center;
+        /* teks ke tengah */
+    }
+
+    /* Versi Mobile */
+    @media (max-width: 768px) {
         .common-hero {
-            background: url('{{ asset(env('GLOBAL_TOPPAGE')) }}') no-repeat center center;
-            background-size: contain;
-            /* default untuk desktop */
-            background-position: center;
-            color: #fff;
-            padding: 40px 0;
-            position: relative;
-            margin-top: 70px;
-            /* jarak dari navbar */
-            text-align: center;
-            /* teks ke tengah */
+            background: url('{{ asset(env(' GLOBAL_TOPMOBILE')) }}') no-repeat center center;
+            background-size: cover;
+            /* gambar diperbesar biar penuh */
+            min-height: 180px;
+            /* tinggi hero agar kelihatan besar */
+            display: flex;
+            align-items: center;
+            /* teks di tengah vertikal */
+            justify-content: center;
+            /* teks di tengah horizontal */
+            padding: 0;
+            /* hilangkan padding default */
         }
 
-        /* Versi Mobile */
-        @media (max-width: 768px) {
-            .common-hero {
-                background: url('{{ asset(env('GLOBAL_TOPMOBILE')) }}') no-repeat center center;
-                background-size: cover;
-                /* gambar diperbesar biar penuh */
-                min-height: 180px;
-                /* tinggi hero agar kelihatan besar */
-                display: flex;
-                align-items: center;
-                /* teks di tengah vertikal */
-                justify-content: center;
-                /* teks di tengah horizontal */
-                padding: 0;
-                /* hilangkan padding default */
-            }
-
-            .common-hero h1,
-            .common-hero h2,
-            .common-hero .title {
-                font-size: 20px;
-                /* sesuaikan ukuran teks agar pas di mobile */
-                font-weight: bold;
-                color: #000;
-                /* atau putih jika kontras dengan background */
-            }
+        .common-hero h1,
+        .common-hero h2,
+        .common-hero .title {
+            font-size: 20px;
+            /* sesuaikan ukuran teks agar pas di mobile */
+            font-weight: bold;
+            color: #000;
+            /* atau putih jika kontras dengan background */
         }
-    </style>
+    }
+</style>
 
-    <body class="body tg-heading-subheading animation-style3">
+<body class="body tg-heading-subheading animation-style3">
 
 
-        <div class="common-hero">
-            <div class="container">
-                <div class="row align-items-center text-center">
-                    <div class="col-lg-8 m-auto">
-                        <div class="main-heading">
-                            <h1 style="font-size: 35px">PENGHARGAAN</h1>
-                            <span class="span"><img src="frontend/bprjas/assets/img/icons/span1.png" alt=""> <a
-                                    href="index.html">Home</a> <span class="arrow"><i
-                                        class="fa-regular fa-angle-right"></i></span> penghargaan</span>
-                        </div>
+    <div class="common-hero">
+        <div class="container">
+            <div class="row align-items-center text-center">
+                <div class="col-lg-8 m-auto">
+                    <div class="main-heading">
+                        <h1 style="font-size: 35px">PENGHARGAAN</h1>
+                        <span class="span"><img src="frontend/bprjas/assets/img/icons/span1.png" alt=""> <a
+                                href="/">Home</a> <span class="arrow"><i class="fa-regular fa-angle-right"></i></span>
+                            penghargaan</span>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        {{-- <div class="blog blog-page sp">
-                            <div class="container">
-                              <div class="row">
-                              <div class="col-lg-4">
-                                <a href="blog-details.html" style="text-decoration:none; color:inherit; display:block;">
-                                    <div style="background:#fff; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.1); overflow:hidden; font-family:'Archivo', sans-serif; margin-bottom:20px; transition:transform 0.2s ease;">
-                                    <img src="frontend/bprjas/assets/img/blog/blog2-img1.png" alt="Blog Image" style="width:100%; display:block;">
-                                    <div style="padding:15px; text-align:left;">
-                                        <h4 style="font-size:16px; font-weight:700; text-transform:uppercase; margin:10px 0; color:#1a1a1a;">
-                                        BPR GUNUNG RIZKI KEMBALI RAIH DIGITAL BRAND AWARDS 2019
-                                        </h4>
-                                        <p style="font-size:13px; color:#666; margin:0 0 10px 0;">May 18, 2019</p>
-                                        <span style="font-size:14px; font-weight:600; color:#007bff;">Lanjutkan Membaca</span>
-                                    </div>
-                                    </div>
-                                </a>
-                                </div>
+    {{-- <div class="blog blog-page sp">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <a href="blog-details.html" style="text-decoration:none; color:inherit; display:block;">
+                        <div
+                            style="background:#fff; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.1); overflow:hidden; font-family:'Archivo', sans-serif; margin-bottom:20px; transition:transform 0.2s ease;">
+                            <img src="frontend/bprjas/assets/img/blog/blog2-img1.png" alt="Blog Image"
+                                style="width:100%; display:block;">
+                            <div style="padding:15px; text-align:left;">
+                                <h4
+                                    style="font-size:16px; font-weight:700; text-transform:uppercase; margin:10px 0; color:#1a1a1a;">
+                                    BPR GUNUNG RIZKI KEMBALI RAIH DIGITAL BRAND AWARDS 2019
+                                </h4>
+                                <p style="font-size:13px; color:#666; margin:0 0 10px 0;">May 18, 2019</p>
+                                <span style="font-size:14px; font-weight:600; color:#007bff;">Lanjutkan Membaca</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
 
-                                <div class="col-lg-4">
-                                <a href="blog-details.html" style="text-decoration:none; color:inherit; display:block;">
-                                    <div style="background:#fff; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.1); overflow:hidden; font-family:'Archivo', sans-serif; margin-bottom:20px; transition:transform 0.2s ease;">
-                                    <img src="frontend/bprjas/assets/img/blog/blog2-img1.png" alt="Blog Image" style="width:100%; display:block;">
-                                    <div style="padding:15px; text-align:left;">
-                                        <h4 style="font-size:16px; font-weight:700; text-transform:uppercase; margin:10px 0; color:#1a1a1a;">
-                                        BPR GUNUNG RIZKI KEMBALI RAIH DIGITAL BRAND AWARDS 2019
-                                        </h4>
-                                        <p style="font-size:13px; color:#666; margin:0 0 10px 0;">May 18, 2019</p>
-                                        <span style="font-size:14px; font-weight:600; color:#007bff;">Lanjutkan Membaca</span>
-                                    </div>
-                                    </div>
-                                </a>
-                                </div>
+                <div class="col-lg-4">
+                    <a href="blog-details.html" style="text-decoration:none; color:inherit; display:block;">
+                        <div
+                            style="background:#fff; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.1); overflow:hidden; font-family:'Archivo', sans-serif; margin-bottom:20px; transition:transform 0.2s ease;">
+                            <img src="frontend/bprjas/assets/img/blog/blog2-img1.png" alt="Blog Image"
+                                style="width:100%; display:block;">
+                            <div style="padding:15px; text-align:left;">
+                                <h4
+                                    style="font-size:16px; font-weight:700; text-transform:uppercase; margin:10px 0; color:#1a1a1a;">
+                                    BPR GUNUNG RIZKI KEMBALI RAIH DIGITAL BRAND AWARDS 2019
+                                </h4>
+                                <p style="font-size:13px; color:#666; margin:0 0 10px 0;">May 18, 2019</p>
+                                <span style="font-size:14px; font-weight:600; color:#007bff;">Lanjutkan Membaca</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
 
-                                <div class="col-lg-4">
-                                <a href="blog-details.html" style="text-decoration:none; color:inherit; display:block;">
-                                    <div style="background:#fff; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.1); overflow:hidden; font-family:'Archivo', sans-serif; margin-bottom:20px; transition:transform 0.2s ease;">
-                                    <img src="frontend/bprjas/assets/img/blog/blog2-img1.png" alt="Blog Image" style="width:100%; display:block;">
-                                    <div style="padding:15px; text-align:left;">
-                                        <h4 style="font-size:16px; font-weight:700; text-transform:uppercase; margin:10px 0; color:#1a1a1a;">
-                                        BPR GUNUNG RIZKI KEMBALI RAIH DIGITAL BRAND AWARDS 2019
-                                        </h4>
-                                        <p style="font-size:13px; color:#666; margin:0 0 10px 0;">May 18, 2019</p>
-                                        <span style="font-size:14px; font-weight:600; color:#007bff;">Lanjutkan Membaca</span>
-                                    </div>
-                                    </div>
-                                </a>
-                                </div>
-                              </div> --}}
+                <div class="col-lg-4">
+                    <a href="blog-details.html" style="text-decoration:none; color:inherit; display:block;">
+                        <div
+                            style="background:#fff; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.1); overflow:hidden; font-family:'Archivo', sans-serif; margin-bottom:20px; transition:transform 0.2s ease;">
+                            <img src="frontend/bprjas/assets/img/blog/blog2-img1.png" alt="Blog Image"
+                                style="width:100%; display:block;">
+                            <div style="padding:15px; text-align:left;">
+                                <h4
+                                    style="font-size:16px; font-weight:700; text-transform:uppercase; margin:10px 0; color:#1a1a1a;">
+                                    BPR GUNUNG RIZKI KEMBALI RAIH DIGITAL BRAND AWARDS 2019
+                                </h4>
+                                <p style="font-size:13px; color:#666; margin:0 0 10px 0;">May 18, 2019</p>
+                                <span style="font-size:14px; font-weight:600; color:#007bff;">Lanjutkan Membaca</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div> --}}
 
 
-    </body>
+</body>
 @endsection

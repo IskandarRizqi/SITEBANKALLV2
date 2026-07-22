@@ -77,13 +77,13 @@
                         <select id="pilihKantor" class="form-select mb-3"
                             style="background-color:#ffffff; color:#462ced; text-transform:none; border-radius: 10px; height: 50px;">
                             @foreach ($kantorglobal as $kantor)
-                                <option value="{{ $kantor->id }}" data-nama="{{ $kantor->kantor }}"
-                                    data-alamat="{{ $kantor->alamat }}" data-telp="{{ $kantor->no_telp }}"
-                                    data-lat="{{ $kantor->latitude }}" data-lng="{{ $kantor->longitude }}"
-                                    data-thumb="/recfil?display=true&rf={{ $kantor->thumbnail }}"
-                                    {{ strtolower($kantor->kantor) == 'kantor pusat' ? 'selected' : '' }}>
-                                    {{ $kantor->kantor }}
-                                </option>
+                            <option value="{{ $kantor->id }}" data-nama="{{ $kantor->kantor }}"
+                                data-alamat="{{ $kantor->alamat }}" data-telp="{{ $kantor->no_telp }}"
+                                data-lat="{{ $kantor->latitude }}" data-lng="{{ $kantor->longitude }}"
+                                data-thumb="/recfil?display=true&rf={{ $kantor->thumbnail }}" {{ strtolower($kantor->
+                                kantor) == 'kantor pusat' ? 'selected' : '' }}>
+                                {{ $kantor->kantor }}
+                            </option>
                             @endforeach
                         </select>
                         <div id="detailKantor">
@@ -102,9 +102,11 @@
                         <div class="menu-all-pages-container">
                             <ul class="menu">
                                 <li style="color: #fff"><a href="#" style="color: #fff">Jaringan Kantor</a></li>
-                                <li style="color: #fff"><a href="/pengaduan" style="color: #fff">Pengaduan Nasabah</a></li>
+                                <li style="color: #fff"><a href="/pengaduan" style="color: #fff">Pengaduan Nasabah</a>
+                                </li>
                                 <li style="color: #fff"><a href="#" style="color: #fff">Whistle Blowing System</a></li>
-                                <li style="color: #fff"><a href="#" style="color: #fff">Publikasi Penanganan Pengaduan</a></li>
+                                <li style="color: #fff"><a href="#" style="color: #fff">Publikasi Penanganan
+                                        Pengaduan</a></li>
                             </ul>
                         </div>
                     </div>
@@ -117,26 +119,26 @@
                         <div class="th-widget-contact">
                             <div class="info-box_text" style="display:flex; align-items:center; gap:10px;">
                                 <div class="icon">
-                                    <img src="{{ asset('frontend/bprmekar/assets/img/icon/phone.svg') }}"
-                                        alt="img" style="width:20px;">
+                                    <img src="{{ asset('frontend/bprmekar/assets/img/icon/phone.svg') }}" alt="img"
+                                        style="width:20px;">
                                 </div>
                                 <div class="details">
                                     <p style="color: #fff; font-weight: 700;">Call Center</p>
                                     <p style="margin:0;">
-                                        <a href="tel:+(0298) 523432" class="info-box_link" style="color:#fff;">(0298) 523432</a>
+                                        <a href="tel:+(0298) 523432" class="info-box_link" style="color:#fff;">(0298)
+                                            523432</a>
                                     </p>
                                 </div>
                             </div>
                             <div class="info-box_text" style="display:flex; align-items:center; gap:10px;">
                                 <div class="icon">
-                                    <img src="{{ asset('frontend/bprmekar/assets/img/icon/envelope.svg') }}"
-                                        alt="img" style="width:20px;">
+                                    <img src="{{ asset('frontend/bprmekar/assets/img/icon/envelope.svg') }}" alt="img"
+                                        style="width:20px;">
                                 </div>
                                 <div class="details">
                                     <p style="color: #fff; font-weight: 700;">Email</p>
                                     <p style="margin:0;">
-                                        <a href="" class="info-box_link"
-                                            style="color:#fff;">mekarnugraha@yahoo.com</a>
+                                        <a href="" class="info-box_link" style="color:#fff;">mekarnugraha@yahoo.com</a>
                                     </p>
                                 </div>
                             </div>
@@ -147,24 +149,25 @@
                                 </div>
                                 <div class="details">
                                     <p style="margin:0;">
-                                        <p style="color: #fff; font-weight: 700;">Customer Care</p>
-                                        <p style="margin:0;">
-                                            <a href="#" class="info-box_link" style="color:#fff;">Pengaduan Nasabah</a>
-                                        </p>
+                                    <p style="color: #fff; font-weight: 700;">Customer Care</p>
+                                    <p style="margin:0;">
+                                        <a href="#" class="info-box_link" style="color:#fff;">Pengaduan Nasabah</a>
+                                    </p>
                                     </p>
                                 </div>
                             </div>
                             <div class="info-box_text" style="display:flex; align-items:flex-start; gap:10px;">
                                 <div class="icon">
-                                    <img src="{{ asset('frontend/bprmekar/assets/img/icon/whatsapp.svg') }}"
-                                        alt="img" style="width:20px; margin-top:3px;">
+                                    <img src="{{ asset('frontend/bprmekar/assets/img/icon/whatsapp.svg') }}" alt="img"
+                                        style="width:20px; margin-top:3px;">
                                 </div>
                                 <div class="details">
                                     <p style="margin:0;">
-                                        <p style="color: #fff; font-weight: 700;">WhatsApp</p>
-                                        <p style="margin:0;">
-                                            <a href="https://wa.me/628112792373" class="info-box_link" style="color:#fff;">0811-2792-373</a>
-                                        </p>
+                                    <p style="color: #fff; font-weight: 700;">WhatsApp</p>
+                                    <p style="margin:0;">
+                                        <a href="https://wa.me/628112792373" class="info-box_link"
+                                            style="color:#fff;">0811-2792-373</a>
+                                    </p>
                                     </p>
                                 </div>
                             </div>
@@ -173,11 +176,11 @@
                 </div>
 
                 <!-- Kolom 4: Tentang Kantor -->
-                 <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-6">
                     <div class="widget footer-widget">
                         <div class="th-widget-about">
                             <div class="about-logo">
-                                <a href="index.html">
+                                <a href="/">
                                     <div
                                         style="background:#fff; padding:8px 20px; display:inline-block; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
                                         <img src="{{ asset('frontend/bprmekar/assets/img/logo/logomekar.png') }}"
@@ -186,14 +189,16 @@
                                 </a>
                             </div>
                             <p class="about-text" style="color: #fff">
-                                PT BPR Mekar Nugraha berizin dan diawasi oleh Otoritas Jasa Keuangan serta merupakan peserta penjaminan LPS. 
-                                Maksimum nilai simpanan yang dijamin LPS per nasabah per bank adalah Rp2 miliar. 
-                                Untuk mengetahui Tingkat Bunga Penjaminan LPS, silahkan akses <a href="https://apps.lps.go.id/BankPesertaLPSRate">disini</a>
+                                PT BPR Mekar Nugraha berizin dan diawasi oleh Otoritas Jasa Keuangan serta merupakan
+                                peserta penjaminan LPS.
+                                Maksimum nilai simpanan yang dijamin LPS per nasabah per bank adalah Rp2 miliar.
+                                Untuk mengetahui Tingkat Bunga Penjaminan LPS, silahkan akses <a
+                                    href="https://apps.lps.go.id/BankPesertaLPSRate">disini</a>
                             </p>
                         </div>
                     </div>
                 </div>
-                
+
 
             </div>
 
@@ -208,7 +213,7 @@
         <div class="container">
             <div class="row justify-content-between align-items-center">
                 <div class="col-lg-6">
-                    <p class="copyright-text">© Copyright <a href="index.html">PT BPR Mekar Nugraha</a>. All Rights Reserved </p>
+                    <p class="copyright-text">© Copyright <a href="/">PT BPR Mekar Nugraha</a>. All Rights Reserved </p>
                 </div>
                 <div class="col-lg-6 text-end">
                     <p class="copyright-text">Support By <a href="" style="color: rgb(255, 255, 255)">Antar Uang</a></p>

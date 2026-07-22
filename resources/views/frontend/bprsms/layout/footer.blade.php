@@ -75,7 +75,7 @@
                     <div class="widget footer-widget">
                         <div class="th-widget-about">
                             <div class="about-logo">
-                                <a href="index.html">
+                                <a href="/">
                                     <div
                                         style="background:#fff; padding:8px 20px; display:inline-block; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
                                         <img src="{{ asset('frontend/bprsms/assets/img/logo/logo.png') }}"
@@ -93,11 +93,12 @@
                                         class="fab fa-facebook-f"></i></a>
                                 <a href="https://x.com/BPRSMS"><i class="fab fa-twitter"></i></a>
 
-                                
+
                                 <a href="https://www.youtube.com/@bprsms3518">
                                     <i class="fab fa-youtube"></i>
                                 </a>
-                                <a href="https://www.instagram.com/accounts/login/?next=%2Fbprsms%2F&source=omni_redirect">
+                                <a
+                                    href="https://www.instagram.com/accounts/login/?next=%2Fbprsms%2F&source=omni_redirect">
                                     <i class="fab fa-instagram"></i>
                                 </a>
                                 <a href="https://wa.me/6285727272035">
@@ -121,7 +122,8 @@
                                         href="{{ asset('frontend/bprbhaktiriyadi/assets/img/alur.png') }}"
                                         target="_blank" style="color: #fff">Alur Pengaduan Nasabah</a></li> --}}
                                 <li style="color: #fff"><a href="/rekrutmen" style="color: #fff">Karir</a></li>
-                                <li style="color: #fff"><a href="/lelang-jualaset" style="color: #fff">Lelang / Jualaset</a></li>
+                                <li style="color: #fff"><a href="/lelang-jualaset" style="color: #fff">Lelang /
+                                        Jualaset</a></li>
                                 <li style="color: #fff"><a href="/jaringankantor" style="color: #fff">Jaringan
                                         Kantor</a></li>
                             </ul>
@@ -183,13 +185,13 @@
                         <select id="pilihKantor" class="form-select mb-3"
                             style="background-color:#ffffff; color:#462ced; text-transform:none;">
                             @foreach ($kantorglobal as $kantor)
-                                <option value="{{ $kantor->id }}" data-nama="{{ $kantor->kantor }}"
-                                    data-alamat="{{ $kantor->alamat }}" data-telp="{{ $kantor->no_telp }}"
-                                    data-lat="{{ $kantor->latitude }}" data-lng="{{ $kantor->longitude }}"
-                                    data-thumb="/recfil?display=true&rf={{ $kantor->thumbnail }}"
-                                    {{ strtolower($kantor->kantor) == 'kantor pusat' ? 'selected' : '' }}>
-                                    {{ $kantor->kantor }}
-                                </option>
+                            <option value="{{ $kantor->id }}" data-nama="{{ $kantor->kantor }}"
+                                data-alamat="{{ $kantor->alamat }}" data-telp="{{ $kantor->no_telp }}"
+                                data-lat="{{ $kantor->latitude }}" data-lng="{{ $kantor->longitude }}"
+                                data-thumb="/recfil?display=true&rf={{ $kantor->thumbnail }}" {{ strtolower($kantor->
+                                kantor) == 'kantor pusat' ? 'selected' : '' }}>
+                                {{ $kantor->kantor }}
+                            </option>
                             @endforeach
                         </select>
                         <div id="detailKantor">
@@ -222,8 +224,8 @@
         <div class="container">
             <div class="row justify-content-between align-items-center">
                 <div class="col-lg-6">
-                    <p class="copyright-text">Copyright © <a href="index.html">BPR Baja</a>. Support By <a
-                            href="" style="color: rgb(255, 255, 255)">Antar Uang</a></p>
+                    <p class="copyright-text">Copyright © <a href="/">BPR Baja</a>. Support By <a href=""
+                            style="color: rgb(255, 255, 255)">Antar Uang</a></p>
                 </div>
                 <div class="col-lg-6 text-lg-end text-center">
                     <div class="footer-links"></div>

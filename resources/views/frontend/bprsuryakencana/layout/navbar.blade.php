@@ -49,9 +49,8 @@
         <!-- top -->
         <div class="offcanvas_top d-flex flex-wrap align-items-center justify-content-between gap-3">
             <div class="offcanvas_logo">
-                <a href="index.html" class="logo"><img
-                        src="{{ asset('frontend/bprsuryakencana/assets/images/logo/logo.png') }}" width="50px;"
-                        alt="LOGO"></a>
+                <a href="/" class="logo"><img src="{{ asset('frontend/bprsuryakencana/assets/images/logo/logo.png') }}"
+                        width="50px;" alt="LOGO"></a>
             </div>
 
             <button class="offcanvas_close">
@@ -133,8 +132,8 @@
                     <div class="pxn_header_main_wrap d-flex flex-wrap align-items-center">
                         <!-- logo -->
                         <a class="pxn_site_logo" href="/">
-                            <img src="{{ asset('frontend/bprsuryakencana/assets/images/logo/logo.png') }}"
-                                alt="Logo" width="70px">
+                            <img src="{{ asset('frontend/bprsuryakencana/assets/images/logo/logo.png') }}" alt="Logo"
+                                width="70px">
                         </a>
 
                         <div class="pxn_header_main_inner d-none d-lg-inline-flex flex-wrap align-items-center">
@@ -264,9 +263,9 @@
                 <div class="col">
                     <div class="pxn_header_main_wrap d-flex flex-wrap align-items-center">
                         <!-- logo -->
-                        <a class="pxn_site_logo" href="index.html">
-                            <img src="{{ asset('frontend/bprsuryakencana/assets/images/logo/logo.png') }}"
-                                alt="Logo" width="70px">
+                        <a class="pxn_site_logo" href="/">
+                            <img src="{{ asset('frontend/bprsuryakencana/assets/images/logo/logo.png') }}" alt="Logo"
+                                width="70px">
                         </a>
 
                         <div class="pxn_header_main_inner d-none d-lg-inline-flex flex-wrap align-items-center">

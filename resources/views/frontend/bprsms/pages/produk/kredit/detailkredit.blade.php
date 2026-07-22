@@ -1,195 +1,194 @@
 @extends('frontend.bprsms.layout.main')
 
 @section('content')
-    <style>
-        .job-wrapper {
-            max-width: 1150px;
-            margin: 0px auto 40px;
-            padding: 0 16px;
-            font-family: 'Open Sans', sans-serif;
-            color: #333;
-            overflow-x: hidden;
+<style>
+    .job-wrapper {
+        max-width: 1150px;
+        margin: 0px auto 40px;
+        padding: 0 16px;
+        font-family: 'Open Sans', sans-serif;
+        color: #333;
+        overflow-x: hidden;
 
+    }
+
+    .job-header-title {
+        font-size: 26px;
+        font-weight: 700;
+        color: #000000;
+    }
+
+    .job-banner {
+        width: 100%;
+        border-radius: 6px;
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+
+    .job-banner img {
+        width: 100%;
+        height: 420px;
+        object-fit: cover;
+        border-radius: 6px;
+        display: block;
+    }
+
+
+    .event-content {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+        word-wrap: break-word;
+        word-break: break-word;
+        line-height: 1.7;
+        text-align: justify;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+
+
+
+    .event-content img,
+    .event-content iframe,
+    .event-content video {
+        max-width: 100% !important;
+        height: auto !important;
+        display: block;
+    }
+
+    .event-content table {
+        width: 100% !important;
+        max-width: 100%;
+        display: block;
+        overflow-x: auto;
+    }
+
+    .event-content * {
+        all: revert;
+    }
+
+    .action-buttons {
+        display: flex;
+        gap: 40px;
+        margin-top: 60px;
+        flex-wrap: wrap;
+    }
+
+    .action-buttons a {
+        flex: 1;
+        background: #ff5a1e;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        border-radius: 50px;
+        font-size: 18px;
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+
+    @media (max-width: 768px) {
+
+        .job-wrapper {
+            margin: 90px auto 30px;
+            padding: 0 14px;
         }
 
         .job-header-title {
-            font-size: 26px;
-            font-weight: 700;
-            color: #000000;
-        }
-
-        .job-banner {
-            width: 100%;
-            border-radius: 6px;
-            overflow: hidden;
-            margin-bottom: 20px;
+            font-size: 20px;
+            line-height: 1.3;
         }
 
         .job-banner img {
-            width: 100%;
-            height: 420px;
-            object-fit: cover;
-            border-radius: 6px;
-            display: block;
+            height: 220px;
         }
 
-
-        .event-content {
-            width: 100%;
-            max-width: 100%;
-            overflow-x: hidden;
-            word-wrap: break-word;
-            word-break: break-word;
-            line-height: 1.7;
-            text-align: justify;
-            font-family: 'Open Sans', sans-serif;
-        }
-
-
-
-
-        .event-content img,
-        .event-content iframe,
-        .event-content video {
-            max-width: 100% !important;
-            height: auto !important;
-            display: block;
-        }
-
-        .event-content table {
-            width: 100% !important;
-            max-width: 100%;
-            display: block;
-            overflow-x: auto;
-        }
-
-        .event-content * {
-            all: revert;
+        .content-flex {
+            flex-direction: column;
+            gap: 30px;
         }
 
         .action-buttons {
-            display: flex;
-            gap: 40px;
-            margin-top: 60px;
-            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 40px;
         }
 
         .action-buttons a {
-            flex: 1;
-            background: #ff5a1e;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-            border-radius: 50px;
-            font-size: 18px;
-            font-weight: 700;
-            text-decoration: none;
+            font-size: 16px;
+            padding: 16px;
         }
+    }
+</style>
 
-
-        @media (max-width: 768px) {
-
-            .job-wrapper {
-                margin: 90px auto 30px;
-                padding: 0 14px;
-            }
-
-            .job-header-title {
-                font-size: 20px;
-                line-height: 1.3;
-            }
-
-            .job-banner img {
-                height: 220px;
-            }
-
-            .content-flex {
-                flex-direction: column;
-                gap: 30px;
-            }
-
-            .action-buttons {
-                flex-direction: column;
-                gap: 16px;
-                margin-top: 40px;
-            }
-
-            .action-buttons a {
-                font-size: 16px;
-                padding: 16px;
-            }
-        }
-    </style>
-
-      <div class="breadcumb-area style2 bg-smoke4">
-        <div class="breadcumb-wrapper" data-bg-src="{{asset('frontend/bprsms/assets/img/bg/breadcumb-bg.jpg')}}">
-            <div class="container">
-                <div class="breadcumb-content">
-                    <h1 class="breadcumb-title">  {{ $kredit->title ?? 'Kredit' }}</h1>
-                    <ul class="breadcumb-menu">
-                        <li><a href="index.html">Kredit</a></li>
-                        <li>  {{ $kredit->title ?? 'Kredit' }}</li>
-                    </ul>
-                </div>
+<div class="breadcumb-area style2 bg-smoke4">
+    <div class="breadcumb-wrapper" data-bg-src="{{asset('frontend/bprsms/assets/img/bg/breadcumb-bg.jpg')}}">
+        <div class="container">
+            <div class="breadcumb-content">
+                <h1 class="breadcumb-title"> {{ $kredit->title ?? 'Kredit' }}</h1>
+                <ul class="breadcumb-menu">
+                    <li><a href="/">Kredit</a></li>
+                    <li> {{ $kredit->title ?? 'Kredit' }}</li>
+                </ul>
             </div>
         </div>
     </div>
+</div>
 
 
 
-    <div class="job-wrapper">
+<div class="job-wrapper">
 
-        <div style="display:flex;align-items:center;margin-bottom:20px;margin-top:0px">
-            <a href="javascript:history.back()" style="text-decoration:none; color:#000000;">
-                <i class="bi bi-arrow-left" style="font-size:26px; font-weight:bold;"></i>
+    <div style="display:flex;align-items:center;margin-bottom:20px;margin-top:0px">
+        <a href="javascript:history.back()" style="text-decoration:none; color:#000000;">
+            <i class="bi bi-arrow-left" style="font-size:26px; font-weight:bold;"></i>
+        </a>
+
+        {{-- <div class="job-header-title">
+            {{ $kredit->title ?? 'Kredit' }}
+        </div> --}}
+    </div>
+
+
+    <div class="job-banner">
+        <img src="/recfil?display=true&rf={{ $kredit->banner }}" style="object-fit: fill" alt="Banner">
+    </div>
+
+
+    <div style="max-width:1200px;margin:0 auto;">
+        <div class="content-flex" style="display:flex;gap:80px;flex-wrap:wrap;">
+            <div style="flex:1;">
+                <div class="event-content">
+                    {!! $kredit->content !!}
+                </div>
+            </div>
+        </div>
+        <div style="margin-top:30px;">
+            <a href="/formpengajuankredit" style="display:inline-block; background:#1a902a; color:#fff; padding:12px 30px; border-radius:20px; font-size:16px; font-weight:600;
+                    text-decoration:none;cursor:pointer;">
+                AJUKAN
+            </a>
+        </div>
+
+
+        <div class="action-buttons">
+
+            <a href="javascript:void(0)" onclick="openFile('{{ $kredit->brosur }}')">
+                Lihat Brosur
             </a>
 
-            {{-- <div class="job-header-title">
-                {{ $kredit->title ?? 'Kredit' }}
-            </div> --}}
-        </div>
-
-
-        <div class="job-banner">
-            <img src="/recfil?display=true&rf={{ $kredit->banner }}" style="object-fit: fill" alt="Banner">
-        </div>
-
-
-        <div style="max-width:1200px;margin:0 auto;">
-            <div class="content-flex" style="display:flex;gap:80px;flex-wrap:wrap;">
-                <div style="flex:1;">
-                    <div class="event-content">
-                        {!! $kredit->content !!}
-                    </div>
-                </div>
-            </div>
-            <div style="margin-top:30px;">
-                <a href="/formpengajuankredit"
-                    style="display:inline-block; background:#1a902a; color:#fff; padding:12px 30px; border-radius:20px; font-size:16px; font-weight:600;
-                    text-decoration:none;cursor:pointer;">
-                    AJUKAN
-                </a>
-            </div>
-
-
-            <div class="action-buttons">
-
-                <a href="javascript:void(0)" onclick="openFile('{{ $kredit->brosur }}')">
-                    Lihat Brosur
-                </a>
-
-                <a href="javascript:void(0)" onclick="openFile('{{ $kredit->riplay }}')">
-                    Ringkasan Informasi Produk dan Layanan (RIPLAY)
-                </a>
-
-            </div>
+            <a href="javascript:void(0)" onclick="openFile('{{ $kredit->riplay }}')">
+                Ringkasan Informasi Produk dan Layanan (RIPLAY)
+            </a>
 
         </div>
 
     </div>
 
-    <script>
-        function openFile(file) {
+</div>
+
+<script>
+    function openFile(file) {
             if (!file) {
                 alert('Data tidak tersedia');
                 return;
@@ -197,5 +196,5 @@
 
             window.open('/recfil?display=true&rf=' + encodeURIComponent(file), '_blank');
         }
-    </script>
+</script>
 @endsection

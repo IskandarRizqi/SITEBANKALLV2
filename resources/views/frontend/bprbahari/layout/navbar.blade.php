@@ -22,24 +22,24 @@
                     </ul>
                 </div>
                 {{-- <div class="social">
-                       <ul>
-                           <li>
-                               <a href="#">
-                                   <i class="fab fa-facebook-f"></i>
-                               </a>
-                           </li>
-                           <li>
-                               <a href="#">
-                                   <i class="fab fa-twitter"></i>
-                               </a>
-                           </li>
-                           <li>
-                               <a href="#">
-                                   <i class="fab fa-linkedin-in"></i>
-                               </a>
-                           </li>
-                       </ul>
-                   </div> --}}
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div> --}}
             </div>
         </div>
     </div>
@@ -55,7 +55,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="/">
                     <img src="{{ asset('frontend/bprbahari/assets/img/logo/logo.png') }}" class="logo" alt="Logo"
                         width="170px">
                 </a>
@@ -132,8 +132,8 @@
                         <li class="contact">
                             <div class="call">
                                 {{-- <div class="icon">
-                                       <i class="fas fa-comments-alt-dollar"></i>
-                                   </div> --}}
+                                    <i class="fas fa-comments-alt-dollar"></i>
+                                </div> --}}
                                 <h5
                                     style="font-size: 15px; background: #0b2c5f; display: inline-block; padding: 10px 18px; border-radius: 8px;">
                                     <a href="/pengajuanonline" style="color: #fff; text-decoration: none;">
@@ -141,20 +141,20 @@
                                     </a>
                                 </h5>
                                 {{-- <div class="info">
-                                       <p>Ada yang di Tanyakan?</p>
-                                       <h5><a href="mailto:info@crysta.com">info@bestup.com</a></h5>
-                                   </div> --}}
+                                    <p>Ada yang di Tanyakan?</p>
+                                    <h5><a href="mailto:info@crysta.com">info@bestup.com</a></h5>
+                                </div> --}}
                             </div>
                         </li>
                         <li>
                             @auth
-                                @if (auth()->user()->role == 1)
-                                    <div class="account-icon" style="margin-left: 40px;" alt="Profile">
-                                        <a href="/dashboarduser" style="font-size: 25px; color: #333;">
-                                            <i class="fa-solid fa-user-tie"></i>
-                                        </a>
-                                    </div>
-                                @endif
+                            @if (auth()->user()->role == 1)
+                            <div class="account-icon" style="margin-left: 40px;" alt="Profile">
+                                <a href="/dashboarduser" style="font-size: 25px; color: #333;">
+                                    <i class="fa-solid fa-user-tie"></i>
+                                </a>
+                            </div>
+                            @endif
                             @endauth
                         </li>
                     </ul>

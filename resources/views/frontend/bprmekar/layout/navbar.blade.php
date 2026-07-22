@@ -104,7 +104,7 @@
             color: #000 !important;
         }
 
-    
+
 
     }
 </style>
@@ -112,7 +112,7 @@
 
 <div class="th-menu-wrapper onepage-nav">
     <div class="th-menu-area text-center"><button class="th-menu-toggle"><i class="fal fa-times"></i></button>
-        <div class="mobile-logo"><a href="index.html"><img src="frontend/bprmekar/assets/img/logo/logomekar.png"
+        <div class="mobile-logo"><a href="/"><img src="frontend/bprmekar/assets/img/logo/logomekar.png"
                     style="width: 170px" alt="Atek"></a></div>
 
         <div class="th-mobile-menu allow-natural-scroll">
@@ -205,9 +205,9 @@
                                 class="far fa-bars"></i></button>
                     </div>
                     <div class="col-auto">
-                        <div class="header-logo"><a href="index.html"><img
-                                    src="{{asset('frontend/bprmekar/assets/img/logo/logomekar.png')}}" style="width: 190px;"
-                                    alt="Logo"></a></div>
+                        <div class="header-logo"><a href="/"><img
+                                    src="{{asset('frontend/bprmekar/assets/img/logo/logomekar.png')}}"
+                                    style="width: 190px;" alt="Logo"></a></div>
                     </div>
 
                     <div class="col-auto d-none d-xl-block">
@@ -215,11 +215,11 @@
                             <ul>
                                 <li><a href="#">Lelang</a></li>
                                 <li class="menu-item-has-children"><a href="#">Kontak</a>
-                                <ul class="sub-menu">
-                                    <li><a href="#">Hubungi Kami</a></li>
-                                    <li><a href="#">Pengaduan Nasabah</a></li>
-                                    <li><a href="">Whistleblowing System</a></li>
-                                </ul>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">Hubungi Kami</a></li>
+                                        <li><a href="#">Pengaduan Nasabah</a></li>
+                                        <li><a href="">Whistleblowing System</a></li>
+                                    </ul>
                                 </li>
                                 <li><a href="#">E-Recruitment</a></li>
                             </ul>

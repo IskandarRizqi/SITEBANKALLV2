@@ -175,7 +175,8 @@
         background: #1a902a;
         transform: translateY(-3px);
     }
-     .running-text {
+
+    .running-text {
         width: 100%;
         overflow: hidden;
         white-space: nowrap;
@@ -207,18 +208,23 @@
                 <div class="single-footer-widget mb-100">
                     <h5 class="widget-title">Tentang Perusahaan</h5>
                     <p style="text-align: justify; line-height:1.6; color: #fff;">
-                        PT. BPR Datagita Mustika terletak di kawasan pusat ekonomi strategis di Leuwiliang PT. BPR Datagita Mustika memiliki misi untuk ikut berperan 
+                        PT. BPR Datagita Mustika terletak di kawasan pusat ekonomi strategis di Leuwiliang PT. BPR
+                        Datagita Mustika memiliki misi untuk ikut berperan
                         Serta menumbuh kembangkan perekonomian.
                     </p>
 
                     <div class="footer-social">
-                        <a href="https://web.facebook.com/people/Bpr-Datagita-Mustika/pfbid0tVYVc9su8ae1Cw5PeN7JMpMduKjynaSg7r6QTUZUoBbHVyaspov1dbFja3qPH4C4l/"><i
+                        <a
+                            href="https://web.facebook.com/people/Bpr-Datagita-Mustika/pfbid0tVYVc9su8ae1Cw5PeN7JMpMduKjynaSg7r6QTUZUoBbHVyaspov1dbFja3qPH4C4l/"><i
                                 class="fab fa-facebook-f"></i></a>
                         <a href="https://www.instagram.com/bpr_datagitamustika/?hl=id"><i
                                 class="fab fa-instagram"></i></a>
-                        {{-- <a href="https://www.youtube.com/@BPRPESISIRDatagita Mustika"><i class="fab fa-youtube"></i></a> --}}
+                        {{-- <a href="https://www.youtube.com/@BPRPESISIRDatagita Mustika"><i
+                                class="fab fa-youtube"></i></a> --}}
                         {{-- <a href="#"><i class="fab fa-tiktok"></i></a> --}}
-                        <a href="https://api.whatsapp.com/send/?phone=6281314791447&text&type=phone_number&app_absent=0"><i class="fab fa-whatsapp"></i></a>
+                        <a
+                            href="https://api.whatsapp.com/send/?phone=6281314791447&text&type=phone_number&app_absent=0"><i
+                                class="fab fa-whatsapp"></i></a>
                     </div>
 
                 </div>
@@ -249,13 +255,13 @@
                         style="background-color:#ffffff; color:#462ced; text-transform:none;">
 
                         @foreach ($kantorglobal as $kantor)
-                            <option value="{{ $kantor->id }}" data-nama="{{ $kantor->kantor }}"
-                                data-alamat="{{ $kantor->alamat }}" data-telp="{{ $kantor->no_telp }}"
-                                data-lat="{{ $kantor->latitude }}" data-lng="{{ $kantor->longitude }}"
-                                data-thumb="/recfil?display=true&rf={{ $kantor->thumbnail }}"
-                                {{ strtolower($kantor->kantor) == 'kantor pusat' ? 'selected' : '' }}>
-                                {{ $kantor->kantor }}
-                            </option>
+                        <option value="{{ $kantor->id }}" data-nama="{{ $kantor->kantor }}"
+                            data-alamat="{{ $kantor->alamat }}" data-telp="{{ $kantor->no_telp }}"
+                            data-lat="{{ $kantor->latitude }}" data-lng="{{ $kantor->longitude }}"
+                            data-thumb="/recfil?display=true&rf={{ $kantor->thumbnail }}" {{ strtolower($kantor->kantor)
+                            == 'kantor pusat' ? 'selected' : '' }}>
+                            {{ $kantor->kantor }}
+                        </option>
                         @endforeach
 
                     </select>
@@ -274,8 +280,8 @@
                 <div class="visitor-stats">
                     <h5>Statistik Pengunjung</h5>
                     {{-- <p>
-                           Pantau aktivitas real-time website kami dan lihat bagaimana kami terus berkembang.
-                       </p> --}}
+                        Pantau aktivitas real-time website kami dan lihat bagaimana kami terus berkembang.
+                    </p> --}}
                     <div class="stats-container">
                         <div class="stat-item">
                             <i class="fas fa-users"></i>
@@ -292,24 +298,25 @@
                             </div>
                         </div>
                     </div>
-                     
+
 
                 </div>
             </div>
-             
+
         </div>
     </div>
-     <div class="container footer-menu">
+    <div class="container footer-menu">
         <div class="f-menu running-text">
             <span style="color: white; margin-bottom: 10px;">
-                PT. BPR Datagita Mustika berizin dan diawasi oleh <strong>Otoritas Jasa Keuangan (OJK)</strong>  serta merupakan peserta penjaminan LPS.
+                PT. BPR Datagita Mustika berizin dan diawasi oleh <strong>Otoritas Jasa Keuangan (OJK)</strong> serta
+                merupakan peserta penjaminan LPS.
                 Maksimum nilai simpanan yang dijamin oleh
                 LPS adalah Rp.2 Miliar per nasabah per bank. Untuk informasi tingkat suku bunga
                 penjaminan LPS dapat diakses
             </span>
         </div>
     </div>
-   
+
 
     <!-- Copywrite Area -->
     <div class="copywrite-area">
@@ -318,18 +325,18 @@
                 <div class="col-12">
                     <div class="copywrite-content d-flex flex-wrap justify-content-between align-items-center">
                         <!-- Footer Logo -->
-                        {{-- <a href="index.html" class="footer-logo"><img
+                        {{-- <a href="/" class="footer-logo"><img
                                 src="{{ asset('frontend/bprdatagita/img/logo/logo.png') }}" alt="logo"
                                 width="125px;"></a> --}}
 
                         <!-- Copywrite Text -->
-                        <p class="copywrite-text"><a
-                                href="#"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        <p class="copywrite-text"><a href="#">
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                                 Copyright &copy;
                                 <script>
                                     document.write(new Date().getFullYear());
-                                </script> BPR Datagita Mustika All Rigths Reserved by <a
-                                    href="https://antaruang.com/" target="_blank" style="color: #e72c2c">Antar Uang</a>
+                                </script> BPR Datagita Mustika All Rigths Reserved by <a href="https://antaruang.com/"
+                                    target="_blank" style="color: #e72c2c">Antar Uang</a>
                                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                         </p>
                     </div>
