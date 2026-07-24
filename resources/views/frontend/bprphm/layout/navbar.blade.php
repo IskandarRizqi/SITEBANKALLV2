@@ -29,9 +29,54 @@
             transform: translateX(-100%);
         }
     }
+
+    @media (min-width: 992px) {
+        .nav-bar.nav-bar-floating {
+            background: transparent;
+            /* padding-top: 14px;
+            padding-bottom: 14px; */
+            z-index: 20;
+        }
+
+        .nav-bar.nav-bar-floating .navbar {
+            background: transparent !important;
+            padding: 0;
+        }
+
+        .nav-bar.nav-bar-floating #navbarCollapse {
+            flex-basis: auto;
+            /* flex-grow: 0; */
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 8px 14px;
+            background: rgba(44, 46, 147, 0.94);
+            border-radius: 0;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-bar.nav-bar-floating .navbar-nav {
+            align-items: center;
+        }
+
+        .nav-bar.nav-bar-floating .navbar-nav .nav-link {
+            /* border-radius: 999px; */
+            white-space: nowrap;
+        }
+
+        .nav-bar.nav-bar-floating .btn {
+            white-space: nowrap;
+        }
+
+        .nav-bar.nav-bar-floating .dropdown-menu {
+            margin-left: 0;
+            border-radius: 0;
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+        }
+    }
 </style>
 <!-- Top Bar Start -->
-<div class="top-bar">
+<div class="top-bar" hidden>
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-3 col-md-12">
@@ -58,7 +103,7 @@
 <!-- Top Bar End -->
 
 <!-- Nav Bar Start -->
-<div class="nav-bar">
+<div class="nav-bar nav-bar-floating p-0">
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
             <a href="#" class="navbar-brand">MENU</a>
@@ -68,6 +113,9 @@
 
             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                 <div class="navbar-nav mr-auto">
+                    <a href="/" class="nav-item nav-link bg-white">
+                        <img src="{{ asset('frontend/bprphm/img/logo/logo.png') }}" alt="Logo" style="max-height: 45px">
+                    </a>
                     <a href="/" class="nav-item nav-link  {{ request()->is('/') ? 'active' : '' }}">Beranda</a>
                     <div class="nav-item dropdown">
                         <a href="#"
@@ -128,6 +176,14 @@
                         class="nav-item nav-link {{ request()->is('pengajuanonline') ? 'active' : '' }}">Pengajuan
                         Online</a>
 
+                </div>
+                <div class="running-text mr-2">
+                    <span class="text-white">
+                        Jam Buka : 08:00 - 15:00 &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+                        No Telp : (061) 7990260 &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+                        Email: bprphm@gmail.com &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+                        Sukses Bersama Nasabah
+                    </span>
                 </div>
                 <div class="ml-auto nav-item dropdown">
                     <a class="btn dropdown-toggle" href="#" data-toggle="dropdown">
