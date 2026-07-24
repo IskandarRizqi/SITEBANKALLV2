@@ -142,6 +142,7 @@ Route::get('/pengajuanonline', function () {
     return view(ENV('GLOBAL_PENGAJUANONLINE'));
 });
 Route::get('/haha', function () {
+    return config('subdomain.name');
     return 'HAHAHAHAHAHAHAHA';
 });
 Route::get('/programmagang', function () {
