@@ -1,6 +1,18 @@
-cd /home/u748550814/domains/bprphm.com/public_html/staging.bprphm.com
+name: Deploy Laravel
 
-/usr/bin/php artisan migrate --force
-/usr/bin/php artisan config:cache
-/usr/bin/php artisan route:cache
-/usr/bin/php artisan view:cache
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Ambil source code
+        uses: actions/checkout@v4
+
+      - name: Cek workflow
+        run: echo "Workflow berhasil dijalankan"
