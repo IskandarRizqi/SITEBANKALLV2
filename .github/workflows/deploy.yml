@@ -10,40 +10,9 @@ jobs:
   deploy:
     name: Deploy and optimize Laravel
     runs-on: ubuntu-latest
-    environment: hostinger1
 
     steps:
-      - name: Validasi konfigurasi SSH
-        shell: bash
-        env:
-          SSH_HOST: ${{ secrets.HOST }}
-          SSH_USERNAME: ${{ secrets.USERNAME }}
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
-          SSH_PORT: ${{ secrets.PORT }}
-        run: |
-          if [ -z "$SSH_HOST" ]; then
-            echo "::error::Secret HOST belum dibuat atau tidak tersedia."
-            exit 1
-          fi
-
-          if [ -z "$SSH_USERNAME" ]; then
-            echo "::error::Secret USERNAME belum dibuat atau tidak tersedia."
-            exit 1
-          fi
-
-          if [ -z "$SSH_PRIVATE_KEY" ]; then
-            echo "::error::Secret SSH_KEY belum dibuat atau tidak tersedia."
-            exit 1
-          fi
-
-          if [ -z "$SSH_PORT" ]; then
-            echo "::error::Secret PORT belum dibuat atau tidak tersedia."
-            exit 1
-          fi
-
-          echo "Konfigurasi SSH tersedia."
-
-      - name: Jalankan perintah deploy di server
+      - name: Jalankan deploy di server
         uses: appleboy/ssh-action@v1.2.5
         with:
           host: ${{ secrets.HOST }}
@@ -54,20 +23,41 @@ jobs:
           script: |
             set -e
 
-            cd /home/u748550814/domains/bprphm.com/public_html/staging
+            PROJECT_PATH="/home/u748550814/domains/bprphm.com/public_html/staging"
+
+            cd "$PROJECT_PATH"
+
+            echo "Direktori aktif:"
+            pwd
+
+            if [ ! -f artisan ]; then
+              echo "ERROR: File artisan tidak ditemukan."
+              exit 1
+            fi
+
+            if [ ! -f .env ]; then
+              echo "ERROR: File .env staging tidak ditemukan."
+              exit 1
+            fi
 
             echo "Menunggu proses deploy Git Hostinger..."
             sleep 60
 
+            echo "Membersihkan seluruh cache lama..."
+            php artisan optimize:clear
+
+            echo "Memastikan konfigurasi menggunakan .env staging..."
+            php artisan config:clear
+
             echo "Menjalankan database migration..."
             php artisan migrate --force
 
-            echo "Membersihkan cache lama..."
-            php artisan optimize:clear
-
-            echo "Membuat cache Laravel..."
+            echo "Membuat ulang cache Laravel..."
             php artisan config:cache
             php artisan route:cache
             php artisan view:cache
 
-            echo "Deploy Laravel selesai."
+            echo "Informasi environment:"
+            php artisan about --only=environment
+
+            echo "Deploy Laravel staging selesai."
