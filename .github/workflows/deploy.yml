@@ -10,15 +10,46 @@ jobs:
   deploy:
     name: Deploy and optimize Laravel
     runs-on: ubuntu-latest
+    environment: hostinger1
 
     steps:
-      - name: Jalankan perintah ${{secrets.APP_NAME}} di server
+      - name: Validasi konfigurasi SSH
+        shell: bash
+        env:
+          SSH_HOST: ${{ secrets.HOST }}
+          SSH_USERNAME: ${{ secrets.USERNAME }}
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_KEY }}
+          SSH_PORT: ${{ secrets.PORT }}
+        run: |
+          if [ -z "$SSH_HOST" ]; then
+            echo "::error::Secret HOST belum dibuat atau tidak tersedia."
+            exit 1
+          fi
+
+          if [ -z "$SSH_USERNAME" ]; then
+            echo "::error::Secret USERNAME belum dibuat atau tidak tersedia."
+            exit 1
+          fi
+
+          if [ -z "$SSH_PRIVATE_KEY" ]; then
+            echo "::error::Secret SSH_KEY belum dibuat atau tidak tersedia."
+            exit 1
+          fi
+
+          if [ -z "$SSH_PORT" ]; then
+            echo "::error::Secret PORT belum dibuat atau tidak tersedia."
+            exit 1
+          fi
+
+          echo "Konfigurasi SSH tersedia."
+
+      - name: Jalankan perintah deploy di server
         uses: appleboy/ssh-action@v1.2.5
         with:
-          host: ${{secrets.HOST}}
-          username: ${{secrets.USERNAME}}
-          key: ${{secrets.SSH_KEY}}
-          port: ${{secrets.PORT}}
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.PORT }}
           command_timeout: 15m
           script: |
             set -e
