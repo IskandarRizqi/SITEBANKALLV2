@@ -1,4 +1,4 @@
-name: Deploy Laravel
+name: Deploy Laravel to Hostinger
 
 on:
   push:
@@ -8,11 +8,35 @@ on:
 
 jobs:
   deploy:
+    name: Deploy and optimize Laravel
     runs-on: ubuntu-latest
 
     steps:
-      - name: Ambil source code
-        uses: actions/checkout@v4
+      - name: Jalankan perintah Laravel di server
+        uses: appleboy/ssh-action@v1.2.5
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.PORT }}
+          command_timeout: 15m
+          script: |
+            set -e
 
-      - name: Cek workflow
-        run: echo "Workflow berhasil dijalankan"
+            cd /home/u748550814/domains/bprphm.com/public_html/staging
+
+            echo "Menunggu proses deploy Git Hostinger..."
+            sleep 60
+
+            echo "Menjalankan database migration..."
+            php artisan migrate --force
+
+            echo "Membersihkan cache lama..."
+            php artisan optimize:clear
+
+            echo "Membuat cache Laravel..."
+            php artisan config:cache
+            php artisan route:cache
+            php artisan view:cache
+
+            echo "Deploy Laravel selesai."
