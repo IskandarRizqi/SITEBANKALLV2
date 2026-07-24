@@ -15,7 +15,7 @@ jobs:
       - name: Jalankan perintah Laravel di server
         uses: appleboy/ssh-action@v1.2.5
         with:
-          host: ${{ secrets.HOST }}
+          host: u748550814
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.PORT }}
