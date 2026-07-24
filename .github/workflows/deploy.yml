@@ -12,13 +12,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Jalankan perintah Laravel di server
+      - name: Jalankan perintah ${{secrets.APP_NAME}} di server
         uses: appleboy/ssh-action@v1.2.5
         with:
-          host: 88.223.90.29
-          username: u748550814
-          key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCLE+2P8usHoYI4l6wenK0LorvZKkLZor+Xrz3MpvKJOiAM5Up2CjgHtKMn6u/02y2WxRwpeVfmRuZA/wguwJ4x5mUUTpHoOX1fNJnF32HvKYOETqnmh50uoOtDy4KFVznUiDHsQVol/k38MNRVET8fpIrXMix+1gjFufr4Cmj0YDkVp0NQhwoQ5GPwz0ZFeW6ePqb504b2Tww0VQsX2cJmeMO8tIK4C+kN61exWNiQhwUCRtcAbnaExL26jpZVtUBNYYfTKs0eEIJqE/Bjmho9+9jyhvnqxNhXWT0l83vLE6Ok1Bh8JjZUsxfc/dQdvJWbsuhc21pzf2I/WSmpZJovM3KMj7ocLfvCg3cMDGzk5DEWSn9GHggMdnCGnaag+IHlWeA+AYqbL6BtYgJUkKLpGoxsntdQQjyvVdDEqukjztTjZFZ+QyVhS/8Z8QBr8O5TjFzZA62gLTkTZQylpW94ug8wI/3KKU823998t0srf6JRkzjfzVsD8Fgep0GEToM= mega@DESKTOP-2OII6D4
-          port: 65002
+          host: ${{secrets.HOST}}
+          username: ${{secrets.USERNAME}}
+          key: ${{secrets.SSH_KEY}}
+          port: ${{secrets.PORT}}
           command_timeout: 15m
           script: |
             set -e
