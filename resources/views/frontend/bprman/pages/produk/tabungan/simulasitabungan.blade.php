@@ -2,6 +2,12 @@
 
 @section('content')
     <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
         .event-content {
             max-width: 100%;
             overflow-x: auto;
@@ -18,61 +24,285 @@
             list-style: disc !important;
             padding-left: 18px !important;
         }
-    .breadcrumb-area {
+
+        .breadcrumb-area {
             margin-top: 90px;
         }
 
-        /* Mobile */
+        .judullap {
+            text-align: center;
+            margin-bottom: 0px;
+            margin-top: 120px;
+        }
+
+        /* ===================== OUTER WRAPPER ===================== */
+        .simulasi-outer {
+            width: 83%;
+            margin: 50px auto;
+            background-color: #ee3624;
+            padding: 35px;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ===================== INNER FLEX (form + banner) ===================== */
+        .simulasi-inner {
+            display: flex;
+            gap: 20px;
+        }
+
+        .simulasi-left {
+            width: 55%;
+            color: white;
+        }
+
+        .simulasi-right {
+            width: 45%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .simulasi-right img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .simulasi-title {
+            font-weight: 600;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .simulasi-title img {
+            width: 50px;
+            margin-right: 10px;
+        }
+
+        /* ===================== FORM ELEMENTS (seragam) ===================== */
+        .form-label {
+            display: block;
+            font-size: 14px;
+            color: #fff;
+            margin-bottom: 6px;
+        }
+
+        .input-box {
+            display: flex;
+            align-items: center;
+            background: white;
+            border-radius: 30px;
+            padding: 0 20px;
+            margin-bottom: 18px;
+            height: 46px;
+        }
+
+        .input-box input {
+            border: none;
+            outline: none;
+            width: 100%;
+            height: 100%;
+            font-size: 14px;
+            font-family: inherit;
+            background: transparent;
+            color: #333;
+        }
+
+        .input-prefix {
+            color: #0a1c92;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .simulasi-buttons {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin-top: 5px;
+            margin-bottom: 0;
+        }
+
+        .btn-reset,
+        .btn-hitung {
+            padding: 10px;
+            border-radius: 40px;
+            border: none;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .btn-reset {
+            width: 40%;
+            background: #0a1c92;
+            color: white;
+        }
+
+        .btn-hitung {
+            width: 55%;
+            background: #efefef;
+            color: #0a1c92;
+        }
+
+        /* ===================== CUSTOM DROPDOWN (Pilih Produk) ===================== */
+        .select-wrapper {
+            position: relative;
+            cursor: pointer;
+            justify-content: space-between;
+            user-select: none;
+        }
+
+        .select-wrapper .real-select {
+            display: none;
+        }
+
+        .select-display {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .select-display.is-placeholder {
+            color: #8a8a8a;
+        }
+
+        .select-arrow {
+            color: #f71827;
+            font-size: 12px;
+            transition: transform 0.2s ease;
+            margin-left: 10px;
+        }
+
+        .select-wrapper.open .select-arrow {
+            transform: rotate(180deg);
+        }
+
+        .select-options {
+            position: absolute;
+            top: calc(100% + 8px);
+            left: 0;
+            width: 100%;
+            max-height: 240px;
+            overflow-y: auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+            display: none;
+            z-index: 20;
+        }
+
+        .select-wrapper.open .select-options {
+            display: block;
+        }
+
+        .select-option {
+            padding: 12px 20px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .select-option:hover {
+            background: #f2f2f2;
+        }
+
+        .select-option.selected {
+            color: #0a1c92;
+            font-weight: 600;
+        }
+
+        /* ===================== HASIL SIMULASI ===================== */
+        #hasilSimulasiContainer {
+            width: 100%;
+            margin-top: 30px;
+            display: none;
+        }
+
+        .hasil-box {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .hasil-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .hasil-col {
+            width: 48%;
+        }
+
+        /* ===================== MOBILE ===================== */
         @media (max-width: 768px) {
             .breadcrumb-area {
                 margin-top: 0;
             }
-        }
 
-        .judullap {
-        text-align: center;
-        margin-bottom: 0px;
-        margin-top: 100px;
+            .simulasi-outer {
+                width: 92%;
+                padding: 20px;
+                margin: 30px auto;
+            }
+
+            .simulasi-inner {
+                flex-direction: column;
+            }
+
+            .simulasi-left,
+            .simulasi-right {
+                width: 100%;
+            }
+
+            /* banner tampil di atas, form di bawah */
+            .simulasi-right {
+                order: -1;
+                margin-bottom: 20px;
+            }
+
+            .simulasi-right img {
+                height: auto;
+            }
+
+            .hasil-col {
+                width: 100%;
+            }
         }
     </style>
+
     <body class="body tg-heading-subheading animation-style3">
         <h2 class="judullap">Simulasi Tabungan</h2>
-        <div style="width:83%; margin:auto;   background: linear-gradient(45deg, #0a1c92, #ffffff); padding:35px; border-radius:15px; margin-top:50px; margin-bottom: 50px; display:flex; flex-direction:column;"
-            class="simulasi-wrapper">
 
-            <div class="simulasi-wrapper" style="display:flex;">
+        <div class="simulasi-outer">
+            <div class="simulasi-inner">
 
-                <div class="simulasi-left" style="width:55%; color:white; padding-right:20px;" class="simulasi-left">
-
-                    <h3 style="font-weight:600; margin-bottom:25px; display:flex; align-items:center; color:white;">
-                        <img src="frontend/bprdatagita/img/produk/iconsimulasi.png"
-                            style="width:50px; margin-right:10px;">
+                <div class="simulasi-left">
+                    <h3 class="simulasi-title">
+                        <img src="frontend/bprdatagita/img/produk/iconsimulasi.png">
                         Simulasi Tabungan
                     </h3>
 
-
-                    <label style="font-size:14px;  color: #fff">Setoran Rata - rata</label>
-                    <div
-                        style="display:flex; align-items:center; background:white; border-radius:30px;
-                        padding:0 20px; margin-bottom:18px;">
-                        <span style="color:#0a1c92; font-weight:bold; margin-right:10px;">Rp.</span>
-
-                        <input type="text" id="plafon" placeholder="Ketik disini"
-                            style="border:none; outline:none; width:100%; font-size:14px;">
+                    <label class="form-label">Setoran Rata - rata</label>
+                    <div class="input-box">
+                        <span class="input-prefix">Rp.</span>
+                        <input type="text" id="plafon" placeholder="Ketik disini">
                     </div>
 
+                    <label class="form-label">Pilih Produk</label>
+                    <div class="input-box select-wrapper" id="produkWrapper">
+                        <span class="select-display is-placeholder" id="produkLabel">Pilih Produk</span>
+                        <span class="select-arrow">&#9662;</span>
 
-                    <label style="font-size:14px;  color: #fff">Pilih Produk</label>
-
-                    <div style="background:white; border-radius:30px; padding:0; margin-bottom:30px;">
-
-                        <select name="bunga" id="bunga"
-                            style="width:100%; padding:0 20px; border-radius:30px;
-                            border:none; outline:none; font-size:14px;
-                            appearance:none; -webkit-appearance:none; -moz-appearance:none;
-                            background:white url('data:image/svg+xml;utf8,<svg fill=\'%23f71827\' height=\'18\' viewBox=\'0 0 24 24\' width=\'18\' xmlns=\'http://www.w3.org/2000/svg\'><path d=\'M7 10l5 5 5-5z\'/></svg>') 
-                            no-repeat right 20px center;">
-
+                        {{-- select asli TIDAK diubah sama sekali, cuma disembunyikan secara visual --}}
+                        <select name="bunga" id="bunga" class="real-select">
                             <option value="">Pilih Produk</option>
 
                             @if (isset($tabungan))
@@ -83,67 +313,50 @@
                                     </option>
                                 @endforeach
                             @endif
-
                         </select>
 
+                        <div class="select-options" id="produkOptions"></div>
                     </div>
 
-
-                    <div style="display:flex; justify-content:space-between; gap:20px; margin-top:5px; margin-bottom:20px;  padding:7px 20px;"
-                        class="simulasi-buttons">
-
-                        <button id="btnReset"
-                            style="width:40%; padding:7px; border-radius:40px; background:#0a1c92;
-                                border:none; color:white; font-size:18px; font-weight:500; cursor:pointer;">
-                            Reset
-                        </button>
-
-                        <button id="btnHitung"
-                            style="width:55%; padding:7px; border-radius:40px; background:#efefef;
-                                border:none; color:#0a1c92; font-weight:bold; font-size:18px; cursor:pointer;">
-                            Hitung
-                        </button>
-
+                    <div class="simulasi-buttons">
+                        <button id="btnReset" class="btn-reset">Reset</button>
+                        <button id="btnHitung" class="btn-hitung">Hitung</button>
                     </div>
-
                 </div>
 
-
-                <div class="simulasi-right" style="width:45%; display:flex; align-items:center; justify-content:center;"
-                    class="simulasi-right">
-                    <img id="gambarProduk" src="frontend/bprman/assets/images/produk/simulasitabungan.png"
-                        style="width:95%; height: 350px; border-radius:10px;">
-
-
+                <div class="simulasi-right">
+                    <img id="gambarProduk" src="frontend/bprman/assets/images/produk/simulasitabungan.png">
                 </div>
 
             </div>
 
-
-            <div id="hasilSimulasiContainer" style="width:100%; margin-top:30px; display:none;">
-                <div style="background:white; border-radius:10px; padding:20px; box-shadow:0 4px 8px rgba(0,0,0,0.1);">
+            <div id="hasilSimulasiContainer">
+                <div class="hasil-box">
                     <h4 style="color:#000; margin-bottom:20px; text-align:center;">Hasil Simulasi Tabungan</h4>
-                    <div style="display: flex; justify-content: space-between; margin-bottom: 15px;">
-                        <div style="width: 48%;">
-                            <h5 style="color:#333; margin-bottom:5px;font-size:16px; ">Bunga + Saldo Tabungan</h5>
+
+                    <div class="hasil-row">
+                        <div class="hasil-col">
+                            <h5 style="color:#333; margin-bottom:5px; font-size:16px;">Bunga + Saldo Tabungan</h5>
                             <p id="saldoKalehBunga" style="font-size: 15px; font-weight: bold; color:#000;">Rp 0</p>
                         </div>
-                        <div style="width: 48%;">
-                            <h5 style="color:#333; margin-bottom:5px;font-size:16px;">Saldo Tanpa Bunga</h5>
+                        <div class="hasil-col">
+                            <h5 style="color:#333; margin-bottom:5px; font-size:16px;">Saldo Tanpa Bunga</h5>
                             <p id="saldo" style="font-size: 15px; font-weight: bold; color:#333;">Rp 0</p>
                         </div>
                     </div>
-                    <div style="display: flex; justify-content: space-between;">
-                        <div style="width: 48%;">
+
+                    <div class="hasil-row" style="margin-bottom:0;">
+                        <div class="hasil-col">
                             <!-- PERUBAHAN: Label diubah menjadi "Bunga Per Bulan" -->
-                            <h5 style="color:#333; margin-bottom:5px;font-size:16px;">Bunga Per Bulan</h5>
+                            <h5 style="color:#333; margin-bottom:5px; font-size:16px;">Bunga Per Bulan</h5>
                             <p id="hasilBunga" style="font-size: 15px; font-weight: bold; color:#333;">Rp 0</p>
                         </div>
-                        <div style="width: 48%;">
-                            <h5 style="color:#333; margin-bottom:5px;font-size:16px;">Total Setoran</h5>
+                        <div class="hasil-col">
+                            <h5 style="color:#333; margin-bottom:5px; font-size:16px;">Total Setoran</h5>
                             <p id="totalSetoran" style="font-size: 15px; font-weight: bold; color:#333;">Rp 0</p>
                         </div>
                     </div>
+
                     <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid #eee;">
                         <small style="color:#666;">Syarat dan Ketentuan</small>
                         <ul class="bullet-list" style="font-size: 12px; color:#666; padding-left: 20px; margin-top: 5px;">
@@ -163,6 +376,7 @@
 
     </body>
 
+    {{-- ===================== SCRIPT PERHITUNGAN (TIDAK DIUBAH) ===================== --}}
     <script>
         // FORMAT RUPIAH
         function formatRupiah(num) {
@@ -236,5 +450,72 @@
                 document.getElementById("gambarProduk").src = imagePath;
             }
         });
+    </script>
+
+    {{-- ===================== SCRIPT BARU: UI DROPDOWN CUSTOM ===================== --}}
+    {{-- Script ini hanya mengurus tampilan dropdown, sama sekali tidak menyentuh logic perhitungan di atas --}}
+    <script>
+        (function() {
+            const realSelect = document.getElementById('bunga');
+            const wrapper = document.getElementById('produkWrapper');
+            const label = document.getElementById('produkLabel');
+            const optionsBox = document.getElementById('produkOptions');
+
+            function buildOptions() {
+                optionsBox.innerHTML = '';
+
+                Array.from(realSelect.options).forEach(function(opt) {
+                    if (opt.value === '') return; // skip placeholder "Pilih Produk"
+
+                    const div = document.createElement('div');
+                    div.className = 'select-option';
+                    div.textContent = opt.textContent.trim();
+                    div.dataset.value = opt.value;
+
+                    div.addEventListener('click', function(e) {
+                        e.stopPropagation();
+
+                        realSelect.value = opt.value;
+                        label.textContent = opt.textContent.trim();
+                        label.classList.remove('is-placeholder');
+
+                        optionsBox.querySelectorAll('.select-option').forEach(function(o) {
+                            o.classList.remove('selected');
+                        });
+                        div.classList.add('selected');
+
+                        wrapper.classList.remove('open');
+
+                        // trigger listener "change" yang sudah ada (ganti gambar produk)
+                        // TANPA mengubah script perhitungan di atas
+                        realSelect.dispatchEvent(new Event('change'));
+                    });
+
+                    optionsBox.appendChild(div);
+                });
+            }
+
+            buildOptions();
+
+            wrapper.addEventListener('click', function() {
+                wrapper.classList.toggle('open');
+            });
+
+            document.addEventListener('click', function(e) {
+                if (!wrapper.contains(e.target)) {
+                    wrapper.classList.remove('open');
+                }
+            });
+
+            // sinkronkan tampilan dropdown custom saat tombol reset diklik
+            // (listener tambahan, tidak menimpa listener reset yang sudah ada)
+            document.getElementById('btnReset').addEventListener('click', function() {
+                label.textContent = 'Pilih Produk';
+                label.classList.add('is-placeholder');
+                optionsBox.querySelectorAll('.select-option').forEach(function(o) {
+                    o.classList.remove('selected');
+                });
+            });
+        })();
     </script>
 @endsection

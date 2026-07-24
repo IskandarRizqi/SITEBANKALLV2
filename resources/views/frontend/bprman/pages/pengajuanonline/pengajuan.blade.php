@@ -32,7 +32,7 @@
         }
     </style>
 
-    <div class="pxn-page-header" data-bg-image="frontend/bprbahari/assets/images/profil/banertop.jpg"
+    <div class="pxn-page-header"
         style="margin-top:120px; height:150px; display:flex; align-items:center; justify-content:center;">
 
 
@@ -54,7 +54,7 @@
                 Pengajuan Online
             </h4> --}}
 
-            <div style=" border:1.5px solid #0a1c92; border-radius:8px; padding:30px 15px; margin-bottom: 30px;">
+            <div style=" border:1.5px solid #740c0d; border-radius:8px; padding:30px 15px; margin-bottom: 30px;">
 
                 <h5 style=" text-align:center; font-weight:600; margin-bottom:30px; ">
                     Pilih Layanan
@@ -66,7 +66,7 @@
                     <div class="col-lg-4 col-md-6">
                         <a href="/formpengajuankredit" style="text-decoration:none;color:inherit;">
                             <div class="team-box"
-                                style=" background: linear-gradient(45deg, #0a1c92, #f36262);border-radius:8px;padding:25px 15px;text-align:center;margin-bottom:20px;cursor:pointer;transition:.3s;">
+                                style=" background: linear-gradient(45deg, #f68029, #ee3c26);border-radius:8px;padding:25px 15px;text-align:center;margin-bottom:20px;cursor:pointer;transition:.3s;">
                                 <div class="image-area">
                                     <div class="image">
                                         <img src="{{ asset('frontend/bprrudo/assets/img/profil/kredit.png') }}"
@@ -85,7 +85,7 @@
                     <div class="col-lg-4 col-md-6">
                         <a href="/formpengajuantabungan" style="text-decoration:none;color:inherit;">
                             <div class="team-box"
-                                style=" background: linear-gradient(45deg, #0a1c92, #f36262);border-radius:8px;padding:25px 15px;text-align:center;margin-bottom:20px;cursor:pointer;transition:.3s;">
+                                style=" background: linear-gradient(45deg, #ee3c26, #f68029);border-radius:8px;padding:25px 15px;text-align:center;margin-bottom:20px;cursor:pointer;transition:.3s;">
                                 <div class="image-area">
                                     <div class="image">
                                         <img src="{{ asset('frontend/bprrudo/assets/img/profil/tabungan.png') }}"
@@ -105,7 +105,7 @@
                     <div class="col-lg-4 col-md-6">
                         <a href="/formpengajuandeposito" style="text-decoration:none;color:inherit;">
                             <div class="team-box"
-                                style=" background: linear-gradient(45deg, #0a1c92, #f36262);border-radius:8px;padding:25px 15px;text-align:center;margin-bottom:20px;cursor:pointer;transition:.3s;">
+                                style=" background: linear-gradient(45deg, #f68029, #ee3c26);border-radius:8px;padding:25px 15px;text-align:center;margin-bottom:20px;cursor:pointer;transition:.3s;">
                                 <div class="image-area">
                                     <div class="image">
                                         <img src="{{ asset('frontend/bprrudo/assets/img/profil/deposito.png') }}"

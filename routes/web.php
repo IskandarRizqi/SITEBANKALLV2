@@ -252,8 +252,13 @@ Route::get('laporanall', [\App\Http\Controllers\frontend\LaporanController::clas
 Route::post('/getlaporan-pisah', [\App\Http\Controllers\frontend\LaporanController::class, 'getlaporanfront']);
 
 
+<<<<<<< Updated upstream
 Route::get('/terms', function () {
     return view(env('GLOBAL_TERMS'));
+=======
+Route::get('/term', function () {
+    return view(env ('GLOBAL_TERMS'));
+>>>>>>> Stashed changes
 });
 Route::get('/privasipolicy', function () {
     return view(env('GLOBAL_PRIVASIPOLICY'));

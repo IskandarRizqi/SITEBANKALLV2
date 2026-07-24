@@ -1,7 +1,8 @@
-@extends('frontend.bprbahari.layout.main')
+@extends('frontend.bprman.layout.main')
 
 @section('content')
 
+<<<<<<< Updated upstream
 <body class="body tg-heading-subheading animation-style3">
 
 
@@ -53,6 +54,85 @@
                             <div class="details-post-area">
                                 <div class="image">
                                     <img src="frontend/bprjas/assets/img/profil/term.jpg" alt="">
+=======
+    <body class="body tg-heading-subheading animation-style3">
+        <!--=====SERVICE DETAILS AREA START=======-->
+
+        <div class="service-details-area-all sp">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-11 m-auto">
+                        <div class="service-details-post">
+                            <article>
+                                <div class="details-post-area" style="padding-top: 12%;">
+                                    <div class="text-center mb-4">
+                                        <h2 class="text-center">Syarat dan Ketentuan</h2>
+                                    </div>
+                                   
+                                    <div class="heading1">
+                                        <div class="space16"></div>
+                                        <p style="text-align: justify;">
+                                            Selamat datang di situs resmi PT BPR Multi Arthanusa, Dengan mengakses dan menggunakan
+                                            situs ini, Anda setuju untuk terikat pada syarat dan ketentuan berikut ini. Jika
+                                            Anda tidak menyetujui salah satu bagian dari ketentuan ini, mohon untuk tidak
+                                            menggunakan situs ini.
+                                        </p>
+                                        <p class="mb-0"><strong>1. Penggunaan Situs</strong></p>
+                                        <p style="text-align: justify;">
+                                            Situs ini disediakan sebagai sarana informasi seputar layanan dan produk PT BPR
+                                            Multi Arthanusa. Pengguna tidak diperkenankan: Menggunakan situs untuk tujuan yang
+                                            melanggar hukum. Mengubah, menyalin, menyebarkan, atau mengeksploitasi konten
+                                            tanpa izin tertulis. Mengganggu keamanan situs atau sistem jaringan kami.
+                                        </p>
+                                        <p class="mb-0"><strong>2. Akses Informasi</strong></p>
+                                        <p style="text-align: justify">
+                                            Informasi yang tersedia di situs ini disediakan untuk keperluan informasi umum
+                                            dan dapat berubah sewaktu-waktu tanpa pemberitahuan. Kami berupaya menyajikan
+                                            informasi seakurat mungkin, namun tidak menjamin kelengkapan dan ketepatan data
+                                            setiap waktu.
+
+                                        <p class="mb-0"><strong>3. Hak Kekayaan Intelektual</strong></p>
+                                        <p style="text-align: justify">
+                                            Seluruh hak cipta, merek dagang, logo, dan materi visual di situs ini adalah
+                                            milik PT PT BPR Multi Arthanusa dan dilindungi oleh undang-undang yang berlaku.
+                                            Dilarang keras menggunakan materi ini tanpa izin.
+                                        </p>
+
+                                        <p class="mb-0"><strong>4. Privasi Pengguna</strong></p>
+                                        <p style="text-align: justify">
+                                            Kami menghormati privasi Anda. Silakan kunjungi halaman Kebijakan Privasi kami
+                                            untuk mengetahui bagaimana kami mengumpulkan, menggunakan, dan melindungi data
+                                            pribadi Anda saat mengakses situs ini.
+                                        </p>
+
+                                        <p class="mb-0"><strong>5. Tautan ke Pihak Ketiga</strong></p>
+                                        <p style="text-align: justify">
+                                            Situs ini dapat mengandung tautan ke situs eksternal yang bukan bagian dari
+                                            kami. PT BPR Multi Arthanusa tidak bertanggung jawab atas isi atau kebijakan situs
+                                            pihak ketiga tersebut.
+                                        </p>
+
+                                        <p class="mb-0"><strong>6. Pembatasan Tanggung Jawab</strong></p>
+                                        <p style="text-align: justify">
+                                            PPT BPR Multi Arthanusa tidak bertanggung jawab atas kerugian langsung atau tidak
+                                            langsung yang timbul dari penggunaan atau ketidakmampuan penggunaan situs ini,
+                                            termasuk gangguan teknis, kehilangan data, atau kesalahan informasi.
+                                        </p>
+
+                                        <p class="mb-0"><strong>7. Perubahan Ketentuan</strong></p>
+                                        <p style="text-align: justify">
+                                            Kami berhak mengubah atau memperbarui syarat dan ketentuan ini kapan saja.
+                                            Perubahan akan berlaku efektif sejak tanggal dipublikasikan di situs ini.
+                                        </p>
+
+                                        <p class="mb-0"><strong>8. Hukum yang Berlaku</strong></p>
+                                        <p style="text-align: justify">
+                                            Syarat dan ketentuan ini diatur oleh dan ditafsirkan sesuai dengan hukum yang
+                                            berlaku di Republik Indonesia.
+                                        </p>
+                                    
+                                    </div>
+>>>>>>> Stashed changes
                                 </div>
                                 <div class="space30"></div>
                                 <div class="heading1">
