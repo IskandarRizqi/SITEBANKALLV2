@@ -10,18 +10,20 @@ return new class extends Migration {
      */
     public function up(): void
     {
-        Schema::create('counter_rate', function (Blueprint $table) {
-            $table->id();
-            $table->string('nama')->nullable();
-            $table->tinyInteger('type')->nullable();
-            // 1 = kredit
-            // 2 = tabungan
-            // 3 = deposito
+        if (!Schema::hasTable('counter_rate')) {
+            Schema::create('counter_rate', function (Blueprint $table) {
+                $table->id();
+                $table->string('nama')->nullable();
+                $table->tinyInteger('type')->nullable();
+                // 1 = kredit
+                // 2 = tabungan
+                // 3 = deposito
 
-            $table->text('image')->nullable();
-            $table->timestamps();
-            $table->softDeletes();
-        });
+                $table->text('image')->nullable();
+                $table->timestamps();
+                $table->softDeletes();
+            });
+        }
     }
 
     /**

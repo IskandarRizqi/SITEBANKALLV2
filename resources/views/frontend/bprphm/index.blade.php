@@ -101,13 +101,14 @@
 
                     {{-- DESKTOP --}}
                     @if (!empty($item->url))
-                    <img src="/recfil?display=true&rf={{ $item->url }}" class="d-none d-md-block w-100" alt="Slide">
+                    <img src="{{env('APP_URL','')}}/recfil?display=true&rf={{ $item->url }}"
+                        class="d-none d-md-block w-100" alt="Slide">
                     @endif
 
                     {{-- MOBILE --}}
                     @if (!empty($item->url_mobile))
-                    <img src="/recfil?display=true&rf={{ $item->url_mobile }}" class="d-block d-md-none w-100"
-                        alt="Slide">
+                    <img src="{{env('APP_URL','')}}/recfil?display=true&rf={{ $item->url_mobile }}"
+                        class="d-block d-md-none w-100" alt="Slide">
                     @endif
 
                 </div>
@@ -173,7 +174,7 @@
 
                             <!-- gambar -->
                             <div style="position:relative;">
-                                <img src="/recfil?display=true&rf={{ $item->thumbnail }}"
+                                <img src="{{env('APP_URL','')}}/recfil?display=true&rf={{ $item->thumbnail }}"
                                     style="height:200px;width:100%;object-fit:fill;">
 
                                 @if ($badge)
@@ -300,7 +301,8 @@
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="service-item">
                             <div class="service-img">
-                                <img src="frontend/bprphm/img/produk/kredit/kredit.png" alt="Image">
+                                <img src="{{env('APP_URL','')}}/frontend/bprphm/img/produk/kredit/kredit.png"
+                                    alt="Image">
                                 <div class="service-overlay">
                                     <p>
                                         Solusi pendanaan untuk beragam kebutuhan Anda di BPR Perbaungan Hombar Makmur
@@ -317,7 +319,8 @@
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
                         <div class="service-item">
                             <div class="service-img">
-                                <img src="frontend/bprphm/img/produk/tabungan/tab.png" alt="Image">
+                                <img src="{{env('APP_URL','')}}/frontend/bprphm/img/produk/tabungan/tab.png"
+                                    alt="Image">
                                 <div class="service-overlay">
                                     <p>
                                         Nikmati kemudahan menabung bersama tabungan BPR Perbaungan Hombar Makmur
@@ -334,7 +337,8 @@
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="service-item">
                             <div class="service-img">
-                                <img src="frontend/bprphm/img/produk/deposito/depo.png" alt="Image">
+                                <img src="{{env('APP_URL','')}}/frontend/bprphm/img/produk/deposito/depo.png"
+                                    alt="Image">
                                 <div class="service-overlay">
                                     <p>
                                         Rencanakan masa depan keuangan Anda bersama deposito BPR Perbaungan Hombar
@@ -364,7 +368,7 @@
                 <div class="simulasi-left" style="width:55%; color:white; padding-right:20px;" class="simulasi-left">
 
                     <h3 style="font-weight:600; margin-bottom:25px; display:flex; align-items:center; color: white;">
-                        <img src="frontend/bprrudo/assets/img/produk/iconsimulasi.png"
+                        <img src="{{env('APP_URL','')}}/frontend/bprrudo/assets/img/produk/iconsimulasi.png"
                             style="width:50px; margin-right:10px;">
                         Simulasi Pinjaman
                     </h3>
@@ -437,7 +441,8 @@
 
                 <div class="simulasi-right" style="width:45%; display:flex; align-items:center; justify-content:center;"
                     class="simulasi-right">
-                    <img src="frontend/bprphm/img/rate.png" style="width:90%; border-radius:10px;">
+                    <img src="{{env('APP_URL','')}}/frontend/bprphm/img/rate.png"
+                        style="width:90%; border-radius:10px;">
                 </div>
 
             </div>
@@ -835,8 +840,8 @@
 
                             <div class="blog-img">
                                 <a href="{{ route('detberita', $item->id) }}">
-                                    <img src="/recfil?display=true&rf={{ $item->thumbnail }}" alt="{{ $item->title }}"
-                                        style="width:100%; height:220px; object-fit:fill;">
+                                    <img src="{{env('APP_URL','')}}/recfil?display=true&rf={{ $item->thumbnail }}"
+                                        alt="{{ $item->title }}" style="width:100%; height:220px; object-fit:fill;">
                                 </a>
                             </div>
 
