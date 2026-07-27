@@ -8,29 +8,22 @@
 				<span class="uk-margin-small-left">Login</span>
 			</a>
 
-			<a class="sidenav-menu-button" href="#main-side-nav-product" data-uk-toggle="" style="top:255px;"
-				role="button">
+			<a class="sidenav-menu-button" href="{{ url('/laporanall') }}" style="top:255px;">
 				<span data-uk-icon="icon:icon-product;ratio:1.25" class="uk-icon"></span>
-				<span class="uk-margin-small-left">Produk</span>
+				<span class="uk-margin-small-left">Laporan</span>
 			</a>
 
-			<a class="sidenav-menu-button" href="./page_layanan.html" aria-expanded="false" style="top:310px;">
+			<a class="sidenav-menu-button" href="{{ url('/layananlain') }}" style="top:310px;">
 				<span data-uk-icon="icon:icon-bjb-digi;ratio:1.25" class="uk-icon"></span>
-				<span class="uk-margin-small-left">Layanan</span>
+				<span class="uk-margin-small-left">Layanan Lain</span>
 			</a>
 
-			<a class="sidenav-menu-button" href="./page_promo.html" aria-expanded="false" style="top:365px;">
-				<span data-uk-icon="icon:icon-bjb-logo;ratio:1.25" class="uk-icon"></span>
-				<span class="uk-margin-small-left">Promo</span>
-			</a>
-
-			<a class="sidenav-menu-button" href="./page_simulasi.html" aria-expanded="false" style="top:420px;">
+			<a class="sidenav-menu-button" href="{{ url('/simulasi') }}" style="top:365px;">
 				<span data-uk-icon="icon:icon-calculator;ratio:1.25" class="uk-icon"></span>
 				<span class="uk-margin-small-left">Simulasi</span>
 			</a>
 
-			<a class="sidenav-menu-button" href="#main-side-nav-complaint" data-uk-toggle="" style="top:475px;"
-				role="button">
+			<a class="sidenav-menu-button" href="{{ url('/pengaduan') }}" style="top:420px;">
 				<span data-uk-icon="icon:icon-pengaduan;ratio:1.25" class="uk-icon"></span>
 				<span class="uk-margin-small-left">Pengaduan</span>
 			</a>
@@ -440,13 +433,13 @@
 
 
 					<div style="border-left: 1px solid rgba(255,255,255,0.2);">
-						<a class="sidenav-menu-button-mobile" href="#main-side-nav-product" data-uk-toggle=""
-							style="top:255px;" role="button">
+						<a class="sidenav-menu-button-mobile" href="{{ url('/laporanall') }}"
+							style="top:255px;">
 							<span class="uk-panel uk-flex uk-flex-center">
 								<span
 									class="uk-margin-small-top uk-margin-small-bottom uk-flex uk-flex-middle uk-flex-column">
 									<span data-uk-icon="icon:icon-product;ratio:1.25" class="uk-icon"></span>
-									<span style="font-size:0.75rem" class="uk-text-light">Produk</span>
+									<span style="font-size:0.75rem" class="uk-text-light">Laporan</span>
 								</span>
 							</span>
 						</a>
@@ -454,36 +447,21 @@
 
 
 					<div style="border-left: 1px solid rgba(255,255,255,0.2);">
-						<a class="sidenav-menu-button-mobile" href="./page_layanan.html" aria-expanded="false"
+						<a class="sidenav-menu-button-mobile" href="{{ url('/layananlain') }}"
 							style="top:310px;">
 							<span class="uk-panel uk-flex uk-flex-center">
 								<span
 									class="uk-margin-small-top uk-margin-small-bottom uk-flex uk-flex-middle uk-flex-column">
 									<span data-uk-icon="icon:icon-bjb-digi;ratio:1.25" class="uk-icon"></span>
-									<span style="font-size:0.75rem" class="uk-text-light">Layanan</span>
+									<span style="font-size:0.75rem" class="uk-text-light">Layanan Lain</span>
 								</span>
 							</span>
 						</a>
 					</div>
 
-
 					<div style="border-left: 1px solid rgba(255,255,255,0.2);">
-						<a class="sidenav-menu-button-mobile" href="./page_promo.html" aria-expanded="false"
+						<a class="sidenav-menu-button-mobile" href="{{ url('/simulasi') }}"
 							style="top:365px;">
-							<span class="uk-panel uk-flex uk-flex-center">
-								<span
-									class="uk-margin-small-top uk-margin-small-bottom uk-flex uk-flex-middle uk-flex-column">
-									<span data-uk-icon="icon:icon-bjb-logo;ratio:1.25" class="uk-icon"></span>
-									<span style="font-size:0.75rem" class="uk-text-light">Promo</span>
-								</span>
-							</span>
-						</a>
-					</div>
-
-
-					<div style="border-left: 1px solid rgba(255,255,255,0.2);">
-						<a class="sidenav-menu-button-mobile" href="./page_simulasi.html" aria-expanded="false"
-							style="top:420px;">
 							<span class="uk-panel uk-flex uk-flex-center">
 								<span
 									class="uk-margin-small-top uk-margin-small-bottom uk-flex uk-flex-middle uk-flex-column">
@@ -496,8 +474,8 @@
 
 
 					<div style="border-left: 1px solid rgba(255,255,255,0.2);">
-						<a class="sidenav-menu-button-mobile" href="#main-side-nav-complaint" data-uk-toggle=""
-							style="top:475px;" role="button">
+						<a class="sidenav-menu-button-mobile" href="{{ url('/pengaduan') }}"
+							style="top:420px;">
 							<span class="uk-panel uk-flex uk-flex-center">
 								<span
 									class="uk-margin-small-top uk-margin-small-bottom uk-flex uk-flex-middle uk-flex-column">

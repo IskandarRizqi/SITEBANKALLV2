@@ -58,10 +58,10 @@ Route::prefix('salamprofit')->middleware(['admin'])->group(function () {
     Route::get('/homeadmin', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::get('/export-visitor-bulanan', [HomeController::class, 'exportVisitorMonthlyPDF'])->name('exportvisitor.monthly');
     Route::get('/export-visitor-tahunan', [HomeController::class, 'exportVisitorYearlyPDF'])->name('exportvisitor.yearly');
- 
 
-   // Hapus route lama dan ganti dengan ini
-// Route::get('/export/visitor/monthly/{year}/{month}', [HomeController::class, 'exportVisitorMonthlyExcel'])->name('export.visitor.monthly');
+
+    // Hapus route lama dan ganti dengan ini
+    // Route::get('/export/visitor/monthly/{year}/{month}', [HomeController::class, 'exportVisitorMonthlyExcel'])->name('export.visitor.monthly');
     Route::resource('banner', BannerController::class)->middleware('auth');
     Route::resource('user', UserController::class)->middleware('auth');
     Route::resource('master-produk-kredit', \App\Http\Controllers\admin\MasterPengajuanKreditController::class)->middleware('auth');
@@ -106,13 +106,11 @@ Route::prefix('salamprofit')->middleware(['admin'])->group(function () {
     Route::post('pengaduan/SimpanSelesaiPenanganan/{id}', [MasterJenisPengaduanController::class, 'SimpanSelesaiPenanganan']);
     Route::post('pengaduan/set-gugur/{id}', [MasterJenisPengaduanController::class, 'SetingGugur']);
 
-    
+
     Route::resource('data-umkm', UMKMController::class);
     Route::resource('rate', UMKMController::class);
 
     Route::resource('counter-rate', CounterRateController::class);
-
-
 });
 // ADMIN ROUTE END
 
@@ -128,7 +126,7 @@ Route::get('detberita/{id}', [InformasiController::class, 'detberita'])->name('d
 Route::get('detliterasi/{id}', [InformasiController::class, 'detliterasi'])->name('detliterasi');
 Route::get('informasi', [InformasiController::class, 'informasi']);
 Route::resource('umkm', \App\Http\Controllers\frontend\UmkmController::class);
-Route::get('detumkm/{id}', [\App\Http\Controllers\frontend\UmkmController::class,'detumkm'])->name('detumkm');
+Route::get('detumkm/{id}', [\App\Http\Controllers\frontend\UmkmController::class, 'detumkm'])->name('detumkm');
 
 // Produk
 Route::get('kredit', [\App\Http\Controllers\frontend\ProdukLayananController::class, 'kredit']);
@@ -140,9 +138,12 @@ Route::get('dettabungan/{id}', [\App\Http\Controllers\frontend\ProdukLayananCont
 Route::get('/simulasi-kredit', [\App\Http\Controllers\frontend\ProdukLayananController::class, 'simulasiKredit']);
 Route::get('/simulasi-tabungan', [\App\Http\Controllers\frontend\ProdukLayananController::class, 'simulasiTabungan']);
 Route::get('/simulasi-deposito', [\App\Http\Controllers\frontend\ProdukLayananController::class, 'simulasiDeposito']);
-Route::get('/pengajuanonline', function () {
+if (env('DATA_PAGE') == 'BPREMAS') {
+    Route::get('/pengajuanonline', [\App\Http\Controllers\frontend\PengajuanOnlineController::class, 'index']);
+    Route::get('/simulasi', [\App\Http\Controllers\frontend\ProdukLayananController::class, 'simulasi']);
+} else {
     return view(ENV('GLOBAL_PENGAJUANONLINE'));
-});
+}
 Route::get('/programmagang', function () {
     return view(ENV('GLOBAL_MAGANG'));
 });
@@ -165,7 +166,7 @@ Route::get('/formktabungan/{id}/download', [\App\Http\Controllers\frontend\Penga
 Route::get('/newformpengajuantabungan', [\App\Http\Controllers\frontend\PengajuanOnlineController::class, 'newformpengajuantabungan']);
 Route::post('/pembukaan-rekening/simpan', [\App\Http\Controllers\frontend\PengajuanOnlineController::class, 'savetabungan'])->name('pembukaanrekening.simpan');
 // Route::get('/pembukaan-rekening/download/{id}', [\App\Http\Controllers\frontend\PengajuanOnlineController::class, 'downloadformpembukaanrekening'])->name('download.pembukaanrekening');
- 
+
 Route::get('/layananlain', function () {
     return view(ENV('GLOBAL_LAYANANLAIN'));
 });
@@ -192,7 +193,7 @@ Route::get('profile', [\App\Http\Controllers\frontend\ProfileController::class, 
 Route::get('corevalue', [\App\Http\Controllers\frontend\ProfileController::class, 'corevalue']);
 Route::resource('jaringankantor', Fe_JaringanKantorController::class);
 Route::resource('galery', \App\Http\Controllers\frontend\GalleryController::class);
-Route::get('detgallery/{id}', [\App\Http\Controllers\frontend\GalleryController::class,'detgallery'])->name('detgallery');
+Route::get('detgallery/{id}', [\App\Http\Controllers\frontend\GalleryController::class, 'detgallery'])->name('detgallery');
 Route::resource('lelang-jualaset', \App\Http\Controllers\frontend\LelangController::class);
 Route::get('detlelang/{id}', [\App\Http\Controllers\frontend\LelangController::class, 'detlelang'])->name('detlelang');
 // Route::get('/detlelang', [\App\Http\Controllers\frontend\LelangController::class, 'detlelang']);
@@ -231,7 +232,6 @@ Route::middleware('auth')->group(function () {
     Route::get('lacak-pengaduan', [PengaduanController::class, 'lacakpengaduan']);
 
     Route::get('pengaduan/detail-lacak-pengaduan/{id}', [PengaduanController::class, 'getDetail'])->name('pengaduan.detail-lacak-pengaduan');
-
 });
 
 
@@ -252,10 +252,12 @@ Route::post('/getlaporan-pisah', [\App\Http\Controllers\frontend\LaporanControll
 
 
 Route::get('/terms', function () {
-    return view(env ('GLOBAL_TERMS'));
+    return view(env('GLOBAL_TERMS'));
 });
 Route::get('/privasipolicy', function () {
-    return view( env('GLOBAL_PRIVASIPOLICY'));
+    return view(env('GLOBAL_PRIVASIPOLICY'));
+});
+Route::get('/prime-landing-rate', function () {
+    return view(env('GLOBAL_PRIMELANDINGRATE'));
 });
 // ENDFRONTEND
-

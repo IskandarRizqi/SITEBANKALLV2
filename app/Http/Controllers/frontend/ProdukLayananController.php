@@ -13,14 +13,11 @@ class ProdukLayananController extends Controller
 {
     public function kredit()
     {
-
-
         $data['kredit'] = ProdukLayananModel::where('type', 0)
             ->where('kategori', 0)
             ->get();
 
         return view(ENV('GLOBAL_KREDIT'), $data);
-
     }
 
     public function detkredit($id)
@@ -39,7 +36,6 @@ class ProdukLayananController extends Controller
             ->get();
 
         return view(ENV('GLOBAL_DETAILKREDIT'), $data);
-
     }
 
     public function deposito()
@@ -50,7 +46,6 @@ class ProdukLayananController extends Controller
             ->get();
 
         return view(ENV('GLOBAL_DEPOSITO'), $data);
-
     }
 
     public function detdeposito($id)
@@ -68,18 +63,21 @@ class ProdukLayananController extends Controller
             //  ->take(5)
             ->get();
         return view(ENV('GLOBAL_DETAILDEPOSITO'), $data);
-
     }
 
     public function tabungan()
     {
-        // detail event
         $data['tabungan'] = ProdukLayananModel::where('type', 0)
             ->where('kategori', 2)
             ->get();
 
-        return view(ENV('GLOBAL_TABUNGAN'), $data);
+        if (env('DATA_PAGE') === 'BPREMAS') {
+            $data['deposito'] = ProdukLayananModel::where('type', 0)
+                ->where('kategori', 1)
+                ->get();
+        }
 
+        return view(ENV('GLOBAL_TABUNGAN'), $data);
     }
     public function dettabungan($id)
     {
@@ -96,7 +94,6 @@ class ProdukLayananController extends Controller
             //  ->take(5)
             ->get();
         return view(ENV('GLOBAL_DETAILTABUNGAN'), $data);
-
     }
 
     public function simulasiKredit()
@@ -105,17 +102,22 @@ class ProdukLayananController extends Controller
         return view(ENV('SIMULASI_KREDIT'));
     }
 
+    public function simulasi()
+    {
+        return view('frontend.bpremas.pages.simulasi.index');
+    }
+
     public function simulasiTabungan()
     {
         $data['tabungan'] = MasterPengajuanTabunganModel::get();
 
-        return view(ENV('SIMULASI_TABUNGAN'),$data);
+        return view(ENV('SIMULASI_TABUNGAN'), $data);
     }
 
     public function simulasiDeposito()
     {
         $data['deposito'] = MasterPengajuanDepositoModel::get();
 
-        return view(ENV('SIMULASI_DEPOSITO'),$data);
+        return view(ENV('SIMULASI_DEPOSITO'), $data);
     }
 }

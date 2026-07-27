@@ -5321,20 +5321,28 @@ if(data.depth > 0 ){
         <%_.each(data, function(nav,i){%>
             <a 
                 class="sidenav-menu-button" 
-                <%if(nav.link !== ""){%>
+                <%if(nav.title === "Simulasi"){%>
+                    href="/simulasi"
+                <%} else if(nav.title === "Produk"){%>
+                    href="/laporanall"
+                <%} else if(nav.title === "Pengaduan"){%>
+                    href="/pengaduan"
+                <%} else if(nav.title === "Layanan" || nav.title === "Layanan Lain"){%>
+                    href="/layananlain"
+                <%} else if(nav.link !== ""){%>
                     href="<%=nav.link%>" aria-expanded="false"
                 <%} else {%>
                     href="#<%=nav.id%>" data-uk-toggle=""
                 <%}%> 
-                style="top:<%=(i * 55)+200%>px;"
+                style="top:<%=nav.title === "Simulasi" ? 365 : nav.title === "Pengaduan" ? 420 : (i * 55) + 200%>px;<%=nav.title === "Promo" ? "display:none;" : ""%>"
                 >
                 <span data-uk-icon="icon:<%=nav.icon%>;ratio:1.25"></span>
-                <span class="uk-margin-small-left"><%=nav.title%></span>
+                <span class="uk-margin-small-left"><%=nav.title === "Produk" ? "Laporan" : nav.title%></span>
             </a>
         <%})%>
     </div>
     <%_.each(data, function(nav,i){%>
-        <div id="<%=nav.id%>" data-uk-offcanvas="mode: slide; overlay: true; flip: true" class="ef-offcanvas-sidenav">
+        <div id="<%=nav.id%>" data-uk-offcanvas="mode: slide; overlay: true; flip: true" class="ef-offcanvas-sidenav"<%=nav.title === "Promo" ? " style=\"display:none;\"" : ""%>>
           <div class="uk-offcanvas-bar" style="overflow-x: hidden;">
             <button title="Close Off Canvas" class="uk-offcanvas-close" type="button" data-uk-close></button>
             <div class="uk-child-width-1-1 uk-grid uk-grid-stack uk-margin" data-uk-grid="">
@@ -5349,19 +5357,27 @@ if(data.depth > 0 ){
         <div class="uk-container uk-background-primary uk-light uk-padding-remove-left uk-padding-remove-right">
             <div class="uk-flex uk-child-width-expand">
                 <%_.each(data, function(nav,i){%>
-                <div style="border-left: 1px solid rgba(255,255,255,0.2);">
+                <div style="border-left: 1px solid rgba(255,255,255,0.2);<%=nav.title === "Promo" ? "display:none;" : ""%>">
                     <a class="sidenav-menu-button-mobile"
-                        <%if(nav.link !== ""){%>
+                        <%if(nav.title === "Simulasi"){%>
+                            href="/simulasi"
+                        <%} else if(nav.title === "Produk"){%>
+                            href="/laporanall"
+                        <%} else if(nav.title === "Pengaduan"){%>
+                            href="/pengaduan"
+                        <%} else if(nav.title === "Layanan" || nav.title === "Layanan Lain"){%>
+                            href="/layananlain"
+                        <%} else if(nav.link !== ""){%>
                             href="<%=nav.link%>" aria-expanded="false"
                         <%} else {%>
                             href="#<%=nav.id%>" data-uk-toggle=""
                         <%}%> 
-                        style="top:<%=(i * 55)+200%>px;"
+                        style="top:<%=nav.title === "Simulasi" ? 365 : nav.title === "Pengaduan" ? 420 : (i * 55) + 200%>px;"
                     >
                         <span class="uk-panel uk-flex uk-flex-center">
                                 <span class="uk-margin-small-top uk-margin-small-bottom uk-flex uk-flex-middle uk-flex-column">
                                     <span data-uk-icon="icon:<%=nav.icon%>;ratio:1.25"></span>
-                                    <span style="font-size:0.75rem" class="uk-text-light"><%=nav.title%></span>
+                                    <span style="font-size:0.75rem" class="uk-text-light"><%=nav.title === "Produk" ? "Laporan" : nav.title%></span>
                                 </span>
                         </span>
                     </a>

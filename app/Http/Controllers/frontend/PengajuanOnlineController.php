@@ -13,6 +13,14 @@ use PDF;
 
 class PengajuanOnlineController extends Controller
 {
+    public function index()
+    {
+        return view('frontend.bpremas.pages.pengajuanonline.index', [
+            'produkkredit' => ProdukLayananModel::where('kategori', 0)->get(),
+            'produktabungan' => ProdukLayananModel::where('kategori', 2)->get(),
+        ]);
+    }
+
     public function formpengajuankredit()
     {
         $data['produkkredit'] = ProdukLayananModel::where('kategori', 0)
