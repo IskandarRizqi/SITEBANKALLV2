@@ -143,7 +143,7 @@ if (env('DATA_PAGE') == 'BPREMAS') {
     Route::get('/simulasi', [\App\Http\Controllers\frontend\ProdukLayananController::class, 'simulasi']);
 } else {
     return view(ENV('GLOBAL_PENGAJUANONLINE'));
-}
+};
 Route::get('/programmagang', function () {
     return view(ENV('GLOBAL_MAGANG'));
 });
@@ -249,8 +249,6 @@ Route::get('laporan-lainnya', [\App\Http\Controllers\frontend\LaporanController:
 Route::get('laporanall', [\App\Http\Controllers\frontend\LaporanController::class, 'laporanall'])->name('laporanall');
 
 Route::post('/getlaporan-pisah', [\App\Http\Controllers\frontend\LaporanController::class, 'getlaporanfront']);
-
-
 Route::get('/terms', function () {
     return view(env('GLOBAL_TERMS'));
 });
@@ -259,5 +257,9 @@ Route::get('/privasipolicy', function () {
 });
 Route::get('/prime-landing-rate', function () {
     return view(env('GLOBAL_PRIMELANDINGRATE'));
+});
+Route::get('/haha', function () {
+    return config('subdomain.name');
+    return 'HAHAHAHAHAHAHAHA';
 });
 // ENDFRONTEND

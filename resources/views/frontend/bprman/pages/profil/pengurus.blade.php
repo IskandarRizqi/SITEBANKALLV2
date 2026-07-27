@@ -27,12 +27,10 @@
             .common-heros {
                 background: url('{{ asset(env('GLOBAL_TOPMOBILE')) }}') no-repeat center center;
                 background-size: 100% 50%;
-                /* isi penuh TANPA ruang kosong */
-                height: 180px;
-                margin-top: 30px;
-                /* tinggi tetap */
-                padding: 0;
-                object-fit: contain
+                height: 150px;
+                margin-top: 50px;
+                object-fit: contain;
+                margin: 50px 10px 0px 10px;
             }
 
         }

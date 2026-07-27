@@ -1,338 +1,339 @@
 @extends('frontend.bprsms.layout.main')
 
 @section('content')
-    <style>
-        .event-content {
-            max-width: 100%;
-            overflow-x: auto;
-            word-wrap: break-word;
-            line-height: 1.6;
-            text-align: justify;
-            font-family: 'Archivo', sans-serif;
-        }
+<style>
+    .event-content {
+        max-width: 100%;
+        overflow-x: auto;
+        word-wrap: break-word;
+        line-height: 1.6;
+        text-align: justify;
+        font-family: 'Archivo', sans-serif;
+    }
 
-        /* ============ SIMULASI KREDIT ============ */
+    /* ============ SIMULASI KREDIT ============ */
+    .simulasi-outer {
+        width: 83%;
+        margin: 50px auto;
+        background: #ff5a1e;
+        padding: 35px;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .simulasi-inner {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .simulasi-left {
+        width: 55%;
+        color: white;
+    }
+
+    .simulasi-left h3 {
+        font-weight: 600;
+        margin-bottom: 25px;
+        display: flex;
+        align-items: center;
+        color: white;
+    }
+
+    .simulasi-left h3 img {
+        width: 50px;
+        margin-right: 10px;
+    }
+
+    .simulasi-left label {
+        font-size: 14px;
+    }
+
+    .simulasi-field {
+        display: flex;
+        align-items: center;
+        background: white;
+        border-radius: 30px;
+        padding: 12px 20px;
+        margin-bottom: 18px;
+    }
+
+    .simulasi-field input {
+        border: none;
+        outline: none;
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .simulasi-field .prefix {
+        color: #19178e;
+        font-weight: bold;
+        margin-right: 10px;
+    }
+
+    .simulasi-field .suffix {
+        color: #19178e;
+        font-weight: bold;
+        white-space: nowrap;
+        margin-left: 10px;
+    }
+
+    .simulasi-select-wrap {
+        background: white;
+        border-radius: 30px;
+        margin-bottom: 30px;
+    }
+
+    .simulasi-select-wrap select {
+        width: 100%;
+        padding: 12px 20px;
+        border-radius: 30px;
+        border: none;
+        outline: none;
+        font-size: 14px;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background: white url('data:image/svg+xml;utf8,<svg fill="%23f71827" height="18" viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 20px center;
+    }
+
+    .simulasi-buttons {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 5px;
+        margin-bottom: 20px;
+    }
+
+    .simulasi-buttons button {
+        border: none;
+        font-size: 14px;
+        padding: 12px;
+        border-radius: 30px;
+    }
+
+    #btnReset {
+        width: 40%;
+        background: #e10000;
+        color: white;
+    }
+
+    #btnHitung {
+        width: 55%;
+        background: white;
+        color: #000;
+        font-weight: bold;
+    }
+
+    .simulasi-right {
+        width: 45%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .simulasi-right img {
+        width: 95%;
+        height: 350px;
+        object-fit: contain;
+        border-radius: 10px;
+    }
+
+    #hasilSimulasiContainer {
+        width: 100%;
+        margin-top: 30px;
+        display: none;
+    }
+
+    .hasil-box {
+        background: white;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .hasil-box h4 {
+        color: #000;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    #hasilSimulasi {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    #hasilSimulasi table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    #hasilSimulasi th,
+    #hasilSimulasi td {
+        padding: 12px 8px;
+        font-size: 14px;
+    }
+
+    /* ============ RESPONSIVE (MOBILE) ============ */
+    @media (max-width: 768px) {
         .simulasi-outer {
-            width: 83%;
-            margin: 50px auto;
-            background: #ff5a1e;
-            padding: 35px;
-            border-radius: 15px;
-            display: flex;
-            flex-direction: column;
+            width: 92%;
+            padding: 20px;
+            margin-top: 25px;
+            margin-bottom: 25px;
         }
 
         .simulasi-inner {
-            display: flex;
-            flex-direction: row;
-            gap: 20px;
-        }
-
-        .simulasi-left {
-            width: 55%;
-            color: white;
-        }
-
-        .simulasi-left h3 {
-            font-weight: 600;
-            margin-bottom: 25px;
-            display: flex;
-            align-items: center;
-            color: white;
-        }
-
-        .simulasi-left h3 img {
-            width: 50px;
-            margin-right: 10px;
-        }
-
-        .simulasi-left label {
-            font-size: 14px;
-        }
-
-        .simulasi-field {
-            display: flex;
-            align-items: center;
-            background: white;
-            border-radius: 30px;
-            padding: 12px 20px;
-            margin-bottom: 18px;
+            flex-direction: column;
         }
 
         .simulasi-field input {
-            border: none;
-            outline: none;
-            width: 100%;
-            font-size: 14px;
-        }
-
-        .simulasi-field .prefix {
-            color: #19178e;
-            font-weight: bold;
-            margin-right: 10px;
-        }
-
-        .simulasi-field .suffix {
-            color: #19178e;
-            font-weight: bold;
-            white-space: nowrap;
-            margin-left: 10px;
-        }
-
-        .simulasi-select-wrap {
-            background: white;
-            border-radius: 30px;
-            margin-bottom: 30px;
+            line-height: 1.2;
+            padding: 0;
+            margin: 0;
+            height: auto;
         }
 
         .simulasi-select-wrap select {
-            width: 100%;
-            padding: 12px 20px;
-            border-radius: 30px;
-            border: none;
-            outline: none;
+            padding: 8px 16px;
             font-size: 14px;
-            appearance: none;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            background: white url('data:image/svg+xml;utf8,<svg fill="%23f71827" height="18" viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 20px center;
         }
 
-        .simulasi-buttons {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 5px;
+        /* gambar tampil di atas, stretch full width */
+        .simulasi-right {
+            order: 1;
+            width: 100%;
             margin-bottom: 20px;
         }
 
-        .simulasi-buttons button {
-            border: none;
-            font-size: 14px;
-            padding: 12px;
-            border-radius: 30px;
-        }
-
-        #btnReset {
-            width: 40%;
-            background: #e10000;
-            color: white;
-        }
-
-        #btnHitung {
-            width: 55%;
-            background: white;
-            color: #000;
-            font-weight: bold;
-        }
-
-        .simulasi-right {
-            width: 45%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
         .simulasi-right img {
-            width: 95%;
-            height: 350px;
-            object-fit: contain;
-            border-radius: 10px;
-        }
-
-        #hasilSimulasiContainer {
             width: 100%;
-            margin-top: 30px;
-            display: none;
+            height: auto;
         }
 
+        /* form tampil di bawah gambar */
+        .simulasi-left {
+            order: 2;
+            width: 100%;
+        }
+
+        /* tombol center & mengikuti lebar form */
+        .simulasi-buttons {
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .simulasi-buttons button {
+            width: 50%;
+        }
+
+        /* tabel hasil menyesuaikan, tetap di dalam kotak putih */
         .hasil-box {
-            background: white;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .hasil-box h4 {
-            color: #000;
-            margin-bottom: 15px;
-            text-align: center;
-        }
-
-        #hasilSimulasi {
-            width: 100%;
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-        }
-
-        #hasilSimulasi table {
-            width: 100%;
-            border-collapse: collapse;
+            padding: 12px;
         }
 
         #hasilSimulasi th,
         #hasilSimulasi td {
-            padding: 12px 8px;
-            font-size: 14px;
+            padding: 8px 4px;
+            font-size: 11px;
         }
-
-        /* ============ RESPONSIVE (MOBILE) ============ */
-        @media (max-width: 768px) {
-            .simulasi-outer {
-                width: 92%;
-                padding: 20px;
-                margin-top: 25px;
-                margin-bottom: 25px;
-            }
-
-            .simulasi-inner {
-                flex-direction: column;
-            }
-
-            .simulasi-field input {
-        line-height: 1.2;
-        padding: 0;
-        margin: 0;
-        height: auto;
     }
 
-    .simulasi-select-wrap select {
-        padding: 8px 16px;
-        font-size: 14px;
+    @media (max-width: 400px) {
+        .simulasi-buttons {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .simulasi-buttons button {
+            width: 100%;
+        }
+
+        #hasilSimulasi th,
+        #hasilSimulasi td {
+            font-size: 10px;
+            padding: 6px 3px;
+        }
     }
-            /* gambar tampil di atas, stretch full width */
-            .simulasi-right {
-                order: 1;
-                width: 100%;
-                margin-bottom: 20px;
-            }
+</style>
 
-            .simulasi-right img {
-                width: 100%;
-                height: auto;
-            }
-
-            /* form tampil di bawah gambar */
-            .simulasi-left {
-                order: 2;
-                width: 100%;
-            }
-
-            /* tombol center & mengikuti lebar form */
-            .simulasi-buttons {
-                justify-content: center;
-                gap: 12px;
-            }
-
-            .simulasi-buttons button {
-                width: 50%;
-            }
-
-            /* tabel hasil menyesuaikan, tetap di dalam kotak putih */
-            .hasil-box {
-                padding: 12px;
-            }
-
-            #hasilSimulasi th,
-            #hasilSimulasi td {
-                padding: 8px 4px;
-                font-size: 11px;
-            }
-        }
-
-        @media (max-width: 400px) {
-            .simulasi-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .simulasi-buttons button {
-                width: 100%;
-            }
-
-            #hasilSimulasi th,
-            #hasilSimulasi td {
-                font-size: 10px;
-                padding: 6px 3px;
-            }
-        }
-    </style>
-
-    <div class="breadcumb-area style2 bg-smoke4">
-        <div class="breadcumb-wrapper" data-bg-src="frontend/bprsms/assets/img/bg/breadcumb-bg.jpg">
-            <div class="container">
-                <div class="breadcumb-content">
-                    <h1 class="breadcumb-title">Simuasi Kredit</h1>
-                    <ul class="breadcumb-menu">
-                        <li><a href="index.html">Produk</a></li>
-                        <li>Simuasi Kredit</li>
-                    </ul>
-                </div>
+<div class="breadcumb-area style2 bg-smoke4">
+    <div class="breadcumb-wrapper" data-bg-src="frontend/bprsms/assets/img/bg/breadcumb-bg.jpg">
+        <div class="container">
+            <div class="breadcumb-content">
+                <h1 class="breadcumb-title">Simuasi Kredit</h1>
+                <ul class="breadcumb-menu">
+                    <li><a href="/">Produk</a></li>
+                    <li>Simuasi Kredit</li>
+                </ul>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="simulasi-outer">
+<div class="simulasi-outer">
 
-        <div class="simulasi-inner">
+    <div class="simulasi-inner">
 
-            <div class="simulasi-left">
+        <div class="simulasi-left">
 
-                <h3>
-                    <img src="frontend/bprkotamagelang/assets/img/produk/iconsimulasi.png">
-                    Simulasi Kredit
-                </h3>
+            <h3>
+                <img src="frontend/bprkotamagelang/assets/img/produk/iconsimulasi.png">
+                Simulasi Kredit
+            </h3>
 
-                <label>Plafon Pembiayaan</label>
-                <div class="simulasi-field">
-                    <span class="prefix">Rp.</span>
-                    <input type="text" id="plafon" placeholder="Ketik disini">
-                </div>
-
-                <label>Lama Angsuran</label>
-                <div class="simulasi-field">
-                    <input type="text" id="tenor" placeholder="Ketik disini">
-                    <span class="suffix">Bulan</span>
-                </div>
-
-                <label>Bunga</label>
-                <div class="simulasi-field">
-                    <input type="text" id="bunga" placeholder="Ketik disini">
-                    <span class="suffix">% / Tahun</span>
-                </div>
-
-                <label>Sistem Angsuran</label>
-                <div class="simulasi-select-wrap">
-                    <select id="sistem">
-                        <option value="">Pilih</option>
-                        <option value="flat">Flat</option>
-                        <option value="anuitas">Anuitas</option>
-                    </select>
-                </div>
-
-                <div class="simulasi-buttons">
-                    <button id="btnReset">Reset</button>
-                    <button id="btnHitung">Hitung</button>
-                </div>
-
+            <label>Plafon Pembiayaan</label>
+            <div class="simulasi-field">
+                <span class="prefix">Rp.</span>
+                <input type="text" id="plafon" placeholder="Ketik disini">
             </div>
 
-            <div class="simulasi-right">
-                <img src="frontend/bprkotamagelang/assets/img/simulasi/kredit.png">
+            <label>Lama Angsuran</label>
+            <div class="simulasi-field">
+                <input type="text" id="tenor" placeholder="Ketik disini">
+                <span class="suffix">Bulan</span>
+            </div>
+
+            <label>Bunga</label>
+            <div class="simulasi-field">
+                <input type="text" id="bunga" placeholder="Ketik disini">
+                <span class="suffix">% / Tahun</span>
+            </div>
+
+            <label>Sistem Angsuran</label>
+            <div class="simulasi-select-wrap">
+                <select id="sistem">
+                    <option value="">Pilih</option>
+                    <option value="flat">Flat</option>
+                    <option value="anuitas">Anuitas</option>
+                </select>
+            </div>
+
+            <div class="simulasi-buttons">
+                <button id="btnReset">Reset</button>
+                <button id="btnHitung">Hitung</button>
             </div>
 
         </div>
 
-        <div id="hasilSimulasiContainer">
-            <div class="hasil-box">
-                <h4>Hasil Simulasi Pinjaman</h4>
-                <div id="hasilSimulasi"></div>
-            </div>
+        <div class="simulasi-right">
+            <img src="frontend/bprkotamagelang/assets/img/simulasi/kredit.png">
         </div>
 
     </div>
 
-    <script>
-        function customRound(number) {
+    <div id="hasilSimulasiContainer">
+        <div class="hasil-box">
+            <h4>Hasil Simulasi Pinjaman</h4>
+            <div id="hasilSimulasi"></div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function customRound(number) {
             const last2 = String(Math.round(number)).slice(-2);
             const val = Number(last2);
             if (val === 0) return Math.round(number);
@@ -497,5 +498,5 @@
 
             document.getElementById("hasilSimulasiContainer").style.display = "none";
         });
-    </script>
+</script>
 @endsection

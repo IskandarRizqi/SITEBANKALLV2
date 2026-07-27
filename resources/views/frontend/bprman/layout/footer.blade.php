@@ -12,9 +12,9 @@
               </div>
             </div>
             <div class="row justify-content-between">
-              <div class="col-lg-3 col-md-6">
-                    <div class="widget footer-widget">
-                        <h3 class="widget_title">Jaringan Kantor</h3>
+              <div class="col-xl-3 col-md-6">
+                    <div class="footer-widget footer-col-4 widget-nav-menu wow fadeInUp" data-wow-delay=".3s">
+                        <h5 class="title mb-2">Jaringan Kantor</h5>
                         <select id="pilihKantor" class="form-select mb-3"
                             style="background-color:#ffffff; color:#000; text-transform:none;">
                             @foreach ($kantorglobal as $kantor)
@@ -56,7 +56,7 @@
                       </a>
                       </li>
                       <li>
-                        <a href=""><i class="fa-light fa-hands-holding-child fa-2xl"></i>
+                        <a href="/pengaduan"><i class="fa-light fa-hands-holding-child fa-2xl"></i>
                         <div style="margin-left: 5px">
                           <b>Customer Care</b>
                           <p style="font-size: 12px; margin-bottom: 0;">Pengaduan Nasabah</p>
@@ -81,10 +81,10 @@
                 <div class="footer-widget widget-contact style-2 wow fadeInUp" data-wow-delay=".7s">
                   <div class="footer-contact-info">
                     <div class="contact-item">
-                      <p>PT. BPR Multi Arthanusa berizin dan diawasi oleh Otoritas Jasa Keuangan</p>
+                      <p style="color: #000;">PT. BPR Multi Arthanusa berizin dan diawasi oleh Otoritas Jasa Keuangan</p>
                     </div>
                     <div class="contact-item">
-                      <p>PT. BPR Multi Arthanusa merupakan peserta penjaminan Lembaga Penjamin Simpanan</p>
+                      <p style="color: #000;">PT. BPR Multi Arthanusa merupakan peserta penjaminan Lembaga Penjamin Simpanan</p>
                     </div>
                     
                   </div>
@@ -99,27 +99,27 @@
               <div class="col-12">
                 <div class="copyright-content-area">
                   <div class="copyright-text">
-                    <p>&copy; <span>BPR Multi Arthanusa By.</span> <a href="https://antaruang.com"
+                    <p>&copy; <span>BPR Multi Arthanusa By.</span><a href="https://antaruang.com"
                         target="_blank"> Antar Uang</a> </p>
                   </div>
                   <div class="social-links style-2">
                     <ul>
-                      <li><a href="https://www.facebook.com/" target="_blank"><i
+                      <li><a href="https://www.facebook.com/multiarthanusa/" target="_blank"><i
                             class="fa-brands fa-facebook-f"></i></a>
                       </li>
-                      <li><a href="https://www.instagram.com/" target="_blank"><i
+                      <li><a href="https://www.instagram.com/multiarthanusa/" target="_blank"><i
                             class="fa-brands fa-instagram"></i></a>
                       </li>
-                      <li><a href="https://x.com/" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
+                      <!-- <li><a href="https://x.com/" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
                       <li><a href="https://www.linkedin.com/" target="_blank"><i
                             class="fa-brands fa-linkedin-in"></i></a>
-                      </li>
+                      </li> -->
                     </ul>
                   </div>
                   <div class="copyright-menu">
                     <ul>
-                      <li><a href="contact.html">Kebijakan Privasi</a></li>
-                      <li><a href="contact.html">Syarat dan Ketentuan</a></li>
+                      <li><a href="/privasipolicy">Kebijakan Privasi</a></li>
+                      <li><a href="/term">Syarat dan Ketentuan</a></li>
                     </ul>
                   </div>
                 </div>

@@ -9,7 +9,7 @@
         <div class="space-for-header"></div>
 
         <!-- start: Banner Section -->
-        <section class="h4-banner-section" style="padding:15px; margin-top:0px; background-color: #1f4fa3;">
+        <section class="h4-banner-section" style="padding:15px; margin-top:0px; margin-right: 15px; margin-left: 15px; background-color: #ffff;">
             <div class="swiper h4-banner-slider">
                 <div class="swiper-wrapper">
 
@@ -28,7 +28,7 @@
                                 @if (!empty($item->url_mobile))
                                     <img src="/recfil?display=true&rf={{ $item->url_mobile }}" alt="Banner Mobile"
                                         class="d-block d-md-none"
-                                        style="width:100%; height:550px; object-fit:cover; display:block; border-radius:10px;">
+                                        style="width:100%; height:auto; object-fit:contain; display:block; border-radius:10px;">
                                 @endif
 
                             </div>
@@ -313,11 +313,9 @@
                                     <div class="swiper-slide">
                                         <div class="project-item h4-project-item">
                                             <div class="project-content">
-                                                <span class="categories"><a
-                                                        href="portfolio-details.html">Business</a></span>
                                                 <div class="project-text">
-                                                    <h3 class="title"><a href="portfolio-details.html">Kredit</a></h3>
-                                                    <a class="tji-icon-btn" href="portfolio-details.html">
+                                                    <h3 class="title"><a href="/kredit">Kredit</a></h3>
+                                                    <a class="tji-icon-btn" href="/kredit">
                                                         <i class="tji-arrow-right-long"></i>
                                                     </a>
                                                 </div>
@@ -331,12 +329,10 @@
                                     <div class="swiper-slide">
                                         <div class="project-item h4-project-item">
                                             <div class="project-content">
-                                                <span class="categories"><a
-                                                        href="portfolio-details.html">Business</a></span>
                                                 <div class="project-text">
-                                                    <h3 class="title"><a href="portfolio-details.html">Deposito</a>
+                                                    <h3 class="title"><a href="/deposito">Deposito</a>
                                                     </h3>
-                                                    <a class="tji-icon-btn" href="portfolio-details.html">
+                                                    <a class="tji-icon-btn" href="/deposito">
                                                         <i class="tji-arrow-right-long"></i>
                                                     </a>
                                                 </div>
@@ -350,11 +346,9 @@
                                     <div class="swiper-slide">
                                         <div class="project-item h4-project-item">
                                             <div class="project-content">
-                                                <span class="categories"><a
-                                                        href="portfolio-details.html">Business</a></span>
                                                 <div class="project-text">
-                                                    <h3 class="title"><a href="portfolio-details.html">Tabungan</a></h3>
-                                                    <a class="tji-icon-btn" href="portfolio-details.html">
+                                                    <h3 class="title"><a href="/tabungan">Tabungan</a></h3>
+                                                    <a class="tji-icon-btn" href="/tabungan">
                                                         <i class="tji-arrow-right-long"></i>
                                                     </a>
                                                 </div>
@@ -420,88 +414,68 @@
         </section>
 
         <!-- start: Blog Section -->
-        <section class="tj-blog-section-4 section-gap">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="sec-heading style-4 text-center">
-                            <span class="sub-title wow fadeInUp" data-wow-delay=".3s"><i
-                                    class="tji-box"></i>Informasi</span>
-                            <h2 class="sec-title title-anim">Informasi Terbaru.</h2>
-                        </div>
+        <section class="tj-blog-section-2 section-gap">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="sec-heading-wrap">
+                  <span class="sub-title wow fadeInUp" data-wow-delay=".3s">BERITA DAN EVENT</span>
+                  <div class="heading-wrap-content">
+                    <div class="sec-heading style-2">
+                      <h2 class="sec-title text-anim">Temukan berita dan event terbaru kami</h2>
                     </div>
+                    <!-- <div class="wow fadeInUp" data-wow-delay=".5s">
+                      <p class="desc">Developing personalized customer journeys to increase satisfaction and loyalty.
+                      </p>
+                    </div> -->
+                    <div class="slider-navigation d-none d-md-inline-flex wow fadeInUp" data-wow-delay=".7s">
+                      <div class="slider-prev">
+                        <span class="anim-icon">
+                          <i class="tji-arrow-left"></i>
+                          <i class="tji-arrow-left"></i>
+                        </span>
+                      </div>
+                      <div class="slider-next">
+                        <span class="anim-icon">
+                          <i class="tji-arrow-right"></i>
+                          <i class="tji-arrow-right"></i>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="row">
+              </div>
+            </div>
+            <div class="row">
                     <div class="col-12">
                         <div class="h4-blog-wrap">
+                            @foreach ($allinfo->take(3) as $item)
                             <div class="blog-item style-3 wow fadeInUp" data-wow-delay=".3s">
                                 <div class="blog-thumb">
-                                    <a href="blog-details.html"><img src="frontend/bprapm/assets/images/blog/blog-1.webp"
-                                            alt=""></a>
-                                    <div class="blog-date">
-                                        <span class="date">28</span>
-                                        <span class="month">Feb</span>
-                                    </div>
+                                    <img src="/recfil?display=true&rf={{ $item->thumbnail }}" alt="{{ $item->title }}">
                                 </div>
                                 <div class="blog-content">
                                     <div class="blog-meta">
-                                        <span class="categories"><a href="blog-details.html">Business</a></span>
-                                        <span>By <a href="blog-details.html">Ellinien Loma</a></span>
+                                        <span class="categories">Berita</span>
                                     </div>
-                                    <h4 class="title"><a href="blog-details.html">Harnessing Digital Transform a
-                                            Roadmap
-                                            Businesses.</a>
+                                    <h4 class="title" style="min-height:70px;"><a href="{{ route('detberita', $item->id) }}">
+                                        {{ \Illuminate\Support\Str::limit($item->title, 60) }}</a>
                                     </h4>
-                                    <a class="text-btn" href="blog-details.html">
-                                        <span class="btn-text"><span>Read More</span></span>
+                                    <span style="color: white;">{{ \Carbon\Carbon::parse($item->tanggal_tampil)->translatedFormat('d M, Y') }}</span>
+                                    <a class="text-btn" href="{{ route('detberita', $item->id) }}">
+                                        <span class="btn-text"><span>Baca Selengkapnya</span></span>
                                         <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
                                     </a>
                                 </div>
                             </div>
-                            <div class="blog-item style-3 wow fadeInUp" data-wow-delay=".5s">
-                                <div class="blog-thumb">
-                                    <a href="blog-details.html"><img src="frontend/bprapm/assets/images/blog/blog-2.webp"
-                                            alt=""></a>
-                                </div>
-                                <div class="blog-content">
-                                    <div class="blog-meta">
-                                        <span class="categories"><a href="blog-details.html">Business</a></span>
-                                        <span>By <a href="blog-details.html">Ellinien Loma</a></span>
-                                    </div>
-                                    <h4 class="title"><a href="blog-details.html">Harnessing Digital Transform a
-                                            Roadmap
-                                            Businesses.</a>
-                                    </h4>
-                                    <a class="text-btn" href="blog-details.html">
-                                        <span class="btn-text"><span>Read More</span></span>
-                                        <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="blog-item style-3 wow fadeInUp" data-wow-delay=".7s">
-                                <div class="blog-thumb">
-                                    <a href="blog-details.html"><img src="frontend/bprapm/assets/images/blog/blog-3.webp"
-                                            alt=""></a>
-                                </div>
-                                <div class="blog-content">
-                                    <div class="blog-meta">
-                                        <span class="categories"><a href="blog-details.html">Business</a></span>
-                                        <span>By <a href="blog-details.html">Ellinien Loma</a></span>
-                                    </div>
-                                    <h4 class="title"><a href="blog-details.html">Mastering Change Management Lessons
-                                            for
-                                            Businesses.</a>
-                                    </h4>
-                                    <a class="text-btn" href="blog-details.html">
-                                        <span class="btn-text"><span>Read More</span></span>
-                                        <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
-                                    </a>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
-            </div>
+                <div class="d-flex justify-content-end">
+                    <a href="/informasi"><button class="btn btn-primary mt-3">Berita Lainnya</button></a>
+                </div>
+          </div>
         </section>
         <section class="tj-blog-section-4 section-gap" style="padding-top: 0;">
             <div class="text-center mt-3">

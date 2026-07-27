@@ -351,8 +351,8 @@
             <div class="row justify-content-center">
                 <div class="col-md-6 mb-3">
                     <a href="#" class="btn btn-lg" id="btnPengaduan"
-                        style=" width: 80%; padding: 15px 7px;  background-color: #0b2c5f; color: #ffffff;font-size: 25px; border-radius: 30px;">
-                        <i class="fas fa-edit mr-2"></i> Pengaduan Nasabah
+                        style=" width: 80%; padding: 15px 7px; color: #ffff;  background: linear-gradient(45deg, #f68029, #ee3c26, #740c0d); #ffffff;font-size: 25px; border-radius: 30px;">
+                        <i class="fas fa-edit mr-2 text-white"></i> Pengaduan Nasabah
                     </a>
 
                 </div>

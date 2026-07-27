@@ -41,6 +41,7 @@
     .mobile-bottom-nav ul li a:hover {
         color: #ffffff;
     }
+
     .running-text {
         width: 100%;
         overflow: hidden;
@@ -74,7 +75,7 @@
                     <div class="widget footer-widget">
                         <div class="th-widget-about">
                             <div class="about-logo">
-                                <a href="index.html">
+                                <a href="/">
                                     <div
                                         style="background:#fff; padding:8px 20px; display:inline-block; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
                                         <img src="{{ asset('frontend/bprbhaktiriyadi/assets/img/logo/logo.png') }}"
@@ -111,7 +112,9 @@
                             <ul class="menu">
                                 <li style="color: #fff"><a href="/pengaduan" style="color: #fff">Pengaduan Nasabah</a>
                                 </li>
-                                 <li style="color: #fff"><a href="{{asset('frontend/bprbhaktiriyadi/assets/img/alur.png')}}" target="_blank" style="color: #fff">Alur Pengaduan Nasabah</a></li>
+                                <li style="color: #fff"><a
+                                        href="{{asset('frontend/bprbhaktiriyadi/assets/img/alur.png')}}" target="_blank"
+                                        style="color: #fff">Alur Pengaduan Nasabah</a></li>
                                 <li style="color: #fff"><a href="/rekrutmen" style="color: #fff">Karir</a></li>
                                 <li style="color: #fff"><a href="/jaringankantor" style="color: #fff">Jaringan
                                         Kantor</a></li>
@@ -175,13 +178,13 @@
                         <select id="pilihKantor" class="form-select mb-3"
                             style="background-color:#ffffff; color:#462ced; text-transform:none;">
                             @foreach ($kantorglobal as $kantor)
-                                <option value="{{ $kantor->id }}" data-nama="{{ $kantor->kantor }}"
-                                    data-alamat="{{ $kantor->alamat }}" data-telp="{{ $kantor->no_telp }}"
-                                    data-lat="{{ $kantor->latitude }}" data-lng="{{ $kantor->longitude }}"
-                                    data-thumb="/recfil?display=true&rf={{ $kantor->thumbnail }}"
-                                    {{ strtolower($kantor->kantor) == 'kantor pusat' ? 'selected' : '' }}>
-                                    {{ $kantor->kantor }}
-                                </option>
+                            <option value="{{ $kantor->id }}" data-nama="{{ $kantor->kantor }}"
+                                data-alamat="{{ $kantor->alamat }}" data-telp="{{ $kantor->no_telp }}"
+                                data-lat="{{ $kantor->latitude }}" data-lng="{{ $kantor->longitude }}"
+                                data-thumb="/recfil?display=true&rf={{ $kantor->thumbnail }}" {{ strtolower($kantor->
+                                kantor) == 'kantor pusat' ? 'selected' : '' }}>
+                                {{ $kantor->kantor }}
+                            </option>
                             @endforeach
                         </select>
                         <div id="detailKantor">
@@ -194,27 +197,28 @@
                 </div>
 
             </div>
-            
+
         </div>
-        
+
     </div>
-     <div class="container footer-menu" style="margin-bottom: 10px">
+    <div class="container footer-menu" style="margin-bottom: 10px">
         <div class="f-menu running-text">
             <span style="color: white">
-                PT. BPR Bhaktiriyadi berizin dan diawasi oleh Otoritas Jasa Keuangan (OJK) serta merupakan peserta penjaminan LPS.
+                PT. BPR Bhaktiriyadi berizin dan diawasi oleh Otoritas Jasa Keuangan (OJK) serta merupakan peserta
+                penjaminan LPS.
                 Maksimum nilai simpanan yang dijamin oleh
                 LPS adalah Rp.2 Miliar per nasabah per bank. Untuk informasi tingkat suku bunga
                 penjaminan LPS dapat diakses
             </span>
         </div>
     </div>
-    
+
     <div class="copyright-wrap">
         <div class="container">
             <div class="row justify-content-between align-items-center">
                 <div class="col-lg-6">
-                    <p class="copyright-text">Copyright © <a href="index.html">BPR Baja</a>. Support By <a
-                            href="" style="color: rgb(255, 255, 255)">Antar Uang</a></p>
+                    <p class="copyright-text">Copyright © <a href="/">BPR Baja</a>. Support By <a href=""
+                            style="color: rgb(255, 255, 255)">Antar Uang</a></p>
                 </div>
                 <div class="col-lg-6 text-lg-end text-center">
                     <div class="footer-links"></div>

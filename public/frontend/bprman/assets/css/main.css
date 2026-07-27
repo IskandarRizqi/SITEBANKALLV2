@@ -1,4 +1,4 @@
-/*-----------------------------------------------------------------------------------
+  /*-----------------------------------------------------------------------------------
 
     Theme Name: Bexon - Corporate Business HTML5 Template
     Author: Theme-Junction
@@ -89,8 +89,9 @@ START: Theme Default CSS
   --tj-color-text-body-3: #67787a;
   --tj-color-text-body-4: #18292c;
   --tj-color-text-body-5: rgba(255, 255, 255, 0.8);
-  --tj-color-theme-primary: #1e8a8a;
-  --tj-color-theme-bg: #d8e5e5;
+  --tj-color-theme-primary: #000000;
+  --tj-color-theme-bg-hamburger: linear-gradient(45deg, #edb54d 25%, #f8d06d 50%, #f47328 100%);
+  --tj-color-theme-bg:  linear-gradient(45deg, #edb54d 25%, #f8d06d 50%, #f47328 100%);
   --tj-color-theme-bg-2: #cee0e0;
   --tj-color-theme-bg-3: #202e30;
   --tj-color-theme-dark: #0c1e21;
@@ -871,7 +872,7 @@ img {
   width: 30px;
   height: 30px;
   overflow: hidden;
-  background-color: var(--tj-color-theme-dark);
+  background-color: #ee3624;
   border-radius: 50%;
 }
 .text-btn .btn-icon i {
@@ -1612,7 +1613,7 @@ START: Theme Header CSS
   width: 50px;
   height: 50px;
   padding: 12px;
-  background: var(--tj-color-theme-primary);
+  background-color: #ee3624;
   border-radius: 7px;
 }
 .menu_bar.mobile_menu_bar span {
@@ -2496,7 +2497,7 @@ START: Theme Header CSS
 START: Theme Footer CSS
 ----------------------------------------*/
 .tj-footer-section {
-  background-color: var(--tj-color-theme-bg);
+  background: var(--tj-color-theme-bg);
   position: relative;
   z-index: 1;
   padding-top: 195px;
@@ -2632,7 +2633,6 @@ START: Theme Footer CSS
 }
 .social-links.style-2 ul li a {
   background-color: var(--tj-color-common-white);
-  opacity: 0.4;
 }
 .social-links.style-2 ul li a i {
   color: var(--tj-color-theme-primary);
@@ -2669,7 +2669,7 @@ START: Theme Footer CSS
   padding-top: 0;
 }
 .widget-nav-menu ul li a {
-  color: var(--tj-color-text-body);
+  color: #000000;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -3314,7 +3314,7 @@ START: Theme Footer CSS
 }
 
 .tj-footer-section.footer-3 {
-  background-color: var(--tj-color-theme-dark);
+  background-color: var(--tj-color-theme-bg);
   position: relative;
   z-index: 1;
   padding-top: 0;
@@ -3762,7 +3762,7 @@ START: Theme Search CSS
   }
 }
 .hamburger_bg {
-  background-color: var(--tj-color-theme-dark);
+  background: var(--tj-color-theme-bg-hamburger);
   height: 100%;
   width: 100%;
   position: absolute;
@@ -3796,7 +3796,6 @@ START: Theme Search CSS
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  background: var(--tj-color-theme-primary);
   -webkit-filter: blur(50px);
   filter: blur(50px);
   opacity: 0.26;
@@ -3916,7 +3915,7 @@ START: Theme Search CSS
   position: relative;
 }
 .hamburger_menu .mean-nav ul li a {
-  color: var(--tj-color-common-white);
+  color: #000;
   width: 100%;
   font-size: 16px;
   line-height: 1;
@@ -4024,7 +4023,7 @@ START: Theme Search CSS
 }
 
 .hamburger-title {
-  color: var(--tj-color-common-white);
+  color: #000;
   font-size: 22px;
   line-height: 1;
   margin-bottom: 25px;
@@ -5266,7 +5265,7 @@ START: Theme Footer CSS
 }
 
 .tj-copyright-area-4 {
-  background-color: var(--tj-color-theme-primary);
+  background-color: #ee3624 ;
 }
 .tj-copyright-area-4 .copyright-content-area {
   padding: 25px 0;
@@ -12699,7 +12698,7 @@ START: Countup CSS
 START: Working process CSS
 ----------------------------------------*/
 .tj-working-process {
-  background-color: var(--tj-color-theme-bg);
+  background: var(--tj-color-theme-bg);
   position: relative;
   z-index: 1;
   border-radius: 12px;
@@ -12742,14 +12741,14 @@ START: Working process CSS
   content: "\e916";
   font-size: 24px;
   line-height: 1;
-  color: var(--tj-color-theme-primary);
+  color: #ffff;
   font-family: "bexon-icons" !important;
   font-weight: normal;
   position: absolute;
   width: 62px;
   height: 62px;
   border-radius: 50%;
-  background-color: var(--tj-color-common-white);
+  background-color: #ee3624;
   border: 7px solid var(--tj-color-theme-bg);
   top: 50%;
   inset-inline-end: -34px;
@@ -12790,7 +12789,7 @@ START: Working process CSS
 }
 .process-item .process-step {
   font-size: 120px;
-  color: var(--tj-color-theme-primary);
+  color: #f47d27;
   background: -webkit-gradient(linear, left top, left bottom, from(var(--tj-color-theme-primary)), color-stop(90%, var(--tj-color-common-white)));
   background: linear-gradient(180deg, var(--tj-color-theme-primary) 0%, var(--tj-color-common-white) 90%);
   background-clip: text;
@@ -12977,7 +12976,7 @@ START: Working process CSS
 START: Contact CSS
 ----------------------------------------*/
 .tj-contact-section {
-  background-color: var(--tj-color-theme-dark);
+  background: var(--tj-color-theme-bg);
   border-radius: 12px;
   position: relative;
   z-index: 1;
@@ -12991,7 +12990,7 @@ START: Contact CSS
   margin-bottom: 35px;
 }
 .tj-contact-section .sec-heading .sec-title {
-  color: var(--tj-color-common-white);
+  color: #000000;
 }
 
 .map-area {
@@ -13020,7 +13019,7 @@ START: Contact CSS
   display: block;
   font-size: 14px;
   line-height: 1;
-  color: var(--tj-color-text-body-2);
+  color: #000;
   margin-bottom: 7px;
 }
 .contact-info .contact-item a:hover {
@@ -13028,7 +13027,7 @@ START: Contact CSS
 }
 .contact-info .contact-item .contact-link {
   display: inline-block;
-  color: var(--tj-color-common-white);
+  color: #000;
 }
 .contact-info .contact-item:last-child {
   border: 0;
@@ -17816,7 +17815,7 @@ START: Contact CSS
   width: 360px;
   height: 360px;
   border-radius: 50%;
-  background: var(--tj-color-theme-primary);
+  /* background: var(--tj-color-theme-primary); */
   -webkit-filter: blur(80px);
   filter: blur(80px);
   opacity: 0.3;

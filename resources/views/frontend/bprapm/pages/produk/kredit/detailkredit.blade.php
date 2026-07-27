@@ -1,4 +1,4 @@
-@extends('frontend.bprbahari.layout.main')
+@extends('frontend.bprapm.layout.main')
 
 @section('content')
     <style>
@@ -131,18 +131,9 @@
         }
     </style>
 
-     <div class="breadcrumb-area text-center shadow dark bg-fixed text-light"
-        style="background-image: url({{asset('frontend/bprbahari/assets/img/profil/banertop.jpg')}});">
+     <div class="breadcrumb-area text-center shadow dark bg-fixed text-light">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2>{{ $kredit->title ?? 'Kredit' }}</h2>
-                    <ul class="breadcrumb">
-                        <li><a href="#"><i class="fas fa-home"></i> Produk</a></li>
-                        <li class="active">{{ $kredit->title ?? 'Kredit' }}</li>
-                    </ul>
-                </div>
-            </div>
+           
         </div>
     </div>
 
