@@ -233,16 +233,13 @@
                     <div class="swiper-slide">
                       <div class="h6-service-item">
                         <div class="h6-service-thumb">
-                          <a href="service-details.html"><img src="frontend/bprman/assets/images/product/kredits.png" alt=""></a>
+                          <a href="/kredit"><img src="frontend/bprman/assets/images/produk/ikonkredit.png" alt=""></a>
                         </div>
                         <div class="h6-service-content">
-                          <h5 class="h6-service-index">
-                            01.
-                          </h5>
                           <div class="h6-service-title-wrap">
-                            <h4 class="title"><a href="blog-details.html">Kredit</a>
+                            <h4 class="title"><a href="/kredit">Kredit</a>
                             </h4>
-                            <a class="text-btn" href="service-details.html">
+                            <a class="text-btn" href="/kredit">
                               <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
                             </a>
                           </div>
@@ -253,16 +250,13 @@
                     <div class="swiper-slide">
                       <div class="h6-service-item">
                         <div class="h6-service-thumb">
-                          <a href="service-details.html"><img src="frontend/bprman/assets/images/product/depositos.png" alt=""></a>
+                          <a href="/deposito"><img src="frontend/bprman/assets/images/produk/ikondepo.png" alt=""></a>
                         </div>
                         <div class="h6-service-content">
-                          <h5 class="h6-service-index">
-                            02.
-                          </h5>
                           <div class="h6-service-title-wrap">
-                            <h4 class="title"><a href="blog-details.html">Deposito</a>
+                            <h4 class="title"><a href="/deposito">Deposito</a>
                             </h4>
-                            <a class="text-btn" href="service-details.html">
+                            <a class="text-btn" href="/deposito">
                               <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
                             </a>
                           </div>
@@ -273,36 +267,13 @@
                     <div class="swiper-slide">
                       <div class="h6-service-item">
                         <div class="h6-service-thumb">
-                          <a href="service-details.html"><img src="frontend/bprman/assets/images/product/tabungan.png" alt=""></a>
+                          <a href="/tabungan"><img src="frontend/bprman/assets/images/produk/ikontab.png" alt=""></a>
                         </div>
                         <div class="h6-service-content">
-                          <h5 class="h6-service-index">
-                            03.
-                          </h5>
                           <div class="h6-service-title-wrap">
-                            <h4 class="title"><a href="blog-details.html">Tabungan</a>
+                            <h4 class="title"><a href="/tabungan">Tabungan</a>
                             </h4>
-                            <a class="text-btn" href="service-details.html">
-                              <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
-                            </a>
-                          </div>
-
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="h6-service-item">
-                        <div class="h6-service-thumb">
-                          <a href="service-details.html"><img src="frontend/bprman/assets/images/product/layanankami.png" alt=""></a>
-                        </div>
-                        <div class="h6-service-content">
-                          <h5 class="h6-service-index">
-                            04.
-                          </h5>
-                          <div class="h6-service-title-wrap">
-                            <h4 class="title"><a href="blog-details.html">Layanan Lain</a>
-                            </h4>
-                            <a class="text-btn" href="service-details.html">
+                            <a class="text-btn" href="/tabungan">
                               <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
                             </a>
                           </div>
@@ -313,14 +284,14 @@
                     <!-- <div class="swiper-slide">
                       <div class="h6-service-item">
                         <div class="h6-service-thumb">
-                          <a href="service-details.html"><img src="assets/images/service/h6-service-2.webp" alt=""></a>
+                          <a href="service-details.html"><img src="frontend/bprman/assets/images/product/layanankami.png" alt=""></a>
                         </div>
                         <div class="h6-service-content">
                           <h5 class="h6-service-index">
-                            01.
+                            04.
                           </h5>
                           <div class="h6-service-title-wrap">
-                            <h4 class="title"><a href="blog-details.html">Customer Experience Solutions</a>
+                            <h4 class="title"><a href="blog-details.html">Layanan Lain</a>
                             </h4>
                             <a class="text-btn" href="service-details.html">
                               <span class="btn-icon"><i class="tji-arrow-right-long"></i></span>
@@ -446,7 +417,7 @@
                     </div>
                 </div>
                 <div class="d-flex justify-content-end">
-                    <a href="/informasi"><button class="btn btn-primary mt-3">Berita Lainnya</button></a>
+                    <a href="/informasi"><button class="btn btn-danger mt-3">Berita Lainnya</button></a>
                 </div>
           </div>
         </section>

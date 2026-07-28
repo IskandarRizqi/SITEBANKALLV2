@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <!-- start: Offcanvas Menu -->
 <div class="tj-offcanvas-area d-none d-lg-block">
     <div class="hamburger_bg"></div>
@@ -116,6 +117,63 @@
     </div>
 </div>
 <!-- end: Hamburger Menu -->
+=======
+  <!-- start: Offcanvas Menu -->
+  <div class="tj-offcanvas-area d-none d-lg-block">
+      <div class="hamburger_bg"></div>
+      <div class="hamburger_wrapper">
+          <div class="hamburger_inner">
+              <div class="hamburger_top d-flex align-items-center justify-content-between">
+                  <div class="hamburger_logo">
+                      <a href="index.html" class="mobile_logo">
+                          <img src="frontend/bprman/assets/images/logos/logoman.png" alt="Logo">
+                      </a>
+                  </div>
+                  <div class="hamburger_close">
+                      <button class="hamburger_close_btn"><i class="fa-thin fa-times"></i></button>
+                  </div>
+              </div>
+              <div class="hamburger-infos">
+                  <h5 class="hamburger-title">Info Kontak</h5>
+                  <div class="contact-info">
+                      <div class="contact-item">
+                          <span class="subtitle">Telepon</span>
+                          <a class="contact-link" href="tel:0293591067">(0293) 591067</a>
+                      </div>
+                      <div class="contact-item">
+                          <span class="subtitle">Email</span>
+                          <a class="contact-link" href="mailto:multiarthanusa@yahoo.co.id">multiarthanusa@yahoo.co.id</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- end: Offcanvas Menu -->
+
+  <!-- start: Hamburger Menu -->
+  <div class="hamburger-area d-lg-none">
+      <div class="hamburger_bg"></div>
+      <div class="hamburger_wrapper">
+          <div class="hamburger_inner">
+              <div class="hamburger_top d-flex align-items-center justify-content-between">
+                  <div class="hamburger_logo">
+                      <a href="index.html" class="mobile_logo">
+                          <img src="frontend/bprman/assets/images/logos/logoman.png" alt="Logo">
+                      </a>
+                  </div>
+                  <div class="hamburger_close">
+                      <button class="hamburger_close_btn"><i class="fa-thin fa-times"></i></button>
+                  </div>
+              </div>
+              <div class="hamburger_menu">
+                  <div class="mobile_menu"></div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- end: Hamburger Menu -->
+>>>>>>> Stashed changes
 
 <!-- start: Header Area -->
 <header class="header-area header-1 header-absolute  section-gap-x">
@@ -136,6 +194,7 @@
 
                                 </li>
 
+<<<<<<< Updated upstream
                                 <li class="has-dropdown"><a href="#">Tentang Kami</a>
                                     <ul class="sub-menu">
                                         <li><a href="/visimisi">Visi Misi</a></li>
@@ -160,6 +219,32 @@
                                         <li><a href="/tatakelola">Tata Kelola</a></li>
                                         <li><a href="/keberlanjutan">Keberlanjutan</a></li>
                                         <li><a href="blog-right-sidebar.html">Audit Charter</a></li>
+=======
+                                  <li class="has-dropdown"><a href="#">Tentang Kami</a>
+                                      <ul class="sub-menu">
+                                          <li><a href="/profile">Profil</a></li>
+                                          <li><a href="/sejarah">Sejarah</a></li>
+                                          <li><a href="/pengurus">Pengurus</a></li>
+                                          <li><a href="/organisasi">Struktur Organisasi</a></li>
+                                          <li><a href="/galery">Gallery</a></li>
+                                      </ul>
+                                  </li>
+                                  <li class="has-dropdown"><a href="#">Produk</a>
+                                      <ul class="sub-menu">
+                                          <li><a href="/kredit">Kredit</a></li>
+                                          <li><a href="/deposito">Deposito</a></li>
+                                          <li><a href="/tabungan">Tabungan</a></li>
+
+                                      </ul>
+                                  </li>
+                                  <li class="has-dropdown"><a href="#">Laporan</a>
+                                      <ul class="sub-menu">
+                                          <li><a href="/publikasi">Publikasi</a></li>
+                                          <li><a href="/tahunan">Tahunan</a></li>
+                                          <li><a href="/tatakelola">Tata Kelola</a></li>
+                                          <li><a href="/keberlanjutan">Keberlanjutan</a></li>
+                                          <!-- <li><a href="blog-right-sidebar.html">Audit Charter</a></li> -->
+>>>>>>> Stashed changes
 
                                     </ul>
                                 </li>
@@ -175,7 +260,7 @@
                                 <li class="has-dropdown"><a href="#">Kontak</a>
                                     <ul class="sub-menu">
                                         <li><a href="/pengaduan">Pengaduan Nasabah</a></li>
-                                        <li><a href="#">Laporan Pelanggaran</a></li>
+                                        <!-- <li><a href="#">Laporan Pelanggaran</a></li> -->
                                     </ul>
                                 </li>
                             </ul>
@@ -257,6 +342,7 @@
 
                                 </li>
 
+<<<<<<< Updated upstream
                                 <li class="has-dropdown"><a href="#">Tentang Kami</a>
                                     <ul class="sub-menu">
                                         <li><a href="/visimisi">Visi Misi</a></li>
@@ -271,6 +357,22 @@
                                         <li><a href="/kredit">Kredit</a></li>
                                         <li><a href="/deposito">Deposito</a></li>
                                         <li><a href="/tabungan">Tabungan</a></li>
+=======
+                                  <li class="has-dropdown"><a href="#">Tentang Kami</a>
+                                      <ul class="sub-menu">
+                                          <li><a href="/profile">Profil</a></li>
+                                          <li><a href="/sejarah">Sejarah</a></li>
+                                          <li><a href="/pengurus">Pengurus</a></li>
+                                          <li><a href="/organisasi">Struktur Organisasi</a></li>
+                                          <li><a href="/galery">Gallery</a></li>
+                                      </ul>
+                                  </li>
+                                  <li class="has-dropdown"><a href="#">Produk</a>
+                                      <ul class="sub-menu">
+                                          <li><a href="/kredit">Kredit</a></li>
+                                          <li><a href="/deposito">Deposito</a></li>
+                                          <li><a href="/tabungan">Tabungan</a></li>
+>>>>>>> Stashed changes
 
                                     </ul>
                                 </li>
@@ -280,7 +382,7 @@
                                         <li><a href="/tahunan">Tahunan</a></li>
                                         <li><a href="/tatakelola">Tata Kelola</a></li>
                                         <li><a href="keberlanjutan">Keberlanjutan</a></li>
-                                        <li><a href="blog-right-sidebar.html">Audit Charter</a></li>
+                                        <!-- <li><a href="blog-right-sidebar.html">Audit Charter</a></li> -->
                                     </ul>
                                 </li>
                                 <li><a href="/lelang-jualaset">Lelang</a></li>
@@ -295,7 +397,7 @@
                                 <li class="has-dropdown"><a href="#">Kontak</a>
                                     <ul class="sub-menu">
                                         <li><a href="#">Pengaduan Nasabah</a></li>
-                                        <li><a href="#">Laporan Pelanggaran</a></li>
+                                        <!-- <li><a href="#">Laporan Pelanggaran</a></li> -->
                                     </ul>
                                 </li>
                             </ul>

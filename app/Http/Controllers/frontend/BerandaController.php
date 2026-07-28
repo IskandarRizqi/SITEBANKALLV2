@@ -11,6 +11,7 @@ use App\Models\JaringanKantorModel;
 use App\Models\UMKMModel;
 use App\Models\Visitor;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class BerandaController extends Controller
 {
@@ -43,6 +44,26 @@ class BerandaController extends Controller
         $data['deposito'] = CounterRateModel::where('type', 2)->get();
         $data['tabungan'] = CounterRateModel::where('type', 3)->get();
 
-        return view(config('subdomain.CUSTOM_PAGE_BERANDA'), $data);
+        if (env('DATA_PAGE') == 'BPREMAS') {
+            $data['kategori_slug'] = CommonPagesModel::where('type', 1)
+                ->pluck('kategori')
+                ->filter()
+                ->unique()
+                ->map(fn($kategori) => Str::slug($kategori))
+                ->values();
+            $data['kategori_slug_implode'] = implode(',', $data['kategori_slug']->all());
+
+            $data['kategori_slug_berita'] = CommonPagesModel::where('type', 0)
+                ->pluck('kategori')
+                ->filter()
+                ->unique()
+                ->map(fn($kategori) => Str::slug($kategori))
+                ->values();
+            $data['kategori_slug_implode_berita'] = implode(',', $data['kategori_slug_berita']->all());
+        }
+
+        // return $data;
+
+        return view(ENV('CUSTOM_PAGE_BERANDA'), $data);
     }
 }

@@ -138,13 +138,14 @@ Route::get('dettabungan/{id}', [\App\Http\Controllers\frontend\ProdukLayananCont
 Route::get('/simulasi-kredit', [\App\Http\Controllers\frontend\ProdukLayananController::class, 'simulasiKredit']);
 Route::get('/simulasi-tabungan', [\App\Http\Controllers\frontend\ProdukLayananController::class, 'simulasiTabungan']);
 Route::get('/simulasi-deposito', [\App\Http\Controllers\frontend\ProdukLayananController::class, 'simulasiDeposito']);
-Route::get('/pengajuanonline', function () {
+if (env('DATA_PAGE') == 'BPREMAS') {
+    Route::get('/pengajuanonline', [\App\Http\Controllers\frontend\PengajuanOnlineController::class, 'index']);
+    Route::get('/simulasi', [\App\Http\Controllers\frontend\ProdukLayananController::class, 'simulasi']);
+} else {
+    Route::get('/pengajuanonline', function () {
     return view(config('subdomain.GLOBAL_PENGAJUANONLINE'));
 });
-Route::get('/haha', function () {
-    return config('subdomain.name');
-    return 'HAHAHAHAHAHAHAHA';
-});
+};
 Route::get('/programmagang', function () {
     return view(config('subdomain.GLOBAL_MAGANG'));
 });
@@ -250,12 +251,17 @@ Route::get('laporan-lainnya', [\App\Http\Controllers\frontend\LaporanController:
 Route::get('laporanall', [\App\Http\Controllers\frontend\LaporanController::class, 'laporanall'])->name('laporanall');
 
 Route::post('/getlaporan-pisah', [\App\Http\Controllers\frontend\LaporanController::class, 'getlaporanfront']);
-
-
 Route::get('/terms', function () {
     return view(env('GLOBAL_TERMS'));
 });
 Route::get('/privasipolicy', function () {
     return view(env('GLOBAL_PRIVASIPOLICY'));
+});
+Route::get('/prime-landing-rate', function () {
+    return view(env('GLOBAL_PRIMELANDINGRATE'));
+});
+Route::get('/haha', function () {
+    return config('subdomain.name');
+    return 'HAHAHAHAHAHAHAHA';
 });
 // ENDFRONTEND

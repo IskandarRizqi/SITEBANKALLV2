@@ -2,20 +2,18 @@
 
 @section('content')
     <style>
-        /* Running text animation */
-        @keyframes marquee {
-            0% {
-                transform: translateX(0);
-            }
-
-            100% {
-                transform: translateX(-100%);
-            }
+        /* Banner */
+        .banner-img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            display: block;
         }
+        /* Card Kredit */
         .team-box {
             margin-bottom: 30px;
         }
-        
+
         .tabungan-img {
             width: 100%;
             height: 250px;
@@ -24,59 +22,24 @@
             transition: 0.3s;
         }
 
-
-        /* Responsive Banner */
-        .banner-img {
-            width: 100%;
-            height: 500px;
-            object-fit: fill;
-            display: block;
+        .tabungan-img:hover {
+            transform: scale(1.03);
         }
 
-        @media(max-width:768px) {
-            .banner-img {
-                height: 260px;
-                object-fit: cover;
-            }
-        }
-         .breadcrumb-area {
+        /* Mobile */
+
+        .breadcrumb-area {
             margin-top: 90px;
         }
 
         /* Mobile */
-        @media (max-width: 768px) {
-            .breadcrumb-area {
-                margin-top: 0;
-            }
-        } .breadcrumb-area {
-            margin-top: 90px;
-        }
-
-        /* Mobile */
-        @media (max-width: 768px) {
-            .breadcrumb-area {
-                margin-top: 0;
-            }
-            
-            .common-heros {
-                background: url('{{ asset(env('GLOBAL_TOPMOBILE')) }}') no-repeat center center;
-                background-size: 100% 50%;
-                /* isi penuh TANPA ruang kosong */
-                height: 180px;
-                margin-top: 30px;
-                /* tinggi tetap */
-                padding: 0;
-                object-fit: contain;
-            }
-
-        }
         
         
         .common-heros {
             background: url('{{ asset ('frontend/bprman/assets/images/banner/tabungan.jpg') }}') no-repeat center center;
-            background-size: contain;
+            background-size: cover;
             /* TIDAK terpotong */
-
+            
             height: 500px;
             max-width: 1200px;
             margin: 100px auto 0 auto;
@@ -94,7 +57,22 @@
             text-align: justify;
             font-family: 'Archivo', sans-serif;
         }
-    </style>
+
+        @media (max-width: 768px) {
+            .breadcrumb-area {
+                margin-top: 0;
+            }
+            
+            .common-heros {
+                background: url('{{ asset ('frontend/bprman/assets/images/banner/tabungan.jpg') }}') no-repeat center center;
+                background-size: contain;
+                height: 500px;
+                max-width: 1200px;
+                margin: -40px 10px 0 10px;
+                border-radius: 10px;
+            }
+        }
+        </style>
 
 <body class="body tg-heading-subheading animation-style3">
 

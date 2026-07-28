@@ -13,8 +13,6 @@ class ProdukLayananController extends Controller
 {
     public function kredit()
     {
-
-
         $data['kredit'] = ProdukLayananModel::where('type', 0)
             ->where('kategori', 0)
             ->get();
@@ -69,12 +67,17 @@ class ProdukLayananController extends Controller
 
     public function tabungan()
     {
-        // detail event
         $data['tabungan'] = ProdukLayananModel::where('type', 0)
             ->where('kategori', 2)
             ->get();
 
-        return view(config('subdomain.GLOBAL_TABUNGAN'), $data);
+        if (env('DATA_PAGE') === 'BPREMAS') {
+            $data['deposito'] = ProdukLayananModel::where('type', 0)
+                ->where('kategori', 1)
+                ->get();
+        }
+
+        return view(ENV('GLOBAL_TABUNGAN'), $data);
     }
     public function dettabungan($id)
     {
@@ -97,6 +100,11 @@ class ProdukLayananController extends Controller
     {
 
         return view(config('subdomain.SIMULASI_KREDIT'));
+    }
+
+    public function simulasi()
+    {
+        return view('frontend.bpremas.pages.simulasi.index');
     }
 
     public function simulasiTabungan()
