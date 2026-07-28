@@ -77,7 +77,7 @@ class ProdukLayananController extends Controller
                 ->get();
         }
 
-        return view(ENV('GLOBAL_TABUNGAN'), $data);
+        return view(config('subdomain.GLOBAL_TABUNGAN'), $data);
     }
     public function dettabungan($id)
     {
