@@ -9,13 +9,6 @@
             object-fit: cover;
             display: block;
         }
-
-        @media(max-width:768px) {
-            .banner-img {
-                height: 260px;
-            }
-        }
-
         /* Card Kredit */
         .team-box {
             margin-bottom: 30px;
@@ -34,40 +27,19 @@
         }
 
         /* Mobile */
-        @media(max-width:768px) {
-            .kredit-img {
-                height: auto;
-            }
-        }
 
         .breadcrumb-area {
             margin-top: 90px;
         }
 
         /* Mobile */
-        @media (max-width: 768px) {
-            .breadcrumb-area {
-                margin-top: 0;
-            }
-            
-            .common-heros {
-                background: url('{{ asset(env('GLOBAL_TOPMOBILE')) }}') no-repeat center center;
-                background-size: 100% 50%;
-                /* isi penuh TANPA ruang kosong */
-                height: 180px;
-                margin-top: 30px;
-                /* tinggi tetap */
-                padding: 0;
-                object-fit: contain;
-            }
-        }
         
         
         .common-heros {
             background: url('{{ asset ('frontend/bprman/assets/images/banner/kredit.jpg') }}') no-repeat center center;
             background-size: cover;
             /* TIDAK terpotong */
-
+            
             height: 500px;
             max-width: 1200px;
             margin: 100px auto 0 auto;
@@ -85,7 +57,22 @@
             text-align: justify;
             font-family: 'Archivo', sans-serif;
         }
-    </style>
+
+        @media (max-width: 768px) {
+            .breadcrumb-area {
+                margin-top: 0;
+            }
+            
+            .common-heros {
+                background: url('{{ asset ('frontend/bprman/assets/images/banner/kredit.jpg') }}') no-repeat center center;
+                background-size: contain;
+                height: 500px;
+                max-width: 1200px;
+                margin: -40px 10px 0 10px;
+                border-radius: 10px;
+            }
+        }
+        </style>
 
     <body class="body tg-heading-subheading animation-style3">
 

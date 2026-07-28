@@ -17,7 +17,7 @@
         .judullap{
         text-align: center;
         margin-bottom: 0px;
-        margin-top: 100px;
+        margin-top: 120px;
     }
     </style>
 @section('content')

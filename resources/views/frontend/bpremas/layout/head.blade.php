@@ -9,23 +9,23 @@
 	<script async="" src="{{ asset('frontend/bpremas/js/script_fbevents_117.js') }}"></script>
 	<script type="text/javascript" async="" src="{{ asset('frontend/bpremas/js/script_js_118.png') }}"></script>
 	<script type="text/javascript" async="" src="{{ asset('frontend/bpremas/js/script_js_119.png') }}"></script>
-	<script async="" src="{{ asset('frontend/bpremas/js/script_gtm_120.js') }}"></script>
-	<script>
-		(function(w, d, s, l, i) {
-			w[l] = w[l] || [];
-			w[l].push({
-				'gtm.start': new Date().getTime(),
-				event: 'gtm.js'
-			});
-			var f = d.getElementsByTagName(s)[0],
-				j = d.createElement(s),
-				dl = l != 'dataLayer' ? '&l=' + l : '';
-			j.async = true;
-			j.src =
-				'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-			f.parentNode.insertBefore(j, f);
-		})(window, document, 'script', 'dataLayer', 'GTM-5DFNBJ68');
-	</script>
+	<!--<script async="" src="{{ asset('frontend/bpremas/js/script_gtm_120.js') }}"></script>-->
+	<!--<script>-->
+	<!--	(function(w, d, s, l, i) {-->
+	<!--		w[l] = w[l] || [];-->
+	<!--		w[l].push({-->
+	<!--			'gtm.start': new Date().getTime(),-->
+	<!--			event: 'gtm.js'-->
+	<!--		});-->
+	<!--		var f = d.getElementsByTagName(s)[0],-->
+	<!--			j = d.createElement(s),-->
+	<!--			dl = l != 'dataLayer' ? '&l=' + l : '';-->
+	<!--		j.async = true;-->
+	<!--		j.src =-->
+	<!--			'https://www.googletagmanager.com/gtm.js?id=' + i + dl;-->
+	<!--		f.parentNode.insertBefore(j, f);-->
+	<!--	})(window, document, 'script', 'dataLayer', 'GTM-5DFNBJ68');-->
+	<!--</script>-->
 	<!-- End Google Tag Manager -->
 
 	<meta charset="UTF-8">
@@ -34,7 +34,7 @@
 	<meta name="description" content="bpr emas">
 	<link rel="icon" type="image/png" sizes="32x32" href="{{ asset('frontend/bpremas/images/img_favicon-32x32_303.png') }}">
 	<link rel="icon" type="image/png" sizes="16x16" href="{{ asset('frontend/bpremas/images/img_favicon-16x16_304.png') }}">
-	<link rel="manifest" href="/manifest.json">
+	<!-- <link rel="manifest" href="/manifest.json"> -->
 	<meta name="theme-color" content="#002950">
 
 	<link rel="stylesheet" href="{{ asset('frontend/bpremas/css/style_screen_301.css') }}">
@@ -49,40 +49,40 @@
 	<link rel="preload" as="font" type="font/woff2" href="{{ asset('frontend/bpremas/font/Avenir-Heavy.woff2') }}"
 		crossorigin="">
 
-	<title>Tandamata Untuk Negeri - bpr emas</title>
-	<meta name="title" content="Tandamata Untuk Negeri - bpr emas">
+	<title>Bertumbuh Dan Berkembang Bersama - bpr emas</title>
+	<meta name="title" content="Bertumbuh Dan Berkembang Bersama - bpr emas">
 	<meta name="description" content="bpr emas">
-	<meta name="keywords" content="bpr emas, jawa barat, jabar, banten, beranda, bank, bank daerah">
+	<meta name="keywords" content="bpr emas, jawa tengah, jateng, kendal, beranda, bank">
 	<meta name="author" content="bpr emas">
-	<link rel="canonical" href="https://www.bankbjb.co.id/page/home">
-	<link rel="alternate" type="application/rss+xml" title="Post Feeds" href="https://site.com/rss/">
+	<!--<link rel="canonical" href="https://www.bankbjb.co.id/page/home">-->
+	<!--<link rel="alternate" type="application/rss+xml" title="Post Feeds" href="https://site.com/rss/">-->
 	<meta name="robots" content="index, follow">
 
-	<meta name="twitter:card" content="summary">
-	<meta name="twitter:title" content="Tandamata Untuk Negeri">
-	<meta name="twitter:description" content="bpr emas">
-	<meta name="twitter:site" content="@infobankbjb">
-	<meta name="twitter:creator" content="@infobankbjb">
+	<!--<meta name="twitter:card" content="summary">-->
+	<!--<meta name="twitter:title" content="Tandamata Untuk Negeri">-->
+	<!--<meta name="twitter:description" content="bpr emas">-->
+	<!--<meta name="twitter:site" content="@infobankbjb">-->
+	<!--<meta name="twitter:creator" content="@infobankbjb">-->
 
-	<meta property="og:type" content="article">
-	<meta property="og:title" content="Tandamata Untuk Negeri">
-	<meta property="og:description" content="bpr emas">
-	<meta property="og:url" content="https://www.bankbjb.co.id/page/home">
-	<meta property="og:site_name" content="bpr emas">
-	<meta property="og:locale" content="id">
-	<meta property="article:publisher" content="https://www.facebook.com/bankbjb/">
-	<meta property="article:author" content="https://www.facebook.com/bankbjb">
-	<meta property="article:published_time" content="2021-10-31T07:17:06+00:00">
-	<meta property="article:modified_time" content="2026-07-20T04:52:36+00:00">
-	<meta property="article:section" content="Tandamata Untuk Negeri">
-	<meta property="article:tag" content="bpr emas">
-	<meta property="article:tag" content="jawa barat">
-	<meta property="article:tag" content="jabar">
-	<meta property="article:tag" content="banten">
-	<meta property="article:tag" content="beranda">
-	<meta property="article:tag" content="bank">
-	<meta property="article:tag" content="bank daerah">
-	<meta property="og:see_also" content="https://www.bankbjb.co.id/Page">
+	<!--<meta property="og:type" content="article">-->
+	<!--<meta property="og:title" content="Tandamata Untuk Negeri">-->
+	<!--<meta property="og:description" content="bpr emas">-->
+	<!--<meta property="og:url" content="https://www.bankbjb.co.id/page/home">-->
+	<!--<meta property="og:site_name" content="bpr emas">-->
+	<!--<meta property="og:locale" content="id">-->
+	<!--<meta property="article:publisher" content="https://www.facebook.com/bankbjb/">-->
+	<!--<meta property="article:author" content="https://www.facebook.com/bankbjb">-->
+	<!--<meta property="article:published_time" content="2021-10-31T07:17:06+00:00">-->
+	<!--<meta property="article:modified_time" content="2026-07-20T04:52:36+00:00">-->
+	<!--<meta property="article:section" content="Tandamata Untuk Negeri">-->
+	<!--<meta property="article:tag" content="bpr emas">-->
+	<!--<meta property="article:tag" content="jawa barat">-->
+	<!--<meta property="article:tag" content="jabar">-->
+	<!--<meta property="article:tag" content="banten">-->
+	<!--<meta property="article:tag" content="beranda">-->
+	<!--<meta property="article:tag" content="bank">-->
+	<!--<meta property="article:tag" content="bank daerah">-->
+	<!--<meta property="og:see_also" content="https://www.bankbjb.co.id/Page">-->
 
 
 	<script>
@@ -101,7 +101,7 @@
 			window.themeOption = option;
 		};
 		loadThemeOption({
-			"title": "bjb theme",
+			"title": "bpremas theme",
 			"content": "b3B0aW9u",
 			"excerpt": "Option",
 			"type": 10,

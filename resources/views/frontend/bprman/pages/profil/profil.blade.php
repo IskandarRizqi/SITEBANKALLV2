@@ -1,14 +1,7 @@
 @extends('frontend.bprman.layout.main')
 
 @section('content')
-    <style>
-        .profile-content,
-        .profile-content * {
-            background: transparent !important;
-            background-color: transparent !important;
-            color: #fff !important;
-        }
-
+   <style>
         .navbar,
         .navbar-area,
         .header-area,
@@ -18,54 +11,67 @@
             z-index: 999;
         }
 
-        .breadcrumb-area {
-            margin-top: 100px;
-            width: 100%;
-            height: 150px;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+        .common-heros {
+            background: url('{{ asset(env('GLOBAL_BANERTOPPROFIL')) }}') no-repeat center center;
+            background-size: contain;
+            height: 170px;
+            max-width: 1120px;
+            margin: 90px auto 0 auto;
+            border-radius: 15px;
         }
 
-        .breadcrumb {
-            padding-left: 15px;
-            margin-top: 20px
-        }
 
-        /* Mobile */
+        /* Versi Mobile */
         @media (max-width: 768px) {
-            .breadcrumb-area {
-                margin-top: 0;
+            .common-heros {
+                background: url('{{ asset(env('GLOBAL_TOPMOBILE')) }}') no-repeat center center;
+                background-size: 100% 50%;
+                height: 150px;
+                margin-top: 50px;
+                object-fit: contain;
+                margin: 50px 10px 0px 10px;
             }
-        }
-    </style>
-    <div id="smooth-wrapper">
-    
-        <div class="breadcrumb-area text-center shadow dark bg-fixed text-light"
-            style="background-image: url(frontend/bprman/assets/images/banner/profil.jpg);">
-        </div>
-        <ul class="breadcrumb">
-            <li><a href="#"><i class="fas fa-home"></i> Profil</a></li>/
-            <li class="active">Profil</li>
-        </ul>
-        <hr>
 
-        <div class="col-lg-12">
-            <h2 style="text-align: center;">Profil</h2>
-        </div>
+        }
+
+        .section-header {
+            font-weight: 600;
+            padding: 1.5rem;
+            color: #1f2937;
+        }
+
+        .section-content {
+            padding: 0 1.5rem 1.5rem;
+        }
+
+        .border-line {
+            height: 4px;
+            width: 100%;
+            background-color: #e5e7eb;
+        }
+
+        .blue-line {
+            width: 8px;
+            height: 100%;
+            background-color: #3b82f6;
+            margin-right: 1rem;
+            border-radius: 4px;
+        }
+  
+    </style>
         <body class="body tg-heading-subheading animation-style3">
-            @if ($profil)
+
+        <div class="common-heros">
+        </div>
+
+    <div class="choose-us-area overflow-hidden reverse default-padding-bottom" style="margin-top: 100px;">
+        <div class="container">
+            <div class="row align-center" style="display: flex; justify-content: center;">
+
+                @if ($profil)
                 <div
                     style="font-family:'Poppins', sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 20px; margin: 0;">
                     <div style="width: 100%; max-width: 1120px;">
-
-                        <div
-                            style=" background: linear-gradient(45deg, #0a1c92, #837878); margin-top: 20px; padding: 25px 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-                            <div
-                                style="display: flex; align-items: center; margin-bottom: 15px; font-size: 28px; font-weight: bold;">
-                                {{-- <img src="frontend/bprrudo/assets/img/icons/misi.png" alt="" style="height: 40px"> --}}
-                                {{-- <span style="margin-left: 22px">Profile</span> --}}
-                            </div>
                             <div style="list-style: none; padding-left: 0px;">
 
                                 <div class="profile-content"
@@ -77,10 +83,14 @@
 
 
                             </div>
-                        </div>
                     </div>
                 </div>
             @endif
-        </body>
+
+            </div>
+        </div>
+    </div>
+    
+    </body>
     </div>
 @endsection

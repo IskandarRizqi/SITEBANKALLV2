@@ -1,4 +1,4 @@
-@extends('frontend.bprbahari.layout.main')
+@extends('frontend.bprman.layout.main')
 
 @section('content')
 <style>
@@ -37,6 +37,7 @@
     }
 
 
+<<<<<<< Updated upstream
     .event-content * {
         all: revert;
     }
@@ -54,6 +55,13 @@
                         <span><a href="/">Pengajuan Online</a></span>
                         /
                         <span class="current">Form Deposito</span>
+=======
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="pxn_page_header_content" style="text-align: center;">
+                        <h1 class="page_title">Form Deposito</h1>
+>>>>>>> Stashed changes
                     </div>
                 </div>
             </div>
