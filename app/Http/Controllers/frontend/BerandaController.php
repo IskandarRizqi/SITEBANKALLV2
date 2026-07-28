@@ -64,6 +64,6 @@ class BerandaController extends Controller
 
         // return $data;
 
-        return view(ENV('CUSTOM_PAGE_BERANDA'), $data);
+        return view(config('subdomain.CUSTOM_PAGE_BERANDA'), $data);
     }
 }
