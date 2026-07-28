@@ -101,11 +101,7 @@ jobs:
            rm -f bootstrap/cache/routes-*.php
            
            echo "Memasang dependency production..."
-           composer install \   
-           --no-dev \
-           --no-interaction \
-           --prefer-dist \
-           --optimize-autoloader
+           composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader --no-progress
            
            echo "Membersihkan cache Laravel..."
            php artisan optimize:clear
