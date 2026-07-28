@@ -38,17 +38,11 @@ class BerandaController extends Controller
         $data['umkm'] = UMKMModel::orderBy('id', 'desc')
             ->take(4)
             ->get();
- 
+
         $data['kredit']   = CounterRateModel::where('type', 1)->get();
         $data['deposito'] = CounterRateModel::where('type', 2)->get();
         $data['tabungan'] = CounterRateModel::where('type', 3)->get();
-       
 
-
-        return view(ENV('CUSTOM_PAGE_BERANDA'), $data);
-
+        return view(config('subdomain.CUSTOM_PAGE_BERANDA'), $data);
     }
-
-
-
 }

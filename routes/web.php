@@ -139,18 +139,18 @@ Route::get('/simulasi-kredit', [\App\Http\Controllers\frontend\ProdukLayananCont
 Route::get('/simulasi-tabungan', [\App\Http\Controllers\frontend\ProdukLayananController::class, 'simulasiTabungan']);
 Route::get('/simulasi-deposito', [\App\Http\Controllers\frontend\ProdukLayananController::class, 'simulasiDeposito']);
 Route::get('/pengajuanonline', function () {
-    return view(ENV('GLOBAL_PENGAJUANONLINE'));
+    return view(config('subdomain.GLOBAL_PENGAJUANONLINE'));
 });
 Route::get('/haha', function () {
     return config('subdomain.name');
     return 'HAHAHAHAHAHAHAHA';
 });
 Route::get('/programmagang', function () {
-    return view(ENV('GLOBAL_MAGANG'));
+    return view(config('subdomain.GLOBAL_MAGANG'));
 });
 
 Route::get('/tatakelolapage', function () {
-    return view(ENV('GLOBAL_TATAKELOLAPAGE'));
+    return view(config('subdomain.GLOBAL_TATAKELOLAPAGE'));
 });
 
 Route::get('/newformtabungan', function () {
@@ -169,7 +169,7 @@ Route::post('/pembukaan-rekening/simpan', [\App\Http\Controllers\frontend\Pengaj
 // Route::get('/pembukaan-rekening/download/{id}', [\App\Http\Controllers\frontend\PengajuanOnlineController::class, 'downloadformpembukaanrekening'])->name('download.pembukaanrekening');
 
 Route::get('/layananlain', function () {
-    return view(ENV('GLOBAL_LAYANANLAIN'));
+    return view(config('subdomain.GLOBAL_LAYANANLAIN'));
 });
 
 // PENGHARGAAN
@@ -202,7 +202,7 @@ Route::get('detlelang/{id}', [\App\Http\Controllers\frontend\LelangController::c
 Route::resource('rekrutmen', Fe_RekruitmenController::class);
 Route::get('detrekrutmen/{id}', [Fe_RekruitmenController::class, 'detrekrutmen'])->name('detrekrutmen');
 Route::get('/faq', function () {
-    return view(ENV('GLOBAL_FAQ'));
+    return view(config('subdomain.GLOBAL_FAQ'));
 });
 Route::get('contact', [InformasiController::class, 'contact']);
 Route::post('/kirim-pesan', [InformasiController::class, 'kirim'])->name('kirim.pesan');

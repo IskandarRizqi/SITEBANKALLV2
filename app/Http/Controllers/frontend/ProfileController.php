@@ -8,56 +8,55 @@ use Illuminate\Http\Request;
 
 class ProfileController extends Controller
 {
-     public function profile() {
-        
+    public function profile()
+    {
+
         $data['profil'] = ProfileModel::where('type', 0)
-        ->first();
+            ->first();
 
-        return view(ENV('GLOBAL_PROFILE'), $data);
-        
+        return view(config('subdomain.GLOBAL_PROFILE'), $data);
     }
 
-    public function sejarah() {
-        
+    public function sejarah()
+    {
+
         $data['sejarah'] = ProfileModel::where('type', 1)
-        ->first();
+            ->first();
 
-        return view(ENV('GLOBAL_SEJARAH'), $data);
-        
+        return view(config('subdomain.GLOBAL_SEJARAH'), $data);
     }
 
-    public function pengurus() {
-        
+    public function pengurus()
+    {
+
         $data['pengurus'] = ProfileModel::where('type', 2)
-        ->first();
+            ->first();
 
 
-        return view(ENV('GLOBAL_PENGURUS'), $data);
-
-        
+        return view(config('subdomain.GLOBAL_PENGURUS'), $data);
     }
 
-    public function organisasi() {
-        
+    public function organisasi()
+    {
+
         $data['organisasi'] = ProfileModel::where('type', 3)
-        ->first();
+            ->first();
 
 
-        return view(ENV('GLOBAL_ORGANISASI'), $data);
-        
+        return view(config('subdomain.GLOBAL_ORGANISASI'), $data);
     }
 
-    public function visimisi() {
+    public function visimisi()
+    {
 
 
-         return view( ENV('GLOBAL_VISIMISI'));
-        
+        return view(config('subdomain.GLOBAL_VISIMISI'));
     }
 
-    public function corevalue() {
+    public function corevalue()
+    {
 
 
-         return view( ENV('GLOBAL_COREVALUE'));
-        
+        return view(config('subdomain.GLOBAL_COREVALUE'));
     }
 }
