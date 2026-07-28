@@ -1,0 +1,63 @@
+name: Deploy Laravel to Hostinger
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy and optimize Laravel
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Jalankan deploy di server
+        uses: appleboy/ssh-action@v1.2.5
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          port: ${{ secrets.PORT }}
+          command_timeout: 15m
+          script: |
+            set -e
+
+            PROJECT_PATH="/home/u748550814/domains/bprphm.com/public_html/staging"
+
+            cd "$PROJECT_PATH"
+
+            echo "Direktori aktif:"
+            pwd
+
+            if [ ! -f artisan ]; then
+              echo "ERROR: File artisan tidak ditemukan."
+              exit 1
+            fi
+
+            if [ ! -f .env ]; then
+              echo "ERROR: File .env staging tidak ditemukan."
+              exit 1
+            fi
+
+            echo "Menunggu proses deploy Git Hostinger..."
+            sleep 60
+
+            echo "Membersihkan seluruh cache lama..."
+            php artisan optimize:clear
+
+            echo "Memastikan konfigurasi menggunakan .env staging..."
+            php artisan config:clear
+
+            echo "Menjalankan database migration..."
+            php artisan migrate --force
+
+            echo "Membuat ulang cache Laravel..."
+            php artisan config:cache
+            php artisan route:cache
+            php artisan view:cache
+
+            echo "Informasi environment:"
+            php artisan about --only=environment
+
+            echo "Deploy Laravel staging selesai."
