@@ -3,7 +3,7 @@
 
 <head>
 
-    @include( ENV ('GLOBAL_INCHEAD'))
+    @include( config('subdomain.GLOBAL_INCHEAD'))
 
 </head>
 
