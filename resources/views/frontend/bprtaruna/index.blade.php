@@ -416,7 +416,7 @@
 
             </div>
         </div>
-        <section class="rate section">
+        {{-- <section class="rate section">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -742,7 +742,182 @@
                     </div>
                 </div>
             </div>
+        </section> --}}
+
+        {{-- <section class="rate section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="mb-4">
+                            <b class="head-title" style="font-size:30px; font-weight:bold">
+                                Counter Rate
+                            </b>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <!-- TAB HEADER -->
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item mr-2">
+                                <button class="nav-link active" data-toggle="tab" data-target="#tabratedeposit"
+                                    type="button" style="color:black">
+                                    Deposito
+                                </button>
+                            </li>
+                            <li class="nav-item mr-2">
+                                <button class="nav-link" data-toggle="tab" data-target="#tabratetabungan" type="button"
+                                    style="color:black">
+                                    Tabungan
+                                </button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="nav-link" data-toggle="tab" data-target="#tabratekredit" type="button"
+                                    style="color:black">
+                                    Kredit
+                                </button>
+                            </li>
+                        </ul>
+
+                        <br>
+
+                        <!-- TAB CONTENT -->
+                        <div class="tab-content">
+
+                            <!-- ================= DEPOSITO ================= -->
+                            <div class="tab-pane fade show active" id="tabratedeposit">
+                                <div class="tab-pane fade show active" id="tabratedeposit">
+                                    @forelse ($deposito as $item)
+                                        <div class="mb-3">
+                                            <img src="/recfil?rf={{ $item->image }}" class="w-100"
+                                                style="height:500px; object-fit:fill; border-radius: 10px;">
+                                        </div>
+                                    @empty
+                                        <div class="text-center">
+                                            <p>Tidak ada data deposito</p>
+                                        </div>
+                                    @endforelse
+                                </div>
+                            </div>
+
+                            <!-- ================= TABUNGAN ================= -->
+                            <div class="tab-pane fade" id="tabratetabungan">
+                                @forelse ($tabungan as $item)
+                                    <div class="mb-3">
+                                        <img src="/recfil?rf={{ $item->image }}" class="w-100"
+                                            style="height:500px; object-fit:fill;  border-radius: 10px;">
+                                    </div>
+                                @empty
+                                    <div class="text-center">
+                                        <p>Tidak ada data tabungan</p>
+                                    </div>
+                                @endforelse
+                            </div>
+
+                            <!-- ================= KREDIT ================= -->
+                            <div class="tab-pane fade" id="tabratekredit">
+                                @forelse ($kredit as $item)
+                                    <div class="mb-3">
+                                        <img src="/recfil?rf={{ $item->image }}" class="w-100"
+                                            style="height:500px; object-fit:flll;  border-radius: 10px;">
+                                    </div>
+                                @empty
+                                    <div class="text-center">
+                                        <p>Tidak ada data kredit</p>
+                                    </div>
+                                @endforelse
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> --}}
+        @if ($deposito->count() || $tabungan->count() || $kredit->count())
+
+        <section class="rate section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="mb-4">
+                            <b class="head-title" style="font-size:30px; font-weight:bold">
+                                Counter Rate
+                            </b>
+                        </div>
+                    </div>
+        
+                    <div class="col-12">
+                        <!-- TAB HEADER -->
+                        <ul class="nav nav-tabs" id="myTab">
+                            @if($deposito->count())
+                                <li class="nav-item mr-2">
+                                    <button class="nav-link active" data-toggle="tab" data-target="#tabratedeposit">
+                                        Deposito
+                                    </button>
+                                </li>
+                            @endif
+        
+                            @if($tabungan->count())
+                                <li class="nav-item mr-2">
+                                    <button class="nav-link {{ !$deposito->count() ? 'active' : '' }}" data-toggle="tab" data-target="#tabratetabungan">
+                                        Tabungan
+                                    </button>
+                                </li>
+                            @endif
+        
+                            @if($kredit->count())
+                                <li class="nav-item">
+                                    <button class="nav-link {{ (!$deposito->count() && !$tabungan->count()) ? 'active' : '' }}" data-toggle="tab" data-target="#tabratekredit">
+                                        Kredit
+                                    </button>
+                                </li>
+                            @endif
+                        </ul>
+        
+                        <br>
+        
+                        <!-- TAB CONTENT -->
+                        <div class="tab-content">
+        
+                            @if($deposito->count())
+                            <div class="tab-pane fade show active" id="tabratedeposit">
+                                @foreach ($deposito as $item)
+                                    <div class="mb-3">
+                                        <img src="/recfil?rf={{ $item->image }}" class="w-100"
+                                             style="height:500px; object-fit:fill; border-radius:10px;">
+                                    </div>
+                                @endforeach
+                            </div>
+                            @endif
+        
+                            @if($tabungan->count())
+                            <div class="tab-pane fade {{ !$deposito->count() ? 'show active' : '' }}" id="tabratetabungan">
+                                @foreach ($tabungan as $item)
+                                    <div class="mb-3">
+                                        <img src="/recfil?rf={{ $item->image }}" class="w-100"
+                                             style="height:500px; object-fit:fill; border-radius:10px;">
+                                    </div>
+                                @endforeach
+                            </div>
+                            @endif
+        
+                            @if($kredit->count())
+                            <div class="tab-pane fade {{ (!$deposito->count() && !$tabungan->count()) ? 'show active' : '' }}" id="tabratekredit">
+                                @foreach ($kredit as $item)
+                                    <div class="mb-3">
+                                        <img src="/recfil?rf={{ $item->image }}" class="w-100"
+                                             style="height:500px; object-fit:fill; border-radius:10px;">
+                                    </div>
+                                @endforeach
+                            </div>
+                            @endif
+        
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
+        
+        @endif
 
         <section class="about section">
             <div class="container">

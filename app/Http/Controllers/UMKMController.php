@@ -32,13 +32,13 @@ class UMKMController extends Controller
                     }
                 }
             }
-
         }
         return view('admin.umkm.index', $data);
     }
 
     public function store(Request $request)
     {
+        // return $request->all();
         $request->validate([
             'title' => 'required',
             'gambar' => 'array|max:5',
@@ -50,8 +50,12 @@ class UMKMController extends Controller
         $gambarPaths = [];
 
         // Jika update → ambil gambar lama
-        if ($umkm && $umkm->gambar) {
-            $gambarPaths = json_decode($umkm->gambar, true) ?? [];
+        // if ($umkm && $umkm->gambar) {
+        //     $gambarPaths = json_decode($umkm->gambar, true) ?? [];
+        // }
+
+        if ($request->gambar_lama) {
+            $gambarPaths = $request->gambar_lama;
         }
 
         if ($request->hasFile('gambar')) {
@@ -81,7 +85,7 @@ class UMKMController extends Controller
                 );
         }
 
-    
+
         // PROSES SOSMED JSON
         $sosmed = [];
 
@@ -147,5 +151,4 @@ class UMKMController extends Controller
         }
         return Redirect::back()->with('error', 'Data tidak ditemukan');
     }
-
 }

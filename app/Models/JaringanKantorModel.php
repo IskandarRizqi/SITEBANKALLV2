@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class JaringanKantorModel extends Model
 {
     use SoftDeletes;
-    protected $table = 'jaringan_kantor';
+    protected $table = 'jaringan_kantors';
     protected $fillable = [
         'kantor',
         'latitude',

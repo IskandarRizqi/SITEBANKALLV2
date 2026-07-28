@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('jaringan_kantor', function (Blueprint $table) {
+        Schema::table('jaringan_kantors', function (Blueprint $table) {
             $table->string('no_telp')->nullable();
         });
     }

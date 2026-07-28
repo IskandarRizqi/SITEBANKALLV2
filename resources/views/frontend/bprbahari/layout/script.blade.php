@@ -1,0 +1,20 @@
+ <!-- jQuery Frameworks
+    ============================================= -->
+    <script src="{{asset('frontend/bprbahari/assets/js/jquery-3.7.1.min.js')}}"></script>
+    <script src="{{asset('frontend/bprbahari/assets/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{asset('frontend/bprbahari/assets/js/jquery.appear.js')}}"></script>
+    <script src="{{asset('frontend/bprbahari/assets/js/jquery.easing.min.js')}}"></script>
+    <script src="{{asset('frontend/bprbahari/assets/js/jquery.magnific-popup.min.js')}}"></script>
+    <script src="{{asset('frontend/bprbahari/assets/js/owl.carousel.min.js')}}"></script>
+    <script src="{{asset('frontend/bprbahari/assets/js/wow.min.js')}}"></script>
+    <script src="{{asset('frontend/bprbahari/assets/js/progress-bar.min.js')}}"></script>
+    <script src="{{asset('frontend/bprbahari/assets/js/isotope.pkgd.min.js')}}"></script>
+    <script src="{{asset('frontend/bprbahari/assets/js/imagesloaded.pkgd.min.js')}}"></script>
+    <script src="{{asset('frontend/bprbahari/assets/js/count-to.js')}}"></script>
+    <script src="{{asset('frontend/bprbahari/assets/js/jquery.nice-select.min.js')}}"></script>
+    <script src="{{asset('frontend/bprbahari/assets/js/YTPlayer.min.js')}}"></script>
+    <script src="{{asset('frontend/bprbahari/assets/js/validnavs.js')}}"></script>
+    <script src="{{asset('frontend/bprbahari/assets/js/gsap.js')}}"></script>
+    <script src="{{asset('frontend/bprbahari/assets/js/ScrollTrigger.min.js')}}"></script>
+    <script src="{{asset('frontend/bprbahari/assets/js/SplitText.min.js')}}"></script>
+    <script src="{{asset('frontend/bprbahari/assets/js/main.js')}}"></script>

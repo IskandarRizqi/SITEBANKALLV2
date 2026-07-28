@@ -15,11 +15,15 @@ class LaporanModel extends Model
         'title',
         'thumbnail',
         'url',
+        'urls_json',
         'created_by',
         'updated_by',
     ];
 
     protected $appends = ['type_text'];
+    protected $casts = [
+        'urls_json' => 'array',
+    ];
 
     public function getTypeTextAttribute()
     {

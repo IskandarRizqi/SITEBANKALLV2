@@ -1,142 +1,235 @@
-  <!-- Topbar Start -->
-  <div class="container-fluid topbar px-0 d-none d-lg-block">
-      <div class="container px-0">
-          <div class="row gx-0 align-items-center" style="height: 45px;">
-              <div class="col-lg-8 text-center text-lg-start mb-lg-0">
-                  <div class="d-flex flex-wrap">
-                      <a href="https://www.google.com/maps/place/Pt+Bpr+Kotabaru/@-3.2494793,116.2207901,17z/data=!3m1!4b1!4m6!3m5!1s0x2def302cb6c251ab:0x7919a61a5ad7bfdf!8m2!3d-3.2494847!4d116.223365!16s%2Fg%2F11ltp1yrr5?entry=ttu&g_ep=EgoyMDI2MDMyNC4wIKXMDSoASAFQAw%3D%3D"
-                          class="text-white me-4 " target="_blank"><i
-                              class="fas fa-map-marker-alt text-white me-2"></i>Maps</a>
-                        <a href="tel:085124525" class="text-white me-4">
-                          <i class="fas fa-phone-alt text-white me-2"></i>085124525
-                          </a>
-                          <a href="#" class="text-white me-0"><i class="fas fa-envelope text-white me-2"></i>
-                              bankKotabaru_perseroda@yahoo.com</a>
-                  </div>
-              </div>
-              <div class="col-lg-4 text-center text-lg-end">
-                  <div class="d-flex align-items-center justify-content-end">
-                      <a href="#" class="btn btn-red btn-square rounded-circle nav-fill me-3"><i
-                              class="fab fa-facebook-f text-white"></i></a>
-                      <a href="#" class="btn btn-red btn-square rounded-circle nav-fill me-3"><i
-                              class="fab fa-twitter text-white"></i></a>
-                      <a href="https://www.instagram.com/bpr.bankkotabaru/"
-                          class="btn btn-red btn-square rounded-circle nav-fill me-3"><i
-                              class="fab fa-instagram text-white"></i></a>
-                      <a href="#" class="btn btn-red btn-square rounded-circle nav-fill me-0"><i
-                              class="fab fa-linkedin-in text-white"></i></a>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-  <!-- Topbar End -->
+<style>
+    /* Background Header Putih */
+    .th-header,
+    .menu-area,
+    .sticky-wrapper {
+        background-color: #ff5a1e !important;
+    }
+
+    /* Text Menu Hitam */
+    .main-menu ul li a {
+        color: #ffffff !important;
+    }
+
+    /* Icon Dropdown (arrow menu) */
+    .main-menu ul li.menu-item-has-children>a::after {
+        color: #fff !important;
+    }
+
+    /* Hover Menu */
+    .main-menu ul li a:hover {
+        color: #0d6efd !important;
+    }
+
+    /* Submenu Background */
+    .sub-menu {
+        background-color: #ff5a1e !important;
+    }
+
+    /* Submenu Text */
+    .sub-menu li a {
+        color: #000 !important;
+    }
+
+    /* Toggle Menu Mobile (Hamburger) */
+    .th-menu-toggle {
+        color: #000 !important;
+    }
+
+    /* Toggle Icon */
+    .th-menu-toggle i {
+        color: #000 !important;
+    }
+
+    /* Icon menu kanan */
+    .simple-btn img {
+        filter: brightness(0);
+        /* jadi hitam */
+    }
+
+    /* Sticky saat scroll */
+    .sticky-wrapper.sticky {
+        background-color: #fff !important;
+    }
+
+    /* Optional Shadow biar elegan */
+    .menu-area {
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .header-button .th-btn.style2 {
+        background: linear-gradient(45deg, #091098, #ffffff);
+        color: #000;
+        border: none;
+    }
+
+    .header-layout3 .header-logo {
+        background: #fff;
+        padding: 5px 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+    }
+
+    /* Mobile Header Putih */
+    @media (max-width: 991px) {
+
+        .th-header,
+        .menu-area,
+        .sticky-wrapper {
+            background-color: #ffffff !important;
+        }
+
+        /* Text menu mobile jadi hitam */
+        .th-mobile-menu ul li a {
+            color: #000 !important;
+        }
+
+        /* Icon toggle mobile */
+        .th-menu-toggle {
+            color: #000 !important;
+        }
+
+        .th-menu-toggle i {
+            color: #000 !important;
+        }
+
+        /* Submenu mobile */
+        .th-mobile-menu .sub-menu {
+            background: #fff !important;
+        }
+
+        .th-mobile-menu .sub-menu li a {
+            color: #000 !important;
+        }
 
 
-  <!-- Navbar & Hero Start -->
-  <div class="container-fluid sticky-top px-0">
-      <div class="position-absolute bg-info" style="left: 0; top: 0; width: 100%; height: 100%;">
-      </div>
-      <div class="container px-0">
-          <nav class="navbar navbar-expand-lg navbar-dark bg-white py-3 px-4">
-              <a href="index.html" class="navbar-brand p-0">
-                  {{-- <h1 class="text-primary m-0"><i class="fas fa-donate me-3"></i>Investa</h1> --}}
-                  <img src="{{ asset('frontend/bprkotabaru/img/logo/logo.png') }}" alt="Logo" width="270px;">
-              </a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                  <span class="fa fa-bars"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarCollapse">
-                  <div class="navbar-nav ms-auto py-0">
-                      <a href="/" class="nav-item nav-link  {{ request()->is('/') ? 'active' : '' }}">Beranda</a>
+
+    }
+</style>
 
 
-                      <div class="nav-item dropdown">
-                          <a href="#"
-                              class="nav-link dropdown-toggle {{ request()->is('visimisi', 'sejarah', 'pengurus', 'organisasi', 'galery') ? 'active' : '' }}"
-                              data-bs-toggle="dropdown">Tentang Kami</a>
-                          <div class="dropdown-menu m-0">
-                              <a href="/visimisi"
-                                  class="dropdown-item {{ request()->is('visimisi') ? 'active' : '' }}">Profil</a>
-                              <a href="/sejarah"
-                                  class="dropdown-item {{ request()->is('sejarah') ? 'active' : '' }}">Sejarah</a>
-                              <a href="/pengurus"
-                                  class="dropdown-item {{ request()->is('pengurus') ? 'active' : '' }}">Pengurus</a>
-                              <a href="/organisasi"
-                                  class="dropdown-item {{ request()->is('organisasi') ? 'active' : '' }}">Struktur
-                                  Organisasi</a>
-                              <a href="/galery"
-                                  class="dropdown-item {{ request()->is('galery') ? 'active' : '' }}">Galery</a>
-                          </div>
-                      </div>
-                      <div class="nav-item dropdown">
-                          <a href="#"
-                              class="nav-link dropdown-toggle {{ request()->is('kredit', 'deposito', 'tabungan') ? 'active' : '' }}"
-                              data-bs-toggle="dropdown">Produk</a>
-                          <div class="dropdown-menu m-0">
-                              <a href="/kredit"
-                                  class="dropdown-item  {{ request()->is('kredit') ? 'active' : '' }}">Produk Kredit</a>
-                              <a href="/tabungan"
-                                  class="dropdown-item  {{ request()->is('tabungan') ? 'active' : '' }}">Produk
-                                  Tabungan</a>
-                              <a href="/deposito"
-                                  class="dropdown-item {{ request()->is('deposito') ? 'active' : '' }}">Produk
-                                  Deposito</a>
-                          </div>
-                      </div>
+<div class="th-menu-wrapper onepage-nav">
+    <div class="th-menu-area text-center"><button class="th-menu-toggle"><i class="fal fa-times"></i></button>
+        <div class="mobile-logo"><a href="/"><img src="frontend/bprsms/assets/img/logo/logo.png" style="width: 170px"
+                    alt="Atek"></a></div>
 
-                      <a href="lelang-jualaset"
-                          class="nav-item nav-link {{ request()->is('lelang-jualaset') ? 'active' : '' }}">Lelang</a>
-                      <div class="nav-item dropdown">
-                          <a href="#"
-                              class="nav-link dropdown-toggle  {{ request()->is('publikasi', 'tahunan', 'tatakelola', 'keberlanjutan') ? 'active' : '' }}"
-                              data-bs-toggle="dropdown">Laporan</a>
-                          <div class="dropdown-menu m-0">
-                              <a href="/publikasi"
-                                  class="dropdown-item {{ request()->is('publikasi') ? 'active' : '' }}">Laporan
-                                  Publikasi</a>
-                              <a href="/tahunan"
-                                  class="dropdown-item  {{ request()->is('tahunan') ? 'active' : '' }}">Laporan
-                                  Tahunan</a>
-                              <a href="/tatakelola"
-                                  class="dropdown-item  {{ request()->is('tatakelola') ? 'active' : '' }}">Laporan Tata
-                                  Kelola</a>
-                              <a href="/keberlanjutan"
-                                  class="dropdown-item {{ request()->is('keberlanjutan') ? 'active' : '' }}">Laporan
-                                  Keberlanjutan</a>
+        <div class="th-mobile-menu allow-natural-scroll">
+            <ul>
 
-                          </div>
-                      </div>
-                      <a href="/pengajuanonline"
-                          class="nav-item nav-link {{ request()->is('pengajuanonline') ? 'active' : '' }}">Pengajuan
-                          Online</a>
-                  </div>
-                  <div class="dropdown ms-2">
-                      <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 dropdown-toggle"
-                          data-bs-toggle="dropdown" aria-expanded="false">
-                          Simulasi
-                      </a>
+                <li><a href="/">Beranda</a></li>
+                <li class="menu-item-has-children"><a href="#">Tentang Kami</a>
+                    <ul class="sub-menu">
 
-                      <ul class="dropdown-menu dropdown-menu-end">
-                          <li>
-                              <a class="dropdown-item" href="/simulasi-kredit">
-                                  Simulasi Kredit
-                              </a>
-                          </li>
-                          <li>
-                              <a class="dropdown-item" href="/simulasi-tabungan">
-                                  Simulasi Tabungan
-                              </a>
-                          </li>
-                          <li>
-                              <a class="dropdown-item" href="/simulasi-deposito">
-                                  Simulasi Deposito
-                              </a>
-                          </li>
-                      </ul>
-                  </div>
-              </div>
-          </nav>
-      </div>
-  </div>
-  <!-- Navbar & Hero End -->
+                        <li><a href="/visimisi">Visi & Misi</a></li>
+                        <li><a href="/sejarah">Sejarah</a></li>
+                        <li><a href="/pengurus">Pengurus</a></li>
+                        <li><a href="/organisasi">Struktur Organisasi</a></li>
+                        <li><a href="/galery">Galery</a></li>
+
+                    </ul>
+                </li>
+                <li class="menu-item-has-children"><a href="#">Produk</a>
+                    <ul class="sub-menu">
+                        <li><a href="/kredit">Kredit</a></li>
+                        <li><a href="/deposito">Deposito</a></li>
+                        <li><a href="/tabungan">Tabungan</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children"><a href="#">Laporan</a>
+                    <ul class="sub-menu">
+                        <li><a href="/publikasi">Laporan Publikasi</a></li>
+                        <li><a href="/tahunan">Laporan Tahunan</a></li>
+                        <li><a href="/tatakelola">Laporan Tata Kelola</a></li>
+                        <li><a href="/keberlanjutan">Laporan Keberlanjutan</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children"><a href="#">Simulasi</a>
+                    <ul class="sub-menu">
+                        <li><a href="/simulasi-kredit">Simulasi Kredit</a></li>
+                        <li><a href="/simulasi-deposito">Simulasi Deposito</a></li>
+                        <li><a href="/simulasi-tabungan">Simulasi Tabungan</a></li>
+                    </ul>
+                </li>
+                <li><a href="/pengajuanonline">Pengajuan Online</a></li>
+
+
+            </ul>
+
+        </div>
+    </div>
+</div>
+<header class="th-header header-layout3">
+    <div class="sticky-wrapper">
+        <div class="menu-area">
+
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-auto d-none d-xl-block">
+                        <nav class="main-menu">
+                            <ul>
+
+                                <li><a href="/" style="color: #fff">Beranda</a></li>
+                                <li class="menu-item-has-children"><a href="#">Tentang Kami</a>
+                                    <ul class="sub-menu">
+
+                                        <li><a href="/visimisi">Visi & Misi</a></li>
+                                        <li><a href="/sejarah">Sejarah</a></li>
+                                        <li><a href="/pengurus">Pengurus</a></li>
+                                        <li><a href="/organisasi">Struktur Organisasi</a></li>
+                                        <li><a href="/galery">Galery</a></li>
+
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children"><a href="#">Produk</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="/kredit">Kredit</a></li>
+                                        <li><a href="/deposito">Deposito</a></li>
+                                        <li><a href="/tabungan">Tabungan</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav><button type="button" class="th-menu-toggle d-block d-xl-none"><i
+                                class="far fa-bars"></i></button>
+                    </div>
+                    <div class="col-auto">
+                        <div class="header-logo"><a href="/"><img
+                                    src="{{asset('frontend/bprsms/assets/img/logo/logo.png')}}" style="width: 190px;"
+                                    alt="Logo"></a></div>
+                    </div>
+
+                    <div class="col-auto d-none d-xl-block">
+                        <nav class="main-menu">
+                            <ul>
+                                <li class="menu-item-has-children"><a href="#">Laporan</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="/publikasi">Laporan Publikasi</a></li>
+                                        <li><a href="/tahunan">Laporan Tahunan</a></li>
+                                        <li><a href="/tatakelola">Laporan Tata Kelola</a></li>
+                                        <li><a href="/keberlanjutan">Laporan Keberlanjutan</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children"><a href="#">Simulasi</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="/simulasi-kredit">Simulasi Kredit</a></li>
+                                        <li><a href="/simulasi-Deposito">Simulasi Deposito</a></li>
+                                        <li><a href="/simulasi-Tabungan">Simulasi Tabungan</a></li>
+
+                                    </ul>
+                                </li>
+                                <li><a href="/pengajuanonline">Pengajuan Online</a></li>
+                            </ul>
+                        </nav>
+
+                    </div>
+                    <button type="button" class="th-menu-toggle d-block d-xl-none ">
+                        <i class="far fa-bars"></i>
+                    </button>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

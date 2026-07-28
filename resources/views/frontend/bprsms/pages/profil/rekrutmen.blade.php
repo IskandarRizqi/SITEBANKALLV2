@@ -1,123 +1,115 @@
-@extends('frontend.bprkotabaru.layout.main')
+@extends('frontend.bprsms.layout.main')
 
 @section('content')
-    <style>
-        .blog-item {
-            background: #fff;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-            height: 100%;
-        }
-
-        .blog-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
-        }
-
-        .blog-img img {
-            width: 100%;
-            height: 220px;
-            object-fit: fill;
-        }
-
-        .blog-title {
-            padding: 15px 15px 5px 15px;
-        }
-
-        .blog-title h3 {
-            font-size: 18px;
-            font-weight: 600;
-            color: #222;
-        }
-
-        .blog-meta {
-            padding: 0 15px;
-            color: #666;
-            font-size: 14px;
-        }
-
-        .blog-meta i {
-            color: #3b87f9;
-            margin-right: 5px;
-        }
-
-        .blog-text {
-            padding: 10px 15px 20px 15px;
-            font-size: 14px;
-            color: #555;
-        }
-
-        .blog-page>div {
-            margin-bottom: 30px;
-        }
-
-        /* Mobile */
-        @media (max-width:768px) {
-            .blog-img img {
-                height: 200px;
-            }
-        }
-    </style>
-   
-    <div class="container-fluid bg-breadcrumb">
-        <div class="bg-breadcrumb-single"></div>
-        <div class="container text-center py-5" style="max-width: 900px;">
-            <h4 class="text-white display-4 mb-4 wow fadeInDown" data-wow-delay="0.1s">
-                Rekruitment
-            </h4>
+    <div class="breadcumb-area style2 bg-smoke4">
+        <div class="breadcumb-wrapper" data-bg-src="frontend/bprsms/assets/img/bg/breadcumb-bg.jpg">
+            <div class="container">
+                <div class="breadcumb-content">
+                    <h1 class="breadcumb-title">Karir</h1>
+                    <ul class="breadcumb-menu">
+                        <li><a href="/">Beranda</a></li>
+                        <li>Karir</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- Blog Start -->
-    <div class="blog" style="margin-top: 80px;">
+    <div class="space">
         <div class="container">
-            <div class="section-header text-center">
+            <div class="row gy-30">
 
-                <div class="row blog-page">
+                @forelse ($rekruitmen as $item)
+                    <div class="col-lg-6 col-xxl-4">
+                        <div class="job-post white-bg">
 
-                    @foreach ($rekruitmen as $item)
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="job-content smoke-bg">
 
-                            <a href="{{ route('detrekrutmen', $item->id) }}"
-                                style="text-decoration:none; color:inherit; display:block;">
-                                <div class="blog-item">
-                                    <div class="blog-img">
-                                        <img src="/recfil?display=true&rf={{ $item->gambar }}" alt="{{ $item->judul }}">
+                                <div class="job-post_date d-flex align-items-center justify-content-between">
+                                    <span class="date">
+                                        {{ \Carbon\Carbon::parse($item->tanggal_posting)->format('d F Y') }}
+                                    </span>
+                                    <div class="icon">
+                                        <i class="fa-solid fa-heart"></i>
+                                    </div>
+                                </div>
+
+                                <div class="job-post_author d-sm-flex align-items-center text-center text-sm-start">
+
+                                    <div class="job-author">
+                                        <img src="/recfil?display=true&rf={{ $item->gambar }}" alt="Image">
                                     </div>
 
-                                    <div class="blog-title" style="text-align:center;">
-                                        <h3 style="font-size: 20px; margin-top: 5px;">{{ $item->judul }}</h3>
-                                    </div>
+                                    <div class="author-info">
+                                        <span class="company-name">
+                                            PT BPR Baja
+                                        </span>
 
-                                    <div class="blog-meta" style="text-align:center;">
-                                        <p
-                                            style="display:flex; justify-content:center; align-items:center; gap:5px; color:#000;">
-                                            <i class="fa fa-calendar"></i>
-                                            <strong>Batas Lamar:</strong>
-                                            <span>
-                                                {{ \Carbon\Carbon::parse($item->tanggal_berakhir)->format('d F Y') }}
-                                            </span>
-                                        </p>
-                                    </div>
+                                        <span class="job-title">
+                                            {{ $item->judul }}
+                                        </span>
 
-                                    <div class="blog-text">
-                                        <p style="color: #000">
-                                            Bergabunglah dengan tim kami! Kami mencari individu yang bersemangat dan
-                                            profesional
-                                            untuk mengisi posisi {{ $item->judul }}. Peluang karir menanti Anda.
-                                        </p>
+                                        <span class="location">
+                                            <i class="fa-light fa-location-dot"></i>
+                                            {{ $item->lokasi }}
+                                        </span>
+
                                     </div>
 
                                 </div>
-                            </a>
+
+                                <div class="job-category">
+                                    <a href="#">
+                                        @if ($item->tipe_pekerjaan == 1)
+                                            Full-time
+                                        @elseif ($item->tipe_pekerjaan == 2)
+                                            Part-time
+                                        @elseif ($item->tipe_pekerjaan == 3)
+                                            Kontrak
+                                        @else
+                                            Magang
+                                        @endif
+                                    </a>
+
+                                    <a href="#">Rekruitmen</a>
+                                </div>
+
+                            </div>
+
+                            <div
+                                class="job-wrapper d-sm-flex align-items-center justify-content-between text-center text-sm-start">
+
+                                <span class="price">
+                                    <i class="fa-sharp fa-regular fa-circle-dollar me-2"></i>
+
+                                    Rp {{ number_format($item->gaji_min, 0, ',', '.') }}
+                                    -
+                                    Rp {{ number_format($item->gaji_max, 0, ',', '.') }}
+
+                                </span>
+
+                                <a href="{{ route('detrekrutmen', $item->id) }}">
+                                    <span class="th-btn style3">
+                                        Detail
+                                    </span>
+                                </a>
+
+                            </div>
 
                         </div>
-                    @endforeach
+                    </div>
 
-                </div>
+                @empty
+
+                    <div class="col-12 text-center">
+                        <div class="alert alert-info">
+                            <h5>Belum Ada Lowongan Tersedia</h5>
+                            <p>Silakan cek kembali nanti untuk informasi karir terbaru.</p>
+                        </div>
+                    </div>
+                @endforelse
 
             </div>
         </div>
-    @endsection
+    </div>
+@endsection

@@ -24,5 +24,6 @@ class ProdukLayananModel extends Model
         'riplay',
         'created_by',
         'updated_by',
+        'deskripsi',
     ];
 }

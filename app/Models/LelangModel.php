@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class LelangModel extends Model
 {
     use SoftDeletes;
-    protected $table = 'lelang';
+    protected $table = 'lelangs';
     protected $fillable = [
         'type',
         'urutan',

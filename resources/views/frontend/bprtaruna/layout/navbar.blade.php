@@ -43,7 +43,7 @@
 
                                     </ul>
                                 </li>
-                                <li class="dropdown-menu-parrent"><a href="#">Laporan <i
+                                {{-- <li class="dropdown-menu-parrent"><a href="#">Laporan <i
                                             class="fa-solid fa-angle-down"></i></a>
                                     <ul>
                                         <li><a href="/publikasi">Publikasi </i></a></li>
@@ -52,7 +52,8 @@
                                         <li><a href="/keberlanjutan">Keberlanjutan </i></a></li>
 
                                     </ul>
-                                </li>
+                                </li> --}}
+                                <li><a href="/publikasi">Laporan </a></li>
                                 <li><a href="/pengajuanonline">Pengajuan Online </a></li>
                                 <li><a href="/lelang-jualaset">Lelang </a></li>
 

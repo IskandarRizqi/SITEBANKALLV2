@@ -286,7 +286,7 @@
             </span>
         </div>
     </div>
-     {{-- <div class="container footer-menu">
+    {{-- <div class="container footer-menu">
         <div class="f-menu">
             <a href="/privasipolicy">
                 <img src="frontend/bprstaja/img/logo/ppatk.png" alt="Privacy Policy" style="height:30px;">
@@ -307,13 +307,13 @@
     <div class="container copyright">
         <div class="row">
             <div class="col-md-6">
-                <p>&copy; <a href="#" style="color: #f96611">Bprs Taja</a> Support By <a href="https://antaruang.com/"
-                                    target="_blank" style="color: red">Antar Uang</a></p>
+                <p>&copy; <a href="#" style="color: #f96611">Bprs Taja</a> Support By <a
+                        href="https://antaruang.com/" target="_blank" style="color: red">Antar Uang</a></p>
             </div>
             <div class="col-md-6">
                 {{-- <p>Designed By <a href="https://htmlcodex.com">HTML Codex</a></p> --}}
             </div>
-        </div>
+        </div>  
     </div>
 </div>
 <!-- Footer End -->

@@ -11,22 +11,24 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('produk_layanan', function (Blueprint $table) {
-            $table->id();
-            $table->integer('type')->default(0)->comment('0:Produk; 1:Layanan; 2:Lainnya');
-            $table->integer('kategori')->default(0)->comment('0:Kredit; 1:Deposito; 2:Tabungan; 3:Layanan; 4:Lainnya;');
-            $table->integer('urutan')->default(0);
-            $table->json('tag')->nullable();
-            $table->text('title')->unique();
-            $table->text('slug')->unique();
-            $table->text('banner');
-            $table->text('thumbnail')->nullable();
-            $table->longText('content');
-            $table->bigInteger('created_by')->nullable();
-            $table->bigInteger('updated_by')->nullable();
-            $table->timestamps();
-            $table->softDeletes();
-        });
+        if (!Schema::hasTable('produk_layanan')) {
+            Schema::create('produk_layanan', function (Blueprint $table) {
+                $table->id();
+                $table->integer('type')->default(0)->comment('0:Produk; 1:Layanan; 2:Lainnya');
+                $table->integer('kategori')->default(0)->comment('0:Kredit; 1:Deposito; 2:Tabungan; 3:Layanan; 4:Lainnya;');
+                $table->integer('urutan')->default(0);
+                $table->json('tag')->nullable();
+                $table->text('title')->unique();
+                $table->text('slug')->unique();
+                $table->text('banner');
+                $table->text('thumbnail')->nullable();
+                $table->longText('content');
+                $table->bigInteger('created_by')->nullable();
+                $table->bigInteger('updated_by')->nullable();
+                $table->timestamps();
+                $table->softDeletes();
+            });
+        }
     }
 
     /**

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\frontend;
 use App\Http\Controllers\Controller;
 use App\Models\LaporanModel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 
 class LaporanController extends Controller
 {
@@ -31,7 +32,7 @@ class LaporanController extends Controller
             })
             ->groupBy('tahun'); // Grouping pertama by tahun
 
-        return view(ENV('GLOBAL_PUBLIKASI'), compact('publikasi'));
+        return view(config('subdomain.GLOBAL_PUBLIKASI'), compact('publikasi'));
     }
 
 
@@ -41,7 +42,7 @@ class LaporanController extends Controller
         $data['tahunan'] = LaporanModel::where('type', 1)->get();
 
 
-        return view(ENV('GLOBAL_TAHUNAN'), $data);
+        return view(config('subdomain.GLOBAL_TAHUNAN'), $data);
     }
 
     public function tatakelola()
@@ -50,7 +51,7 @@ class LaporanController extends Controller
         $data['tatakelola'] = LaporanModel::where('type', 2)->get();
 
 
-        return view(ENV('GLOBAL_TATAKELOLA'), $data);
+        return view(config('subdomain.GLOBAL_TATAKELOLA'), $data);
     }
 
     public function keberlanjutan()
@@ -59,16 +60,31 @@ class LaporanController extends Controller
         $data['keberlanjutan'] = LaporanModel::where('type', 3)->get();
 
 
-        return view(ENV('GLOBAL_KEBERLANJUTAN'), $data);
+        return view(config('subdomain.GLOBAL_KEBERLANJUTAN'), $data);
+    }
+    public function akb()
+    {
+        // detail event
+        $data['akb'] = LaporanModel::where('type', 4)->get();
+
+
+        return view(config('subdomain.GLOBAL_AKB'), $data);
+    }
+
+    public function piagamaudit()
+    {
+
+        $data['piagamaudit'] = LaporanModel::where('type', 5)->get();
+
+        return view(config('subdomain.GLOBAL_PIAGAMAUDIT'), $data);
     }
 
     public function lainnya()
     {
 
-        $data['lainnya'] = LaporanModel::where('type', 4)->get();
+        $data['lainnya'] = LaporanModel::where('type', 6)->get();
 
-
-        return view('frontend.bprtaruna.pages.laporan.piagamaudit', $data);
+        return view(config('subdomain.GLOBAL_LAPORAN_LAINNYA'), $data);
     }
 
     public function laporanall()
@@ -101,7 +117,34 @@ class LaporanController extends Controller
         $data['all'] = LaporanModel::orderBy('created_at', 'DESC')->paginate(6);
 
 
-        return view(ENV('GLOBAL_LAPORANALL'), $data);
+        return view(config('subdomain.GLOBAL_LAPORANALL'), $data);
     }
 
+    public function getlaporanfront(Request $request)
+    {
+        $query = LaporanModel::query();
+
+        if ($request->type !== null && $request->type !== '') {
+            $query->where('type', $request->type);
+        }
+
+        if ($request->tahun) {
+            $query->whereYear('tanggal', $request->tahun);
+        }
+
+        if ($request->bulan && $request->bulan !== '') {
+            $bulan    = (int) $request->bulan;
+            $bulanAwal = $bulan - 2;
+            $query->whereMonth('tanggal', '>=', $bulanAwal)
+                ->whereMonth('tanggal', '<=', $bulan);
+        }
+
+        $data = $query->orderBy('tanggal', 'desc')->get()
+            ->map(function ($item) {
+                $item->bulan = (int) Carbon::parse($item->tanggal)->format('n');
+                return $item;
+            });
+
+        return response()->json($data->values());
+    }
 }

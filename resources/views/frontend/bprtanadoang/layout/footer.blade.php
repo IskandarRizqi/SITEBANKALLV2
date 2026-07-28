@@ -228,13 +228,13 @@
                         style="background-color:#ffffff; color:#462ced; text-transform:none;">
 
                         @foreach ($kantorglobal as $kantor)
-                            <option value="{{ $kantor->id }}" data-nama="{{ $kantor->kantor }}"
-                                data-alamat="{{ $kantor->alamat }}" data-telp="{{ $kantor->no_telp }}"
-                                data-lat="{{ $kantor->latitude }}" data-lng="{{ $kantor->longitude }}"
-                                data-thumb="/recfil?display=true&rf={{ $kantor->thumbnail }}"
-                                {{ strtolower($kantor->kantor) == 'kantor pusat' ? 'selected' : '' }}>
-                                {{ $kantor->kantor }}
-                            </option>
+                        <option value="{{ $kantor->id }}" data-nama="{{ $kantor->kantor }}"
+                            data-alamat="{{ $kantor->alamat }}" data-telp="{{ $kantor->no_telp }}"
+                            data-lat="{{ $kantor->latitude }}" data-lng="{{ $kantor->longitude }}"
+                            data-thumb="/recfil?display=true&rf={{ $kantor->thumbnail }}" {{ strtolower($kantor->kantor)
+                            == 'kantor pusat' ? 'selected' : '' }}>
+                            {{ $kantor->kantor }}
+                        </option>
                         @endforeach
 
                     </select>
@@ -253,8 +253,8 @@
                 <div class="visitor-stats">
                     <h5>Statistik Pengunjung</h5>
                     {{-- <p>
-                           Pantau aktivitas real-time website kami dan lihat bagaimana kami terus berkembang.
-                       </p> --}}
+                        Pantau aktivitas real-time website kami dan lihat bagaimana kami terus berkembang.
+                    </p> --}}
                     <div class="stats-container">
                         <div class="stat-item">
                             <i class="fas fa-users"></i>
@@ -283,18 +283,18 @@
                 <div class="col-12">
                     <div class="copywrite-content d-flex flex-wrap justify-content-between align-items-center">
                         <!-- Footer Logo -->
-                        <a href="index.html" class="footer-logo"><img
+                        <a href="/" class="footer-logo"><img
                                 src="{{ asset('frontend/bprtanadoang/img/logo/logo.png') }}" alt="logo"
                                 width="65px;"></a>
 
                         <!-- Copywrite Text -->
-                        <p class="copywrite-text"><a
-                                href="#"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        <p class="copywrite-text"><a href="#">
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                                 Copyright &copy;
                                 <script>
                                     document.write(new Date().getFullYear());
-                                </script> BPR Tanadoang All Rigths Reserved by <a
-                                    href="https://antaruang.com/" target="_blank" style="color: red">Antar Uang</a>
+                                </script> BPR Tanadoang All Rigths Reserved by <a href="https://antaruang.com/"
+                                    target="_blank" style="color: red">Antar Uang</a>
                                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                         </p>
                     </div>

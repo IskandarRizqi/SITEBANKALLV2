@@ -47,6 +47,7 @@ class ProdukLayananController extends Controller
             'title' => $r->title,
             'slug' => $slug,
             'content' => $r->content,
+            'deskripsi' => $r->deskripsi,
         ];
         if ($r->id) {
             $insertdata['updated_by'] = Auth::user()->id;
@@ -83,7 +84,7 @@ class ProdukLayananController extends Controller
         $brosur = NULL;
         if ($r->file('filbrosur')) {
             $validator = Validator::make($r->all(), [
-                 'filbrosur' => 'required|mimes:pdf,doc,docx|max:2048',
+                'filbrosur' => 'required|mimes:pdf,doc,docx|max:2048',
             ]);
             if ($validator->fails()) {
                 return response()->json([['Tipe File Harus Berupa Gambar dan Tidak Melebihi 2MB']], 401);

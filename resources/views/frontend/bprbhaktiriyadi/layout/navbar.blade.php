@@ -67,20 +67,20 @@
     <div class="sidemenu-content"><button class="closeButton sideMenuCls"><i class="far fa-times"></i></button>
         <div class="widget">
             <div class="th-widget-about">
-                <div class="about-logo"><a href="index.html"><img src="frontend/bprbhaktiriyadi/assets/img/logo/logo.png"
+                <div class="about-logo"><a href="/"><img src="frontend/bprbhaktiriyadi/assets/img/logo/logo.png"
                             style="width: 270px" alt="Logo"></a></div>
                 <p class="about-text">BPR Bhaktiriyadi merupakan lembaga keuangan yang berkomitmen
                     memberikan layanan perbankan terpercaya dengan produk tabungan, deposito,
                     dan kredit untuk mendukung pertumbuhan ekonomi masyarakat.</p>
                 <div class="th-social">
-                        <a href="https://web.facebook.com/bprbhaktiriyadiklaten/?_rdc=1&_rdr"><i
-                            class="fab fa-facebook-f"></i></a> 
-                        <a href="https://x.com/bprbhaktiriyadi"><i class="fab fa-twitter"></i></a> 
-                        {{-- <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>  --}}
-                        <a href="https://api.whatsapp.com/send/?phone=6281393630003&text&type=phone_number&app_absent=0"><i
-                            class="fab fa-whatsapp"></i></a> 
-                        <a href="https://www.instagram.com/bprbhaktiriyadi/?hl=id"><i
-                            class="fab fa-instagram"></i></a></div>
+                    <a href="https://web.facebook.com/bprbhaktiriyadiklaten/?_rdc=1&_rdr"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com/bprbhaktiriyadi"><i class="fab fa-twitter"></i></a>
+                    {{-- <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a> --}}
+                    <a href="https://api.whatsapp.com/send/?phone=6281393630003&text&type=phone_number&app_absent=0"><i
+                            class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/bprbhaktiriyadi/?hl=id"><i class="fab fa-instagram"></i></a>
+                </div>
             </div>
         </div>
         <div class="widget">
@@ -104,7 +104,7 @@
 </div>
 <div class="th-menu-wrapper onepage-nav">
     <div class="th-menu-area text-center"><button class="th-menu-toggle"><i class="fal fa-times"></i></button>
-        <div class="mobile-logo"><a href="index.html"><img src="frontend/bprbhaktiriyadi/assets/img/logo/logo.png"
+        <div class="mobile-logo"><a href="/"><img src="frontend/bprbhaktiriyadi/assets/img/logo/logo.png"
                     style="width: 170px" alt="Atek"></a></div>
         <div class="th-mobile-menu allow-natural-scroll">
             <ul>
@@ -148,7 +148,7 @@
             <div class="container th-container3">
                 <div class="row align-items-center justify-content-between">
                     <div class="col-auto">
-                        <div class="header-logo ml-25"><a href="index.html"><img
+                        <div class="header-logo ml-25"><a href="/"><img
                                     src="{{ asset('frontend/bprbhaktiriyadi/assets/img/logo/logo.png') }}"
                                     style="width: 270px" alt="Logo"></a></div>
                     </div>
@@ -203,8 +203,7 @@
                                     Simulasi <i class="fa-light fa-angle-down"></i>
                                 </a>
 
-                                <ul
-                                    style="
+                                <ul style="
                                         position:absolute;
                                         top:100%;
                                         right:0;
@@ -253,13 +252,13 @@
                             </button>
                             <li>
                                 @auth
-                                    @if (auth()->user()->role == 1)
-                                        <div class="account-icon" style="margin-left: 10px;" alt="Profile">
-                                            <a href="/dashboarduser" style="font-size: 25px; color: #333;">
-                                                <i class="fa-solid fa-user-tie"></i>
-                                            </a>
-                                        </div>
-                                    @endif
+                                @if (auth()->user()->role == 1)
+                                <div class="account-icon" style="margin-left: 10px;" alt="Profile">
+                                    <a href="/dashboarduser" style="font-size: 25px; color: #333;">
+                                        <i class="fa-solid fa-user-tie"></i>
+                                    </a>
+                                </div>
+                                @endif
                                 @endauth
                             </li>
 

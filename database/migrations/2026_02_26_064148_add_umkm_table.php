@@ -11,7 +11,7 @@ return new class extends Migration
      */
      public function up()
     {
-        Schema::table('umkm', function (Blueprint $table) {
+        Schema::table('umkms', function (Blueprint $table) {
             $table->time('jam_buka')->nullable();
             $table->time('jam_tutup')->nullable();
             $table->json('sosmed')->nullable();
@@ -24,7 +24,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('umkm', function (Blueprint $table) {
+        Schema::table('umkms', function (Blueprint $table) {
             //
         });
     }

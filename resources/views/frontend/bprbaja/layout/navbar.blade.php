@@ -67,17 +67,17 @@
     <div class="sidemenu-content"><button class="closeButton sideMenuCls"><i class="far fa-times"></i></button>
         <div class="widget">
             <div class="th-widget-about">
-                <div class="about-logo"><a href="index.html"><img src="frontend/bprbaja/assets/img/logo/logo.png"
+                <div class="about-logo"><a href="/"><img src="frontend/bprbaja/assets/img/logo/logo.png"
                             style="width: 180px" alt="Logo"></a></div>
                 <p class="about-text">BPR Bahtera Artha Jaya merupakan lembaga keuangan yang berkomitmen
                     memberikan layanan perbankan terpercaya dengan produk tabungan, deposito,
                     dan kredit untuk mendukung pertumbuhan ekonomi masyarakat.</p>
                 <div class="th-social"><a
                         href="https://web.facebook.com/people/Bpr-Bahtera-Artha-Jaya/pfbid0svM89fCKTxw1ELRfPvVamaHswQBUo4phfmwVUnbbC1wKv1UVeEbwBhBFHZHZzL5vl/"><i
-                            class="fab fa-facebook-f"></i></a> <a {{-- href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a> <a
-                        href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a> <a --}} href="#"><i
-                            class="fab fa-whatsapp"></i></a> <a href="https://www.instagram.com/bank.baja/"><i
-                            class="fab fa-instagram"></i></a></div>
+                            class="fab fa-facebook-f"></i></a> <a {{-- href="https://www.twitter.com/"><i
+                            class="fab fa-twitter"></i></a> <a href="https://www.linkedin.com/"><i
+                            class="fab fa-linkedin-in"></i></a> <a --}} href="#"><i class="fab fa-whatsapp"></i></a> <a
+                        href="https://www.instagram.com/bank.baja/"><i class="fab fa-instagram"></i></a></div>
             </div>
         </div>
         <div class="widget">
@@ -101,8 +101,8 @@
 </div>
 <div class="th-menu-wrapper onepage-nav">
     <div class="th-menu-area text-center"><button class="th-menu-toggle"><i class="fal fa-times"></i></button>
-        <div class="mobile-logo"><a href="index.html"><img src="frontend/bprbaja/assets/img/logo/logo.png"
-                    style="width: 170px" alt="Atek"></a></div>
+        <div class="mobile-logo"><a href="/"><img src="frontend/bprbaja/assets/img/logo/logo.png" style="width: 170px"
+                    alt="Atek"></a></div>
         <div class="th-mobile-menu allow-natural-scroll">
             <ul>
 
@@ -154,7 +154,7 @@
             <div class="container th-container3">
                 <div class="row align-items-center justify-content-between">
                     <div class="col-auto">
-                        <div class="header-logo"><a href="index.html"><img
+                        <div class="header-logo"><a href="/"><img
                                     src="{{ asset('frontend/bprbaja/assets/img/logo/logo.png') }}" style="width: 170px"
                                     alt="Logo"></a></div>
                     </div>
@@ -216,8 +216,7 @@
                                     Simulasi <i class="fa-light fa-angle-down"></i>
                                 </a>
 
-                                <ul
-                                    style="
+                                <ul style="
                                         position:absolute;
                                         top:100%;
                                         right:0;
@@ -264,15 +263,15 @@
                             <button type="button" class="th-menu-toggle d-block d-xl-none">
                                 <i class="far fa-bars"></i>
                             </button>
-                             <li>
+                            <li>
                                 @auth
-                                    @if (auth()->user()->role == 1)
-                                        <div class="account-icon" style="margin-left: 10px;" alt="Profile">
-                                            <a href="/dashboarduser" style="font-size: 25px; color: #333;">
-                                                <i class="fa-solid fa-user-tie"></i>
-                                            </a>
-                                        </div>
-                                    @endif
+                                @if (auth()->user()->role == 1)
+                                <div class="account-icon" style="margin-left: 10px;" alt="Profile">
+                                    <a href="/dashboarduser" style="font-size: 25px; color: #333;">
+                                        <i class="fa-solid fa-user-tie"></i>
+                                    </a>
+                                </div>
+                                @endif
                                 @endauth
                             </li>
 
