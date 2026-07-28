@@ -79,80 +79,43 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.PORT }}
           command_timeout: 15m
-
           script: |
-            set -e
-
-            PROJECT_PATH="/home/u748550814/domains/bprphm.com/public_html"
-
-            cd "$PROJECT_PATH"
-
-            echo "Direktori aplikasi:"
-            pwd
-
-            if [ ! -f artisan ]; then
-              echo "ERROR: File artisan tidak ditemukan."
-              exit 1
-            fi
-
-            if [ ! -f .env ]; then
-              echo "ERROR: File .env server tidak ditemukan."
-              exit 1
-            fi
-
-            echo "Memastikan folder Laravel tersedia..."
-
-            mkdir -p storage/app/public
-            mkdir -p storage/framework/cache/data
-            mkdir -p storage/framework/sessions
-            mkdir -p storage/framework/views
-            mkdir -p storage/logs
-            mkdir -p bootstrap/cache
-
-            chmod -R 775 storage
-            chmod -R 775 bootstrap/cache
-
-            echo "Mengaktifkan mode maintenance..."
-            php artisan down --retry=60 || true
-
-            # Pastikan aplikasi aktif kembali meskipun command berikutnya gagal
-            trap 'php artisan up || true' EXIT
-
-            echo "Membersihkan cache lama..."
-            php artisan optimize:clear
-
-            echo "Memasang dependency Composer..."
-            composer install \
-              --no-dev \
-              --no-interaction \
-              --prefer-dist \
-              --optimize-autoloader
-
-            echo "Menjalankan migration..."
-            php artisan migrate --force
-
-            echo "Memastikan symbolic link storage tersedia..."
-
-            if [ -L public/storage ]; then
-              echo "Symlink public/storage sudah tersedia."
-            elif [ -e public/storage ]; then
-              echo "PERINGATAN: public/storage tersedia tetapi bukan symbolic link."
-              echo "Tidak dihapus untuk menjaga file server."
-            else
-              php artisan storage:link
-            fi
-
-            echo "Membuat ulang cache Laravel..."
-            php artisan config:cache
-            php artisan route:cache
-            php artisan view:cache
-
-            echo "Menampilkan informasi environment..."
-            php artisan about --only=environment
-
-            echo "Menonaktifkan mode maintenance..."
-            php artisan up
-
-            trap - EXIT
-
-            echo "Deployment Laravel selesai."
+           set -e
+           PROJECT_PATH="/home/u748550814/domains/bprphm.com/public_html"
+           cd "$PROJECT_PATH"
+           if [ ! -f artisan ]; then
+           echo "ERROR: File artisan tidak ditemukan."
+           exit 1
+           fi
+           
+           if [ ! -f .env ]; then
+           echo "ERROR: File .env tidak ditemukan."
+           exit 1
+           fi
+           
+           echo "Menghapus cache package lama..."
+           rm -f bootstrap/cache/config.php
+           rm -f bootstrap/cache/packages.php
+           rm -f bootstrap/cache/services.php
+           rm -f bootstrap/cache/events.php
+           rm -f bootstrap/cache/routes-*.php
+           
+           echo "Memasang dependency production..."
+           composer install \   
+           --no-dev \
+           --no-interaction \
+           --prefer-dist \
+           --optimize-autoloader
+           
+           echo "Membersihkan cache Laravel..."
+           php artisan optimize:clear
+           
+           echo "Menjalankan migration..."
+           php artisan migrate --force
+           
+           echo "Membuat ulang cache Laravel..."
+           php artisan config:cache
+           php artisan route:cache
+           php artisan view:cache
+           
+           echo "Deploy selesai."
